@@ -1,0 +1,108 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-radius: 10px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between columns */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1; /* Make all columns equal width */
+    padding: 0 20px; /* Horizontal padding for spacing between columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .footer-heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center heading text */
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the links */
+  }
+  
+  .footer-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  .footer-contact {
+    margin: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center; /* Center the contact information */
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 10px;
+  }
+  
+  .footer-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .footer-icons a:hover {
+    color: #007bff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    background-color: #1C1C1C;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    width: 100%;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  pre {
+    font-family: Arial, Helvetica, sans-serif;
+  }

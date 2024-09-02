@@ -1,27 +1,23 @@
-.ftco_section {
-  margin: 100px 200px 0 200px;
-
-  position: fixed;
+.espardhaWrapper {
+  padding-bottom: 100px; /* Ensure enough space for the footer */
 }
+
+.ftco_section {
+  margin: 100px 200px 0 200px; /* Adjust margins as needed */
+  position: relative; /* Changed from fixed to relative */
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  height: 150%;
-  padding-bottom: 50px;
-}
-.container {
-  /* position: fixed; */
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.9);
   padding: 30px 50px;
 }
+
 .maindiv {
   padding: 41px 35px;
   display: flex;
@@ -31,6 +27,7 @@
   height: 75vh;
   overflow-y: auto;
 }
+
 .maindiv::-webkit-scrollbar {
   width: 10px;
 }
@@ -39,110 +36,123 @@
   background-color: #760e53;
   border-radius: 200px;
 }
+
+/* Poster styling */
 .poster {
   padding: 20px;
   border-right: 1.5px solid #000;
 }
+
+/* Content styling */
 .content {
   margin: 12px 0 36px 36px;
   padding: 10px;
   border-radius: 20px;
   border: 1.5px solid #000;
 }
+
+/* Top section styling */
 .top {
   justify-content: center;
   display: flex;
   gap: 12px;
   align-items: center;
 }
+
 .top h1 {
   color: #000;
   text-align: center;
   font-family: Poppins, sans-serif;
-  /* font-size: 28px; */
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
 }
+
+/* Middle section styling */
 .middle {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
+
 .discription {
   color: #000;
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
+
+/* Buttons styling */
 .buttons {
   gap: 5rem;
   display: flex;
   padding-left: 40px;
 }
+
 .buttons a {
   border-radius: 35px;
   border: 2px solid #760e53;
   padding: 9px 33px;
-  justify-content: center;
   text-align: center;
-  gap: 10px;
-  flex-shrink: 0;
   color: #760e53;
   text-decoration: none;
   font-family: Poppins, sans-serif;
 }
-.buttons a:hover{
+
+.buttons a:hover {
   background-color: #760e53;
   color: #fff;
 }
+
+/* Paragraph styling in the top section */
 .top p {
   color: #000;
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
+/* Bottom section styling */
 .bottom {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
+
 .bottom_heading {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 35px;
 }
+
 .hr {
   width: 200px;
   border-top: 1px solid black;
 }
+
 .bottom h3 {
   color: #760e53;
   text-align: center;
   font-family: Poppins, sans-serif;
-  /* font-size: 24px; */
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-decoration-line: underline;
 }
+
+/* Contacts section styling */
 .contacts {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 17rem;
 }
+
 .contact_card {
   align-items: center;
   display: flex;
@@ -151,14 +161,14 @@
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
+
 .contact_card p {
   font-weight: 400;
 }
 
+/* Responsive styles */
 @media (max-width: 1500px) {
   .container {
     padding: 20px;
@@ -170,6 +180,7 @@
     margin-left: 15px;
   }
 }
+
 @media (max-width: 1380px) {
   .contacts {
     gap: 6rem;
@@ -191,6 +202,7 @@
     font-size: 24px;
   }
 }
+
 @media (max-width: 1230px) {
   .ftco_section {
     margin: 100px 150px 0 150px;
@@ -199,6 +211,7 @@
     padding-left: 0;
   }
 }
+
 @media (max-width: 1111px) {
   .ftco_section {
     margin: 100px 100px 0 100px;
@@ -210,6 +223,7 @@
     gap: 1.5rem;
   }
 }
+
 @media (max-width: 990px) {
   .maindiv {
     flex-direction: column;
@@ -219,10 +233,11 @@
     border-bottom: 1.5px solid black;
     margin-bottom: 20px;
     width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
   }
 }
+
 @media (max-width: 720px) {
   .poster {
     margin-bottom: 0;
@@ -240,34 +255,10 @@
   .hr {
     width: 0;
   }
-  .top {
-    flex-direction: column;
+  .top h1 {
+    font-size: 22px;
   }
-  .buttons {
-    flex-direction: column;
-  }
-  .contacts {
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-    align-items: flex-start;
-  }
-  .contact_card{
-    align-items: flex-start;
-  }
-}
-@media (max-width: 540px) {
-  .ftco_section {
-    margin: 100px 50px 0 50px;
-  }
-}
-@media (max-width: 450px) {
-  .ftco_section {
-    margin: 100px 30px 0 30px;
-  }
-}
-@media (max-width: 395px) {
-  .ftco_section {
-    margin: 100px 11px 0 11px;
+  .bottom h3 {
+    font-size: 20px;
   }
 }

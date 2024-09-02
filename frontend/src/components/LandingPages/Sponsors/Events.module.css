@@ -21,7 +21,7 @@
 .scrollablediv{
   height: 75%;
   z-index: 1;
-  position: relative;
+  position: fixed;
   overflow: auto;
 
   width: 100%;

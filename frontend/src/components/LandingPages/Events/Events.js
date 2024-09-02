@@ -67,6 +67,7 @@ import {
   Volleyball,
   WeightLifting,
 } from './Events_Components.js';
+import FooterMain from '../Footer/Footer.js';
 
 const Events = () => {
   const [showResults0, setShowResults0] = useState(false);
@@ -1121,7 +1122,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-
+      <FooterMain/>
     </section>
   );
 };

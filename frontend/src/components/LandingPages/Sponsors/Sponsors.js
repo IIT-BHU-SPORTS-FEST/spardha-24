@@ -2,6 +2,7 @@ import React from 'react';
 import './Sponsors.css';
 import Carousel from '../Home/Carousel/Carouselhp';
 import styles from './Events.module.css';
+import FooterMain from '../Footer/Footer';
 
 
 const Sponsors = () => {
@@ -1927,13 +1928,10 @@ const Sponsors = () => {
 
           </div>
 
-
+          
         </div>
-
-
+        
       </div>
-
-
     </section>
   );
 };

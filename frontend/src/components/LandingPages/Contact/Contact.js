@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Contact.module.css';
 import Carousel from '../Home/Carousel/Carouselhp';
+import FooterMain from '../Footer/Footer';
 
 
 
@@ -116,6 +117,7 @@ const Contact = () => {
           </div>
         </footer>
       </section>
+      <FooterMain />
     </>
   );
 };
