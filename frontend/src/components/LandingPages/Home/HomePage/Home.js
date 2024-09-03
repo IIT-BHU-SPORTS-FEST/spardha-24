@@ -3,9 +3,9 @@ import './Home.css';
 import Mid from '../MiddleSection/MiddleSection';
 import Carousel from '../Carousel/Carouselhp';
 import CountdownTimer from '../Countdown/Countdown';
-import FooterMain from '../../Footer/Footer';
 /*import Foot from '../HomeBottom/HomeBottom';*/
 // import Footer from '../Footer/Footer';
+import FooterMain from '../../Footer/Footer';
 
 function App() {
   return (
