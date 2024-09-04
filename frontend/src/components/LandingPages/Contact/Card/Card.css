@@ -1,0 +1,88 @@
+.containercard {
+    height: 25rem;
+    width: 17rem;
+    background-color: rgba(0, 0, 0, 1);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    position: relative;
+    opacity: 1;
+    border-radius: 20px;
+    transition: scale 0.3s ease;
+}
+
+.containercard:hover {
+    transition: ease-out 0.5s;
+    scale: 1.01;
+}
+
+.Image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+}
+
+.info {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    background-color: rgba(46, 46, 46, 1);
+    position: relative;
+    top: 60%;
+    padding-top: 0.6rem;
+    box-shadow: inset 0px 4px 7px 2px rgba(214, 214, 214, 0.25);
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+
+.info h5 {
+    color: rgba(73, 130, 246, 1);
+    font-weight: 600;
+}
+
+hr {
+    position: relative;
+    border: 1px;
+    height: 1px;
+    width: 70%;
+    background-color: rgba(230, 230, 230, 1); 
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    top: 2%;
+}
+
+.images {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+@media (max-width: 768px){
+    .Image img {
+        left: 0;
+    }
+}
+@media (max-width: 432px){
+    .containercard{
+        scale: 0.9;
+    }
+    .info h2{
+        font-size: 1.2rem;
+    }
+    .info h5{
+        font-size: 0.8rem;
+    }
+    
+}
+
+
+
+
+
+

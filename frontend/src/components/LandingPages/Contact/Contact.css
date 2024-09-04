@@ -1,0 +1,135 @@
+.heading123 {
+  color: rgba(73, 130, 246, 1);
+  padding-top: 2%;
+  align-self: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+#contactus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  min-height: 85%; 
+  max-height: 80vh; 
+  margin-top: 5%;
+  font-size: small;
+  position: fixed;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.heading2 {
+  color: rgba(255, 255, 255, 1);
+  width: 90%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+  gap: 2rem;
+  align-self: center;
+}
+
+.heading2 li {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.heading2 li:hover {
+  color: rgba(73, 130, 246, 1);
+}
+
+.heading2 li.selected {
+  color: rgba(73, 130, 246, 1);
+}
+
+.content123 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: auto;
+  row-gap: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.content123::-webkit-scrollbar {
+  width: 10px;
+}
+
+.content123::-webkit-scrollbar-thumb {
+  background-color: rgba(73, 130, 246, 1);
+  border-radius: 200px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+
+  .heading2 {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .content123 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 1.5rem;
+    margin: 100px 50px 32px 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    margin: 100px 30px 32px 30px;
+  }
+}
+
+@media (max-width: 395px) {
+  .container {
+    margin: 100px 11px 32px 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 350px) {
+  .content123 {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 1450px) {
+  .links {
+    height: 60%;
+  }
+}
