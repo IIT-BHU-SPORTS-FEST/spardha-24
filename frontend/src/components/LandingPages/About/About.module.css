@@ -2,7 +2,9 @@
 
 .col-md-4,
 .col-md-12 {
-  background-color: white;
+  /* background-color: white; */
+ 
+
   border-radius: 20px;
   
 /*   border-radius: 14px; */
@@ -18,29 +20,33 @@
 
 }
 .maindiv{
-  padding-top: 5vh;
+  padding-top: 18vh;
   width: 95%;
   padding-right: 10px;
   padding-left: 10px;
   margin-left: auto;
   margin-right: auto;
 overflow: auto;
-height: 82vh;
+height: 100vh;
 position: relative;
-top: 16vh;
-border-radius: 10px;
-  background: #ded1dee5;
+/* top: 17vh; */
+/* border-radius: 10px; */
+background: rgba(0, 0, 0, 0.8);
+
 }
 .scrollcontainer {
   width: 100%;
   padding-right: 10px;
   padding-left: 10px;
+  padding-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
 overflow: auto;
+border-bottom: none;
+border-top-left-radius: 10px;
 height: 67vh;
 position: relative;
-border-radius: 10px;
+/* border-radius: 10px; */
 
 
 
@@ -54,11 +60,15 @@ border-radius: 10px;
 /* Customize scrollbar appearance (optional) */
 .scrollcontainer::-webkit-scrollbar {
   width: 10px;
-}
 
+}
+/* 
 .scrollcontainer::-webkit-scrollbar-thumb {
-  background-color: #760e53;
+  background-color: none;
   border-radius: 200px;
+} */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
 @media (min-width: 1200px) {
@@ -90,6 +100,7 @@ border-radius: 10px;
 }
 
 .mb-1 {
+  
   font-family: 'Poppins';
 }
 
@@ -235,8 +246,10 @@ border-radius: 10px;
   margin-bottom: 30px;
   padding: 30px;
   box-shadow: 0px 3px 35px - 24px black;
-  background: white;
-  border-color: #000;
+  /* background: white; */
+  background: rgba(2, 0, 33, 1);
+  border: 1px solid;
+border-image-source: linear-gradient(163.05deg, rgba(156, 156, 156, 0.3) 16.49%, rgba(130, 130, 130, 0.3) 62.02%);
   /* margin-left: 55px;
     margin-right: 55px; */
   border-radius: 30px;
@@ -290,7 +303,7 @@ border-radius: 10px;
 
 .para1 {
   font-family: 'Poppins';
-  color: black;
+  color: white;
   padding-bottom: 20px;
   font-size: 17px;
   font-weight: 500;
@@ -298,7 +311,7 @@ border-radius: 10px;
 
 .para2 {
   font-family: 'Poppins';
-  color: black;
+  color: white;
   padding-bottom: auto;
   font-size: 17px;
   font-weight: 500;
@@ -306,7 +319,7 @@ border-radius: 10px;
 
 .para3 {
   font-family: 'Poppins';
-  color: black;
+  color: white;
   padding-bottom: auto;
   font-size: 17px;
   font-weight: 500;
