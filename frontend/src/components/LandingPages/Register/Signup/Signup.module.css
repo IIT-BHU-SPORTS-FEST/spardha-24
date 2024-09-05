@@ -14,18 +14,19 @@
   padding-right: 7px;
   padding-top: 10px;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: rgb(2, 0, 33,1.3);
   border-radius: 30px;
 }
 
 .form-group {
   margin-bottom: 15px;
+  padding-bottom: 24px;
   font-family: 'Poppins', sans-serif;;
   font-size: 14px;
   /* border-radius: 10px; */
   /* background-color: #FFFFFF; */
   line-height: 1.42857143;
-  color: #333;
+  color: #f6f0f0;
 }
 
 .btn-block {
@@ -36,9 +37,8 @@
   font-size: 16px;
   font-family: 'League Spartan';
   font-weight: 800 !important;
-  text-transform: uppercase;
-  margin: 1em auto !important;
-  background-color:#760E53 !important;
+  margin: 2.3em auto !important;
+  background-color:#4982F6 !important;
 }
 
 .btn-block:active,
@@ -48,7 +48,7 @@
 
 .panel {
   box-sizing: border-box;
-  background-color: #D9D9D9 !important ;
+  background-color: black !important ;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 30px;
@@ -72,6 +72,7 @@
 }
 
 .panel-title-1 {
+  white-space: nowrap;
   font-size: 18px;
   text-align: left !important;
   width:67px;
@@ -121,7 +122,7 @@
 .form-control {
   height: 34px;
   font-size: 14px !important;
-  color: #555;
+  /* color: #555; */
   border-left: none !important;
   margin-bottom: -12px;
 }
@@ -175,7 +176,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: #760E53 !important;
+  background: #e3d8d8 !important;
 }
 .signup_note{
   display: flex;
@@ -187,6 +188,7 @@
 
 @media (max-width: 1180px) {
   .panel-title-1{
+  white-space: nowrap;
   font-size: 16px;
   text-align: left !important;
   width:75px;
@@ -344,3 +346,4 @@
 .abc123{
   margin-bottom: -12px;
 }
+

@@ -261,7 +261,7 @@ function Signup() {
             fontSize: '14px',
             heigth:'80px',
             fontFamily: 'Poppins, sans-serif',
-            background: "#760E53",
+            background: "#020021",
             color:'#FFFFFF ',
             fontWeight:'400',
             paddingTop:'0.5rem',
@@ -315,9 +315,9 @@ function Signup() {
               <div className={`${styles['register-page-form-header']}`} >
                 <h4
                   className={`${styles['panel-title-1']} text-center`}
-                  style={{ color: '#760E53'}}
+                  style={{ color: '#4982F6'}}
                 >
-                  Sign up
+                  Sign Up
                   <motion.div className={`${styles['underline']}`} layoutId="underline" transition={{ duration: 0.5 }}/>
                 </h4>
                 <h4
@@ -743,7 +743,7 @@ function Signup() {
                   target="_blank"
                   style={{ textDecoration: 'none' }}
                 >
-                  "Rules of Spardha 2023."{' '}
+                  "Rules of Spardha 2024."{' '}
                 </a>
                 
               </Label>
@@ -769,7 +769,7 @@ function Signup() {
             className={`${styles['btn-block']}`}
             onClick={submitHandler}
           >
-            Sign up
+            Sign Up
           </Button>
           {/* <b
             style={{
