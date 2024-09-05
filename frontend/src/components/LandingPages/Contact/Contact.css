@@ -8,15 +8,12 @@
 
 
 #contactus {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center; 
-  overflow: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .container {
   display: flex;
@@ -25,10 +22,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   min-height: 85%; 
-  max-height: 80vh; 
-  margin-top: 5%;
+  max-height: max-content; 
+  margin-top: 5rem;
   font-size: small;
-  position: fixed;
+  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -69,14 +66,14 @@
   padding: 1rem;
 }
 
-.content123::-webkit-scrollbar {
+/* .content123::-webkit-scrollbar {
   width: 10px;
 }
 
 .content123::-webkit-scrollbar-thumb {
   background-color: rgba(73, 130, 246, 1);
   border-radius: 200px;
-}
+} */
 
 @media (max-width: 768px) {
   .container {
