@@ -40,7 +40,7 @@ const Contact = () => {
                   <h6>suraj.kumar.min22@itbhu.ac.in</h6>
                   <h6>+91 93041 92920</h6>
                   <h6 className={styles.name}>Arya Meshram</h6>
-                  <h6>aarya.meshram.chy22@itbhu.ac.in </h6>
+                  <h6>aarya.meshram.chy22@itbhu.ac.in</h6>
                   <h6>+91 90090 73032</h6>
                   <h6 className={styles.name}>Vivek Kumar</h6>
                   <h6>vivek.kumar.min22@itbhu.ac.in</h6>
