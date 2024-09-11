@@ -22,7 +22,7 @@ const Contact = () => {
                   <div>
                     <h5><b>Convenor:</b></h5>
                     <h6 className={styles.name}>Sarthak Gupta</h6>
-                    <h6>sarthak.gupta.civ.21@itbhu.ac.in</h6>
+                    <h6>sarthak.gupta.civ21@itbhu.ac.in</h6>
                   </div>
                   <div>
                     <h5><b>Co-convenors:</b></h5>
