@@ -21,51 +21,53 @@ const Contact = () => {
                 <div className={styles.convenor}>
                   <div>
                     <h5><b>Convenor:</b></h5>
-                    <h6 className={styles.name}>Himanshu Ranjan</h6>
-                    <h6>himanshu.ranjan.met20@itbhu.ac.in</h6>
+                    <h6 className={styles.name}>Sarthak Gupta</h6>
+                    <h6>sarthak.gupta.civ.21@itbhu.ac.in</h6>
                   </div>
                   <div>
                     <h5><b>Co-convenors:</b></h5>
-                    <h6 className={styles.name}>Harsh Lalit Parmar</h6>
-                    <h6>harsh.lalitparmar.mat20@itbhu.ac.in</h6>
-                    <h6 className={styles.name}>Aditya Ayush Mishra</h6>
-                    <h6>aditya.ayushmishra.met20@itbhu.ac.in</h6>
+                    <h6 className={styles.name}>Bhumika Batra</h6>
+                    <h6>bhumika.student.met21@itbhu.ac.in</h6>
+                    <h6 className={styles.name}>Shubham Sahu</h6>
+                    <h6>shubham.sahu.cer21@itbhu.ac.in</h6>
+                    <h6 className={styles.name}>Adarsh Raj</h6>
+                    <h6>adarsh.raj.civ21@itbhu.ac.in</h6>
                   </div>
                 </div>
                 <div className={styles.publicity}>
                   <h5><b>Publicity:</b></h5>
-                  <h6 className={styles.name}>Nimish Parmar</h6>
-                  <h6>nimish.parmar.civ21@itbhu.ac.in</h6>
-                  <h6>+91 74006 94759</h6>
-                  <h6 className={styles.name}>Adarsh Raj</h6>
-                  <h6>adarsh.raj.civ21@itbhu.ac.in </h6>
-                  <h6>+91 88628 66770</h6>
-                  <h6 className={styles.name}>Sarthak Gupta</h6>
-                  <h6>sarthak.gupta.civ21@itbhu.ac.in</h6>
-                  <h6>+91 63920 03370</h6>
+                  <h6 className={styles.name}>Suraj Kumar</h6>
+                  <h6>suraj.kumar.min22@itbhu.ac.in</h6>
+                  <h6>+91 93041 92920</h6>
+                  <h6 className={styles.name}>Arya Meshram</h6>
+                  <h6>aarya.meshram.chy22@itbhu.ac.in</h6>
+                  <h6>+91 90090 73032</h6>
+                  <h6 className={styles.name}>Vivek Kumar</h6>
+                  <h6>vivek.kumar.min22@itbhu.ac.in</h6>
+                  <h6>+91 70335 87357</h6>
                 </div>
               </div>
               <div className={styles.evehosp}>
                 <div className={styles.events}>
                   <h5><b>Events:</b></h5>
-                  <h6 className={styles.name}>Gurmeet Punia</h6>
-                  <h6>gurmeet.student.civ21@itbhu.ac.in</h6>
-                  <h6>+91 97858 15941</h6>
-                  <h6 className={styles.name}>Dhruv Jain</h6>
-                  <h6>dhruv.jain.cd.mec21@itbhu.ac.in</h6>
-                  <h6>+91 95489 62930</h6>
+                  <h6 className={styles.name}>Aryan Maurya</h6>
+                  <h6>aryan.maurya.civ22@itbhu.ac.in</h6>
+                  <h6>+91 86040 99753</h6>
+                  <h6 className={styles.name}>Adesh Meena</h6>
+                  <h6>adesh.meena.ece22@itbhu.ac.in</h6>
+                  <h6>+91 63502 78428</h6>
                 </div>
                 <div className={styles.hospitality}>
                   <h5><b>Hospitality:</b></h5>
-                  <h6 className={styles.name}>Aryan Singh</h6>
-                  <h6>aryan.singh.met21@itbhu.ac.in</h6>
-                  <h6>+91 99972 55604</h6>
-                  <h6 className={styles.name}>Gaurav Maharshi</h6>
-                  <h6>gaurav.maharshi.cer21@itbhu.ac.in </h6>
-                  <h6>+91 87624 49914</h6>
-                  <h6 className={styles.name}>Deepanshu</h6>
+                  <h6 className={styles.name}>Ojas Raj</h6>
+                  <h6>ojas.raj.civ22@itbhu.ac.in</h6>
+                  <h6>+91 79745 52339</h6>
+                  <h6 className={styles.name}>Vinay Dadri</h6>
+                  <h6>vinay.kumar.mec22@itbhu.ac.in </h6>
+                  <h6>+91 85295 52845</h6>
+                  <h6 className={styles.name}>Divyanshi Gautam</h6>
                   <h6>deepanshu.student.cer21@itbhu.ac.in</h6>
-                  <h6>+91 91168 98755</h6>
+                  <h6>+91 87070 90583</h6>
                 </div>
               </div>
               <div className={styles.linkfollow}>
