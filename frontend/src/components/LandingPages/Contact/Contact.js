@@ -66,7 +66,7 @@ const Contact = () => {
                   <h6>vinay.kumar.mec22@itbhu.ac.in </h6>
                   <h6>+91 85295 52845</h6>
                   <h6 className={styles.name}>Divyanshi Gautam</h6>
-                  <h6>deepanshu.student.cer21@itbhu.ac.in</h6>
+                  <h6>ddivyanshi.gautam.cer22@itbhu.ac.in</h6>
                   <h6>+91 87070 90583</h6>
                 </div>
               </div>
