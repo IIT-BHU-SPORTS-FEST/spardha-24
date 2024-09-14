@@ -180,25 +180,23 @@ function Login() {
           </Alert>
         </div>
         <Form className={`${styles['form-horizontal']}`}>
-          <div
+          {/* <div
             className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
-            style={{ marginTop: '12px' }}
+            style={{ marginTop: '12px'}}
           >
-            <div className={`${styles.panel}`}>
-              <div className={`${styles['panel-heading']}`}>
-                <div className={`${styles['register-page-form-header']}`}>
-                  <h4 className={`${styles['panel-title-1']} text-center`}>
+            <div>
+            <h4 className={`${styles['panel-title-1']} text-center`}>
                     <Link
                       to="/register/signup"
                       style={{
                         textDecoration: 'none',
-                        color: '#000000',
+                        color: '#ffffff',
                         whiteSpace: 'nowrap',
                       }}
                     >
                       Sign Up
                     </Link>
-                    {/* <a href="/register/Signup/newSignup" onClick={()=>navigate("/register/Signup/newSignup")}>sign up</a> */}
+
                   </h4>
                   <h4
                     className={`${styles['panel-title-2']} text-center`}
@@ -211,14 +209,80 @@ function Login() {
                       transition={{ duration: 0.5 }}
                     />
                   </h4>
-                  <h4
+                  </div> */}
+          <div
+            className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
+            style={{ marginTop: '12px' }}
+          >
+            <div className="d-flex">
+              <h4 className={`${styles['panel-title-1']} text-center`}>
+                <Link
+                  to="/register/signup"
+                  style={{
+                    textDecoration: 'none',
+                    color: '#ffffff',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Sign Up
+                </Link>
+              </h4>
+
+              <h4
+                className={`${styles['panel-title-2']} text-center`}
+                style={{ color: '#4982F6' }}
+              >
+                <Link
+                  to="/login"
+                  style={{
+                    textDecoration: 'none',
+                    color: '#4982F6',
+                  }}
+                >
+                  Login
+                </Link>
+                <motion.div
+                  className={`${styles['underline']}`}
+                  layoutId="underline"
+                  transition={{ duration: 0.5 }}
+                />
+              </h4>
+            </div>
+
+            <div className={`${styles.panel}`}>
+              {/* <div className={`${styles['panel-heading']}`}>
+                <div className={`${styles['register-page-form-header']}`}>
+                  <h4 className={`${styles['panel-title-1']} text-center`}>
+                    <Link
+                      to="/register/signup"
+                      style={{
+                        textDecoration: 'none',
+                        color: '#ffffff',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      <b>Sign Up</b>
+                    </Link>
+                  </h4> */}
+                  {/* <h4
+                    className={`${styles['panel-title-2']} text-center`}
+                    style={{ color: '#4982F6' }}
+                  >
+                    <line>Login</line>
+                    <motion.div
+                      className={`${styles['underline']}`}
+                      layoutId="underline"
+                      transition={{ duration: 0.5 }}
+                    />
+                  </h4> */}
+                  {/* <h4
                     className={`${styles['panel-title-3']} text-center`}
-                    style={{ color: '#000000' }}
+                    style={{ color: '#ffffff' }}
                   >
                     <span style={{ color: 'red' }}>*</span>Mandatory
                   </h4>
                 </div>
-              </div>
+              </div> */}
               <div className={styles.abc123}>
                 <AnimatePresence>
                   <motion.div
@@ -360,6 +424,12 @@ function Login() {
                                 required
                               ></Input>
                             </InputGroup>
+                            <h4
+                            className={`${styles['panel-title-3']} text-center`}
+                            style={{ color: '#ffffff', marginLeft:'7rem' }}
+                          >
+                            <span style={{ color: 'red' }}>*</span>Mandatory Field
+                          </h4>
                             {password.warning !== '' && (
                               <FormFeedback
                                 className="text-danger d-block fw-bold"
@@ -369,6 +439,7 @@ function Login() {
                               </FormFeedback>
                             )}
                           </FormGroup>
+                          
                         </div>
 
                         {/* <div className="col-sm-6">
@@ -632,7 +703,7 @@ function Login() {
               className={`${styles['btn-block']}`}
               onClick={submitHandler}
             >
-              <FaPaperPlane color="white" className="me-1"></FaPaperPlane>
+              {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
               Login
             </Button>
           </div>

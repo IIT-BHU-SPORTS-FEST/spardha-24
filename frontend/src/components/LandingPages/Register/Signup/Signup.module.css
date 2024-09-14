@@ -4,7 +4,7 @@
 .heading {
   text-align: center;
   color: #760E53;
-  font-family: 'League Spartan';
+  font-family: 'Poppins';
   font-size: 40px;
   font-weight: bold;
 }
@@ -34,10 +34,11 @@
   width: 30%;
   margin: auto;
   box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'League Spartan';
-  font-weight: 800 !important;
-  margin: 2.3em auto !important;
+  line-height: 38px;
+  font-size: 30px;
+  font-family: 'Poppins';
+  font-weight: 700 !important;
+  margin: 2.3rem auto !important;
   background-color:#4982F6 !important;
 }
 
@@ -50,7 +51,7 @@
   box-sizing: border-box;
   background-color: black !important ;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 30px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -59,31 +60,32 @@
 
 .panel-heading {
   background-color: #f2f2f2 !important;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   padding: 10px 15px;
   padding-bottom: 0;
   /* border-radius: 30px; */
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent; */
   border-bottom-color: transparent;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: #333;
-  background-color: #D9D9D9 !important;
+  background-color: #020021 !important;
 }
 
 .panel-title-1 {
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: left !important;
   width:67px;
   margin-bottom: 0 !important;
   color:#000000;
   margin-left: 7%;
-
 }
 
 .panel-title-2 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: left !important;
   width:50px;
   margin-bottom: 0 !important;
@@ -99,7 +101,6 @@
   color:#000000;
   padding-right: 7%;
 }
-
 .panel-title-1:hover {
   cursor: pointer;
 }
@@ -180,6 +181,7 @@
 }
 .signup_note{
   display: flex;
+  border: none;
   height: 20vh !important;
   /* justify-content: center; */
   align-items: center !important;
