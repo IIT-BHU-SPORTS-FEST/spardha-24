@@ -1,5 +1,5 @@
 .containercard {
-    height: 25rem;
+    height: 24rem;
     width: 17rem;
     background-color: rgba(0, 0, 0, 1);
     margin: 0;
@@ -66,6 +66,9 @@ hr {
 @media (max-width: 768px){
     .Image img {
         left: 0;
+    }
+    .containercard{
+        scale: 0.9;
     }
 }
 @media (max-width: 432px){

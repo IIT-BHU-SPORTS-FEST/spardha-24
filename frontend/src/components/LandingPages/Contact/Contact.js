@@ -1,14 +1,19 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import './Contact.css';
 import Carousel from '../Home/Carousel/Carouselhp';
 import Card from './Card/Card';
 
 const Contact = () => {
-
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [menuActive, setMenuActive] = useState(false);  
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setMenuActive(false); 
+  };
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive); 
   };
 
   const renderCards = () => {
@@ -28,53 +33,70 @@ const Contact = () => {
     }
   };
 
-  
   return (
     <>
       <section id='contactus'>
         <Carousel />
-          <div className='container'>
-            <div className='heading123'>
-              <h2>Contact Us</h2>  
+        <div className='container'>
+          <div className='heading123'>
+            <h2>Contact Us</h2>
+          </div>
+
+      
+          <div className='hamburger-container'>
+         
+            <button className='hamburger' onClick={toggleMenu}>
+              &#9776; 
+            </button>
+
+           
+            <div className='selected-heading'>
+              {selectedCategory}
             </div>
-          <div className='heading2'>
-            <li 
+          </div>
+
+        
+          <ul className={`heading2 ${menuActive ? 'active' : ''}`}>
+            <li
               onClick={() => handleCategoryClick('All')}
               className={selectedCategory === 'All' ? 'selected' : ''}
             >
               <h3>All</h3>
             </li>
-            <li 
+            <li
               onClick={() => handleCategoryClick('Convenors')}
               className={selectedCategory === 'Convenors' ? 'selected' : ''}
             >
               <h3>Convenors</h3>
             </li>
-            <li 
+            <li
               onClick={() => handleCategoryClick('Publicity')}
               className={selectedCategory === 'Publicity' ? 'selected' : ''}
             >
               <h3>Publicity</h3>
             </li>
-            <li 
+            <li
               onClick={() => handleCategoryClick('Marketing')}
               className={selectedCategory === 'Marketing' ? 'selected' : ''}
             >
               <h3>Marketing</h3>
             </li>
-            <li 
+            <li
               onClick={() => handleCategoryClick('Others')}
               className={selectedCategory === 'Others' ? 'selected' : ''}
             >
               <h3>Others</h3>
             </li>
+          </ul>
+
+          <div className='content123'>
+            {renderCards()}
           </div>
-            <div className='content123'>
-              {renderCards()}
-            </div>
-          </div>
+        </div>
       </section>
     </>
   );
 };
+
 export default Contact;
+

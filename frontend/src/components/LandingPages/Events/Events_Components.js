@@ -135,7 +135,7 @@ const Aquatics = (props) => {
 const Athletics = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Tagaram Kiran Kumar (M)", "7396797341", "tagaram.kirankumar.cer20@itbhu.ac.in"), new Person("Anchal Dhar (W)", "8955357448", "anchal.dhar.mec21@itbhu.ac.in")]}
+      captainsArray={[new Person("Ankit Mishra (M)", "9518478065", "tagaram.kirankumar.cer20@itbhu.ac.in"), new Person("Prachi (W)", "9532072319", "anchal.dhar.mec21@itbhu.ac.in")]}
       imageSrc={athletics}
       eventName="Athletics"
       rulebookPDF={AthleticsPDF}
@@ -170,7 +170,7 @@ const Basketball = (props) => {
 const Boxing = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Suyash Baloni (M)", "N/A", "suyash.baloni.bme20@itbhu.ac.in"), new Person("Saloni Agrawal (W)", "9928107374", "saloni.agrawal.mat20@itbhu.ac.in")]}
+      captainsArray={[new Person("Ayush Sahu (M)", "8085733084", "suyash.baloni.bme20@itbhu.ac.in"), new Person("Sukriti Sharma (W)", "8824973337", "saloni.agrawal.mat20@itbhu.ac.in")]}
       imageSrc={boxing}
       eventName="Boxing"
       rulebookPDF={BoxingPDF}
