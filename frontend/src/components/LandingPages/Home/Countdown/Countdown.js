@@ -7,6 +7,7 @@ class CountdownTimer extends Component {
 
     // Calculate the target date and time in IST (UTC+5:30)
     this.targetDate = new Date("2024-10-18T00:00:00Z"); // UTC time
+    this.targetDate.setHours(this.targetDate.getHours() + 24);
     this.targetDate.setHours(this.targetDate.getHours() -5, this.targetDate.getMinutes()-30 );
 
     // Initialize the state with the initial time difference
@@ -28,7 +29,7 @@ class CountdownTimer extends Component {
     
     return { days ,hours, minutes, seconds };
   };
-
+     
   // Define a function to update the timer
   updateTime = () => {
     const { hours, minutes, seconds } = this.calculateTimeDifference();
@@ -44,7 +45,9 @@ class CountdownTimer extends Component {
 
     
     return (
+      
         <div class="countdowntimer">
+          <h1 > 18-20 OCTOBER 2024</h1>
           <div class="countdown">
             <span class="hours">
               <div class="time">
