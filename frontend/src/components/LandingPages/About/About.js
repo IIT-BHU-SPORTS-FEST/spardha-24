@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './About.module.css';
-import talkofthetown from './talkoftown.jpg';
-import hype from './hype.png';
-import takeback from './takeback.png';
+import talkofthetown from './talkoftown24.png';
+import hype from './hype24.png';
+import takeback from './takeback24.png'
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
 const About = () => {
