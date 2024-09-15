@@ -5,7 +5,6 @@ import hype from './hype.png';
 import takeback from './takeback.png';
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
-import FooterMain from '../Footer/Footer';
 const About = () => {
   return (
     <>
@@ -32,7 +31,6 @@ const About = () => {
           </h2>
           <div className={styles.scrollcontainer}>
             <div className={styles.container}>
-
 
 
               <div className={styles['row']}>
@@ -73,6 +71,7 @@ const About = () => {
                             color: 'rgba(73, 130, 246, 1)',
                             fontSize: '22px',
                             lineHeight: '1.2',
+                            fontWeight: 'bold',
                           }}
                         >
                           Hype&nbsp;Around Spardha
@@ -101,7 +100,9 @@ const About = () => {
                           className={styles['text-wrap']}
                           style={{
                             fontSize: '22px',
-                            color: 'black',
+                            paddingBottom:'16px',
+                            fontFamily: 'Poppins',
+                            color: 'rgba(73, 130, 246, 1)',
                             lineHeight: '1.4',
                             fontWeight: 'bold',
                           }}
@@ -109,12 +110,7 @@ const About = () => {
                           The&nbsp;Talk&nbsp;Of The&nbsp;Town
                         </h3>
                         <p className={`${styles.para2}`}>
-                          Each&nbsp;year&nbsp;thousands of participants at Spardha
-                          put their hard work to test in a vast array of sports. If
-                          this doesn't catch your attention, the bustle of 45,000
-                          people on the campus streets surely will. Its them who
-                          make Spardha the festival it is, a celebration of four
-                          long days.
+                        Each year thousands of participants at Spardha put their hard work to test in a vast array of sports. If this doesn't catch your attention, the bustle of 45,000 people on the campus streets surely will. Its them who make Spardha the festival it is, a celebration of four long days.
                           <br />
                         </p>
                       </div>
@@ -128,7 +124,7 @@ const About = () => {
                           src={takeback}
                           alt="/"
                           style={{
-                            width: '20%',
+                            width: '22%',
                             marginLeft: 'auto',
                             marginRight: 'auto',
                           }}
@@ -137,7 +133,10 @@ const About = () => {
                           className={styles['text-wrap']}
                           style={{
                             fontSize: '22px',
-                            color: 'black',
+                            fontFamily: 'Poppins',
+                            
+                            paddingBottom:'16px',
+                            color: 'rgba(73, 130, 246, 1)',
                             lineHeight: '1.4',
                             fontWeight: 'bold',
                           }}
@@ -145,11 +144,7 @@ const About = () => {
                           What&nbsp;You Take Back
                         </h3>
                         <p className={`${styles.para3}`}>
-                          It's about making memories, and living them. Every time
-                          you win a race, or lose your voice cheering for your team,
-                          it adds up to your moments. We at Spardha make sure that
-                          you get an experience worth cherishing and some beautiful
-                          memories to treasure forever!
+                        It's about making memories, and living them. Every time you win a race, or lose your voice cheering for your team, it adds up to your moments. We at Spardha make sure that you get an experience worth cherishing and some beautiful memories to treasure forever!
                           <br />
                         </p>
                       </div>
