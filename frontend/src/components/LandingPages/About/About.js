@@ -5,9 +5,7 @@ import hype from './hype.png';
 import takeback from './takeback.png';
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
-import Gallery from '../Gallery/Gallery';
 import FooterMain from '../Footer/Footer';
-
 const About = () => {
   return (
     <>
@@ -17,20 +15,26 @@ const About = () => {
           <h2
             className={styles['mb-1']}
             style={{
-              color: '#760E53',
-              fontFamily: 'Poppins',
+              // fontSize: '3.5em',
+              fontfamily: 'Poppins',
               margin: '0px',
+              color: 'rgba(73, 130, 246, 1)',
+
               marginBottom: '20px',
               fontWeight: '700',
-              fontSize: '30px',
+              fontSize: '40px ',
               letterSpacing: '2px',
-              textDecoration: 'underline',
+              // textDecoration:"underline"
+
             }}
           >
             About&nbsp;Us
           </h2>
           <div className={styles.scrollcontainer}>
             <div className={styles.container}>
+
+
+
               <div className={styles['row']}>
                 <div className={styles['col-md-12']}>
                   <div className={styles['block-7']} id={styles['borderline']}>
@@ -49,7 +53,6 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className={styles.midsection}>
                   <div className={styles['col-md-4']}>
                     <div className={styles['block-7']}>
@@ -66,20 +69,16 @@ const About = () => {
                         <h3
                           className={styles['text-wrap']}
                           style={{
+                            fontFamily: 'Poppins',
+                            color: 'rgba(73, 130, 246, 1)',
                             fontSize: '22px',
-                            color: 'black',
-                            lineHeight: '1.4',
-                            fontWeight: 'bold',
+                            lineHeight: '1.2',
                           }}
                         >
                           Hype&nbsp;Around Spardha
                         </h3>
                         <p className={`${styles.para1}`}>
-                          For starters, 2023 will witness the 38th edition of
-                          Spardha, a festival which has grown from strength to
-                          strength ever since its inception. After all these
-                          successful editions, Spardha, today stands as the largest
-                          inter-collegiate sporting event of India.
+                        For starters, 2024 will witness the 39th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
                           <br />
                         </p>
                       </div>
@@ -160,7 +159,7 @@ const About = () => {
               </div>
             </div>
             <Greencounter />
-            <Gallery />
+
           </div>
         </section>
         <div style={{ marginBottom: '100px' }}></div>
