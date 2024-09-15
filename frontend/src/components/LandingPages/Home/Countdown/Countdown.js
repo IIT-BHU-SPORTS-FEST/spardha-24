@@ -47,7 +47,7 @@ class CountdownTimer extends Component {
     return (
       
         <div class="countdowntimer">
-          <h1 > 18-20 OCTOBER 2024</h1>
+          <h1 > 18-20 OCTOBER 2024 </h1>
           <div class="countdown">
             <span class="hours">
               <div class="time">
