@@ -51,14 +51,14 @@ const Contact = () => {
             <h2>Contact Us</h2>
           </div>
 
-        
+      
           <div className='hamburger-container'>
-
+          
             <button className='hamburger' onClick={toggleMenu}>
-              &#9776;
+              &#9776; 
             </button>
 
-
+            
             <div className='selected-heading'>
               {selectedCategory}
             </div>
