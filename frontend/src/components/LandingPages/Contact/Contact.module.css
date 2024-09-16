@@ -6,7 +6,7 @@ hr {
   padding-top: 2%;
 }
 #contactus {
-  position: relative;
+  position: fixed;
 }
 .container {
   display: flex;

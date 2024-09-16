@@ -29,7 +29,7 @@ const About = () => {
 
                    }}
                   >
-                  About&nbsp;Us
+                   About&nbsp;Us
                   </h2>
           <div className={styles.scrollcontainer}>
             <div className={styles.container}>
