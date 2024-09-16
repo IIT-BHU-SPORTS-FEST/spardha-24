@@ -7,6 +7,8 @@
 
 .ftco-counter {
   padding: 7em 0;
+  background: rgba(2, 0, 33, 1);
+
   
 }
 
@@ -29,7 +31,8 @@
   right: 0;
   left: 0;
   height: 150%;
-  
+  background: rgba(2, 0, 33, 1);
+
   opacity: 0.8;
 }
 
@@ -39,7 +42,9 @@
   height: 150%;
   padding-top: 50px;
   padding-bottom: 50px;
-  background: white;
+  /* background: white; */
+  background: rgba(2, 0, 33, 1);
+
   border-radius: 20px;
 }
 
@@ -84,6 +89,8 @@
 .col_md_12 {
   position: relative;
   width: 100%;
+  background: rgba(2, 0, 33, 1);
+
   min-height: 1px;
   /* padding-right: 15px;
     padding-left: 15px; */
@@ -176,9 +183,12 @@
   vertical-align: middle;
   border-radius: 115px;
   border-width: 4px;
-  border-color:#760E53 ;
+  border-color: 'white';
+  /* border-color:#760E53 ; */
   border-style: solid;
-  color: #760E53;
+ 
+  /* color: #760E53; */
+  color: white;
   padding: 65px 5px;
   text-align: center;
   font-family: 'Poppins';
@@ -189,6 +199,7 @@
   letter-spacing: 3px;
   font-weight: 800;
   font-size: 50px;
-  color:#760E53;
+color: white;
+  /* color:#760E53; */
  
 }

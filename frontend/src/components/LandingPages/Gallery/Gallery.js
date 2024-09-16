@@ -11,7 +11,7 @@ const Gallery = () => {
   const toggle = () => setModal(!modal);
   const [item, setItem] = useState(0);
   const [check, setCheck] = useState(false);
-
+  
   useEffect(() => {
     if (check) {
       if (!modal) {
