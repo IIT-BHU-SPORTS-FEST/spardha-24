@@ -105,9 +105,9 @@ const PersonDetails = (props) => {
   return (
     <div className={`${styles.person_details}`}>
     <br />
-      <span className={`${styles.content_header}`}>{props.name}<br /></span>
-      <span className={`${styles.content}`}>{props.contact}<br /></span>
-      <span className={`${styles.content}`}>{props.email}<br /><br /></span>
+      <span className={`${styles.content_header}`} style={{ color: 'white' }}>{props.name}<br /></span>
+      <span className={`${styles.content}`} style={{ color: 'white' }}>{props.contact}<br /></span>
+      <span className={`${styles.content}`} style={{ color: 'white' }}>{props.email}<br /><br /></span>
     </div>
   );
 };
