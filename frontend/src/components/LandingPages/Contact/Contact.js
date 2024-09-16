@@ -5,7 +5,7 @@ import Card from './Card/Card';
 
 const Contact = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [menuActive, setMenuActive] = useState(false); 
+  const [menuActive, setMenuActive] = useState(false);  
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -13,7 +13,7 @@ const Contact = () => {
   };
 
   const toggleMenu = () => {
-    setMenuActive(!menuActive);
+    setMenuActive(!menuActive); 
   };
 
   const renderCards = () => {
@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
           </div>
 
-
+        
           <ul className={`heading2 ${menuActive ? 'active' : ''}`}>
             <li
               onClick={() => handleCategoryClick('All')}
