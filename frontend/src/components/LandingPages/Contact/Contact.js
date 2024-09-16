@@ -51,7 +51,7 @@ const Contact = () => {
             <h2>Contact Us</h2>
           </div>
 
-
+        
           <div className='hamburger-container'>
 
             <button className='hamburger' onClick={toggleMenu}>
@@ -64,7 +64,7 @@ const Contact = () => {
             </div>
           </div>
 
-        
+
           <ul className={`heading2 ${menuActive ? 'active' : ''}`}>
             <li
               onClick={() => handleCategoryClick('All')}
