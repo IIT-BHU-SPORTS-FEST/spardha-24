@@ -16,7 +16,7 @@ import {
   Row,
 } from 'reactstrap';
 import styles from '../Signup/Signup.module.css';
-import { FaEnvelope, FaKey, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaKey } from 'react-icons/fa';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
 import { useNavigate } from 'react-router';
