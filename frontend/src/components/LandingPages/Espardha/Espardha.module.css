@@ -1,7 +1,11 @@
+.espardhaWrapper {
+  padding-bottom: 100px;
+}
+
 .ftco_section {
   margin: 100px 200px 0 200px;
 
-  position: fixed;
+  position: relative;
 }
 .container {
   width: 100%;
@@ -10,12 +14,7 @@
   margin-right: auto;
   margin-left: auto;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  height: 150%;
-  padding-bottom: 50px;
-}
+
 .container {
   /* position: fixed; */
   border-radius: 20px;
@@ -60,7 +59,6 @@
   text-align: center;
   font-family: Poppins, sans-serif;
   /* font-size: 28px; */
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
@@ -132,7 +130,6 @@
   text-align: center;
   font-family: Poppins, sans-serif;
   /* font-size: 24px; */
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-decoration-line: underline;

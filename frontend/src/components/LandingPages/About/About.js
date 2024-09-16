@@ -5,7 +5,8 @@ import hype from './hype.png';
 import takeback from './takeback.png'
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
-import Gallery from '../Gallery/Gallery'
+import Gallery from '../Gallery/Gallery';
+import FooterMain from '../Footer/Footer';
 const About = () => {
   return (
     <>
@@ -15,21 +16,20 @@ const About = () => {
                   <h2
                     className={styles['mb-1']}
                     style={{
-                      color: '#760E53',
                       // fontSize: '3.5em',
-                      fontfamily: 'Poppins',
-                      margin:'0px',
-                      marginBottom:'20px',
-                      fontWeight: '700',
-                      fontSize: '30px ',
-                
-                      
-                      letterSpacing: '2px',
-                      textDecoration:"underline"
+                    fontfamily: 'Poppins',
+                    margin: '0px',
+                   color: 'rgba(73, 130, 246, 1)',
 
-                    }}
+                   marginBottom: '20px',
+                   fontWeight: '700',
+                   fontSize: '40px ',
+                   letterSpacing: '2px',
+                   // textDecoration:"underline"
+
+                   }}
                   >
-                    About&nbsp;Us
+                  About&nbsp;Us
                   </h2>
           <div className={styles.scrollcontainer}>
             <div className={styles.container}>
@@ -169,7 +169,9 @@ const About = () => {
             <Gallery />
           </div>
         </section>
+        <div style={{ marginBottom: '100px' }}></div>
       </div>
+      <FooterMain />
     </>
   );
 };
