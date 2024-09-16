@@ -53,18 +53,18 @@ const Contact = () => {
 
       
           <div className='hamburger-container'>
-          
+        
             <button className='hamburger' onClick={toggleMenu}>
               &#9776; 
             </button>
 
-            
+                     
             <div className='selected-heading'>
               {selectedCategory}
             </div>
           </div>
 
-
+        
           <ul className={`heading2 ${menuActive ? 'active' : ''}`}>
             <li
               onClick={() => handleCategoryClick('All')}
