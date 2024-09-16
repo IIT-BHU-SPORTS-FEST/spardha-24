@@ -19,9 +19,18 @@ const Contact = () => {
   const renderCards = () => {
     switch (selectedCategory) {
       case 'All':
-        return <><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /></>;
+        return <><Card  mainImage='/images/Contact/cimages/Convenor2.jpeg' name="Sarthak Gupta" position="Convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenor21.jpeg' name="Shubham Sahu" position="Co-convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convenor"/>
+        <Card /><Card /><Card /><Card /><Card /></>;
       case 'Convenors':
-        return <><Card /><Card /></>;
+        return <>
+        <Card  mainImage='/images/Contact/cimages/Convenor2.jpeg' name="Sarthak Gupta" position="Convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenor21.jpeg' name="Shubham Sahu" position="Co-convenor"/>
+        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convenor"/>
+        </>;
       case 'Publicity':
         return <><Card /><Card /><Card /><Card /></>;
       case 'Marketing':

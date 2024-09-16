@@ -1,5 +1,5 @@
 .containercard {
-    height: 24rem;
+    height: 24.5rem;
     width: 17rem;
     background-color: rgba(0, 0, 0, 1);
     margin: 0;
@@ -73,7 +73,12 @@ hr {
 }
 @media (max-width: 432px){
     .containercard{
-        scale: 0.9;
+        scale: 0.8;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .content123{
+        row-gap: 0;
     }
     .info h2{
         font-size: 1.2rem;
