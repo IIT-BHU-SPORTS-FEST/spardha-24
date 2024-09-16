@@ -51,7 +51,7 @@ const FooterMain = () => {
            <br/>
             Sarthak Gupta
             <br />
-            +91 63920 03370
+            Convener.spardha@itbhu.ac.in
           </pre>
           <h3 className="footer-heading">Follow Us</h3>
           <div className="footer-icons">
