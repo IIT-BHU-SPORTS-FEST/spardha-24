@@ -152,7 +152,7 @@ function Header() {
                     About
                   </NavHashLink>
                 </NavItem>
-                <NavItem className={styles['nav-items']}>
+                {/* <NavItem className={styles['nav-items']}>
                   <NavHashLink
                     exact="true"
                     to="/gallery#gallery"
@@ -181,7 +181,7 @@ function Header() {
                   >
                     Gallery
                   </NavHashLink>
-                </NavItem>
+                </NavItem> */}
                 {/* <NavItem className={styles['nav-items']}>
                   <NavHashLink
                     exact="true"

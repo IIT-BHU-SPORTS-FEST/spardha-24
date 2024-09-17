@@ -1,25 +1,22 @@
 import React from 'react';
 import './Home.css';
 import Mid from '../MiddleSection/MiddleSection';
-import Carousel from '../Carousel/Carouselhp';
-import CountdownTimer from '../Countdown/Countdown';
-/*import Foot from '../HomeBottom/HomeBottom';*/
-// import Footer from '../Footer/Footer';
+import Bgimg from '../Images/newbg.jpg';
+// import Footer from '../Footer/Footer'
+
 
 function App() {
   return (
     <div className="sctn">
-      <div className="bg">
-        <Carousel />
+      <div className="bg" style={{ backgroundImage: `url(${Bgimg})` }}>
       </div>
-      <div className="hehe">
+      {/* Main Content Section */}
+      <div className="main-content">
         <div>
           <Mid />
-          {/* <Footer/> */}
         </div>
         <div>
-          {/*<Foot />*/}
-          <CountdownTimer />
+          {/* <Footer /> */}
         </div>
       </div>
     </div>
