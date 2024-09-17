@@ -28,12 +28,16 @@ const Contact = () => {
         return <>
         <Card  mainImage='/images/Contact/cimages/Convenor2.jpeg' name="Sarthak Gupta" position="Convener" email="sarthak.gupta.civ21@itbhu.ac.in" />
 
-        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convener" email="adarsh.raj.met21@itbhu.ac.in" />
+        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convener" email="bhumika.student.met21@itbhu.ac.in" />
 
         <Card mainImage='/images/Contact/cimages/Co-convenor21.jpeg' name="Shubham Sahu" position="Co-convener" email="shubham.sahu.
         cer21@itbhu.ac.in" />
 
-        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convener" email="bhumika.student.met21@itbhu.ac.in" />
+        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convener" email="adarsh.raj.met21@itbhu.ac.in" />
+
+        
+
+        
 
         </>;
       case 'Publicity':
@@ -55,7 +59,7 @@ const Contact = () => {
       return <>
       <Card name="Ojas Raj " email="ojas.raj.civ22@itbhu.ac.in " phone="7974552339 "/>
       <Card name="Vinay Dadri " email="vinay.kumar.mec22@itbhu.ac.in" phone="8529552845"/>
-      <Card name="Divyanshi Gautam " email="divyanshi.gautam.cer22@itbhu.ac.in" phone="8707090583"/>
+      <Card name="Sandeep sarkar" email="Sandeep.sarkar.cse22@itbhu.ac.in" phone="+91 7721-877086"/>
       </>;
       default:
         return null;
