@@ -14,7 +14,7 @@ const Sponsors = () => {
       <div className={styles.maindiv}>
 
         <h2 className={`${styles.mb_1} ${styles.H2}`} >
-          Our Past Sponsors
+          OUR PAST SPONSORS
         </h2>
 
 
@@ -37,7 +37,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>My Rankers</p>
+              {/* <p>My Rankers</p> */}
 
             </div>
 
@@ -53,7 +53,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>IITian Trader</p>
+              {/* <p>IITian Trader</p> */}
 
             </div>
 
@@ -69,7 +69,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Amul</p>
+              {/* <p>Amul</p> */}
 
             </div>
             <div
@@ -84,7 +84,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>KTM</p>
+              {/* <p>KTM</p> */}
 
             </div>
 
@@ -111,7 +111,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Toyota</p>
+              {/* <p>Toyota</p> */}
             </div>
 
             <div
@@ -125,7 +125,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Amar Ujala</p>
+              {/* <p>Amar Ujala</p> */}
             </div>
             <div
               className={`${styles.col_2} ${styles.padding} `}
@@ -139,7 +139,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Ipsator</p>
+              {/* <p>Ipsator</p> */}
 
             </div>
 
@@ -154,7 +154,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Balle Baazi</p>
+              {/* <p>Balle Baazi</p> */}
 
             </div>
 
@@ -175,7 +175,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>DGP Cafe</p>
+              {/* <p>DGP Cafe</p> */}
             </div>
 
             <div
@@ -190,7 +190,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Cuts & Looks</p>
+              {/* <p>Cuts & Looks</p> */}
             </div>
 
 
@@ -206,7 +206,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Paramount Dealz</p>
+              {/* <p>Paramount Dealz</p> */}
 
             </div>
 
@@ -224,7 +224,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Hotel Castillo</p>
+              {/* <p>Hotel Castillo</p> */}
 
             </div>
           </div>
@@ -245,7 +245,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Shri Raj Bandhu</p>
+              {/* <p>Shri Raj Bandhu</p> */}
             </div>
 
             <div
@@ -260,7 +260,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Sumangal Jewelers</p>
+              {/* <p>Sumangal Jewelers</p> */}
             </div>
 
 
@@ -276,7 +276,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Terra Cotta Cafe</p>
+              {/* <p>Terra Cotta Cafe</p> */}
 
             </div>
 
@@ -294,7 +294,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Pahuna Kitchen</p>
+              {/* <p>Pahuna Kitchen</p> */}
 
             </div>
 
@@ -316,7 +316,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Laxmi Cycles</p>
+              {/* <p>Laxmi Cycles</p> */}
             </div>
 
             <div
@@ -331,7 +331,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Sankalan</p>
+              {/* <p>Sankalan</p> */}
             </div>
 
 
@@ -347,7 +347,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Sandeep Sports</p>
+              {/* <p>Sandeep Sports</p> */}
 
             </div>
 
@@ -365,7 +365,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Vishal Bakers</p>
+              {/* <p>Vishal Bakers</p> */}
 
             </div>
 
@@ -386,7 +386,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>PayTM</p>
+              {/* <p>PayTM</p> */}
             </div>
 
             <div
@@ -401,7 +401,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Pepsi</p>
+              {/* <p>Pepsi</p> */}
             </div>
 
 
@@ -417,7 +417,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Puma</p>
+              {/* <p>Puma</p> */}
 
             </div>
 
@@ -435,7 +435,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Red Bull</p>
+              {/* <p>Red Bull</p> */}
 
             </div>
 
@@ -453,7 +453,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>JK Cement</p>
+              {/* <p>JK Cement</p> */}
             </div>
 
             <div
@@ -468,7 +468,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Aao ji</p>
+              {/* <p>Aao ji</p> */}
             </div>
 
 
@@ -484,7 +484,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>cafeDeCoop</p>
+              {/* <p>cafeDeCoop</p> */}
 
             </div>
 
@@ -502,7 +502,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>English Masala</p>
+              {/* <p>English Masala</p> */}
 
             </div>
 
@@ -525,7 +525,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Reebok</p>
+              {/* <p>Reebok</p> */}
             </div>
 
             <div
@@ -539,7 +539,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Mahindra</p>
+              {/* <p>Mahindra</p> */}
             </div>
 
 
@@ -556,7 +556,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Hero Motocorp.</p>
+              {/* <p>Hero Motocorp.</p> */}
 
             </div>
 
@@ -575,7 +575,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Fasttrack</p>
+              {/* <p>Fasttrack</p> */}
 
             </div>
 
@@ -605,7 +605,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>NTPC</p>
+              {/* <p>NTPC</p> */}
             </div>
 
             <div
@@ -620,7 +620,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Sail</p>
+              {/* <p>Sail</p> */}
             </div>
 
 
@@ -636,7 +636,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>IOCL</p>
+              {/* <p>IOCL</p> */}
 
             </div>
 
@@ -654,7 +654,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>HPCL</p>
+              {/* <p>HPCL</p> */}
 
             </div>
 
@@ -678,7 +678,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Oriental Bank</p>
+              {/* <p>Oriental Bank</p> */}
             </div>
 
             <div
@@ -692,7 +692,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Aditya Birla </p>
+              {/* <p>Aditya Birla </p> */}
             </div>
 
 
@@ -709,7 +709,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Swiggy</p>
+              {/* <p>Swiggy</p> */}
 
             </div>
 
@@ -728,7 +728,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Bank of India</p>
+              {/* <p>Bank of India</p> */}
 
             </div>
 
@@ -757,7 +757,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>UCO Bank</p>
+              {/* <p>UCO Bank</p> */}
             </div>
 
             <div
@@ -772,7 +772,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>BIG FM</p>
+              {/* <p>BIG FM</p> */}
             </div>
 
 
@@ -788,7 +788,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>VLCC</p>
+              {/* <p>VLCC</p> */}
 
             </div>
 
@@ -806,7 +806,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Zebronics</p>
+              {/* <p>Zebronics</p> */}
 
             </div>
 
@@ -828,7 +828,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Heini Sports</p>
+              {/* <p>Heini Sports</p> */}
             </div>
 
             <div
@@ -842,7 +842,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Aquivo</p>
+              {/* <p>Aquivo</p> */}
             </div>
 
 
@@ -859,7 +859,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Bank of Baroda</p>
+              {/* <p>Bank of Baroda</p> */}
 
             </div>
 
@@ -878,7 +878,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>BSA</p>
+              {/* <p>BSA</p> */}
 
             </div>
 
@@ -898,7 +898,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Cafe Coffee Day</p>
+              {/* <p>Cafe Coffee Day</p> */}
             </div>
 
             <div
@@ -913,7 +913,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Cosco</p>
+              {/* <p>Cosco</p> */}
             </div>
 
 
@@ -929,7 +929,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Hindustan Times</p>
+              {/* <p>Hindustan Times</p> */}
 
             </div>
 
@@ -947,7 +947,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Times Of India</p>
+              {/* <p>Times Of India</p> */}
 
             </div>
 
@@ -968,7 +968,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>SBI</p>
+              {/* <p>SBI</p> */}
             </div>
 
             <div
@@ -982,7 +982,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Hercules</p>
+              {/* <p>Hercules</p> */}
             </div>
 
 
@@ -999,7 +999,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>GeoSenz</p>
+              {/* <p>GeoSenz</p> */}
 
             </div>
 
@@ -1018,7 +1018,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Godrej</p>
+              {/* <p>Godrej</p> */}
 
             </div>
 
@@ -1040,7 +1040,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Dominos</p>
+              {/* <p>Dominos</p> */}
             </div>
 
             <div
@@ -1055,7 +1055,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>HP</p>
+              {/* <p>HP</p> */}
             </div>
 
 
@@ -1071,7 +1071,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>iNext</p>
+              {/* <p>iNext</p> */}
 
             </div>
 
@@ -1089,7 +1089,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Intel</p>
+              {/* <p>Intel</p> */}
 
             </div>
 
@@ -1110,7 +1110,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>ITC</p>
+              {/* <p>ITC</p> */}
             </div>
 
             <div
@@ -1124,7 +1124,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Jabong</p>
+              {/* <p>Jabong</p> */}
             </div>
 
 
@@ -1141,7 +1141,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Microsoft</p>
+              {/* <p>Microsoft</p> */}
 
             </div>
 
@@ -1160,7 +1160,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>GrabOn</p>
+              {/* <p>GrabOn</p> */}
 
             </div>
 
@@ -1182,7 +1182,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Pizza Hut</p>
+              {/* <p>Pizza Hut</p> */}
             </div>
 
             <div
@@ -1197,7 +1197,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>US Polo</p>
+              {/* <p>US Polo</p> */}
             </div>
 
 
@@ -1213,7 +1213,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Smile Foundation</p>
+              {/* <p>Smile Foundation</p> */}
 
             </div>
 
@@ -1231,7 +1231,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>UPSACS</p>
+              {/* <p>UPSACS</p> */}
 
             </div>
 
@@ -1252,7 +1252,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Toni & Guy</p>
+              {/* <p>Toni & Guy</p> */}
             </div>
 
             <div
@@ -1266,7 +1266,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Fisto</p>
+              {/* <p>Fisto</p> */}
             </div>
 
 
@@ -1283,7 +1283,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>NTD IN</p>
+              {/* <p>NTD IN</p> */}
 
             </div>
 
@@ -1302,7 +1302,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Unite Foundation</p>
+              {/* <p>Unite Foundation</p> */}
 
             </div>
 
@@ -1323,7 +1323,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Peta India</p>
+              {/* <p>Peta India</p> */}
             </div>
 
             <div
@@ -1338,7 +1338,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>News Times</p>
+              {/* <p>News Times</p> */}
             </div>
 
 
@@ -1354,7 +1354,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Indian Idol</p>
+              {/* <p>Indian Idol</p> */}
 
             </div>
 
@@ -1372,7 +1372,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Geet Jewels</p>
+              {/* <p>Geet Jewels</p> */}
 
             </div>
 
@@ -1393,7 +1393,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Dainik Jagran</p>
+              {/* <p>Dainik Jagran</p> */}
             </div>
 
             <div
@@ -1407,7 +1407,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Amar Ujala</p>
+              {/* <p>Amar Ujala</p> */}
             </div>
 
 
@@ -1424,7 +1424,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Manpasand</p>
+              {/* <p>Manpasand</p> */}
 
             </div>
 
@@ -1443,7 +1443,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>BYJU's</p>
+              {/* <p>BYJU's</p> */}
 
             </div>
 
@@ -1464,7 +1464,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Ambition Gurukul</p>
+              {/* <p>Ambition Gurukul</p> */}
             </div>
 
             <div
@@ -1478,7 +1478,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>IMS</p>
+              {/* <p>IMS</p> */}
             </div>
 
 
@@ -1495,7 +1495,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Extramarks</p>
+              {/* <p>Extramarks</p> */}
 
             </div>
 
@@ -1514,7 +1514,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>IES Master</p>
+              {/* <p>IES Master</p> */}
 
             </div>
 
@@ -1535,7 +1535,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Aakash</p>
+              {/* <p>Aakash</p> */}
             </div>
 
             <div
@@ -1549,7 +1549,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>What After College</p>
+              {/* <p>What After College</p> */}
             </div>
 
 
@@ -1566,7 +1566,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Doorpix</p>
+              {/* <p>Doorpix</p> */}
 
             </div>
 
@@ -1585,7 +1585,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Heritage</p>
+              {/* <p>Heritage</p> */}
 
             </div>
 
@@ -1606,7 +1606,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Diamond</p>
+              {/* <p>Diamond</p> */}
             </div>
 
             <div
@@ -1620,7 +1620,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Grapevine</p>
+              {/* <p>Grapevine</p> */}
             </div>
 
 
@@ -1637,7 +1637,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Chetmani</p>
+              {/* <p>Chetmani</p> */}
 
             </div>
 
@@ -1656,7 +1656,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>The Education Tree</p>
+              {/* <p>The Education Tree</p> */}
 
             </div>
 
@@ -1678,7 +1678,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Knockout</p>
+              {/* <p>Knockout</p> */}
             </div>
 
             <div
@@ -1692,7 +1692,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Presto</p>
+              {/* <p>Presto</p> */}
             </div>
 
 
@@ -1709,7 +1709,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Doodh Booth</p>
+              {/* <p>Doodh Booth</p> */}
 
             </div>
 
@@ -1728,7 +1728,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Ming Garden</p>
+              {/* <p>Ming Garden</p> */}
 
             </div>
 
@@ -1749,7 +1749,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Basant Bahar</p>
+              {/* <p>Basant Bahar</p> */}
             </div>
 
             <div
@@ -1763,7 +1763,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Shri Infotec</p>
+              {/* <p>Shri Infotec</p> */}
             </div>
 
 
@@ -1780,7 +1780,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Oranz Body Spa Salon</p>
+              {/* <p>Oranz Body Spa Salon</p> */}
 
             </div>
 
@@ -1799,7 +1799,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Red FM</p>
+              {/* <p>Red FM</p> */}
 
             </div>
 
@@ -1819,7 +1819,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Sapphire Watches</p>
+              {/* <p>Sapphire Watches</p> */}
             </div>
 
             <div
@@ -1833,7 +1833,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>Seed Infotech</p>
+              {/* <p>Seed Infotech</p> */}
             </div>
 
 
@@ -1850,7 +1850,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>She Creations</p>
+              {/* <p>She Creations</p> */}
 
             </div>
 
@@ -1869,7 +1869,7 @@ const Sponsors = () => {
                   alt=""
                 />
               </a>
-              <p>Web Com System</p>
+              {/* <p>Web Com System</p> */}
 
             </div>
 
@@ -1890,7 +1890,7 @@ const Sponsors = () => {
 
                 />
               </a>
-              <p>Siti Networks</p>
+              {/* <p>Siti Networks</p> */}
             </div>
 
             <div
@@ -1904,7 +1904,7 @@ const Sponsors = () => {
                   alt=""
 
                 />  </a>
-              <p>The Souled Store</p>
+              {/* <p>The Souled Store</p> */}
             </div>
 
 
@@ -1921,7 +1921,7 @@ const Sponsors = () => {
                   alt="" sors
                 />
               </a>
-              <p>VMart</p>
+              {/* <p>VMart</p> */}
 
             </div>
 

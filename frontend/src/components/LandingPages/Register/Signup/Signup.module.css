@@ -4,7 +4,7 @@
 .heading {
   text-align: center;
   color: #760E53;
-  font-family: 'League Spartan';
+  font-family: 'Poppins';
   font-size: 40px;
   font-weight: bold;
 }
@@ -14,18 +14,19 @@
   padding-right: 7px;
   padding-top: 10px;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: rgb(2, 0, 33,1.3);
   border-radius: 30px;
 }
 
 .form-group {
   margin-bottom: 15px;
+  padding-bottom: 24px;
   font-family: 'Poppins', sans-serif;;
   font-size: 14px;
   /* border-radius: 10px; */
   /* background-color: #FFFFFF; */
   line-height: 1.42857143;
-  color: #333;
+  color: #ffffff;
 }
 
 .btn-block {
@@ -33,12 +34,12 @@
   width: 30%;
   margin: auto;
   box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'League Spartan';
-  font-weight: 800 !important;
-  text-transform: uppercase;
-  margin: 1em auto !important;
-  background-color:#760E53 !important;
+  line-height: 38px;
+  font-size: 30px;
+  font-family: 'Poppins';
+  font-weight: 700 !important;
+  margin: 2.3rem auto !important;
+  background-color:#4982F6 !important;
 }
 
 .btn-block:active,
@@ -48,9 +49,9 @@
 
 .panel {
   box-sizing: border-box;
-  background-color: #D9D9D9 !important ;
+  background-color: black !important ;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 30px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -59,30 +60,32 @@
 
 .panel-heading {
   background-color: #f2f2f2 !important;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   padding: 10px 15px;
   padding-bottom: 0;
   /* border-radius: 30px; */
-  border-bottom: 1px solid transparent;
+  /* border-bottom: 1px solid transparent; */
   border-bottom-color: transparent;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: #333;
-  background-color: #D9D9D9 !important;
+  background-color: #020021 !important;
 }
 
 .panel-title-1 {
-  font-size: 18px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 700;
   text-align: left !important;
   width:67px;
   margin-bottom: 0 !important;
   color:#000000;
   margin-left: 7%;
-
 }
 
 .panel-title-2 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: left !important;
   width:50px;
   margin-bottom: 0 !important;
@@ -98,7 +101,6 @@
   color:#000000;
   padding-right: 7%;
 }
-
 .panel-title-1:hover {
   cursor: pointer;
 }
@@ -116,14 +118,17 @@
   margin-bottom: 0px !important;
   font-weight: 700;
   font-size: 14px;
+  color: white;
 }
 
 .form-control {
   height: 34px;
   font-size: 14px !important;
-  color: #555;
+  /* color: #555; */
   border-left: none !important;
   margin-bottom: -12px;
+  color: white;
+  background-color: #020021;
 }
 
 .form-control:focus,
@@ -132,6 +137,8 @@
   box-shadow: none !important;
   border-color: dodgerblue !important;
   box-shadow: 3px 1px 8px rgba(102, 175, 233, 0.6) !important;
+  background-color: #020021;
+  color: white;
 }
 
 .form-text {
@@ -140,7 +147,7 @@
   height: 34px;
   padding-left: 0.4rem !important;
   padding-right: 0.1rem !important;
-  background-color: white !important;
+  background-color: #020021 !important;
   border-right: none !important;
   color: #aaa;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -150,8 +157,12 @@
   color: dodgerblue !important;
   border-color: dodgerblue !important;
   box-shadow: 1px 1px 8px rgba(102, 175, 233, 0.6);
-  background-color: white;
+  background-color: rgb(10, 7, 7);
   transition: none !important;
+}
+
+.input-group input::placeholder{
+  color: WHITE;
 }
 
 .register-page-form-header{
@@ -175,10 +186,11 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: #760E53 !important;
+  /* background: #e3d8d8 !important; */
 }
 .signup_note{
   display: flex;
+  border: none;
   height: 20vh !important;
   /* justify-content: center; */
   align-items: center !important;
@@ -187,6 +199,7 @@
 
 @media (max-width: 1180px) {
   .panel-title-1{
+  white-space: nowrap;
   font-size: 16px;
   text-align: left !important;
   width:75px;
@@ -344,3 +357,4 @@
 .abc123{
   margin-bottom: -12px;
 }
+

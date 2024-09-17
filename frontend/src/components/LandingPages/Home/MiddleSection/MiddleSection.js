@@ -1,47 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './MiddleSection.css';
 import { NavHashLink } from 'react-router-hash-link';
-// import Date1 from '../DaysLeft/DaysLeft';
-import Day_remaining from '../Images/whatsappimage3.png';
-function Mid() {
-  return (
-    <div>
-      <div className="container-home">
-        <div className="left-box">
-          <div className="heading1">
-            SPARDHA 2024 <br />
-            <div className="subheading1">MOULDING CHAMPIONS</div>
-          </div>
-          <div className="description">
-            Annual sports festival of IIT (BHU) under the Games and Sports
-            Council.
-          </div>
 
-          <div className="button-container">
-            <NavHashLink to="/register/signup#register">
-              <button className="btn1">LOGIN&nbsp;/&nbsp;SIGNUP</button>
-            </NavHashLink>
-            <NavHashLink to="/matches">
-              {' '}
-              <button className="btn2">MATCHES</button>
-            </NavHashLink>
+function Mid() {
+  const [daysLeft, setDaysLeft] = useState(0);
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const eventDate = new Date('2024-10-18');
+      const currentDate = new Date();
+      const timeDifference = eventDate - currentDate;
+      const days = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+      setDaysLeft(days);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="container-home">
+      <div className="left-box">
+        <div className="countdown-container">
+          <div className="count">
+            <span className="before-day">{daysLeft - 1}</span>
+            <span className="current-day">{daysLeft}</span>
+            <span className="after-day">{daysLeft + 1}</span>
+          </div>
+          <div className="days">
+            <p className="days-text">DAYS TO GO</p>
           </div>
         </div>
-        <div className="right-box">
-          <div className="card">
-            {/* <div className='cdate'>{Date1()}</div> */}
-            <div className="cdate">
-              <img
-                src={Day_remaining}
-                className="day_remaining_image"
-                alt="Day_remaining"
-              />
-            </div>
-            {/* <div className='ctext'>Day Remaining</div> */}
-          </div>
+
+        <div className="button-container">
+          <NavHashLink to="/register/signup#register">
+            <button className="btn2">REGISTER</button>
+          </NavHashLink>
+          <NavHashLink to="/matches">
+            <button className="btn1">MATCHES</button>
+          </NavHashLink>
         </div>
       </div>
     </div>
   );
 }
+
 export default Mid;

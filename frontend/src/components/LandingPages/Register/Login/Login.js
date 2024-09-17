@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { motion ,AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Alert,
   Button,
@@ -16,11 +16,7 @@ import {
   Row,
 } from 'reactstrap';
 import styles from '../Signup/Signup.module.css';
-import {
-  FaEnvelope,
-  FaKey,
-  FaPaperPlane,
-} from 'react-icons/fa';
+import { FaEnvelope, FaKey } from 'react-icons/fa';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
 import { useNavigate } from 'react-router';
@@ -60,8 +56,7 @@ function Login() {
     }
 
     let baseUrl = process.env.REACT_APP_BASE_URL;
-    if(baseUrl.substring(baseUrl.length-1)!=="/")
-    baseUrl+='/'
+    if (baseUrl.substring(baseUrl.length - 1) !== '/') baseUrl += '/';
     console.log(`${baseUrl}auth/login/`);
     axios
       .post(`${baseUrl}auth/login/`, {
@@ -69,7 +64,7 @@ function Login() {
         password: password.value,
       })
       .then((res) => {
-        console.log("login resp",res)
+        console.log('login resp', res);
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('role', res.data.role);
         dispatchToast({
@@ -132,143 +127,221 @@ function Login() {
   });
   return (
     <AnimatePresence>
-    <motion.div 
-    id="loginDiv" ref={ref_container} >
-      <div className="col-sm-12">
-
-      <Alert
-        color="success"
-        className={`${styles['signup_note']} py-2`}
-        style={{
-            fontSize: '14px',
-            height:'80px ! important',
-            fontFamily: 'Poppins, sans-serif',
-            background: "#760E53",
-            color:'#FFFFFF ',
-            fontWeight:'400',
-            borderRadius:'15px',
-            // position: "fixed",
-            // zIndex: 1,
-            // top: "0",
-            // right: "0",
-            // bottom: "0",
-            // left: "0",
-            opacity: "1",
-            transition: "all .2s",
-            visibility:  "visible",
-        }}
-        
-      >
-        {/* <b> Account not yet created? </b>
+      <motion.div id="loginDiv" ref={ref_container}>
+        <div className="col-sm-12">
+          <Alert
+            color="success"
+            className={`${styles['signup_note']} py-2`}
+            style={{
+              fontSize: '14px',
+              height: '80px ! important',
+              fontFamily: 'Poppins, sans-serif',
+              background: '#020021',
+              color: '#FFFFFF ',
+              fontWeight: '400',
+              borderRadius: '15px',
+              // position: "fixed",
+              // zIndex: 1,
+              // top: "0",
+              // right: "0",
+              // bottom: "0",
+              // left: "0",
+              opacity: '1',
+              transition: 'all .2s',
+              visibility: 'visible',
+            }}
+          >
+            {/* <b> Account not yet created? </b>
         Click{' '}
         <Link to="/register/signup" style={{ textDecoration: 'none' }}>
           here{' '}
         </Link>{' '}
         to create one
         <br /> */}
-        <motion.div 
-          initial={{opacity:0}}
-          animate={{y:0,opacity:1}}
-          exit={{y:100,opacity:1}}
-          transition={{ duration: 0.5 }}
-        ><strong> Account not activated? </strong>
-        Click{' '}
-        <Link to="/register/verify" style={{ textDecoration: 'none' }}>
-          {' '}
-          here{' '}
-        </Link>
-        to verify your account.
-        <br />
-        <strong>Forgot Password? </strong>Click{' '}
-        <Link to="/register/forgot" className="text-decoration-none">
-          here
-        </Link></motion.div>
-      </Alert>
-      </div>
-      <Form className={`${styles['form-horizontal']}`}>
-        <div
-          className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
-          style={{ marginTop: '12px' }}
-        >
-          <div className={`${styles.panel}`}>
-            <div className={`${styles['panel-heading']}`}>
-              <div className={`${styles['register-page-form-header']}`}>
-                <h4
-                  className={`${styles['panel-title-1']} text-center`}
-                  
-                  
-                >
-                <Link to="/register/signup"  style={{ textDecoration: 'none',color: '#000000'}}>Sign up</Link> 
-                {/* <a href="/register/Signup/newSignup" onClick={()=>navigate("/register/Signup/newSignup")}>sign up</a> */}
-                </h4>
-                <h4
-                  className={`${styles['panel-title-2']} text-center`}
-                  style={{ color: '#760E53'}}
-                >
-                <line color='#760E53'>Login</line>
-                <motion.div className={`${styles['underline']}`} layoutId="underline" transition={{ duration: 0.5 }}/>
-                </h4>
-                <h4
-                  className={`${styles['panel-title-3']} text-center`}
-                  style={{ color: '#000000' }}
-                >
-                <span style={{ color: 'red' }}>*</span>Mandatory
-                </h4>
-              </div>
-            </div>
-            <div className={styles.abc123}>
-            <AnimatePresence>
-              <motion.div 
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -100, opacity: 0 }}
-            transition={{ duration: 0.5 }}>
-            <FormGroup className={`${styles['form-group']}`}>
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="email" className={`${styles.label}`}>
-                      Username/Email Address:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          username.valid && ' text-success border-success'
-                        } ${
-                          username.warning !== '' && ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaEnvelope></FaEnvelope>
-                      </InputGroupText>
-                      <Input
-                        name="username"
-                        id="username"
-                        type="text"
-                        placeholder="Enter Your Username or Email"
-                        value={username.value}
-                        valid={username.warning === '' && username.value !== ''}
-                        invalid={username.warning !== ''}
-                        onChange={(e) => {
-                          dispatchUsername(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {username.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {username.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <strong> Account not activated? </strong>
+              Click{' '}
+              <Link to="/register/verify" style={{ textDecoration: 'none' }}>
+                {' '}
+                here{' '}
+              </Link>
+              to verify your account.
+              <br />
+              <strong>Forgot Password? </strong>Click{' '}
+              <Link to="/register/forgot" className="text-decoration-none">
+                here
+              </Link>
+            </motion.div>
+          </Alert>
+        </div>
+        <Form className={`${styles['form-horizontal']}`}>
+          {/* <div
+            className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
+            style={{ marginTop: '12px'}}
+          >
+            <div>
+            <h4 className={`${styles['panel-title-1']} text-center`}>
+                    <Link
+                      to="/register/signup"
+                      style={{
+                        textDecoration: 'none',
+                        color: '#ffffff',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      Sign Up
+                    </Link>
 
-                {/* <div className="col-sm-6">
+                  </h4>
+                  <h4
+                    className={`${styles['panel-title-2']} text-center`}
+                    style={{ color: '#4982F6' }}
+                  >
+                    <line>Login</line>
+                    <motion.div
+                      className={`${styles['underline']}`}
+                      layoutId="underline"
+                      transition={{ duration: 0.5 }}
+                    />
+                  </h4>
+                  </div> */}
+          <div
+            className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
+            style={{ marginTop: '12px' }}
+          >
+            <div className="d-flex">
+              <h4 className={`${styles['panel-title-1']} text-center`}>
+                <Link
+                  to="/register/signup"
+                  style={{
+                    textDecoration: 'none',
+                    color: '#ffffff',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Sign Up
+                </Link>
+              </h4>
+
+              <h4
+                className={`${styles['panel-title-2']} text-center`}
+                style={{ color: '#4982F6' }}
+              >
+                <Link
+                  to="/login"
+                  style={{
+                    textDecoration: 'none',
+                    color: '#4982F6',
+                  }}
+                >
+                  Login
+                </Link>
+                {/* <motion.div
+                  className={`${styles['underline']}`}
+                  layoutId="underline"
+                  transition={{ duration: 0.5 }}
+                /> */}
+              </h4>
+            </div>
+
+            <div className={`${styles.panel}`}>
+              {/* <div className={`${styles['panel-heading']}`}>
+                <div className={`${styles['register-page-form-header']}`}>
+                  <h4 className={`${styles['panel-title-1']} text-center`}>
+                    <Link
+                      to="/register/signup"
+                      style={{
+                        textDecoration: 'none',
+                        color: '#ffffff',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      <b>Sign Up</b>
+                    </Link>
+                  </h4> */}
+                  {/* <h4
+                    className={`${styles['panel-title-2']} text-center`}
+                    style={{ color: '#4982F6' }}
+                  >
+                    <line>Login</line>
+                    <motion.div
+                      className={`${styles['underline']}`}
+                      layoutId="underline"
+                      transition={{ duration: 0.5 }}
+                    />
+                  </h4> */}
+                  {/* <h4
+                    className={`${styles['panel-title-3']} text-center`}
+                    style={{ color: '#ffffff' }}
+                  >
+                    <span style={{ color: 'red' }}>*</span>Mandatory
+                  </h4>
+                </div>
+              </div> */}
+              <div className={styles.abc123}>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <FormGroup className={`${styles['form-group']}`}>
+                      <Row xs={1} md={1} xl={2}>
+                        <div className="col-sm-6">
+                          <FormGroup className={`${styles['form-group']}`}>
+                            <Label for="email" className={`${styles.label}`}>
+                              Username/Email Address:&nbsp;
+                              <span style={{ color: 'red' }}>*</span>
+                            </Label>
+                            <InputGroup className={`${styles['input-group']}`}>
+                              <InputGroupText
+                                className={`${styles['form-text']} ${
+                                  username.valid &&
+                                  ' text-success border-success'
+                                } ${
+                                  username.warning !== '' &&
+                                  ' text-danger border-danger'
+                                }`}
+                              >
+                                <FaEnvelope></FaEnvelope>
+                              </InputGroupText>
+                              <Input
+                                name="username"
+                                id="username"
+                                type="text"
+                                placeholder="Enter Your Username or Email"
+                                value={username.value}
+                                valid={
+                                  username.warning === '' &&
+                                  username.value !== ''
+                                }
+                                invalid={username.warning !== ''}
+                                onChange={(e) => {
+                                  dispatchUsername(e.target.value);
+                                }}
+                                bsSize="sm"
+                                className={`${styles['form-control']}`}
+                                required
+                              ></Input>
+                            </InputGroup>
+                            {username.warning !== '' && (
+                              <FormFeedback
+                                className="text-danger d-block fw-bold"
+                                style={{ fontSize: '12px' }}
+                              >
+                                {username.warning}
+                              </FormFeedback>
+                            )}
+                          </FormGroup>
+                        </div>
+
+                        {/* <div className="col-sm-6">
                   <FormGroup className={`${styles['form-group']}`}>
                     <Label for="username" className={`${styles.label}`}>
                       Username:&nbsp;
@@ -311,56 +384,65 @@ function Login() {
                     )}
                   </FormGroup>
                 </div> */}
-              </Row>
+                      </Row>
 
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="password" className={`${styles.label}`}>
-                      Password:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          password.valid && ' text-success border-success'
-                        } ${
-                          password.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaKey></FaKey>
-                      </InputGroupText>
-                      <Input
-                        name="password"
-                        id="password"
-                        type="password"
-                        placeholder="Enter the Password"
-                        value={password.value}
-                        valid={
-                          password.warning === '' && password.value !== ''
-                        }
-                        invalid={password.warning !== ''}
-                        onChange={(e) => {
-                          dispatchpassword(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {password.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {password.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+                      <Row xs={1} md={1} xl={2}>
+                        <div className="col-sm-6">
+                          <FormGroup className={`${styles['form-group']}`}>
+                            <Label for="password" className={`${styles.label}`}>
+                              Password:&nbsp;
+                              <span style={{ color: 'red' }}>*</span>
+                            </Label>
+                            <InputGroup className={`${styles['input-group']}`}>
+                              <InputGroupText
+                                className={`${styles['form-text']} ${
+                                  password.valid &&
+                                  ' text-success border-success'
+                                } ${
+                                  password.warning !== '' &&
+                                  ' text-danger border-danger'
+                                }`}
+                              >
+                                <FaKey></FaKey>
+                              </InputGroupText>
+                              <Input
+                                name="password"
+                                id="password"
+                                type="password"
+                                placeholder="Enter the Password"
+                                value={password.value}
+                                valid={
+                                  password.warning === '' &&
+                                  password.value !== ''
+                                }
+                                invalid={password.warning !== ''}
+                                onChange={(e) => {
+                                  dispatchpassword(e.target.value);
+                                }}
+                                bsSize="sm"
+                                className={`${styles['form-control']}`}
+                                required
+                              ></Input>
+                            </InputGroup>
+                            <h4
+                            className={`${styles['panel-title-3']} text-center`}
+                            style={{ color: '#ffffff', marginLeft:'7rem' }}
+                          >
+                            <span style={{ color: 'red' }}>*</span>Mandatory Field
+                          </h4>
+                            {password.warning !== '' && (
+                              <FormFeedback
+                                className="text-danger d-block fw-bold"
+                                style={{ fontSize: '12px' }}
+                              >
+                                {password.warning}
+                              </FormFeedback>
+                            )}
+                          </FormGroup>
+                          
+                        </div>
 
-                {/* <div className="col-sm-6">
+                        {/* <div className="col-sm-6">
                   <FormGroup className={`${styles['form-group']}`}>
                     <Label for="password2" className={`${styles.label}`}>
                       Password Confirmation:&nbsp;
@@ -405,9 +487,9 @@ function Login() {
                     )}
                   </FormGroup>
                 </div> */}
-              </Row>
+                      </Row>
 
-              {/* <Row xs={1} md={1} xl={2}>
+                      {/* <Row xs={1} md={1} xl={2}>
                 <div className="col-sm-6">
                   <FormGroup className={`${styles['form-group']}`}>
                     <Label for="name" className={`${styles.label}`}>
@@ -597,37 +679,36 @@ function Login() {
                   </FormGroup>
                 </div>
               </Row> */}
-            </FormGroup></motion.div></AnimatePresence>
+                    </FormGroup>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
-          </div>
 
-          
+            {toast.message !== '' && (
+              <Alert
+                color={toast.color}
+                style={{
+                  fontSize: '15px',
+                  fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+                }}
+                className="my-1 py-2"
+              >
+                {toast.message}
+              </Alert>
+            )}
 
-          {toast.message !== '' && (
-            <Alert
-              color={toast.color}
-              style={{
-                fontSize: '15px',
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
-              }}
-              className="my-1 py-2"
+            <Button
+              color="success"
+              className={`${styles['btn-block']}`}
+              onClick={submitHandler}
             >
-              {toast.message}
-            </Alert>
-          )}
-
-          <Button
-            color="success"
-            className={`${styles['btn-block']}`}
-            onClick={submitHandler}
-          >
-            <FaPaperPlane color="white" className="me-1"></FaPaperPlane>
-            Login
-          </Button>
-          
-        </div>
-      </Form>
-    </motion.div>
+              {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
+              Login
+            </Button>
+          </div>
+        </Form>
+      </motion.div>
     </AnimatePresence>
   );
 }

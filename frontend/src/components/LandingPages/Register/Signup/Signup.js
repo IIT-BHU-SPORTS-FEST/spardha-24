@@ -31,15 +31,15 @@ import isAlphanumeric from 'validator/lib/isAlphanumeric';
 import isInt from 'validator/lib/isInt';
 import isPhone from 'validator/lib/isMobilePhone';
 import isAlpha from 'validator/lib/isAlpha';
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Signup() {
   const ref_container = useRef();
   useEffect(() => {
     const scrollDiv = document.getElementById('signUpDiv').offsetTop;
-    window.scrollTo({top: scrollDiv -80, behavior: 'smooth'});
+    window.scrollTo({ top: scrollDiv - 80, behavior: 'smooth' });
   }, []);
- const navigate = useNavigate();
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -95,8 +95,12 @@ function Signup() {
         return;
       })
       .catch(({ response }) => {
-         if(response.status===500 || response.status === 403 || response.status === 502){
-          navigate("/*")
+        if (
+          response.status === 500 ||
+          response.status === 403 ||
+          response.status === 502
+        ) {
+          navigate('/*');
         }
         dispatchToast({
           color: 'danger',
@@ -224,14 +228,7 @@ function Signup() {
     message: '',
   });
   return (
-    
-    <motion.div 
-      id="signUpDiv" ref={ref_container}
-      transition={{delay:0.1}}
-
-    >
-      
-      
+    <motion.div id="signUpDiv" ref={ref_container} transition={{ delay: 0.1 }}>
       <div className="col-sm-12">
         {/* <Alert
           color="success"
@@ -256,31 +253,33 @@ function Signup() {
         <Alert
           color="primary"
           className={`${styles['signup_note']} py-2`}
-
           style={{
             fontSize: '14px',
-            heigth:'80px',
+            heigth: '80px',
             fontFamily: 'Poppins, sans-serif',
-            background: "#760E53",
-            color:'#FFFFFF ',
-            fontWeight:'400',
-            paddingTop:'0.5rem',
-            borderRadius:'15px',
-            opacity: "1",
-            transition: "all .2s",
-            visibility:  "visible",
+            background: '#020021',
+            color: '#FFFFFF ',
+            fontWeight: '400',
+            paddingTop: '0.5rem',
+            borderRadius: '15px',
+            opacity: '1',
+            transition: 'all .2s',
+            visibility: 'visible',
           }}
-        ><motion.div
-        initial={{opacity:0}}
-        animate={{y:0,opacity:1}}
-        exit={{y:100,opacity:0}}
-        transition={{ duration: 0.5 }}
         >
-          <strong>NOTE:</strong><br />
-          1. Individual registrations are not entertained.
-          Only one registration is allowed per college.<br />
-          2. If you cannot find your Institute name, then
-          type it manually.</motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <strong>NOTE:</strong>
+            <br />
+            1. Individual registrations are not entertained. Only one
+            registration is allowed per college.
+            <br />
+            2. If you cannot find your Institute name, then type it manually.
+          </motion.div>
         </Alert>
         {/* <Alert
           color="warning"
@@ -304,449 +303,547 @@ function Signup() {
           *&nbsp;Mandatory
         </span>
       </div> */}
-      
+
       <Form className={`${styles['form-horizontal']}`}>
         <div
           className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
           style={{ marginTop: '12px' }}
         >
+          <div className="d-flex">
+            <h4
+              className={`${styles['panel-title-1']} text-center`}
+              style={{ color: '#4982F6' }}
+            >
+              Sign Up
+              <motion.div
+                className={`${styles['underline']}`}
+                layoutId="underline"
+                transition={{ duration: 0.5 }}
+              />
+            </h4>
+
+            <h4
+              className={`${styles['panel-title-2']} text-center`}
+              style={{ color: '#ffffff' }}
+            >
+              <Link
+                to="/register/login"
+                style={{ textDecoration: 'none', color: '#ffffff' }}
+              >
+                Login
+              </Link>
+            </h4>
+          </div>
+
           <div className={`${styles.panel}`}>
-            <div className={`${styles['panel-heading']}`}>
-              <div className={`${styles['register-page-form-header']}`} >
+            {/* <div className={`${styles['panel-heading']}`}>
+              <div className={`${styles['register-page-form-header']}`}>
                 <h4
                   className={`${styles['panel-title-1']} text-center`}
-                  style={{ color: '#760E53'}}
+                  style={{ color: '#4982F6'}}
                 >
-                  Sign up
+                  Sign Up
                   <motion.div className={`${styles['underline']}`} layoutId="underline" transition={{ duration: 0.5 }}/>
-                </h4>
-                <h4
+                </h4> */}
+                {/* <h4
                   className={`${styles['panel-title-2']} text-center`}
-                  style={{ color: '#000000' }}
+                  style={{ color: '#ffffff' }}
                 >
-                <Link to="/register/login" style={{ textDecoration: 'none',color: '#000000'}}>Login</Link>
-                </h4>
-                <h4
+                  <Link
+                    to="/register/login"
+                    style={{ textDecoration: 'none', color: '#ffffff' }}
+                  >
+                    Login
+                  </Link>
+                </h4> */}
+                {/* <h4
                   className={`${styles['panel-title-3']} text-center`}
-                  style={{ color: '#000000' }}
+                  style={{ color: '#ffffff' }}
                 >
                   <span style={{ color: 'red' }}>*</span>Mandatory
                 </h4>
               </div>
-            </div>
+            </div> */}
             <div className={styles.abc123}>
-            <AnimatePresence>
-              <motion.div 
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -1000, opacity: 0 }}
-            transition={{ duration: 0.5 }}>
-            <FormGroup className={`${styles['form-group']}`} style={{
-            opacity: "1",
-            transition: "all .2s",
-            visibility:  "visible",
-            transitionDelay: "all 10s"}}>
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`} style={{
-            opacity: "1",
-            transition: "all .2s",
-            visibility:  "visible",
-            transitionDelay: "all 10s"}}>
-                    <Label for="email" className={`${styles.label}`}>
-                      Email Address:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          email.valid && ' text-success border-success'
-                        } ${
-                          email.warning !== '' && ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaEnvelope></FaEnvelope>
-                      </InputGroupText>
-                      <Input
-                        name="email"
-                        id="email"
-                        type="email"
-                        placeholder="Enter Your Email Address"
-                        value={email.value}
-                        valid={email.warning === '' && email.value !== ''}
-                        invalid={email.warning !== ''}
-                        onChange={(e) => {
-                          dispatchEmail(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {email.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {email.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+              <AnimatePresence>
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -1000, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <FormGroup
+                    className={`${styles['form-group']}`}
+                    style={{
+                      opacity: '1',
+                      transition: 'all .2s',
+                      visibility: 'visible',
+                      transitionDelay: 'all 10s',
+                    }}
+                  >
+                    <Row xs={1} md={1} xl={2}>
+                      <div className="col-sm-6">
+                        <FormGroup
+                          className={`${styles['form-group']}`}
+                          style={{
+                            opacity: '1',
+                            transition: 'all .2s',
+                            visibility: 'visible',
+                            transitionDelay: 'all 10s',
+                          }}
+                        >
+                          <Label for="email" className={`${styles.label}`}>
+                            Email Address:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                email.valid && ' text-success border-success'
+                              } ${
+                                email.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaEnvelope></FaEnvelope>
+                            </InputGroupText>
+                            <Input
+                              name="email"
+                              id="email"
+                              type="email"
+                              placeholder="Enter Your Email Address"
+                              value={email.value}
+                              valid={email.warning === '' && email.value !== ''}
+                              invalid={email.warning !== ''}
+                              onChange={(e) => {
+                                dispatchEmail(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {email.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {email.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
 
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="username" className={`${styles.label}`}>
-                      Username:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          username.valid && ' text-success border-success'
-                        } ${
-                          username.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaAt></FaAt>
-                      </InputGroupText>
-                      <Input
-                        name="username"
-                        id="username"
-                        type="text"
-                        placeholder="Enter your username"
-                        value={username.value}
-                        valid={username.warning === '' && username.value !== ''}
-                        invalid={username.warning !== ''}
-                        onChange={(e) => {
-                          dispatchUsername(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {username.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {username.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
-              </Row>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="username" className={`${styles.label}`}>
+                            Username:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                username.valid && ' text-success border-success'
+                              } ${
+                                username.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaAt></FaAt>
+                            </InputGroupText>
+                            <Input
+                              name="username"
+                              id="username"
+                              type="text"
+                              placeholder="Enter your username"
+                              value={username.value}
+                              valid={
+                                username.warning === '' && username.value !== ''
+                              }
+                              invalid={username.warning !== ''}
+                              onChange={(e) => {
+                                dispatchUsername(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {username.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {username.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
+                    </Row>
 
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="password1" className={`${styles.label}`}>
-                      Password:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          password1.valid && ' text-success border-success'
-                        } ${
-                          password1.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaKey></FaKey>
-                      </InputGroupText>
-                      <Input
-                        name="password1"
-                        id="password1"
-                        type="password"
-                        placeholder="Enter the Password"
-                        value={password1.value}
-                        valid={
-                          password1.warning === '' && password1.value !== ''
-                        }
-                        invalid={password1.warning !== ''}
-                        onChange={(e) => {
-                          dispatchPassword1(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {password1.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {password1.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+                    <Row xs={1} md={1} xl={2}>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="password1" className={`${styles.label}`}>
+                            Password:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                password1.valid &&
+                                ' text-success border-success'
+                              } ${
+                                password1.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaKey></FaKey>
+                            </InputGroupText>
+                            <Input
+                              name="password1"
+                              id="password1"
+                              type="password"
+                              placeholder="Enter the Password"
+                              value={password1.value}
+                              valid={
+                                password1.warning === '' &&
+                                password1.value !== ''
+                              }
+                              invalid={password1.warning !== ''}
+                              onChange={(e) => {
+                                dispatchPassword1(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {password1.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {password1.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
 
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="password2" className={`${styles.label}`}>
-                      Password Confirmation:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          password2.valid && ' text-success border-success'
-                        } ${
-                          password2.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaKey></FaKey>
-                      </InputGroupText>
-                      <Input
-                        name="password2"
-                        id="password2"
-                        type="password"
-                        placeholder="Confirm your Password"
-                        value={password2.value}
-                        valid={
-                          password2.warning === '' && password2.value !== ''
-                        }
-                        invalid={password2.warning !== ''}
-                        onChange={(e) => {
-                          dispatchPassword2(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {password2.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {password2.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
-              </Row>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="password2" className={`${styles.label}`}>
+                            Password Confirmation:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                password2.valid &&
+                                ' text-success border-success'
+                              } ${
+                                password2.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaKey></FaKey>
+                            </InputGroupText>
+                            <Input
+                              name="password2"
+                              id="password2"
+                              type="password"
+                              placeholder="Confirm your Password"
+                              value={password2.value}
+                              valid={
+                                password2.warning === '' &&
+                                password2.value !== ''
+                              }
+                              invalid={password2.warning !== ''}
+                              onChange={(e) => {
+                                dispatchPassword2(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {password2.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {password2.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
+                    </Row>
 
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="name" className={`${styles.label}`}>
-                      Name:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          name.valid && ' text-success border-success'
-                        } ${
-                          name.warning !== '' && ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaUser></FaUser>
-                      </InputGroupText>
-                      <Input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Enter your Name"
-                        value={name.value}
-                        valid={name.warning === '' && name.value !== ''}
-                        invalid={name.warning !== ''}
-                        onChange={(e) => {
-                          dispatchName(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {name.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {name.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+                    <Row xs={1} md={1} xl={2}>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="name" className={`${styles.label}`}>
+                            Name:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                name.valid && ' text-success border-success'
+                              } ${
+                                name.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaUser></FaUser>
+                            </InputGroupText>
+                            <Input
+                              type="text"
+                              name="name"
+                              id="name"
+                              placeholder="Enter your Name"
+                              value={name.value}
+                              valid={name.warning === '' && name.value !== ''}
+                              invalid={name.warning !== ''}
+                              onChange={(e) => {
+                                dispatchName(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {name.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {name.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
 
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="designation" className={`${styles.label}`}>
-                      Designation:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          designation.valid && ' text-success border-success'
-                        } ${
-                          designation.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaBriefcase></FaBriefcase>
-                      </InputGroupText>
-                      <Input
-                        type="designation"
-                        name="designation"
-                        id="designation"
-                        placeholder="Write your Designation"
-                        value={designation.value}
-                        valid={
-                          designation.warning === '' && designation.value !== ''
-                        }
-                        invalid={designation.warning !== ''}
-                        onChange={(e) => {
-                          dispatchDesignation(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {designation.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {designation.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
-              </Row>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label
+                            for="designation"
+                            className={`${styles.label}`}
+                          >
+                            Designation:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                designation.valid &&
+                                ' text-success border-success'
+                              } ${
+                                designation.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaBriefcase></FaBriefcase>
+                            </InputGroupText>
+                            <Input
+                              type="designation"
+                              name="designation"
+                              id="designation"
+                              placeholder="Write your Designation"
+                              value={designation.value}
+                              valid={
+                                designation.warning === '' &&
+                                designation.value !== ''
+                              }
+                              invalid={designation.warning !== ''}
+                              onChange={(e) => {
+                                dispatchDesignation(e.target.value);
+                              }}
+                              bsSize="sm"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                          </InputGroup>
+                          {designation.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {designation.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
+                    </Row>
 
-              <Row xs={1} md={1} xl={2}>
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="institute" className={`${styles.label}`}>
-                      Institute Name:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          institute.valid && ' text-success border-success'
-                        } ${
-                          institute.warning !== '' &&
-                          ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaBuilding></FaBuilding>
-                      </InputGroupText>
-                      <Input
-                        type="text"
-                        name="institute"
-                        id="institute"
-                        placeholder="Select / Enter your Institute & City"
-                        value={institute.value}
-                        valid={
-                          institute.warning === '' && institute.value !== ''
-                        }
-                        invalid={institute.warning !== ''}
-                        onChange={(e) => {
-                          dispatchInstitute(e.target.value);
-                        }}
-                        bsSize="sm"
-                        list="instituteList"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                      <datalist id="instituteList">
-                        <option selected={true} disabled>
-                          Select your institute
-                        </option>
-                        {instituteList.map(({ id, name }) => {
-                          return <option value={name} key={id}></option>;
-                        })}
-                      </datalist>
-                    </InputGroup>
-                    {institute.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {institute.warning}
-                      </FormFeedback>
-                    )}
-                  </FormGroup>
-                </div>
+                    <Row xs={1} md={1} xl={2}>
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="institute" className={`${styles.label}`}>
+                            Institute Name:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <InputGroup className={`${styles['input-group']}`}>
+                            <InputGroupText
+                              className={`${styles['form-text']} ${
+                                institute.valid &&
+                                ' text-success border-success'
+                              } ${
+                                institute.warning !== '' &&
+                                ' text-danger border-danger'
+                              }`}
+                            >
+                              <FaBuilding></FaBuilding>
+                            </InputGroupText>
+                            <Input
+                              type="text"
+                              name="institute"
+                              id="institute"
+                              placeholder="Select / Enter your Institute & City"
+                              value={institute.value}
+                              valid={
+                                institute.warning === '' &&
+                                institute.value !== ''
+                              }
+                              invalid={institute.warning !== ''}
+                              onChange={(e) => {
+                                dispatchInstitute(e.target.value);
+                              }}
+                              bsSize="sm"
+                              list="instituteList"
+                              className={`${styles['form-control']}`}
+                              required
+                            ></Input>
+                            <datalist id="instituteList">
+                              <option selected={true} disabled>
+                                Select your institute
+                              </option>
+                              {instituteList.map(({ id, name }) => {
+                                return <option value={name} key={id}></option>;
+                              })}
+                            </datalist>
+                          </InputGroup>
+                          {institute.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {institute.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
 
-                <div className="col-sm-6">
-                  <FormGroup className={`${styles['form-group']}`}>
-                    <Label for="phone" className={`${styles.label}`}>
-                      Phone Number:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
-                    </Label>
-                    <InputGroup className={`${styles['input-group']}`}>
-                      <InputGroupText
-                        className={`${styles['form-text']} ${
-                          phone.valid && ' text-success border-success'
-                        } ${
-                          phone.warning !== '' && ' text-danger border-danger'
-                        }`}
-                      >
-                        <FaPhone></FaPhone>
-                      </InputGroupText>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        id="phone"
-                        placeholder="Enter Your Phone No."
-                        value={phone.value}
-                        valid={phone.warning === '' && phone.value !== ''}
-                        invalid={phone.warning !== ''}
-                        onChange={(e) => {
-                          dispatchPhone(e.target.value);
-                        }}
-                        bsSize="sm"
-                        className={`${styles['form-control']}`}
-                        required
-                      ></Input>
-                    </InputGroup>
-                    {phone.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
-                        {phone.warning}
-                      </FormFeedback>
-                    )}
+                      <div className="col-sm-6">
+                        <FormGroup className={`${styles['form-group']}`}>
+                          <Label for="phone" className={`${styles.label}`}>
+                            Phone Number:&nbsp;
+                            <span style={{ color: 'red' }}>*</span>
+                          </Label>
+                          <div className="form-group">
+  <InputGroup className={`${styles['input-group']}`}>
+    <InputGroupText
+      className={`${styles['form-text']} ${
+        phone.valid && ' text-success border-success'
+      } ${
+        phone.warning !== '' &&
+        ' text-danger border-danger'
+      }`}
+    >
+      <FaPhone />
+    </InputGroupText>
+
+    <Input
+      type="tel"
+      name="phone"
+      id="phone"
+      placeholder="Enter Your Phone No."
+      value={phone.value}
+      valid={phone.warning === '' && phone.value !== ''}
+      invalid={phone.warning !== ''}
+      onChange={(e) => {
+        dispatchPhone(e.target.value);
+      }}
+      bsSize="sm"
+      className={`${styles['form-control']}`}
+      required
+    />
+  </InputGroup>
+
+  {/* Mandatory Field message aligned to the right */}
+  <h4
+    className={`${styles['panel-title-3']}`}
+    style={{
+      color: '#ffffff',
+      textAlign: 'right', // Align text to the right so it matches the input's end
+      marginTop: '5px', // Add some spacing below the input
+    }}
+  >
+    <span style={{ color: 'red' }}>*</span> Mandatory Field
+  </h4>
+</div>
+
+                          
+
+                          {phone.warning !== '' && (
+                            <FormFeedback
+                              className="text-danger d-block fw-bold"
+                              style={{ fontSize: '12px' }}
+                            >
+                              {phone.warning}
+                            </FormFeedback>
+                          )}
+                        </FormGroup>
+                      </div>
+                    </Row>
                   </FormGroup>
-                </div>
-              </Row>
-            </FormGroup></motion.div></AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
 
-          <div className="col-sm-12 ">
-            <FormGroup check className={`${styles['form-group']} ps-3`} style={{backgroundColor:"transparent"}} >
-              <div className={`${styles['form-footer']}`} style={{textAlign:"center", alignItems:"center",backgroundColor:"none"}}> 
-              <Input className={`${styles['form-footer-input']}`} type="checkbox" name="terms" id="terms" required style={{float:"none"}}></Input>
-              <Label
-                for="terms"
-                className={`${styles['label']}`}
-                style={{ paddingTop: '2px', textAlign: 'justify',fontSize:"14px" }}
+          <div className="col-sm-12">
+            <FormGroup
+              check
+              className={`${styles['form-group']} ps-3`}
+              style={{ backgroundColor: 'transparent' }}
+            >
+              <div
+                className={`${styles['form-footer']}`}
+                style={{
+                  textAlign: 'center',
+                  alignItems: 'center',
+                  backgroundColor: 'none',
+                  position: 'relative',
+                  marginTop: '5rem',
+                }}
               >
-                By submitting this form,
-                you agree to abide by the{' '}
-                <a
-                  href="/pdf/RuleBook.pdf"
-                  target="_blank"
-                  style={{ textDecoration: 'none' }}
+                <Input
+                  className={`${styles['form-footer-input']}`}
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                  required
+                  style={{ float: 'none', marginTop: '10px' }}
+                />
+                <Label
+                  for="terms"
+                  className={`${styles['label']}`}
+                  style={{
+                    textAlign: 'justify',
+                    fontSize: '14px',
+                    marginTop: '0.2rem',
+                  }}
                 >
-                  "Rules of Spardha 2023."{' '}
-                </a>
-                
-              </Label>
+                  By submitting this form, you agree to abide by the{' '}
+                  <a
+                    href="/pdf/RuleBook.pdf"
+                    target="_blank"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    "Rules of Spardha 2024."{' '}
+                  </a>
+                </Label>
               </div>
             </FormGroup>
           </div>
@@ -769,7 +866,7 @@ function Signup() {
             className={`${styles['btn-block']}`}
             onClick={submitHandler}
           >
-            Sign up
+            Sign Up
           </Button>
           {/* <b
             style={{
