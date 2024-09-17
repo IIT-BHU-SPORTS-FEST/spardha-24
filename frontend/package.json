@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "bootstrap": "^5.3.1",
+    "caniuse-lite": "^1.0.30001660",
     "docx": "^4.7.1",
     "file-saver": "^2.0.5",
     "framer-motion": "^6.2.8",
