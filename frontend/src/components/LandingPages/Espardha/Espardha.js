@@ -7,7 +7,7 @@ import controler from './img/control.png';
 import pdf from './ESPARDHA24.pdf'
 import freefire from './img/freefire.png'
 import bgmi from './img/bgmi.png'
-import valorent from './img/valorant.png'
+import valorent from './img/valorent.png'
 
 const Espardha = () => {
 
