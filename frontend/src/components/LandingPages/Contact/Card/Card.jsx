@@ -1,24 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Card.css';
 
 function Card({ mainImage, name, position, email, phone }) {
   const imageSrc = mainImage || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';
   
-  const [showCopyButton, setShowCopyButton] = useState(false);
+  const [showHoverBox, setShowHoverBox] = useState(false);
   const [copied, setCopied] = useState(false);
+  const timeoutRef = useRef(null);
 
   const copyPhoneNumber = () => {
     navigator.clipboard.writeText(phone);
-    setCopied(true); 
+    setCopied(true);
     setTimeout(() => {
-      setShowCopyButton(false); 
-    }, 1500);
+      setCopied(false);
+    }, 3000); 
   };
 
-  const resetCopyStatus = () => {
-    setShowCopyButton(true); 
-    setCopied(false); 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setShowHoverBox(true);
   };
+
+  const handleMouseLeave = () => {
+    
+    timeoutRef.current = setTimeout(() => {
+      setShowHoverBox(false);
+    }, 1000); 
+  };
+
+  useEffect(() => {
+ 
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
 
   return (
     <div className='containercard'>
@@ -37,10 +52,10 @@ function Card({ mainImage, name, position, email, phone }) {
             className='contact'
             href='/'
             onClick={(e) => e.preventDefault()}
-            onMouseEnter={resetCopyStatus}
-            onMouseLeave={() => setShowCopyButton(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            {showCopyButton && phone &&(
+            {showHoverBox && phone && (
               <div className='hover-box'>
                 <h5>{phone}</h5>
                 <button

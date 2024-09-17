@@ -59,7 +59,7 @@ const Contact = () => {
       return <>
       <Card name="Ojas Raj " email="ojas.raj.civ22@itbhu.ac.in " phone="7974552339 "/>
       <Card name="Vinay Dadri " email="vinay.kumar.mec22@itbhu.ac.in" phone="8529552845"/>
-      <Card name="Sandeep sarkar" email="Sandeep.sarkar.cse22@itbhu.ac.in" phone="+91 7721-877086"/>
+      <Card name="Sandeep sarkar" email="Sandeep.sarkar.cse22@itbhu.ac.in" phone="7721877086"/>
       </>;
       default:
         return null;

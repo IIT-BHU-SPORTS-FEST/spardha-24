@@ -86,7 +86,7 @@ hr {
     gap: 0.5rem;
     width: max-content;
     opacity: 0; 
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
 }
 
 .hover-box h5 {

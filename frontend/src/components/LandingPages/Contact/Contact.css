@@ -1,4 +1,7 @@
 
+body {
+  overflow-x: hidden; 
+}
 .heading123 {
   color: rgba(73, 130, 246, 1);
   align-self: center;
