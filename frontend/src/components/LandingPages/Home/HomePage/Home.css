@@ -1,23 +1,36 @@
+/* Overall Section */
 .sctn {
-	width:100vw;
-	display: flex;
-	height: 95vh;
-
-
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.hehe {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	/* margin: auto; */
-	
-
-	
+/* Background Image Styling */
+.bg {
+  background-size: cover; /* Ensures the entire image is visible */
+  background-position: top;
+  background-attachment: fixed; /* Keeps the image static when scrolling */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* left: calc(50% - 2562px / 2 - 67px);
+  top: 63px; */
+  z-index: -1;
+  filter: blur(4px);
+  filter: brightness(0.6) contrast(1.2);
+  opacity: 1;
 }
-@media(max-width:390px){
-	.hehe{
-		margin-top: 50px;
-	}
-}
 
+/* Main content positioning */
+.main-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}

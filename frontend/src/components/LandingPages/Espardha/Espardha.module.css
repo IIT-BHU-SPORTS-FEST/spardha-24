@@ -5,6 +5,7 @@
 }
 .container {
   width: 100%;
+  background-color: rgb(2,0,31);
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -19,7 +20,8 @@
 .container {
   /* position: fixed; */
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background: rgba(255, 255, 255, 0.9); */
   padding: 30px 50px;
 }
 .maindiv {
@@ -27,18 +29,19 @@
   display: flex;
   flex-direction: row;
   border-radius: 21px;
-  background: #fff;
-  height: 75vh;
+  /* background: #fff; */
+  background-color: rgb(2,0,31);
+  height: 80vh;
   overflow-y: auto;
 }
-.maindiv::-webkit-scrollbar {
-  width: 10px;
+/* .maindiv::-webkit-scrollbar {
+  width: 0px;
 }
 
 .maindiv::-webkit-scrollbar-thumb {
   background-color: #760e53;
   border-radius: 200px;
-}
+} */
 .poster {
   padding: 20px;
   border-right: 1.5px solid #000;
@@ -56,7 +59,7 @@
   align-items: center;
 }
 .top h1 {
-  color: #000;
+  color:rgba(73, 130, 246, 1);
   text-align: center;
   font-family: Poppins, sans-serif;
   /* font-size: 28px; */
@@ -72,7 +75,8 @@
   margin-top: 20px;
 }
 .discription {
-  color: #000;
+  color:white;
+  /* color: #000; */
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -87,22 +91,24 @@
 }
 .buttons a {
   border-radius: 35px;
-  border: 2px solid #760e53;
+  border: 2px solid rgba(73, 130, 246, 1)  ;
   padding: 9px 33px;
   justify-content: center;
   text-align: center;
   gap: 10px;
+  font-weight: bold;
   flex-shrink: 0;
-  color: #760e53;
+  color: white;
   text-decoration: none;
   font-family: Poppins, sans-serif;
 }
 .buttons a:hover{
-  background-color: #760e53;
+  background-color:  rgba(73, 130, 246, 1);
   color: #fff;
 }
 .top p {
-  color: #000;
+  /* color: #000; */
+  color:white;
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
@@ -127,8 +133,86 @@
   width: 200px;
   border-top: 1px solid black;
 }
+/*my try*/
+.cardmaindiv{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.btnclass{
+  border-radius: 35px;
+  border: 2px solid rgba(73, 130, 246, 1)  ;
+  padding: 9px 33px;
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  font-weight: bold;
+  flex-shrink: 0;
+  color: white;
+  text-decoration: none;
+  font-family: Poppins, sans-serif;
+}
+.btnclass:hover{
+  background-color:  rgba(73, 130, 246, 1);
+  color: #fff;
+}
+.cardcon{margin-top: 20px;
+  width: fit-content;
+  /* height: 300px; */
+  background: rgba(2, 0, 33, 1);  
+  display: flex;
+  gap:20px;
+  color:white;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid rgb(55, 0, 128);
+  justify-content: center;
+  align-items: center;
+}
+.cardcon:hover{
+  transform: scale(1.05);
+}
+.cardimg img{
+ width:350px;
+ border-top-right-radius: 20px;
+ border-top-left-radius: 20px;
+ object-fit: fill;
+}
+.formlink{
+  text-decoration: none;
+  color: rgb(183,112,217);
+  font-weight: bold;
+  font-family:Poppins, sans-serif;
+}
+.prizepool{
+  display: flex;
+  color: rgb(153,153,153);
+  justify-content: space-between;
+}
+.formlink:hover{
+  color:aqua
+}
+.cardbottom{
+  padding: 5px;
+}
+.scrollable-div {
+  overflow: auto;
+}
+.scrollable-div::-webkit-scrollbar {
+  display: none; 
+}
+.scrollable-div {
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+/*my try*/
 .bottom h3 {
-  color: #760e53;
+  /* color: #760e53; */
+  color: rgba(73, 130, 246, 1);
   text-align: center;
   font-family: Poppins, sans-serif;
   /* font-size: 24px; */
@@ -147,7 +231,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  color: #000;
+  color: white;
   text-align: center;
   font-family: Poppins, sans-serif;
   font-size: 16px;
