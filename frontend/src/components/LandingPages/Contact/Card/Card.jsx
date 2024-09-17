@@ -35,7 +35,7 @@ function Card({ mainImage, name, position, email, phone }) {
         <div className='images'>
           <a
             className='contact'
-            href='#'
+            href='/'
             onClick={(e) => e.preventDefault()}
             onMouseEnter={resetCopyStatus}
             onMouseLeave={() => setShowCopyButton(false)}
@@ -60,9 +60,9 @@ function Card({ mainImage, name, position, email, phone }) {
             <img src="/images/Contact/cimages/Group 33709.svg" alt="call" />
           </a>
 
-          <a href='#' onClick={(e) => e.preventDefault()}><img src="/images/Contact/cimages/Group 33711.svg" alt="linkedin" /></a>
+          <a href='/' onClick={(e) => e.preventDefault()}><img src="/images/Contact/cimages/Group 33711.svg" alt="linkedin" /></a>
           <a href={`mailto:${email}`}><img src="/images/Contact/cimages/Group 33712.svg" alt="gmail" /></a>
-          <a href='#' onClick={(e) => e.preventDefault()}><img src="/images/Contact/cimages/Group 33710.svg" alt="insta" /></a>
+          <a href='/' onClick={(e) => e.preventDefault()}><img src="/images/Contact/cimages/Group 33710.svg" alt="insta" /></a>
         </div>
       </div>
     </div>
