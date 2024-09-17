@@ -5,6 +5,7 @@ import hype from './hype24.png';
 import takeback from './takeback24.png'
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
+import Gallery from '../Gallery/Gallery'
 const About = () => {
   return (
     <>
@@ -173,7 +174,7 @@ const About = () => {
               </div>
             </div>
             <Greencounter />
-
+            <Gallery/>
           </div>
         </section>
       </div>

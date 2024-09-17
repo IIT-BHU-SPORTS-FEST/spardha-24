@@ -29,7 +29,7 @@ const Gallery = () => {
       <section id="gallery" className="ftco-section padSect">
               <h3
                 className="subheading_gallery"
-                style={{ color: '#760e53'  ,fontFamily: 'Poppins',
+                style={{ color: ' #4982F6' ,fontFamily: 'Poppins',
                 fontSize: '30px',
                 fontWeight: '900',
                 lineHeight: '25px',
@@ -50,7 +50,7 @@ const Gallery = () => {
             </div>
           </div>
           <div className="tz-gallery">
-            <div className="row_gallery mb-3 gallery-heading boldClass"  style={{ color: '#760e53'}}>
+            <div className="row_gallery mb-3 gallery-heading boldClass"  style={{ color: '#4982F6'}}>
               Opening Ceremony
             </div>
 
@@ -126,12 +126,12 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass"  style={{ color: '#760e53'}}>
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass"  style={{ color: '#4982F6'}}>
               Pre-Events:
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '19px' }}
+              style={{ fontSize: '19px ', color:'White' }}
             >
               &emsp;I. Mashaal Handover Ceremony
             </div>
@@ -181,7 +181,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '19px' }}
+              style={{ fontSize: '19px', color:'white' }}
             >
               &emsp;II. Run for a Cause
             </div>
@@ -231,7 +231,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '19px' }}
+              style={{ fontSize: '19px' , color:'white'}}
             >
               &emsp;III. Saturnalia
             </div>
@@ -281,7 +281,7 @@ const Gallery = () => {
             </div>
             <div
               className="row_gallery mb-3 mt-3 gallery-heading boldClass"
-              style={{ fontSize: '19px' }}
+              style={{ fontSize: '19px', color:'white' }}
             >
               &emsp;IV. Udbhav
             </div>
@@ -343,7 +343,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'#4982F6'}}>
               Closing Ceremony:
             </div>
             <div className="row_gallery">
@@ -418,7 +418,7 @@ const Gallery = () => {
                 </span>
               </div> */}
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Aquatics:
             </div>
             <div className="row_gallery">
@@ -465,7 +465,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Athletics:
             </div>
             <div className="row_gallery">
@@ -554,7 +554,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Badminton:
             </div>
             <div className="row_gallery">
@@ -601,7 +601,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Basketball:
             </div>
             <div className="row_gallery">
@@ -733,7 +733,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Boxing:
             </div>
             <div className="row_gallery">
@@ -808,7 +808,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Carrom:
             </div>
             <div className="row_gallery">
@@ -855,7 +855,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Chess:
             </div>
             <div className="row_gallery">
@@ -917,7 +917,7 @@ const Gallery = () => {
               </div>
             </div>
 
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Cricket:
             </div>
             <div className="row_gallery">
@@ -1034,7 +1034,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Football:
             </div>
             <div className="row_gallery">
@@ -1123,7 +1123,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Handball:
             </div>
             <div className="row_gallery">
@@ -1198,7 +1198,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Hockey:
             </div>
             <div className="row_gallery">
@@ -1287,7 +1287,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Kabaddi:
             </div>
             <div className="row_gallery">
@@ -1376,7 +1376,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Kho-kho:
             </div>
             <div className="row_gallery">
@@ -1451,7 +1451,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Powerlifting & Weightlifting:
             </div>
             <div className="row_gallery">
@@ -1498,7 +1498,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Table Tennis:
             </div>
             <div className="row_gallery">
@@ -1573,7 +1573,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Taekwondo:
             </div>
             <div className="row_gallery">
@@ -1634,7 +1634,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Tennis:
             </div>
             <div className="row_gallery">
@@ -1695,7 +1695,7 @@ const Gallery = () => {
                 </span>
               </div>
             </div>
-            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass">
+            <div className="row_gallery mb-3 mt-3 gallery-heading boldClass" style={{color:'white'}}>
               Volleyball:
             </div>
             <div className="row_gallery">
