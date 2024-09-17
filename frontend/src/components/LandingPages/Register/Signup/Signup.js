@@ -739,11 +739,11 @@ function Signup() {
                 By submitting this form,
                 you agree to abide by the{' '}
                 <a
-                  href="/pdf/RuleBook.pdf"
+                  href="/pdf/Rulebook24.pdf"
                   target="_blank"
                   style={{ textDecoration: 'none' }}
                 >
-                  "Rules of Spardha 2023."{' '}
+                  "Rules of Spardha 2024."{' '}
                 </a>
                 
               </Label>

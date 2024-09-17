@@ -1,10 +1,25 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './Espardha.module.css';
 import Carousel from '../Home/Carousel/Carouselhp';
-import poster from './img/poster.png';
+import poster from './img/poster24.png';
 import controler from './img/control.png';
-import pdf from './ESPARDHA.pdf'
+import pdf from './ESPARDHA24.pdf'
+import freefire from './img/freefire.png'
+import bgmi from './img/bgmi.png'
+import valorent from './img/valorent.png'
+
 const Espardha = () => {
+
+  const [isCardVisible, setCardVisible] = useState(false);
+  const handleRegisterClick = () => {
+    setCardVisible(true);
+  };
+  const handleBackClick = () => {
+    setCardVisible(false);
+  };
+
+
   return (
     <>
       <Carousel />
@@ -35,16 +50,59 @@ const Espardha = () => {
                     because Espardha is about to set the gaming world on fire!
                     🔥🔥
                   </div>
-                  <p>🏆 #Espardha2023 🎮</p>
+                  <p style={{ color: "black" }}> 🏆 #Espardha2024 🎮</p>
                   <div className={`${styles.buttons}`}>
-                    <a href="http://zenet.co.in/" target="_blank" rel="noopener noreferrer">
-                      Register Now
-                    </a>
-                    <a href={pdf} download>
+                    {/* <Link to="/registration_form"> hello </Link> */}
+                    <button className={`${styles.registerbtn} ${styles.btnclass}`} style={{ display: isCardVisible ? 'none' : 'block' }} onClick={handleRegisterClick}>Register Now</button>
+                    <button className={`${styles.backbtn} ${styles.btnclass}`} style={{ display: isCardVisible ? 'block' : 'none' }} onClick={handleBackClick}>Back</button>
+                    <a href={pdf} style={{ display: isCardVisible ? 'none' : 'block' }} download>
                       Download Brochure
                     </a>
                   </div>
                 </div>
+                {/* my try start*/}
+                <div className={`${styles.cardmaindiv}`} style={{ display: isCardVisible ? 'flex' : 'none' }}>
+                  <a href="https://forms.gle/LMGudFmq3dLez9dr6" className={`${styles.formlink}`} target='blank'>
+                    <div className={`${styles.cardcon}`}>
+                      <div className={`${styles.cardimg}`}>
+                        <img src={freefire} alt='Freefire Poster'></img>
+                      </div>
+                      <div className={`${styles.cardbottom}`}>
+                        <h4 style={{ fontWeight: "bold" }}>Freefire E-Spardha 2024</h4>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 100/perosn</h6>
+                          <a href="https://forms.gle/LMGudFmq3dLez9dr6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>
+                    <div className={`${styles.cardcon}`}>
+                      <div className={`${styles.cardimg}`}>
+                        <img src={valorent} alt='Valorant poster'></img>
+                      </div>
+                      <div className={`${styles.cardbottom}`}>
+                        <h4 style={{ fontWeight: "bold" }}>Valorant E-Spardha  2024</h4>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 100/perosn</h6>
+                          <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>
+                    <div className={`${styles.cardcon}`}>
+                      <div className={`${styles.cardimg}`}>
+                        <img src={bgmi} alt='BGMI Poster'></img>
+                      </div>
+                      <div className={`${styles.cardbottom}`}>
+                        <h4 style={{ fontWeight: "bold" }}> BGMI E-Spardha 2024</h4>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 110/perosn</h6>
+                          <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                {/* my try end*/}
                 <div className={`${styles.bottom}`}>
                   <div className={`${styles.bottom_heading}`}>
                     <div className={`${styles.hr}`}></div>

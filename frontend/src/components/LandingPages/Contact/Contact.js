@@ -22,7 +22,7 @@ const Contact = () => {
                   <div>
                     <h5><b>Convenor:</b></h5>
                     <h6 className={styles.name}>Sarthak Gupta</h6>
-                    <h6>sarthak.gupta.civ.21@itbhu.ac.in</h6>
+                    <h6>sarthak.gupta.civ21@itbhu.ac.in</h6>
                   </div>
                   <div>
                     <h5><b>Co-convenors:</b></h5>
@@ -65,9 +65,9 @@ const Contact = () => {
                   <h6 className={styles.name}>Vinay Dadri</h6>
                   <h6>vinay.kumar.mec22@itbhu.ac.in </h6>
                   <h6>+91 85295 52845</h6>
-                  <h6 className={styles.name}>Divyanshi Gautam</h6>
-                  <h6>deepanshu.student.cer21@itbhu.ac.in</h6>
-                  <h6>+91 87070 90583</h6>
+                  <h6 className={styles.name}>Sandeep Sarkar </h6>
+                  <h6>Sandeep.sarkar.cse22@itbhu.ac.in</h6>
+                  <h6>+91 77218 77086</h6>
                 </div>
               </div>
               <div className={styles.linkfollow}>
