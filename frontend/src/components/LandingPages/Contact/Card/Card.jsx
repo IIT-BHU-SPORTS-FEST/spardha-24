@@ -9,15 +9,15 @@ function Card({ mainImage, name, position, email, phone }) {
 
   const copyPhoneNumber = () => {
     navigator.clipboard.writeText(phone);
-    setCopied(true); // Set copied status to true
+    setCopied(true); 
     setTimeout(() => {
-      setShowCopyButton(false); // Close hover-box after a delay
-    }, 1500); // Adjust the timeout as needed
+      setShowCopyButton(false); 
+    }, 1500);
   };
 
   const resetCopyStatus = () => {
-    setShowCopyButton(true); // Show hover-box on hover
-    setCopied(false); // Reset copied status when hovering again
+    setShowCopyButton(true); 
+    setCopied(false); 
   };
 
   return (
