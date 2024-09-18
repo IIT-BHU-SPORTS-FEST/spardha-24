@@ -163,6 +163,7 @@ align-items: center;
 .cardcon{margin-top: 20px;
   width: fit-content;
   /* height: 300px; */
+  padding-bottom: 20px;
   background: rgba(2, 0, 33, 1);  
   display: flex;
   gap:20px;
@@ -201,13 +202,13 @@ align-items: center;
 .cardbottom{
   padding: 5px;
 }
-.scrollable-div {
+.maindiv {
   overflow: auto;
 }
-.scrollable-div::-webkit-scrollbar {
+.maindiv::-webkit-scrollbar {
   display: none; 
 }
-.scrollable-div {
+.maindiv {
   scrollbar-width: none; /* Hides the scrollbar */
 }
 
