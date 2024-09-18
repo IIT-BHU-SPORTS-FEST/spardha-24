@@ -12,6 +12,7 @@ const Contact = () => {
         <footer
           className={`${styles.ftco_footer} ${styles.ftco_section} ${styles.img}`}
         >
+          <div className={styles.main}>
           <div className={styles.container}>
             <div className={styles.heading123}>
               <h2><b><u>Contact Us</u></b></h2>
@@ -116,6 +117,8 @@ const Contact = () => {
             </div>
           </div>
           </div>
+          </div>
+         
         </footer>
       </section>
     </>
