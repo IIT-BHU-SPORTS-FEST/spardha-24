@@ -1,10 +1,14 @@
 
+body {
+  overflow-x: hidden; 
+}
 .heading123 {
   color: rgba(73, 130, 246, 1);
-  padding-top: 2%;
   align-self: center;
   font-weight: 700;
   text-transform: uppercase;
+  position: relative;
+  top: -2.5rem;
 }
 
 #contactus {
@@ -19,15 +23,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 8px;
-  min-height: 85%;
+  min-height: 80vh;
   max-height: max-content;
   margin-top: 5rem;
   font-size: small;
   position: relative;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
@@ -85,8 +89,14 @@
   font-weight: bold;
 }
 
+@media (max-width: 1400px){
+  .heading123{
+    top: -1.5rem;
+    padding-top: 1rem;
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hamburger-container {
     display: flex;
     justify-content: space-between;

@@ -71,7 +71,7 @@ const Espardha = () => {
                     </div>
                     <div className={`${styles.cardbottom}`}>
                       <h4 style={{ fontWeight:"bold"}}>Freefire E-Spardha 2024</h4>
-                      <div className={`${styles.prizepool}`}><h5>₹ 200000</h5>
+                      <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 100/Person</h6>
                       <a href="https://forms.gle/LMGudFmq3dLez9dr6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                       </div>
                     </div>
@@ -84,7 +84,7 @@ const Espardha = () => {
                     </div>
                     <div className={`${styles.cardbottom}`}>
                       <h4 style={{ fontWeight:"bold"}}>Valorant E-Spardha  2024</h4>
-                      <div className={`${styles.prizepool}`}><h5>₹ 200000</h5>
+                      <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 100/Person</h6>
                       <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                       </div>
                     </div>
@@ -97,7 +97,7 @@ const Espardha = () => {
                     </div>
                     <div className={`${styles.cardbottom}`}>
                     <h4 style={{ fontWeight:"bold"}}> BGMI E-Spardha 2024</h4>
-                    <div className={`${styles.prizepool}`}><h5>₹ 200000</h5>
+                    <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 110/Person</h6>
                       <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                       </div>
                     </div>

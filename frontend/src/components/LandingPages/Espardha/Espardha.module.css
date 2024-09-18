@@ -190,8 +190,10 @@ align-items: center;
 }
 .prizepool{
   display: flex;
+  flex-direction: column;
   color: rgb(153,153,153);
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .formlink:hover{
   color:aqua
