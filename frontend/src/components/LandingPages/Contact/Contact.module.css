@@ -8,16 +8,24 @@ hr {
 #contactus {
   position: fixed;
 }
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   padding-left: 5%;
   padding-right: 1%;
-  background-color: #ffffff;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   height: 80%;
-  margin: 100px 200px 32px 200px;
+  max-width: 80%;
   font-size: small;
   position: fixed;
 }
