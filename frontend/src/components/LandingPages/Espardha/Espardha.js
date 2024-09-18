@@ -7,7 +7,7 @@ import controler from './img/control.png';
 import pdf from './ESPARDHA24.pdf'
 import freefire from './img/freefire.png'
 import bgmi from './img/bgmi.png'
-import valorent from './img/valorent.png'
+import valorent from './img/valorant.png'
 
 const Espardha = () => {
 
@@ -69,7 +69,7 @@ const Espardha = () => {
                       </div>
                       <div className={`${styles.cardbottom}`}>
                         <h4 style={{ fontWeight: "bold" }}>Freefire E-Spardha 2024</h4>
-                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 100/perosn</h6>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: ₹ 100/Person</h6>
                           <a href="https://forms.gle/LMGudFmq3dLez9dr6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                         </div>
                       </div>
@@ -82,7 +82,7 @@ const Espardha = () => {
                       </div>
                       <div className={`${styles.cardbottom}`}>
                         <h4 style={{ fontWeight: "bold" }}>Valorant E-Spardha  2024</h4>
-                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 100/perosn</h6>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: ₹ 100/Person</h6>
                           <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                         </div>
                       </div>
@@ -95,7 +95,7 @@ const Espardha = () => {
                       </div>
                       <div className={`${styles.cardbottom}`}>
                         <h4 style={{ fontWeight: "bold" }}> BGMI E-Spardha 2024</h4>
-                        <div className={`${styles.prizepool}`}><h6>Registration Fee: 110/perosn</h6>
+                        <div className={`${styles.prizepool}`}><h6>Registration Fee: ₹ 110/Person</h6>
                           <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                         </div>
                       </div>
