@@ -226,11 +226,11 @@ body {
 @media (max-width: 376px) {
   .before-day,
   .after-day {
-    font-size: 70px;
+    font-size: 65px;
   }
 
   .current-day {
-    font-size: 120px;
+    font-size: 110px;
   }
 
   .days-text {
@@ -250,7 +250,7 @@ body {
     margin-top: 15px;
   }
   .days-text {
-    font-size: 40px;
+    font-size: 33px;
   }
 }
 /* .card {
