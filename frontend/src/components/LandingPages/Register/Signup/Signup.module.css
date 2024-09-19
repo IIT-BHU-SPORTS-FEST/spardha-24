@@ -3,7 +3,7 @@
 
 .heading {
   text-align: center;
-  color: #760E53;
+  color: white;
   font-family: 'Poppins';
   font-size: 40px;
   font-weight: bold;
@@ -164,6 +164,18 @@
 .input-group input::placeholder{
   color: WHITE;
 }
+
+.input-group input:-webkit-autofill {
+  background-color: #020021 !important; 
+  color: white; 
+}
+
+/* Optional: Firefox styling (for additional support) */
+.input-group input:-moz-autofill {
+  background-color: #020021 !important;
+  color: white; 
+}
+
 
 .register-page-form-header{
   display:flex;

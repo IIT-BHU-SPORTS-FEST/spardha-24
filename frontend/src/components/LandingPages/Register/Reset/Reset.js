@@ -13,7 +13,7 @@ import {
   Label,
 } from 'reactstrap';
 import { Link, useSearchParams } from 'react-router-dom';
-import { FaKey, FaPaperPlane, FaUser } from 'react-icons/fa';
+import { FaKey, FaUser } from 'react-icons/fa';
 import { useReducer } from 'react';
 
 function Reset() {
@@ -112,7 +112,7 @@ function Reset() {
         color="success"
         style={{
           fontSize: '14px',
-          fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
         }}
         className="py-2"
       >
@@ -134,7 +134,7 @@ function Reset() {
           style={{
             color: 'red',
             fontSize: '14px',
-            fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+            fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
           }}
         >
           *&nbsp;Mandatory
@@ -150,7 +150,7 @@ function Reset() {
             <div className={`${styles['panel-heading']}`}>
               <h4
                 className={`${styles['panel-title']} text-center`}
-                style={{ color: '#59ba00' }}
+                style={{ color: 'white' }}
               >
                 <FaUser /> Login Details
               </h4>
@@ -251,7 +251,7 @@ function Reset() {
               color={toast.color}
               style={{
                 fontSize: '15px',
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+                fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
               }}
               className="my-1 py-2"
             >
@@ -264,7 +264,7 @@ function Reset() {
             className={`${styles['btn-block']}`}
             onClick={submitHandler}
           >
-            <FaPaperPlane color="white" className="me-1"></FaPaperPlane>
+            {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
             UPDATE
           </Button>
         </div>

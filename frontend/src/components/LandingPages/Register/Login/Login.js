@@ -426,7 +426,7 @@ function Login() {
                             </InputGroup>
                             <h4
                             className={`${styles['panel-title-3']} text-center`}
-                            style={{ color: '#ffffff', marginLeft:'7rem' }}
+                            style={{ color: '#ffffff', marginLeft:'4rem' }}
                           >
                             <span style={{ color: 'red' }}>*</span>Mandatory Field
                           </h4>
