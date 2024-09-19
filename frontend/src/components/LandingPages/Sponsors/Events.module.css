@@ -6,7 +6,7 @@
   /* height: fit-content; */
   height: 80%;
   z-index: 1;
-  position: fixed;
+  position: relative;
   /* overflow: auto; */
   background: rgba(0,0,0,0.8);
   width: 85%;
@@ -710,4 +710,8 @@
   .H2 {
     font-size: 26px;
   }
+}
+.outermostdiv{
+  width: 100vw;
+  height: 100vh;
 }

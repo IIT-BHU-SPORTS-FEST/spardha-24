@@ -24,8 +24,7 @@ function Carousel() {
         className="carousel-image-home"
         src={images[currentSlide]}
         alt={`Slide ${currentSlide + 1}`}
-      />
-
+        />
     </div>
   );
 }

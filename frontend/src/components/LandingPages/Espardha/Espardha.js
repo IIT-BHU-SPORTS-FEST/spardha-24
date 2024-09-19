@@ -28,7 +28,7 @@ const Espardha = () => {
   return (
     <>
       <Carousel />
-      <div>
+      <div className={`${styles.outermostdiv}`} >
         <section
           id="espardha"
           className={`${styles.ftco_section} ${styles.events}`}

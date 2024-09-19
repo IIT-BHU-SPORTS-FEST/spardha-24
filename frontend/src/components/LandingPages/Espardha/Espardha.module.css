@@ -1,7 +1,7 @@
 .ftco_section {
   margin: 100px 200px 0 200px;
 
-  position: fixed;
+  position: relative;
 }
 .container {
   width: 100%;
@@ -357,4 +357,8 @@ align-items: center;
   .ftco_section {
     margin: 100px 11px 0 11px;
   }
+}
+.outermostdiv{
+  width: 100vw;
+  height: 100vh;
 }

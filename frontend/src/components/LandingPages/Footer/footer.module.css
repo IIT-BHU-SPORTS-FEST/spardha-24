@@ -1,0 +1,161 @@
+.maindiv{
+    background: linear-gradient(79.99deg, #1F1E1E 46.39%, #353535 100%);
+    position:relative;
+    bottom: 0px;
+    width: 100vw;
+    z-index: 1000;
+}
+.bottom{
+    height: 30px;
+    display: flex;
+    align-items:end;
+    color: #B7B4B4;
+    width: 100vw;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100vw;
+    background-color: rgb(3,3,4);
+    gap: 100px;
+    flex-direction: row;
+}
+.quicklink_contact{
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+}
+.logoimg{
+    width: 170px;
+}
+.gaping{
+    padding-bottom: 20px;
+}
+.address{
+    width: 250px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.quicklinks Link{
+    text-decoration: none;
+}
+.quickoptions{
+    font-weight: 600;
+    font-size: 18px;
+    color: #F0F0F0;
+}
+.links{
+    text-decoration: none;
+}
+.bluetext{
+    color: #4982F6;
+font-weight: 700;
+font-size: 24px;
+}
+.followusinside{
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+.innerparts{
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    align-items: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+  gap: 20px;
+}
+.contacts{
+    display: flex;
+    font-size: 18px;
+    line-height: 10px;
+    color: #F0F0F0;
+    flex-direction: column;
+}
+.convener{
+    font-weight: 700;
+    font-size: 18px;
+}
+.text{
+    
+    color: white;
+    font-weight: 600;
+}
+@media (max-width:995px) {
+    .container{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .quicklink_contact{
+        width: 100vw;
+        gap: 50px;
+        justify-content: space-evenly;
+    }
+    .address{
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+    .text{
+        font-size: 15px;
+    }
+    .contacts, .quickoptions,.convener{
+        font-size: 16px;
+    }
+    .bluetext{
+        font-size: 20px;
+        gap: 0px;
+    }
+    .gaping{
+        padding-bottom: 10px;
+    }
+.bottom{
+    font-size: 20px;
+    height: 35px;
+}
+}
+@media (max-width:660px) {
+    
+    .container{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .quicklink_contact{
+        width: 100vw;
+        gap:20px;
+        justify-content: space-evenly;
+    }
+    .contacts, .quickoptions,.convener{
+        font-size: 14px;
+    }
+    .bluetext{
+        font-size: 20px;
+    }
+    .gaping{
+       padding-bottom: 5px;
+    }
+    .logoimg{
+     width: 120px;
+     height: 90px;
+    }
+    .bottom{
+        height: 38px;
+    }
+
+}
+@media (max-width:380px) {
+    .bluetext{
+        font-size: 18px;
+    }
+    .bottom{
+        font-size: 14px;
+        height: 40px;
+    }
+}
