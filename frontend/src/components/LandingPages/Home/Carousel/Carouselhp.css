@@ -1,28 +1,27 @@
-.carousel-home{
-
-	width: 100vw;
-	/* position: absolute; */
-	position: fixed;
-top: 0px;
-	left: 0px;
-	opacity: 1;
-	background-image: linear-gradient(to right, red, blue);
-	background-size: 100%;
+.carousel-home {
+  width: 100vw;
+  /* position: absolute; */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  background-image: linear-gradient(to right, red, blue);
+  background-size: 100%;
 }
-.carousel-image-home{
-	height: 100vh;
-	width:100vw;
-	opacity: 0.6;
+.carousel-image-home {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.6;
 }
-#prev{
-	position: absolute;
-	top: 5vh;
-	height: 95vh;
-	z-index: 8;
+#prev {
+  position: absolute;
+  top: 5vh;
+  height: 95vh;
+  z-index: 8;
 }
-#next{
-	position: absolute;
-	top: 5vh;
-	height: 95vh;
-	z-index: 5;
+#next {
+  position: absolute;
+  top: 5vh;
+  height: 95vh;
+  z-index: 5;
 }

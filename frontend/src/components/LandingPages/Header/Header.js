@@ -49,6 +49,7 @@ function Header() {
           borderBottom: '1px solid #303030',
           borderBottomLeftRadius: '20px',
           borderBottomRightRadius: '20px',
+          width: '100vw',
         }}
       >
         <div className="nav-contain" style={{ display: 'flex' }}>
@@ -60,7 +61,7 @@ function Header() {
                 }.png`}
                 alt="Sparhda Logo"
                 height="70px"
-                style={{ marginLeft: '2px' }}
+                // style={{ marginLeft: '2px' }}
               />
             </NavHashLink>
           </NavbarBrand>
