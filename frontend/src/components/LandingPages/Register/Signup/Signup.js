@@ -345,7 +345,7 @@ function Signup() {
                   Sign Up
                   <motion.div className={`${styles['underline']}`} layoutId="underline" transition={{ duration: 0.5 }}/>
                 </h4> */}
-                {/* <h4
+            {/* <h4
                   className={`${styles['panel-title-2']} text-center`}
                   style={{ color: '#ffffff' }}
                 >
@@ -356,7 +356,7 @@ function Signup() {
                     Login
                   </Link>
                 </h4> */}
-                {/* <h4
+            {/* <h4
                   className={`${styles['panel-title-3']} text-center`}
                   style={{ color: '#ffffff' }}
                 >
@@ -741,49 +741,49 @@ function Signup() {
                             <span style={{ color: 'red' }}>*</span>
                           </Label>
                           <div className="form-group">
-  <InputGroup className={`${styles['input-group']}`}>
-    <InputGroupText
-      className={`${styles['form-text']} ${
-        phone.valid && ' text-success border-success'
-      } ${
-        phone.warning !== '' &&
-        ' text-danger border-danger'
-      }`}
-    >
-      <FaPhone />
-    </InputGroupText>
+                            <InputGroup className={`${styles['input-group']}`}>
+                              <InputGroupText
+                                className={`${styles['form-text']} ${
+                                  phone.valid && ' text-success border-success'
+                                } ${
+                                  phone.warning !== '' &&
+                                  ' text-danger border-danger'
+                                }`}
+                              >
+                                <FaPhone />
+                              </InputGroupText>
 
-    <Input
-      type="tel"
-      name="phone"
-      id="phone"
-      placeholder="Enter Your Phone No."
-      value={phone.value}
-      valid={phone.warning === '' && phone.value !== ''}
-      invalid={phone.warning !== ''}
-      onChange={(e) => {
-        dispatchPhone(e.target.value);
-      }}
-      bsSize="sm"
-      className={`${styles['form-control']}`}
-      required
-    />
-  </InputGroup>
+                              <Input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="Enter Your Phone No."
+                                value={phone.value}
+                                valid={
+                                  phone.warning === '' && phone.value !== ''
+                                }
+                                invalid={phone.warning !== ''}
+                                onChange={(e) => {
+                                  dispatchPhone(e.target.value);
+                                }}
+                                bsSize="sm"
+                                className={`${styles['form-control']}`}
+                                required
+                              />
+                            </InputGroup>
 
-  {/* Mandatory Field message aligned to the right */}
-  <h4
-    className={`${styles['panel-title-3']}`}
-    style={{
-      color: '#ffffff',
-      textAlign: 'right', // Align text to the right so it matches the input's end
-      marginTop: '5px', // Add some spacing below the input
-    }}
-  >
-    <span style={{ color: 'red' }}>*</span> Mandatory Field
-  </h4>
-</div>
-
-                          
+                            <h4
+                              className={`${styles['panel-title-3']}`}
+                              style={{
+                                color: '#ffffff',
+                                textAlign: 'right',
+                                marginTop: '5px',
+                              }}
+                            >
+                              <span style={{ color: 'red' }}>*</span> Mandatory
+                              Field
+                            </h4>
+                          </div>
 
                           {phone.warning !== '' && (
                             <FormFeedback

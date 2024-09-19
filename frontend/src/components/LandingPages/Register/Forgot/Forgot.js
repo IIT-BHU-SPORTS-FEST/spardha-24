@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
-import { FaEnvelope, FaPaperPlane, FaUser } from 'react-icons/fa';
+import { FaEnvelope, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
@@ -90,9 +90,10 @@ function Forgot() {
         color="success"
         style={{
           fontSize: '14px',
-          backgroundColor: '#760E53',
-          color:'#ffffff',
-          fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+          backgroundColor: '#020021',
+          border: 'none',
+          color: '#ffffff',
+          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
         }}
         className="py-2"
       >
@@ -114,86 +115,107 @@ function Forgot() {
         className="py-2"
         style={{
           fontSize: '14px',
-          backgroundColor: '#760E53',
-          color:'#ffffff',
-          fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+          backgroundColor: '#020021',
+          border: 'none',
+          color: '#ffffff',
+          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
         }}
       >
         Enter the details below and confirm using OTP Verification.
       </Alert>
 
-      <div class="col-sm-12 text-end">
+      {/* <div class="col-sm-12 text-end">
         <span
           style={{
-            color: 'black',
+            color: 'white',
             fontSize: '14px',
-            fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+            fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
           }}
         >
           *&nbsp;Mandatory
         </span>
-      </div>
+      </div> */}
 
       <Form className={`${styles['form-horizontal']}`}>
+        
         <div
           className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
           style={{ marginTop: '12px' }}
         >
-          <div className={`${styles.panel}`}>
-            <div className={`${styles['panel-heading']}`}>
-              <h4
+          <h4
                 className={`${styles['panel-title']} text-center`}
-                style={{ color: '#760E53' }}
+                style={{ color: 'white', fontFamily:'Poppins' }}
               >
                 <FaUser /> Login Details
               </h4>
-            </div>
+          <div className={`${styles.panel}`}>
+            {/* <div className={`${styles['panel-heading']}`}>
+              <h4
+                className={`${styles['panel-title']} text-center`}
+                style={{ color: 'white' }}
+              >
+                <FaUser /> Login Details
+              </h4>
+            </div> */}
             <div className={styles.abc123}>
-            <FormGroup className={`${styles['form-group']}`}>
-              <div className="col-sm-12">
-                <FormGroup className={`${styles['form-group']}`}>
-                  <Label for="email" className={`${styles.label}`}>
-                    Email Address:&nbsp;
-                    <span style={{ color: 'red' }}>*</span>
-                  </Label>
-                  <InputGroup className={`${styles['input-group']}`}>
-                    <InputGroupText
-                      className={`${styles['form-text']} ${
-                        email.valid && ' text-success border-success'
-                      } ${
-                        email.warning !== '' && ' text-danger border-danger'
-                      }`}
-                    >
-                      <FaEnvelope></FaEnvelope>
-                    </InputGroupText>
-                    <Input
-                      name="email"
-                      id="email"
-                      type="email"
-                      placeholder="Enter Your Email Address"
-                      value={email.value}
-                      valid={email.warning === '' && email.value !== ''}
-                      invalid={email.warning !== ''}
-                      onChange={(e) => {
-                        dispatchEmail(e.target.value);
-                      }}
-                      bsSize="sm"
-                      className={`${styles['form-control']}`}
-                      required
-                    ></Input>
-                  </InputGroup>
-                  {email.warning !== '' && (
-                    <FormFeedback
-                      className="text-danger d-block fw-bold"
-                      style={{ fontSize: '12px' }}
-                    >
-                      {email.warning}
-                    </FormFeedback>
-                  )}
-                </FormGroup>
-              </div>
-            </FormGroup>
-          </div> </div>
+              <FormGroup className={`${styles['form-group']}`}>
+                <div className="col-sm-12">
+                  <FormGroup className={`${styles['form-group']}`}>
+                    <Label for="email" className={`${styles.label}`}>
+                      Email Address:&nbsp;
+                      <span style={{ color: 'red' }}>*</span>
+                    </Label>
+                    <InputGroup className={`${styles['input-group']}`}>
+                      <InputGroupText
+                        className={`${styles['form-text']} ${
+                          email.valid && ' text-success border-success'
+                        } ${
+                          email.warning !== '' && ' text-danger border-danger'
+                        }`}
+                      >
+                        <FaEnvelope></FaEnvelope>
+                      </InputGroupText>
+                      <Input
+                        name="email"
+                        id="email"
+                        type="email"
+                        placeholder="Enter Your Email Address"
+                        value={email.value}
+                        valid={email.warning === '' && email.value !== ''}
+                        invalid={email.warning !== ''}
+                        onChange={(e) => {
+                          dispatchEmail(e.target.value);
+                        }}
+                        bsSize="sm"
+                        className={`${styles['form-control']}`}
+                        required
+                      ></Input>
+                    </InputGroup>
+                    <div class="col-sm-12 text-end">
+                      <span
+                        style={{
+                          color: 'white',
+                          fontSize: '14px',
+                          fontFamily:
+                            'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
+                        }}
+                      >
+                        <span style={{ color: 'red' }}>*</span>Mandatory
+                      </span>
+                    </div>
+                    {email.warning !== '' && (
+                      <FormFeedback
+                        className="text-danger d-block fw-bold"
+                        style={{ fontSize: '12px' }}
+                      >
+                        {email.warning}
+                      </FormFeedback>
+                    )}
+                  </FormGroup>
+                </div>
+              </FormGroup>
+            </div>{' '}
+          </div>
 
           {toast.message !== '' && (
             <Alert
@@ -213,7 +235,6 @@ function Forgot() {
             className={`${styles['btn-block']}`}
             onClick={submitHandler}
           >
-            <FaPaperPlane color="white" className="me-1"></FaPaperPlane>
             SUBMIT
           </Button>
         </div>

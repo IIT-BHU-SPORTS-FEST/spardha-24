@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   /* left: calc(50% - 2562px / 2 - 67px);
   top: 63px; */
   z-index: -1;
