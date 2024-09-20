@@ -1,5 +1,5 @@
 .container {
-  /* background: url(../Home/Images/bg.webp) fixed center center/cover; */
+  /* background: url() fixed center center/cover; */
   padding: 5em 0 0 0;
   position: relative;
 }
@@ -14,14 +14,14 @@
   margin-left: auto;
   margin-right: auto;
   width: 71%;
-  height: 80%;
+  max-height: 80%;
   /* max-width: 35em; */
   border-radius: 10px;
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.5);
   position: relative;
   /* overflow: auto; */
-  /* height: ; */
+  /* height: fit-content; */
 }
 .card::-webkit-scrollbar {
   width: 10px;

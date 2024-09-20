@@ -133,7 +133,7 @@ function Login() {
             color="success"
             className={`${styles['signup_note']} py-2`}
             style={{
-              fontSize: '14px',
+              fontSize: '12px',
               height: '80px ! important',
               fontFamily: 'Poppins, sans-serif',
               background: '#020021',
@@ -237,6 +237,7 @@ function Login() {
                   style={{
                     textDecoration: 'none',
                     color: '#4982F6',
+                    fontSize:'1.29rem',
                   }}
                 >
                   Login
@@ -426,7 +427,8 @@ function Login() {
                             </InputGroup>
                             <h4
                             className={`${styles['panel-title-3']} text-center`}
-                            style={{ color: '#ffffff', marginLeft:'7rem' }}
+                            style={{ color: '#ffffff', marginLeft:'4rem',fontSize:'15px', }}
+                            // class={"text-end"}
                           >
                             <span style={{ color: 'red' }}>*</span>Mandatory Field
                           </h4>
@@ -690,7 +692,7 @@ function Login() {
                 color={toast.color}
                 style={{
                   fontSize: '15px',
-                  fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+                  fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
                 }}
                 className="my-1 py-2"
               >

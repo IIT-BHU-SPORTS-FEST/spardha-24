@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
-import { FaEnvelope, FaPaperPlane, FaUser } from 'react-icons/fa';
+import { FaEnvelope, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
@@ -90,9 +90,10 @@ function Forgot() {
         color="success"
         style={{
           fontSize: '14px',
-          backgroundColor: '#760E53',
+          backgroundColor: '#020021',
           color:'#ffffff',
-          fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
+          border: 'none',
         }}
         className="py-2"
       >
@@ -114,40 +115,31 @@ function Forgot() {
         className="py-2"
         style={{
           fontSize: '14px',
-          backgroundColor: '#760E53',
+          backgroundColor: '#020021',
           color:'#ffffff',
-          fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
+          border: 'none',
         }}
       >
         Enter the details below and confirm using OTP Verification.
       </Alert>
 
-      <div class="col-sm-12 text-end">
-        <span
-          style={{
-            color: 'black',
-            fontSize: '14px',
-            fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
-          }}
-        >
-          *&nbsp;Mandatory
-        </span>
-      </div>
-
+      
+      
+              <h4
+                className={`${styles['panel-title']} text-center`}
+                style={{ color: 'white' }}
+              >
+                <FaUser /> Login Details
+              </h4>
+            
       <Form className={`${styles['form-horizontal']}`}>
         <div
           className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
           style={{ marginTop: '12px' }}
         >
           <div className={`${styles.panel}`}>
-            <div className={`${styles['panel-heading']}`}>
-              <h4
-                className={`${styles['panel-title']} text-center`}
-                style={{ color: '#760E53' }}
-              >
-                <FaUser /> Login Details
-              </h4>
-            </div>
+            
             <div className={styles.abc123}>
             <FormGroup className={`${styles['form-group']}`}>
               <div className="col-sm-12">
@@ -181,7 +173,11 @@ function Forgot() {
                       className={`${styles['form-control']}`}
                       required
                     ></Input>
+                    
                   </InputGroup>
+                  <div class="col-sm-12  text-end">
+      <span style={{ color: 'red' }}>*</span>Mandatory Field
+      </div>
                   {email.warning !== '' && (
                     <FormFeedback
                       className="text-danger d-block fw-bold"
@@ -200,7 +196,7 @@ function Forgot() {
               color={toast.color}
               style={{
                 fontSize: '15px',
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+                fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
               }}
               className="my-1 py-2"
             >
@@ -213,7 +209,7 @@ function Forgot() {
             className={`${styles['btn-block']}`}
             onClick={submitHandler}
           >
-            <FaPaperPlane color="white" className="me-1"></FaPaperPlane>
+            {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
             SUBMIT
           </Button>
         </div>
