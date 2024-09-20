@@ -8,7 +8,7 @@
 }
 
 .user-dashboard3::-webkit-scrollbar-thumb {
-  background-color: #760e53;
+  background-color: rgba(2, 0, 33, 1);
   border-radius: 200px;
 }
 
@@ -120,7 +120,7 @@
   margin: 15px;
   padding: 25px 0 50px;
   line-height: 1.5;
-  border: 2px solid #760e53;
+  border: 2px solid rgba(73, 130, 246, 1);
   border-radius: 10px;
   ;
 }
@@ -192,7 +192,7 @@
 .profile-table .left-column {
   /* text-align: right; */
   padding-right: 0px;
-  color: #760e53;
+  color: rgba(2, 0, 33, 1);
   padding-left: 0px;
   line-height: 1;
 }
@@ -347,9 +347,9 @@ td {
 }
 .change-now{
   background: white none repeat scroll 0 0;
-    border: 2px solid #760E53;
+    border: 2px solid rgba(2, 0, 33, 1);
     border-radius: 100px;
-    color: #760E53;
+    color: rgba(2, 0, 33, 1);
     font: Poppins;
     font-size: 18px;
     font-weight: 600;
@@ -360,7 +360,7 @@ td {
 }
 .change-now:hover{
   color: white;
-  background-color: #760E53;
+  background-color: rgba(73, 130, 246, 1);
 }
 @media (max-width:998px) {
   .change-now{
@@ -417,9 +417,11 @@ td {
   }
   .change-now{
     margin-left: 0rem;
+    position: inherit;
   }
   .delete_button{
     margin-left: 0rem;
+    position: inherit;
   }
 }
 @media (max-width:417px) {

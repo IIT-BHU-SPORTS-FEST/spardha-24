@@ -36,8 +36,8 @@
 }
 
 .navi .item_nav {
-  border-bottom: 1px solid rgba(118, 14, 83, 1);
-  border-top: 1px solid rgba(118, 14, 83, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
   color: #ffffff;
   display: block;
   font:Poppins;
@@ -45,32 +45,33 @@
   font-weight: 500;
   padding: 28px 20px;
   text-decoration: none;
+  background: rgba(73, 130, 246, 1);
 }
 
 .navi i {
   margin-right: 15px;
-  color: #B4147E;
+  color: rgba(18, 76, 193, 1);
 }
 
-.navi .active .item_nav {
-  background: #760E53;
-  border-left: 5px solid #B4147E;
-  padding-left: 15px;
+.navi .item_nav.active {
+  background-color: rgba(18, 76, 193, 1) !important; 
+  padding-left: 15px !important; 
 }
+
 
 .navi .item_nav:hover {
-  background: #B4147E none repeat scroll 0 0;
-  border-left: 15px solid #760E53;
-  border-right: 10px solid #760E53;
+  background: rgba(18, 76, 193, 1) none repeat scroll 0 0;
   border-top: 1.5px solid white;
   border-bottom:1.5px solid white ;
   display: block;
   padding-left: 15px;
 }
 
-#navigation {
-  /* position: fixed; */
-  background: rgba(118, 14, 83, 1);
+
+
+
+#navigation{
+  background: rgba(2, 0, 33, 1);  
 }
 
 #navigation {
@@ -92,8 +93,8 @@
   }
 
   #navigation .navi .item_nav:hover,
-  #navigation .navi .active .item_nav {
-    background: rgba(118, 14, 83, 1) none repeat scroll 0 0;
+  #navigation .navi.active .item_nav {
+    background: rgba(18, 76, 193, 1) none repeat scroll 0 0;
     border-left: none;
     display: block;
     padding-left: 20px;

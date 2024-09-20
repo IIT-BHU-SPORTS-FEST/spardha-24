@@ -8,8 +8,12 @@
     height: 300px;
 }
 
+.user-dashboard3{
+    color: white;
+}
+
 #buttonn {
-    border-color: rgb(118, 14, 83);
+    border-color: rgba(18, 76, 193, 1);
     display:block;
     font-weight: 400;
     text-align: center;
@@ -22,8 +26,8 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     color: white;
-    background-color: rgb(118, 14, 83);
-    border-color: rgb(118, 14, 83);
+    background-color: rgba(18, 76, 193, 1);
+    border-color: rgba(18, 76, 193, 1);
 }
 #left {
     padding-right: 2%;
