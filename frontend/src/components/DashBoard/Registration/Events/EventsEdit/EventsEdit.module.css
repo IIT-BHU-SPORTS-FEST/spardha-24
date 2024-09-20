@@ -21,7 +21,7 @@
   }
   
   .user-dashboard::-webkit-scrollbar-thumb {
-    background-color: #760e53;
+    background-color: rgba(73, 130, 246, 1);
     border-radius: 200px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .panel-heading {
-  background-color: #B4147E;
+  background-color: rgba(18, 76, 193, 1);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 8px 15px;
   border-bottom: 1px solid transparent;
@@ -55,19 +55,19 @@
 }
 
 .btn{
-  color:#760E53;
+  color:rgba(73, 130, 246, 1);
   background-color:#ffffff ;
   border-width:2px ;
   padding: 10px 20px 10px 20px;
-  border-color:#760E53;
+  border-color:rgba(73, 130, 246, 1);
   border-radius: 35px;
   margin:12px;
 }
 
 .btn:hover{
-  background-color:#760E53;
+  background-color:rgba(73, 130, 246, 1);
   color: #ffffff;
-  border-color:#760E53;
+  border-color:rgba(73, 130, 246, 1);
   transition: ease-out;
   transition-duration: 300ms;
 }
@@ -99,7 +99,7 @@
 }
 
 .input-wrapper input{
-  border: 1px solid #760E53D9;
+  border: 1px solid rgba(73, 130, 246, 1);
   width: 16px;
 height: 16px;
 top: 229px;

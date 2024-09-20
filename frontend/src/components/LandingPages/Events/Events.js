@@ -43,7 +43,7 @@ import weightlifting from './image/weightlifting.png';
 import weightliftinghover from './image/weightliftinghover.png';
 import styles from './Events.module.css';
 import { Link } from 'react-router-dom';
-import Carousel from '../Home/Carousel/Carouselhp';
+// import Carousel from '../Home/Carousel/Carouselhp';
 import {
   Aquatics,
   Athletics,
@@ -673,12 +673,13 @@ const Events = () => {
     setShowResults18(false);
     setShowResults19(!showResults18);
   };
-
+  
   return (
+    <div className='blk'>
     <section id="events" className={`${styles.ftco_section} ${styles.events}`}>
-      <div className='bg'>
+      {/* <div className='bg'>
         <Carousel />
-      </div>
+      </div> */}
       <div className={`${styles.container} ${styles.pb_1}`}>
         <div
           className={`${styles.row} ${styles.justify_content_center} ${styles.mb_5}`}
@@ -686,20 +687,20 @@ const Events = () => {
           <div
             className={`${styles.col_md_7} ${styles.heading_section} ${styles.text_center}`}
           >
-
+          
           </div>
         </div>
         <div className={styles.maindiv}>
           <div className={styles.title}>
 
             <div><h2 className={`${styles.mb_1} ${styles.H2}`} >
-              Sports &amp; Games
+              EVENTS
             </h2></div>
             <div>
               <Link to="/register/signup/" className={styles.registerbtn}>Register Now</Link>
             </div>
           </div>
-          <div className={styles.scrollablediv}>
+          {/* <div className={styles.scrollablediv}> */}
             <div className={`${styles.row}`}>
              
               <div
@@ -1118,11 +1119,12 @@ const Events = () => {
                 />
               ) : null}
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
 
     </section>
+    </div>
   );
 };
 

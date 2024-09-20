@@ -16,7 +16,9 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
+  /* my changes */
+  width: 100%;
 }
 
 .left-box {
@@ -27,17 +29,22 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
+  /* my changes */
+  width: 100vw;
   /* margin-left: 3vw; */
+  padding-left: 14px;
+  padding-right: 14px;
 }
 .count {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  /* width: 100vw; */
+  gap: 8%;
   margin-top: 70px;
 }
-
 .before-day,
 .after-day {
-  font-size: 135px;
+  font-size: 150px;
   font-weight: 600;
   line-height: 30px;
   margin-bottom: 40px;
@@ -45,7 +52,7 @@ body {
 }
 
 .current-day {
-  font-size: 200px;
+  font-size: 253px;
   font-weight: 600;
   line-height: 30px;
   margin-bottom: 40px;
@@ -54,7 +61,7 @@ body {
 }
 
 .days-text {
-  font-size: 50px;
+  font-size: 68px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
@@ -63,7 +70,7 @@ body {
   margin-top: 50px; */
 }
 .days {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .button-container {
@@ -75,15 +82,15 @@ body {
 }
 
 .btn1 {
-  width: 260px;
-  height: 60px;
+  width: 300px;
+  height: 75px;
   /* padding: 20px 75px 20px 75px; */
   gap: 20px;
   border: 3px solid #f0f0f0;
   border-radius: 15px;
-  background: rgba(0,0,0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 30px;
   /* top: 20px;
   left: 371px; */
@@ -99,15 +106,15 @@ body {
 }
 
 .btn2 {
-  width: 260px;
-  height: 60px;
+  width: 300px;
+  height: 75px;
   /* padding: 20px 75px 20px 75px; */
   gap: 20px;
   border: none;
   border-radius: 15px;
   background: #f71018;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 30px;
   color: white;
   transition-duration: 0.3s;
@@ -119,83 +126,133 @@ body {
   transform: scale(1.1);
 }
 @media (max-width: 1024px) {
-    .before-day, .after-day {
-        font-size: 120px;
-    }
+  .before-day,
+  .after-day {
+    font-size: 140px;
+  }
 
-    .current-day {
-        font-size: 180px;
-    }
+  .current-day {
+    font-size: 210px;
+  }
+  .count {
+    gap: 6%;
+  }
+  .days {
+    margin-top: 50px;
+  }
+  .days-text {
+    font-size: 60px;
+  }
 
-    .days-text {
-        font-size: 48px;
-    }
-
-    .btn1, .btn2 {
-        font-size: 24px;
-        width: 240px;
-        height: 60px;
-    }
+  .btn1,
+  .btn2 {
+    font-size: 27px;
+    width: 240px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 768px) {
-    .before-day, .after-day {
-        font-size: 100px;
-    }
+  .before-day,
+  .after-day {
+    font-size: 85px;
+  }
 
-    .current-day {
-        font-size: 150px;
-    }
+  .current-day {
+    font-size: 145px;
+  }
 
-    .days-text {
-        font-size: 36px;
-    }
+  .days-text {
+    font-size: 54px;
+  }
+  .days {
+    margin-top: 30px;
+  }
+  .btn1,
+  .btn2 {
+    font-size: 24px;
+    width: 200px;
+    height: 50px;
+  }
 
-    .btn1, .btn2 {
-        font-size: 20px;
-        width: 200px;
-        height: 50px;
-    }
+  .count {
+    gap: 4%;
+  }
 
-    .count {
-        gap: 8px;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .button-container {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
-@media (max-width: 480px) {
-    .before-day, .after-day {
-        font-size: 80px;
-    }
+@media (max-width: 426px) {
+  .before-day,
+  .after-day {
+    font-size: 75px;
+  }
 
-    .current-day {
-        font-size: 120px;
-    }
+  .current-day {
+    font-size: 130px;
+  }
+  .days {
+    margin-top: 25px;
+  }
+  .days-text {
+    font-size: 48px;
+  }
 
-    .days-text {
-        font-size: 24px;
-    }
+  .btn1,
+  .btn2 {
+    font-size: 21px;
+    width: 180px;
+    height: 45px;
+  }
+  .left-box {
+    padding: 0 7px 0 7px;
+  }
+  .countdown-container {
+    padding-left: 0;
+  }
 
-    .btn1, .btn2 {
-        font-size: 18px;
-        width: 180px;
-        height: 45px;
-    }
-
-    .count {
-        gap: 2px;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
+.countdown-container {
+  width: 100%;
+}
+@media (max-width: 376px) {
+  .before-day,
+  .after-day {
+    font-size: 65px;
+  }
+
+  .current-day {
+    font-size: 110px;
+  }
+
+  .days-text {
+    font-size: 36px;
+  }
+}
+@media (max-width: 320px) {
+  .before-day,
+  .after-day {
+    font-size: 65px;
+  }
+
+  .current-day {
+    font-size: 110px;
+  }
+  .days {
+    margin-top: 15px;
+  }
+  .days-text {
+    font-size: 33px;
+  }
+}
 /* .card {
 	height: 28vh;
 width: 176px;

@@ -75,7 +75,7 @@
 }
 
 .row_dbContingent::-webkit-scrollbar-thumb {
-  background-color: #760e53;
+  background-color: rgba(73, 130, 246, 1);
   border-radius: 200px;
 }
 .gutter-cont {
@@ -94,13 +94,13 @@
   border-radius: 20px;
 }
 .border_div{
-  border: 2px solid #760E53;
+  border: 2px solid rgba(73, 130, 246, 1);
   border-radius: 19px;
 }
 .form-control_contDb{
   width: 290px;
   height: 37px;
-  border: 1.5px solid #760E53 !important;
+  border: 1.5px solid rgba(73, 130, 246, 1) !important;
   border-radius: 10px;
 }
 .del_button {

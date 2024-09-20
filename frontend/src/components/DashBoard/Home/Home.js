@@ -78,7 +78,7 @@ const Home = () => {
       .then(async (response) => {
         const data = JSON.parse(await response.data.text());
         const doc = new Document();
-        doc.addParagraph((new Paragraph()).addRun((new TextRun("SPARDHA'23")).bold()).spacing({ line: 300 }).title().center());
+        doc.addParagraph((new Paragraph()).addRun((new TextRun("SPARDHA'24")).bold()).spacing({ line: 300 }).title().center());
         doc.addParagraph((new Paragraph()).addRun((new TextRun("DETAILED ENTRY FORM")).size(30)).center());
         doc.addParagraph((new Paragraph()).addRun((new TextRun(`Name of college: ${data.institution_name}`)).size(24)).spacing({ line: 480 }).center());
 
@@ -145,7 +145,7 @@ const Home = () => {
           doc.addParagraph((new Paragraph()).addRun((new TextRun('Signature with Seal')).size(24)).spacing({ before: 2000, after: 120, line: 480 }).right());
         });
 
-        saveDocumentToFile(doc, "Spardha23_detailed_entryform.docx");
+        saveDocumentToFile(doc, "Spardha24_detailed_entryform.docx");
 
 
       })
@@ -217,7 +217,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <button className="btnform" onClick={handleDownload}>Download&nbsp;Entry&nbsp;Form</button>
+          <button className="btnform download" onClick={handleDownload}>Download&nbsp;Entry&nbsp;Form</button>
         </div>
       </div>
     </div>

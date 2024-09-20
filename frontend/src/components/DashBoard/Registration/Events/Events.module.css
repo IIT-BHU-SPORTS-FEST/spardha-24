@@ -3,7 +3,8 @@
 .events-heading {
   font-family: 'League Spartan';
   text-align: center;
-  color: #760E53;
+  color: rgba(2, 0, 33, 1);
+  background-color: rgba(2, 0, 33, 1);
   font-size: 30px;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -65,7 +66,7 @@ td {
 
 .events-table td,
 .events-table th {
-  border: 1px solid #760E53;
+  border: 1px solid rgba(73, 130, 246, 1);
   padding: 8px;
 }
 
@@ -74,7 +75,7 @@ td {
 }
 
 .events-table tr:hover {
-  background-color: #B4147E;
+  background-color: rgba(18, 76, 193, 1);
   color: white;
 }
 
@@ -90,7 +91,7 @@ td {
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-  background-color: #760e53;
+  background-color: rgba(73, 130, 246, 1);
   border-radius: 200px;
 }
 
@@ -98,7 +99,7 @@ td {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #B4147E;
+  background-color: rgba(18, 76, 193, 1);
   color: white;
 }
 
@@ -106,17 +107,17 @@ td {
   background: white;
   border: medium none;
   border-radius: 100px;
-  color: #760E53;
+  color: rgba(2, 0, 33, 1);
   font-size: 14px;
   font-weight: 600;
   padding: 10px 20px 10px 20px;
   position: relative;
-  border: 1px solid #760E53;
+  border: 1px solid rgba(2, 0, 33, 1);
 }
 
 .register-now:hover {
   color: #ffffff;
-  background: #760E53;
+  background: rgba(73, 130, 246, 1);
 }
 
 .register-now:focus {
@@ -141,7 +142,7 @@ td {
 .login-header {
   display: inline-block;
   width: 100%;
-  background: #760E53;
+  background: rgba(73, 130, 246, 1);
 }
 
 .login-header .navbar-right {
@@ -190,9 +191,9 @@ td {
 
 .modal-footer .register-now {
   background: white;
-  border: 2px solid #760E53;
+  border: 2px solid rgba(73, 130, 246, 1);
   border-radius: 40px;
-  color: #760E53;
+  color: rgba(73, 130, 246, 1);
   font-size: 14px;
   font-weight: 600;
   padding: 10px 30px;
@@ -204,7 +205,7 @@ td {
 }
 
 .modal-footer .register-now:hover {
-  background: #760E53;
+  background: rgba(73, 130, 246, 1);
   color: white;
 }
 
@@ -232,7 +233,7 @@ td {
   background: #F71018;
 }
 .alert-warning{
-  background-color: #760E53;
+  background-color: rgba(73, 130, 246, 1);
 }
 .modal {
   top: 20%;
@@ -243,12 +244,12 @@ td {
 }
 
 .search input:focus {
-  border-bottom: 1px solid #760E53;
+  border-bottom: 1px solid rgba(73, 130, 246, 1);
   line-height: 22px;
   transition: 0.1s all;
 }
 .form-control{
-  border: 1px solid #760E53 !important;
+  border: 1px solid rgba(73, 130, 246, 1) !important;
 }
 .modal-header.login-header {
   border: none;
@@ -259,7 +260,7 @@ td {
   /*Main CSS*/
 }
 input{
-  border: 1px solid #760E53 !important;
+  border: 1px solid rgba(73, 130, 246, 1) !important;
 }
 @media (max-width:998px) {
   .events-table tr{

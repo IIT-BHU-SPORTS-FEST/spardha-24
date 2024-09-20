@@ -83,7 +83,7 @@ const EventCard = (props) => {
           <div className={`${styles.event_box_name}`}>{props.eventName}</div>
           <div className={`${styles.rule_book_box}`}>
             <div style={{
-              color: "#760E53",
+              color: "white",
               fontSize: 18,
               fontFamily: "Poppins",
               fontWeight: 600,
@@ -105,9 +105,9 @@ const PersonDetails = (props) => {
   return (
     <div className={`${styles.person_details}`}>
     <br />
-      <span className={`${styles.content_header}`}>{props.name}<br /></span>
-      <span className={`${styles.content}`}>{props.contact}<br /></span>
-      <span className={`${styles.content}`}>{props.email}<br /><br /></span>
+      <span className={`${styles.content_header}`}><span className='newwh'>{props.name}</span><br /></span>
+      <span><span className='newwh'>{props.contact}</span><br /></span>
+      <span><span className='newwh'>{props.email}</span><br /><br /></span>
     </div>
   );
 };
@@ -135,7 +135,7 @@ const Aquatics = (props) => {
 const Athletics = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Ankit Mishra (M)", "9518478065", "tagaram.kirankumar.cer20@itbhu.ac.in"), new Person("Prachi (W)", "9532072319", "anchal.dhar.mec21@itbhu.ac.in")]}
+      captainsArray={[new Person("Ankit Mishra (M)", "9518478065", "N/A"), new Person("Prachi (W)", "9532072319", "N/A")]}
       imageSrc={athletics}
       eventName="Athletics"
       rulebookPDF={AthleticsPDF}
@@ -170,7 +170,7 @@ const Basketball = (props) => {
 const Boxing = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Ayush Sahu (M)", "8085733084", "suyash.baloni.bme20@itbhu.ac.in"), new Person("Sukriti Sharma (W)", "8824973337", "saloni.agrawal.mat20@itbhu.ac.in")]}
+      captainsArray={[new Person("Ayush Sahu (M)", "8085733084", "N/A"), new Person("Sukriti Sharma (W)", "8824973337", "N/A")]}
       imageSrc={boxing}
       eventName="Boxing"
       rulebookPDF={BoxingPDF}
@@ -182,7 +182,7 @@ const Boxing = (props) => {
 const Chess = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Harshraj Joshi (M)", "N/A", "harshraj.joshi.che21@itbhu.ac.in")]}
+      captainsArray={[new Person("Sidharth A Kumar (M)", "7510353244", "N/A")]}
       imageSrc={chess}
       eventName="Chess"
       rulebookPDF={ChessPDF}
@@ -194,7 +194,7 @@ const Chess = (props) => {
 const Cricket = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Jai Patel (M)", "7023064941", "shashanksp.met18@itbhu.ac.in")]}
+      captainsArray={[new Person("Swastik (M)", "9528157765", "N/A")]}
       imageSrc={cricket}
       eventName="Cricket"
       rulebookPDF={CricketPDF}
@@ -219,8 +219,8 @@ const Cycling = (props) => {
 const Football = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Soham Nandy (M)", "9580058180", "soham.nandy.cd.mst21@itbhu.ac.in")]}
-      viceCaptainsArray={[new Person("Harsh Raj Singh (M)", "9142697620", "harsh.raj.chy21@itbhu.ac.in")]}
+      captainsArray={[new Person("Harsh (M)", "9427630511", "N/A")]}
+      viceCaptainsArray={[new Person("")]}
       imageSrc={football}
       eventName="Football"
       rulebookPDF={FootballPDF}
@@ -232,7 +232,7 @@ const Football = (props) => {
 const Handball = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Patel Avi (M)", "6352926616", "patelavi.nihilkumar.mec21@itbhu.ac.in")]}
+      captainsArray={[new Person("Milan D Vijay (M)", "8848254336", "N/A")]}
       imageSrc={handball}
       eventName="Handball"
       rulebookPDF={HandballPDF}
@@ -244,7 +244,7 @@ const Handball = (props) => {
 const Hockey = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Abhishek Meena (M)", "8840041931", "abhishek.meena.mec19@itbhu.ac.in")]}
+      captainsArray={[new Person("Chaitanya Magarde (M)", "7249148862", "N/A")]}
       imageSrc={hockey}
       eventName="Hockey"
       rulebookPDF={HockeyPDF}
@@ -256,7 +256,7 @@ const Hockey = (props) => {
 const Kabbadi = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Peddinti Sai Siva Kumar (M)", "7569965571", "peddinti.saiskumar.cer19@itbhu.ac.in"), new Person("Kodurupaka Mallika (W)", "6302471817", "kodurupaka.mallika.mec21@itbhu.ac.in")]}
+      captainsArray={[new Person("Banoth Devender (M)", "8341367106", "N/A"), new Person("Anuska (W)", "N/A", "N/A")]}
       imageSrc={kabaddi}
       eventName="Kabbadi"
       rulebookPDF={KabbadiPDF}
@@ -268,7 +268,7 @@ const Kabbadi = (props) => {
 const Khokho = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Yandapalli Gireesh Reddy (M)", "6303606994", "ygireesh.reddy.eee21@itbhu.ac.in"), new Person("Saloni Sharma (W)", "8392940227", "saloni.sharma.civ22@itbhu.ac.in")]}
+      captainsArray={[new Person("Varadaraj Santhosh (M)", "9561820241", "N/A"), new Person("Saloni Sharma (W)", "8392940227", "saloni.sharma.civ22@itbhu.ac.in")]}
       imageSrc={khokho}
       eventName="Khokho"
       rulebookPDF={KhoKhoPDF}
@@ -280,7 +280,7 @@ const Khokho = (props) => {
 const Powerlifting = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Dhahal Brahma", "9101401340", "dhahal.brahma.cer19@itbhu.ac.in")]}
+      captainsArray={[new Person("Anshuman (M)", "7409060231", "N/A")]}
       imageSrc={powerlifting}
       eventName="Powerlifting"
       rulebookPDF={PowerliftingPDF}
@@ -292,7 +292,7 @@ const Powerlifting = (props) => {
 const Squash = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Hemank Vats (M)", "N/A", "hemank.vats.apd20@itbhu.ac.in"), new Person("Toko Yanu (W)", "8258872098", "saloni.sharma.civ22@itbhu.ac.in")]}
+      captainsArray={[new Person("Harsh (M)", "7042626767", "N/A"), new Person("Arunima Bhatnagar (W)", "9630886703", "N/A")]}
       imageSrc={squash}
       eventName="Squash"
       rulebookPDF={SquashPDF}
@@ -340,7 +340,7 @@ const Tennis = (props) => {
 const Volleyball = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Pawan Kumar (M)", "9110142092", "pawan.kumar.ece20@itbhu.ac.in"), new Person("Boddu Bhavana (W)", "9390085089", "boddu.bhavana.mec20@itbhu.ac.in")]}
+      captainsArray={[new Person("Ankur Sheoran (M)", "9306369779", "N/A"), new Person("Shriya Tiwari (W)", "7573005785", "N/A")]}
       imageSrc={volleyball}
       eventName="Volleyball"
       rulebookPDF={VolleyballPDF}
@@ -352,7 +352,7 @@ const Volleyball = (props) => {
 const WeightLifting = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Harsh Agrawal (M)", "9759877847", "harshagrawal789789@gmail.com")]}
+      captainsArray={[new Person("Anshuman (M)", "7409060231", "N/A")]}
       imageSrc={weightlifting}
       eventName="WeightLifting"
       rulebookPDF={WeightliftingPDF}

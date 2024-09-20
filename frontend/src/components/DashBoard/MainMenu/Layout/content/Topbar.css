@@ -48,7 +48,7 @@
 }
 
 .header-top i {
-  color:#760E53;
+  color:rgba(73, 130, 246, 1);
 }
 
 .header-top li {
@@ -57,7 +57,7 @@
 }
 
 .header-top .dropdown-toggle {
-  color: rgba(118, 14, 83, 1);
+  color: rgba(18, 76, 193, 1);
   background-color: transparent;
   border-color: transparent;
 }
@@ -86,9 +86,9 @@
 
 .register-now {
   background: white none repeat scroll 0 0;
-  border: 2px solid #760E53;
+  border: 2px solid rgba(2, 0, 33, 1);
   border-radius: 100px ;
-  color: #760E53;
+  color: rgba(2, 0, 33, 1);
   font:Poppins;
   font-size: 18px;
   font-weight: 600;
@@ -117,17 +117,18 @@
   border-radius: 35px;
   border: 1px;
   gap: 10px;
-  border: 1px solid rgba(118, 14, 83, 1);
+  border: 1px solid rgba(2, 0, 33, 1);
   display: flex;
   margin:2.5rem;
   font-weight: 700;
-  color: #760E53;}
+  color: rgba(2, 0, 33, 1);}
 
 .register-now:hover {
-  background-color: #760E53;
+  background-color: rgba(73, 130, 246, 1);
   color: white;
   transition: ease-out;
   transition-duration: 300ms;
+  border-color: rgba(73, 130, 246, 1);
 }
 
 /* .register-now:focus {
@@ -152,7 +153,7 @@
 }
 
 .dropdown-menu {
-  position: absolute;
+  /* position: absolute; */
   top: 100%;
   left: 0;
   z-index: 1000;
@@ -185,6 +186,7 @@
   font-weight: 500;
 }
 
+
 .text-muted {
   color: rgba(177, 177, 177, 1) !important;
 }
@@ -202,7 +204,7 @@
   border-radius: 0.2rem;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 901px) {
   .hidden-xs {
     display: none !important;
   }
@@ -227,11 +229,11 @@
 .view_db {
   background: white none repeat scroll 0 0;
   border-radius: 100px;
-  border:2px solid #760E53;
+  border:2px solid rgba(73, 130, 246, 1);
   width: Fixed (150px);
   height: Fixed (35px);
   font:Poppins;
-  color: #760E53;
+  color: rgba(73, 130, 246, 1);
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -241,7 +243,7 @@
 
 .view_db:hover {
   color: #ffffff;
-  background: #760E53 none repeat scroll 0 0;
+  background: rgba(73, 130, 246, 1) none repeat scroll 0 0;
 }
 
 .view_db:focus {
@@ -268,7 +270,7 @@
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 820px) {
   .left_content {
     display: flex;
     justify-content: center;
@@ -283,4 +285,5 @@
   border-radius: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  position: inherit;
 }
