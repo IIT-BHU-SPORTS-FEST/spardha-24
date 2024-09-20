@@ -9,7 +9,7 @@
 }
 
 /* Background Image Styling */
-.bg {
+.bg-home {
   background-size: cover; /* Ensures the entire image is visible */
   background-position: top;
   background-attachment: fixed; /* Keeps the image static when scrolling */

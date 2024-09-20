@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="sctn">
-        <div className="bg" style={{ backgroundImage: `url(${Bgimg})` }}></div>
+        <div className="bg-home" style={{ backgroundImage: `url(${Bgimg})` }}></div>
         {/* Main Content Section */}
         <div className="main-content">
           <div>
