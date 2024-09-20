@@ -150,12 +150,35 @@ font-size: 24px;
     .bottom{
         height: 38px;
     }
-
+.mail{
+    padding: 15px;
+    padding-right: 30px;
+}
 }
 @media (max-width:490px) {
     .bottom{
         font-size: 18px;
         height: 40px;
+    }
+    .mail img{
+        width: 18px;
+
+    }
+    .address{
+        gap: 5px;
+}
+.container{
+    padding: 0px;
+    padding-top: 20px;
+}
+.quicklink_contact{
+    gap: 2px;
+}
+.convenermail{
+    font-size: 12px;
+}
+    .logoimg{
+        width: 100px;
     }
 }
 @media (max-width:400px) {
@@ -165,5 +188,13 @@ font-size: 24px;
     .bluetext{
         font-size: 18px;
     }
+    .text{
+        font-size: 10px;
+    }
     
+}
+@media (max-width:340px) {
+    .text{
+        font-size: 12px;
+    }
 }

@@ -49,7 +49,7 @@ const footer = () => {
               <div className={`${css.contacts}`}>
               <h4 className={`${css.convener}`}> Convener</h4>
               <p>Sarthak Gupta</p>
-              <p>convener.spardha@itbhu.ac.in</p></div>
+              <p className={`${css.convenermail}`}>convener.spardha@itbhu.ac.in</p></div>
             </div>
             <div className={`${css.followus}`}>
               <h2 className={`${css.bluetext} ${css.gaping}`}> Follow Us</h2>
