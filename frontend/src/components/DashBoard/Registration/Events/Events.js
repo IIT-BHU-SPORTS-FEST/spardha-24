@@ -305,7 +305,7 @@ const EventsDb = () => {
           <div className="edit_button">
             <Link
               to="/dashboard/events"
-              style={{ textDecoration: 'none', color: '#760e53' }}
+              style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit
             </Link>
@@ -605,7 +605,7 @@ const EventsDb = () => {
           <div className="edit_button">
             <Link
               to="/dashboard/events"
-              style={{ textDecoration: 'none', color: '#760e53' }}
+              style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit
             </Link>
@@ -898,12 +898,12 @@ const EventsDb = () => {
       </div>
       <br />
       <div className='sub_details'>
-        <div className='heading'>
+        <div className='heading-register'>
           <div className="events-heading">Mixed</div>
           <div className="edit_button">
             <Link
               to="/dashboard/events"
-              style={{ textDecoration: 'none', color: '#760e53' }}
+              style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit
             </Link>

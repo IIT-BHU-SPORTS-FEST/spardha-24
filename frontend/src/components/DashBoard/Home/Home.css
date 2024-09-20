@@ -1,24 +1,25 @@
 .user-dashboard {
   padding: 0 20px;
-  background-color: #D9D9D9;
+  background: rgba(13, 14, 15, 1);
+
 }
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; 
 
 .user-dashboard h1 {
-  color: black;
+  color: rgba(255, 255, 255, 1);
   font: Poppins;
   font-size: 22px;
   font-weight: 500;
   margin: 0;
   padding: 21px 0;
-  
+
 }
 .username{
-  color:#760E53
+  color:rgba(73, 130, 246, 1)
 }
 .num{
-  color:#760E53;
+  color:rgba(73, 130, 246, 1);
   font-weight: 1000;
 }
 .home_scroller{
@@ -32,7 +33,7 @@
 }
 
 .home_scroller::-webkit-scrollbar-thumb {
-  background-color: #760e53;
+  background-color: rgba(73, 130, 246, 1);
   border-radius: 200px;
 }
 
@@ -88,11 +89,10 @@
 
 .welcome-text h2{
   font: Poppins;
-  color: #760E53;
+  color: rgba(73, 130, 246, 1);
   font-size: 22px;
   font-weight: 600;
   line-height: 33px;
-
 }
 
 .register {
@@ -109,19 +109,20 @@
   left: 1045px;
   border: 2px;
   gap: 10px;
-  border: 2px solid rgba(118, 14, 83, 1);
+  border: 2px solid rgba(2, 0, 33, 1);
   display: flex;
   margin-left: auto;
   font-weight: 500;
   font-size: 18px;
-  color: #760E53;
+  color: rgba(2, 0, 33, 1);
 }
 
 .register:hover {
-  background-color: #760E53;
+  background-color: rgba(73, 130, 246, 1);
   color: white;
   transition: ease-out;
   transition-duration: 300ms;
+  border-color: rgba(73, 130, 246, 1);
 }
 
 .register:focus {
@@ -181,7 +182,7 @@
 }
 
 .welcome-text .dropdown-menu > a {
-  color: #760E53;
+  color: rgba(73, 130, 246, 1);
   display: inline-block;
   font-weight: 800;
   padding: 9px 0;
@@ -190,7 +191,7 @@
 }
 
 .welcome-text .dropdown-menu > a:hover {
-  color: #B4147E;
+  color: rgba(73, 130, 246, 1);
 }
 
 @media only screen and (max-width: 767px) {
@@ -277,8 +278,6 @@
   font-size: 14px;
   font-weight: 600;
   padding: 10px 20px 10px 20px;
-  position: relative;
-
   background-color: transparent;
   text-decoration: none;
   justify-content: center;
@@ -292,15 +291,15 @@
   left: 1045px; */
   border: 2px;
   gap: 10px;
-  border: 2px solid rgba(118, 14, 83, 1);
+  border: 2px solid rgba(73, 130, 246, 1);
   display: flex;
   margin-right: auto;
   font-weight: 500;
   font-size: 18px;
-  color: #760E53;
+  color: rgba(73, 130, 246, 1);
 } 
 .btnform:hover {
-  background-color: #760E53;
+  background-color: rgba(73, 130, 246, 1);
   color: white;
   transition: ease-out;
   transition-duration: 300ms;

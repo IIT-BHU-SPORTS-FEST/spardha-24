@@ -60,7 +60,7 @@ const Registration = () => {
                     <div className="edit_button">
                       <Link
                         to="/dashboard/contingentEdit"
-                        style={{ textDecoration: 'none', color: '#760e53' }}
+                        style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
                       >
                         Edit
                       </Link>
