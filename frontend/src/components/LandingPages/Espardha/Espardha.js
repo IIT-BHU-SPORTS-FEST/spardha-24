@@ -8,6 +8,9 @@ import bgmi from "./img/bgmi.png"
 import { useState } from 'react';
 import freefire from './img/freefire.png'
 import valorent from './img/valorent.png'
+import bgmi_rulebook from './rulebook/BGMI_RULEBOOK.pdf'
+import freefire_rulebook from './rulebook/FREEFIRE_RULEBOOK.pdf'
+import valorant_rulebook from './rulebook/VALORANT_RULEBOOK.pdf'
 
 
 const Espardha = () => {
@@ -73,6 +76,9 @@ const Espardha = () => {
                       <h4 style={{ fontWeight:"bold"}}>Freefire E-Spardha 2024</h4>
                       <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 100/Person</h6>
                       <a href="https://forms.gle/LMGudFmq3dLez9dr6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                      <a href={freefire_rulebook} className={`${styles.btnclass}`} download>
+                      Rulebook
+                    </a>
                       </div>
                     </div>
                   </div>
@@ -86,6 +92,9 @@ const Espardha = () => {
                       <h4 style={{ fontWeight:"bold"}}>Valorant E-Spardha  2024</h4>
                       <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 100/Person</h6>
                       <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                      <a href={valorant_rulebook} className={`${styles.btnclass}`} download>
+                      Rulebook
+                    </a>
                       </div>
                     </div>
                   </div>
@@ -99,6 +108,9 @@ const Espardha = () => {
                     <h4 style={{ fontWeight:"bold"}}> BGMI E-Spardha 2024</h4>
                     <div className={`${styles.prizepool}`}><h6>Rregistration Fee: ₹ 110/Person</h6>
                       <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
+                      <a href={bgmi_rulebook} className={`${styles.btnclass}`} download>
+                      Rulebook
+                    </a>
                       </div>
                     </div>
                   </div>

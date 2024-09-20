@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './Profile.css';
 import axios from 'axios';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router';
+import './Profile.css';
 //toast.configure();
 
 const Profile = () => {
