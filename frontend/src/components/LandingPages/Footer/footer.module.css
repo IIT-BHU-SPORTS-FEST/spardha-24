@@ -2,7 +2,8 @@
     background: linear-gradient(79.99deg, #1F1E1E 46.39%, #353535 100%);
     position:relative;
     bottom: 0px;
-    width: 100vw;
+    overflow-x:hidden ;
+    min-width: 100vw;
     z-index: 1000;
 }
 .bottom{
@@ -11,6 +12,7 @@
     align-items:end;
     color: #B7B4B4;
     width: 100vw;
+    align-items: center;
     justify-content: center;
 }
 .container{
@@ -150,12 +152,15 @@ font-size: 24px;
     }
 
 }
+@media (max-width:490px) {
+    .bottom{
+        font-size: 18px;
+        height: 40px;
+    }
+}
 @media (max-width:380px) {
     .bluetext{
         font-size: 18px;
     }
-    .bottom{
-        font-size: 14px;
-        height: 40px;
-    }
+    
 }

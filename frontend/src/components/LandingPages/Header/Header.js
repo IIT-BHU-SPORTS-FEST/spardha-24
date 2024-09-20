@@ -40,6 +40,7 @@ function Header() {
 
   return (
     <>
+    <div className='outercon'>
       <Navbar
         expand="lg"
         className={styles['wrap-container']}
@@ -55,9 +56,8 @@ function Header() {
           <NavbarBrand>
             <NavHashLink exact="true" to="/" smooth>
               <img
-                src={`/images/logo/spardha-logo-${
-                  navbar ? (isMobile ? 'white' : 'white') : 'white'
-                }.png`}
+                src={`/images/logo/spardha-logo-${navbar ? (isMobile ? 'white' : 'white') : 'white'
+                  }.png`}
                 alt="Sparhda Logo"
                 height="70px"
                 style={{ marginLeft: '2px' }}
@@ -80,9 +80,8 @@ function Header() {
             }}
           >
             <NavbarToggler
-              className={`${
-                styles[`navbar-toggler${open ? '-open' : ''}`]
-              } mx-2`}
+              className={`${styles[`navbar-toggler${open ? '-open' : ''}`]
+                } mx-2`}
               style={{ border: 'none' }}
               onClick={toggle}
             ></NavbarToggler>
@@ -107,13 +106,13 @@ function Header() {
                         color: isMobile
                           ? 'black'
                           : navbar
-                          ? 'white'
-                          : 'rgba(255, 255, 255, 0.9)',
+                            ? 'white'
+                            : 'rgba(255, 255, 255, 0.9)',
                         borderBottom: isMobile
                           ? '1px solid black'
                           : active
-                          ? '3px solid #4982F6'
-                          : null,
+                            ? '3px solid #4982F6'
+                            : null,
                       };
                     }}
                     smooth
@@ -138,13 +137,13 @@ function Header() {
                         color: isMobile
                           ? 'black'
                           : navbar
-                          ? 'white'
-                          : 'rgba(255, 255, 255, 0.9)',
+                            ? 'white'
+                            : 'rgba(255, 255, 255, 0.9)',
                         borderBottom: isMobile
                           ? '1px solid black'
                           : isActive
-                          ? '3px solid #4982F6'
-                          : null,
+                            ? '3px solid #4982F6'
+                            : null,
                       };
                     }}
                     smooth
@@ -221,8 +220,8 @@ function Header() {
                         color: isMobile
                           ? 'black'
                           : navbar
-                          ? 'white'
-                          : 'rgba(255, 255, 255, 0.9)',
+                            ? 'white'
+                            : 'rgba(255, 255, 255, 0.9)',
                         borderBottom: isMobile ? '1px solid black' : null,
                       };
                     }}
@@ -263,13 +262,13 @@ function Header() {
                             color: isMobile
                               ? 'black'
                               : navbar
-                              ? 'white'
-                              : 'rgba(255, 255, 255, 0.9)',
+                                ? 'white'
+                                : 'rgba(255, 255, 255, 0.9)',
                             borderBottom: isMobile
                               ? '3px solid black'
                               : isActive
-                              ? '3px solid #4982F6'
-                              : null,
+                                ? '3px solid #4982F6'
+                                : null,
                           };
                         }}
                         smooth
@@ -306,13 +305,13 @@ function Header() {
                             color: isMobile
                               ? 'black'
                               : navbar
-                              ? 'white'
-                              : 'rgba(255, 255, 255, 0.9)',
+                                ? 'white'
+                                : 'rgba(255, 255, 255, 0.9)',
                             borderBottom: isMobile
                               ? '3px solid black'
                               : isActive
-                              ? '3px solid #4982F6'
-                              : null,
+                                ? '3px solid #4982F6'
+                                : null,
                           };
                         }}
                         smooth
@@ -352,13 +351,13 @@ function Header() {
                         color: isMobile
                           ? 'black'
                           : navbar
-                          ? 'white'
-                          : 'rgba(255, 255, 255, 0.9)',
+                            ? 'white'
+                            : 'rgba(255, 255, 255, 0.9)',
                         borderBottom: isMobile
                           ? '1px solid black'
                           : isActive
-                          ? '3px solid #4982F6'
-                          : null,
+                            ? '3px solid #4982F6'
+                            : null,
                       };
                     }}
                     smooth
@@ -383,13 +382,13 @@ function Header() {
                         color: isMobile
                           ? 'black'
                           : navbar
-                          ? 'white'
-                          : 'rgba(255, 255, 255, 0.9)',
+                            ? 'white'
+                            : 'rgba(255, 255, 255, 0.9)',
                         borderBottom: isMobile
                           ? '1px solid black'
                           : isActive
-                          ? '3px solid #4982F6'
-                          : null,
+                            ? '3px solid #4982F6'
+                            : null,
                       };
                     }}
                     smooth
@@ -417,8 +416,8 @@ function Header() {
                           color: isMobile
                             ? 'black'
                             : navbar
-                            ? 'white'
-                            : 'rgba(255, 255, 255, 0.9)',
+                              ? 'white'
+                              : 'rgba(255, 255, 255, 0.9)',
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -439,8 +438,8 @@ function Header() {
                           color: isMobile
                             ? 'black'
                             : navbar
-                            ? 'white'
-                            : 'rgba(255, 255, 255, 0.9)',
+                              ? 'white'
+                              : 'rgba(255, 255, 255, 0.9)',
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -460,8 +459,8 @@ function Header() {
                           color: isMobile
                             ? 'black'
                             : navbar
-                            ? 'white'
-                            : 'rgba(255, 255, 255, 0.9)',
+                              ? 'white'
+                              : 'rgba(255, 255, 255, 0.9)',
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -476,7 +475,7 @@ function Header() {
             </Collapse>
           </div>
         </div>
-      </Navbar>
+      </Navbar></div>
     </>
   );
 }
