@@ -175,7 +175,7 @@ function Forgot() {
                     ></Input>
                     
                   </InputGroup>
-                  <div class="col-sm-12 text-end">
+                  <div class="col-sm-12  text-end">
       <span style={{ color: 'red' }}>*</span>Mandatory Field
       </div>
                   {email.warning !== '' && (
@@ -196,7 +196,7 @@ function Forgot() {
               color={toast.color}
               style={{
                 fontSize: '15px',
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+                fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
               }}
               className="my-1 py-2"
             >

@@ -254,7 +254,7 @@ function Signup() {
           color="primary"
           className={`${styles['signup_note']} py-2`}
           style={{
-            fontSize: '14px',
+            fontSize: '0.75rem',
             heigth: '80px',
             fontFamily: 'Poppins, sans-serif',
             background: '#020021',
@@ -417,7 +417,7 @@ function Signup() {
               {email.warning !== '' && (
                 <FormFeedback
                   className="text-danger d-block fw-bold"
-                  style={{ fontSize: '12px' }}
+                  style={{ fontSize: '13px' }}
                 >
                   {email.warning}
                 </FormFeedback>
@@ -736,7 +736,9 @@ function Signup() {
       color: '#ffffff',
       textAlign: 'right', 
       marginTop: '5px', 
+      fontSize:'15px',
     }}
+    class={"text-end"}
   >
     <span style={{ color: 'red' }}>*</span> Mandatory Field
   </h4>
