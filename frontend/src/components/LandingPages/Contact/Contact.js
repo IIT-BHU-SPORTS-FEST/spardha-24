@@ -5,7 +5,7 @@ import Card from './Card/Card';
 
 const Contact = () => {
   const [selectedCategory, setSelectedCategory] = useState('Conveners');
-  const [menuActive, setMenuActive] = useState(false);  
+  const [menuActive, setMenuActive] = useState(false); 
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -26,14 +26,14 @@ const Contact = () => {
       //   <Card /><Card /><Card /><Card /><Card /></>;
       case 'Conveners':
         return <>
-        <Card  mainImage='/images/Contact/cimages/Convenor2.jpeg' name="Sarthak Gupta" position="Convener" email="sarthak.gupta.civ21@itbhu.ac.in" />
+        <Card  mainImage='/images/Contact/cimages/Convenor2.jpeg' name="Sarthak Gupta" position="Convener" email="sarthak.gupta.civ21@itbhu.ac.in"  isConvener={true} linkedin="https://www.linkedin.com/in/sarthak-gupta-4779b6227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" insta="https://www.instagram.com/sarthak._.gupta23?igsh=aWl3NHh5eWZseTBv"/>
 
-        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convener" email="bhumika.student.met21@itbhu.ac.in" />
+        <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Bhumika" position="Co-convener" email="bhumika.student.met21@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/bhumika-batra-47782222a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" insta="https://www.instagram.com/bhumika_batra_05?igsh=bWU3NTExcTh4bHNy"/>
 
         <Card mainImage='/images/Contact/cimages/Co-convenor21.jpeg' name="Shubham Sahu" position="Co-convener" email="shubham.sahu.
-        cer21@itbhu.ac.in" />
+        cer21@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/shubhamsahu7240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" insta="https://www.instagram.com/shubham.sahu7240?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"/>
 
-        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convener" email="adarsh.raj.met21@itbhu.ac.in" />
+        <Card mainImage='/images/Contact/cimages/Co-convenor.jpeg' name="Adarsh Raj" position="Co-convener" email="adarsh.raj.met21@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/adarsh-raj-a5b9b4244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" insta="https://www.instagram.com/adarsh_.raj._?igsh=bmg3ZG0zN3VodzNo"/>
 
         
 

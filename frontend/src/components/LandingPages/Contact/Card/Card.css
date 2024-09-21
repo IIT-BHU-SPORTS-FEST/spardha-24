@@ -72,8 +72,8 @@ hr {
 
 .hover-box {
     position: absolute; 
-    top: -3.5rem;
-    left: -2.8rem;
+    top: -2.5rem;
+    left: -5.8rem;
     display: flex;
     flex-direction: row;
     align-items: center;
