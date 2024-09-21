@@ -6,6 +6,7 @@ import takeback from './takeback24.png'
 import Greencounter from '../GreenCounter/Greencounter';
 import Carousel from '../Home/Carousel/Carouselhp';
 import Gallery from '../Gallery/Gallery'
+import Footer from '../Footer/footer';
 const About = () => {
   return (
     <>
@@ -178,6 +179,8 @@ const About = () => {
           </div>
         </section>
       </div>
+      <div style={{height:'30px'}}></div>
+      <Footer/>
     </>
   );
 };

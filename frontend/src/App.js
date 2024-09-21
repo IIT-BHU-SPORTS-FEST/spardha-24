@@ -116,6 +116,7 @@ function App() {
             element={
               <Suspense fallback={<Spinner />}>
                 <HomePage />
+                <Footer />
               </Suspense>
             }
           />
@@ -195,6 +196,7 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Espardha />
+                <Footer />
               </Suspense>
             }
           />
@@ -203,6 +205,7 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Events />
+                <Footer />
               </Suspense>
             }
           />
@@ -227,6 +230,7 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Matches />
+                <Footer />
               </Suspense>
             }
           />
@@ -243,6 +247,7 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Sponsors />
+                <Footer />
               </Suspense>
             }
           />
@@ -267,6 +272,7 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Footer1 />
+                <Footer />
               </Suspense>
             }
           />
@@ -277,6 +283,7 @@ function App() {
           element={
             <Suspense fallback={<Preloader />}>
               <Admin />
+              <Footer />
             </Suspense>
           }
         />
@@ -311,6 +318,7 @@ function App() {
           element={
             <Suspense fallback={<Preloader />}>
               <DashBoard />
+              <Footer />
             </Suspense>
           }
         >
@@ -365,7 +373,7 @@ function App() {
           />
         </Route>
       </Routes>
-      <Footer />
+    
     </>
   );
 }
