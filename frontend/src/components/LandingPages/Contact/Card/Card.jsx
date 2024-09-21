@@ -88,7 +88,7 @@ function Card({ mainImage, name, position, email, phone, isConvener, insta, link
           </a>
 
           {insta && (
-            <a href={insta} >
+            <a href={insta} target="_blank" rel="noopener noreferrer">
               <img src="/images/Contact/cimages/Group 33710.svg" alt="insta" />
             </a>
           )}
