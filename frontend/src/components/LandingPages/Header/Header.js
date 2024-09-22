@@ -646,11 +646,17 @@ function Header() {
                   </div>
 
                   <footer style={{ display: isMobile ? null : 'none' }}>
+                    <div
+                      style={{
+                        borderTop: '2px solid white',
+                        marginBottom: '5px',
+                        height: 'fit-content',
+                      }}
+                    ></div>
                     <img
                       src="/images/logo/spardha24.png"
                       alt="spardha-logo"
-                      height={'100%'}
-                      width={'80%'}
+                      className="image"
                     />
                   </footer>
                 </Nav>
