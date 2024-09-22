@@ -237,7 +237,7 @@ function Login() {
                   style={{
                     textDecoration: 'none',
                     color: '#4982F6',
-                    fontSize:'1.29rem',
+                    // fontSize:'20px',
                   }}
                 >
                   Login
@@ -427,7 +427,7 @@ function Login() {
                             </InputGroup>
                             <h4
                             className={`${styles['panel-title-3']} text-center`}
-                            style={{ color: '#ffffff', marginLeft:'4rem',fontSize:'15px', }}
+                            style={{ color: '#ffffff', marginLeft:'4rem',fontSize:'15px' }}
                             // class={"text-end"}
                           >
                             <span style={{ color: 'red' }}>*</span>Mandatory Field

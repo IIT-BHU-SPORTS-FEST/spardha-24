@@ -737,6 +737,7 @@ function Signup() {
       textAlign: 'right', 
       marginTop: '5px', 
       fontSize:'15px',
+      whiteSpace:'nowrap'
     }}
     // class={"text-end"}
   >
