@@ -1,16 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 //toast.configure();
 import { Document, Packer, Paragraph, TextRun, Table, WidthType } from "docx";
 import { saveAs } from 'file-saver';
-// import { useLocation } from 'react-router-dom';
-import { ValidityContext } from '../ValidityContext';
-
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -19,8 +16,6 @@ const Home = () => {
 
   const [user, setUser] = useState('');
   const [numevents, setNumEvents] = useState('10');
-  const { isValid } = useContext(ValidityContext);
-
 
   useEffect(() => {
     axios
@@ -73,14 +68,6 @@ const Home = () => {
   }
 
   const handleDownload = () => {
-
-    if (!isValid) {
-      toast.error('Please fill out the contingent details before downloading!', {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-      return; 
-    }
-
     axios.get(`${baseUrl}teams/contingent/form`, {
       responseType: 'blob',
       headers: {
@@ -164,6 +151,7 @@ const Home = () => {
       })
       .catch((error) => {
         console.error('Error downloading document:', error);
+        alert("Please fill the contingent details before downloading!");
       });
   }
 

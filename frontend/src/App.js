@@ -11,7 +11,6 @@ import NotFound from './components/LandingPages/NotFound/NotFound';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
 // import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
-import { ValidityProvider } from './components/DashBoard/ValidityContext.js';
 
 const LandingPages = React.lazy(() =>
   import('./components/LandingPages/LandingPages')
@@ -100,7 +99,6 @@ function usePageViews() {
 function App() {
   usePageViews();
   return (
-    <ValidityProvider>
     <>
       {/* <Router> */}
       <Routes>
@@ -377,7 +375,6 @@ function App() {
       </Routes>
     
     </>
-    </ValidityProvider>
   );
 }
 
