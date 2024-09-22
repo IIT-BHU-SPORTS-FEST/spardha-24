@@ -5,16 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  min-width: 100vw;
 }
-:root{
-
-  --width_sc:17px;
+:root {
+  --width_sc: 17px;
 }
 @media (pointer: coarse) {
-  :root{
-
-    --width_sc:0px;
+  :root {
+    --width_sc: 0px;
   }
 }
 
