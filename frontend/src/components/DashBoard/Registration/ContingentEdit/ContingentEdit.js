@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import {
   // Alert,
   Form,
@@ -19,6 +19,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router';
 import '../../Profile/Profile.css'
+import { ValidityContext } from '../../ValidityContext';
 //toast.configure();
 
 const ContingentEdit = () => {
@@ -26,6 +27,7 @@ const ContingentEdit = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
   const baseUrl = process.env.REACT_APP_BASE_URL;
+  const { setIsValid } = useContext(ValidityContext);
 
   const rep = JSON.stringify(localStorage.getItem('College_Rep'));
   // console.log('rep=',rep);
@@ -67,60 +69,61 @@ const ContingentEdit = () => {
     // redirect to registration page
     navigate('/dashboard/registration');
   };
-
+  
   const submitButton = () => {
-    // console.log('submit', input.leader_name.length);
+    let isValid = true; 
     if (
       input.num_of_boys === '' ||
       input.num_of_girls === '' ||
       input.leader_name === '' ||
       input.leader_contact_num === '' ||
-      input.num_of_faculty_members === ''||
-      input.num_of_coaches_pti===''||
-      input.num_of_supporting_staff===''
+      input.num_of_faculty_members === '' ||
+      input.num_of_coaches_pti === '' ||
+      input.num_of_supporting_staff === ''
     ) {
-      //console.log('wrong input');
       toast.error('Please fill all the fields', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false; 
     } else if (input.num_of_boys < 0) {
-      //console.log('num boys');
       toast.error('Number of boys in a team should be positive', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false;
     } else if (input.num_of_girls < 0) {
-      // console.log('num girls');
       toast.error('Number of girls in a team should be positive', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false;
     } else if (input.num_of_faculty_members < 0) {
-      //console.log('num faculty members');
       toast.error('Number of Faculty members in a team should be positive', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false;
     } else if (input.leader_name.length < 3) {
-      //console.log('num faculty members');
       toast.error('Please enter a valid name', {
         position: toast.POSITION.BOTTOM_RIGHT,
-      });     
-      
-    }
-    else if (input.num_of_coaches_pti < 0) {
-      //console.log('num coaches & PTI');
+      });
+      isValid = false;
+    } else if (input.num_of_coaches_pti < 0) {
       toast.error('Number of Coaches & PTI in a team should be positive', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false;
     } else if (input.num_of_supporting_staff < 0) {
-      //console.log('num supporting staff');
       toast.error('Number of Supporting Staff in a team should be positive', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      isValid = false;
     } else if (!input.leader_contact_num.match(/^[0-9]{10}$/)) {
-      //console.log('num contact');
       toast.error('Please enter a valid contact number', {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-    } else {
+      isValid = false;
+    }
+    setIsValid(isValid);
+    if (isValid) {
+      navigate('/dashboard/home', { state: { isValid } });
       axios
         .delete(`${baseUrl}teams/contingent/details/`, {
           headers: {
@@ -128,18 +131,15 @@ const ContingentEdit = () => {
           },
         })
         .then((res) => {
-          //console.log('deleted');
-          const passed = input;
-
+          const passed = { ...input }; // Clone the input object
+  
           passed['num_of_boys'] = parseInt(passed['num_of_boys']);
           passed['num_of_girls'] = parseInt(passed['num_of_girls']);
           passed['num_of_faculty_members'] = parseInt(passed['num_of_faculty_members']);
           passed['num_of_coaches_pti'] = parseInt(passed['num_of_coaches_pti']);
           passed['num_of_supporting_staff'] = parseInt(passed['num_of_supporting_staff']);
           passed['college_rep'] = JSON.parse(rep);
-
-          //console.log('passed', passed);
-
+  
           axios
             .post(`${baseUrl}teams/contingent/details/`, passed, {
               headers: {
@@ -147,7 +147,7 @@ const ContingentEdit = () => {
               },
             })
             .then((res) => {
-              //console.log('successful');
+              // On success, navigate to another page
               navigate('/dashboard/registration');
             })
             .catch((err) => {
@@ -159,6 +159,7 @@ const ContingentEdit = () => {
         });
     }
   };
+  
 
   const inputChangeHandler = async (e) => {
     // console.log("e in form", e.target.value);
