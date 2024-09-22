@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
 import styles from '../Signup/Signup.module.css';
+import Footer from '../../Footer/footer';
 import {
   Alert,
   Button,
@@ -104,6 +105,8 @@ function Reset() {
   });
 
   return (
+  <div className={`${styles.outerdiv}`}>
+  <div className={`${styles.maindiv}`}>
     <div id="resetDiv" ref={ref_container}>
       <h3 className={`${styles.heading}`}> UPDATE PASSWORD </h3>
       <hr />
@@ -269,6 +272,10 @@ function Reset() {
           </Button>
         </div>
       </Form>
+    </div>
+    </div>
+    <div style={{height:'30px'}}></div>
+      <Footer/>
     </div>
   );
 }

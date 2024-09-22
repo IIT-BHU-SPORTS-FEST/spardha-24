@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../../Footer/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Alert,
@@ -125,7 +126,8 @@ function Login() {
     color: 'primary',
     message: '',
   });
-  return (
+  return (<div className={`${styles.outerdiv}`}>
+  <div className={`${styles.maindiv}`}>
     <AnimatePresence>
       <motion.div id="loginDiv" ref={ref_container}>
         <div className="col-sm-12">
@@ -712,6 +714,10 @@ function Login() {
         </Form>
       </motion.div>
     </AnimatePresence>
+    </div>
+    <div style={{height:'30px'}}></div>
+    <Footer></Footer>
+    </div>
   );
 }
 

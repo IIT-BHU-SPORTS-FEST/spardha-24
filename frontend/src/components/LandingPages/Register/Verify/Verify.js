@@ -4,6 +4,7 @@ import { FaEnvelope, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
+import Footer from '../../Footer/footer';
 import {
   Alert,
   Form,
@@ -82,7 +83,8 @@ function Verify() {
     message: '',
   });
 
-  return (
+  return (<div className={`${styles.outerdiv}`}>
+    <div className={`${styles.maindiv}`}>
     <div id="verifyDiv" ref={ref_container}>
       <h3 className={`${styles.heading}`}> VERIFY EMAIL </h3>
       <hr />
@@ -219,6 +221,10 @@ function Verify() {
           </Button>
         </div>
       </Form>
+    </div>
+    </div>
+    <div style={{height:'30px'}}></div>
+    <Footer></Footer>
     </div>
   );
 }

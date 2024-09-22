@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../../Footer/footer';
 import {
   Alert,
   Button,
@@ -227,7 +228,9 @@ function Signup() {
     color: 'primary',
     message: '',
   });
-  return (
+  return (<div className={`${styles.outerdiv
+  }`}>
+  <div className={`${styles.maindiv}`}>
     <motion.div id="signUpDiv" ref={ref_container} transition={{ delay: 0.1 }}>
       <div className="col-sm-12">
         {/* <Alert
@@ -841,6 +844,9 @@ function Signup() {
         </div>
       </Form>
     </motion.div>
+    </div>
+    <div style={{height:'30px'}}></div>
+      <Footer/></div>
   );
 }
 
