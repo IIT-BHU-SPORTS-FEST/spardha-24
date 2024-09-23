@@ -35,12 +35,11 @@
   margin: auto;
   box-sizing: border-box;
   line-height: 38px;
-  font-size: 1.6rem;
+  font-size: 30px;
   font-family: 'Poppins';
   font-weight: 700 !important;
   margin: 2.3rem auto !important;
   background-color:#4982F6 !important;
-  white-space: nowrap;
 }
 
 .btn-block:active,
@@ -101,7 +100,6 @@
   margin-bottom: 0 !important;
   color:#000000;
   margin-left: 7%;
-  row-gap: 0.2rem;
 }
 
 .panel-title-2 {
@@ -112,7 +110,6 @@
   margin-bottom: 0 !important;
   margin-left: 5%;
   color:#000000;
-  row-gap: 0.2rem;
 }
 
 .panel-title-3 {
@@ -240,7 +237,6 @@
   margin-bottom: 0 !important;
   color:#000000;
   padding-left: 0;
-  row-gap: 0.2rem;
   }
   .panel-title-2 {
     font-size: 19px;
@@ -249,7 +245,6 @@
     margin-bottom: 0 !important;
     padding-left: 0;
     color:#000000;
-    row-gap: 0.2rem;
   }
   .panel-title-3 {
     font-size: 14px;
@@ -272,7 +267,6 @@
   margin-bottom: 0 !important;
   color:#000000;
   padding-left: 0;
-  row-gap: 0.2rem;
   }
   .panel-title-2 {
     font-size: 19px;
@@ -281,7 +275,6 @@
     margin-bottom: 0 !important;
     padding-left: 0;
     color:#000000;
-    row-gap: 0.2rem;
   }
   .panel-title-3 {
     font-size: 14px;
@@ -326,22 +319,20 @@
 
 @media (max-width: 550px) {
   .panel-title-1{
-  font-size: 16px;
+  font-size: 19px;
   text-align: left !important;
   width:55px;
   margin-bottom: 0 !important;
   color:#000000;
   padding-left: 0;
-  row-gap: 0.2rem;
   }
   .panel-title-2 {
-    font-size: 17px;
+    font-size: 19px;
     text-align: left !important;
     width:40px;
     margin-bottom: 0 !important;
     padding-left: 0;
     color:#000000;
-    row-gap: 0.2rem;
   }
   .panel-title-3 {
     font-size: 14px;
@@ -370,22 +361,20 @@
 }
 @media (max-width: 300px) {
   .panel-title-1{
-  font-size: 16px;
+  font-size: 19px;
   text-align: left !important;
   width:60px;
   margin-bottom: 0 !important;
   color:#000000;
   padding-left: 0;
-  row-gap: 0.2rem;
   }
   .panel-title-2 {
-    font-size: 17px;
+    font-size: 19px;
     text-align: left !important;
     width:30px;
     margin-bottom: 0 !important;
     padding-left: 0;
     color:#000000;
-    row-gap: 0.2rem;
   }
   .panel-title-3 {
     font-size: 14px;
