@@ -3,13 +3,14 @@ import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-//import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//toast.configure();
+
 import { Document, Packer, Paragraph, TextRun, Table, WidthType } from "docx";
 import { saveAs } from 'file-saver';
 
 const Home = () => {
+  toast.configure();
   const token = localStorage.getItem('token');
   // console.log('token', token);
   const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -151,7 +152,9 @@ const Home = () => {
       })
       .catch((error) => {
         console.error('Error downloading document:', error);
-        alert("Please fill the contingent details before downloading!");
+        toast.error("Please fill the contingent details before downloading!", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       });
   }
 
