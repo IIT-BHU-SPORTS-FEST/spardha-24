@@ -239,7 +239,7 @@ function Login() {
                   style={{
                     textDecoration: 'none',
                     color: '#4982F6',
-                    fontSize:'1.29rem',
+                    // fontSize:'1.24rem',
                   }}
                 >
                   Login
