@@ -3,7 +3,7 @@
     position:relative;
     bottom: 0px;
     overflow-x:hidden ;
-    min-width: 100vw;
+    /* min-width: 100vw; */
     z-index: 1000;
 }
 .bottom{
@@ -130,7 +130,7 @@ font-size: 24px;
         gap: 10px;
     }
     .quicklink_contact{
-        width: 100vw;
+        width: 80vw;
         gap:20px;
         justify-content: space-evenly;
     }
@@ -176,6 +176,7 @@ font-size: 24px;
 }
 .convenermail{
     font-size: 12px;
+    white-space: wrap;
 }
     .logoimg{
         width: 100px;

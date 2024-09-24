@@ -239,7 +239,7 @@ function Login() {
                   style={{
                     textDecoration: 'none',
                     color: '#4982F6',
-                    fontSize:'1.29rem',
+                    // fontSize:'1.24rem',
                   }}
                 >
                   Login
@@ -296,7 +296,7 @@ function Login() {
                   >
                     <FormGroup className={`${styles['form-group']}`}>
                       <Row xs={1} md={1} xl={2}>
-                        <div className="col-sm-6">
+                        <div className="col-sm-6" style={{ width: '80%' }}>
                           <FormGroup className={`${styles['form-group']}`}>
                             <Label for="email" className={`${styles.label}`}>
                               Username/Email Address:&nbsp;
@@ -390,7 +390,7 @@ function Login() {
                       </Row>
 
                       <Row xs={1} md={1} xl={2}>
-                        <div className="col-sm-6">
+                        <div className="col-sm-6" style={{ width: '80%' }}>
                           <FormGroup className={`${styles['form-group']}`}>
                             <Label for="password" className={`${styles.label}`}>
                               Password:&nbsp;
