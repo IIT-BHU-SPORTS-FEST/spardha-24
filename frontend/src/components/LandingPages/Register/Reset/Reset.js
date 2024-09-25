@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
 import styles from '../Signup/Signup.module.css';
-import Footer from '../../Footer/footer';
+// import Footer from '../../Footer/footer';
 import {
   Alert,
   Button,

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Footer from '../../Footer/footer';
+// import Footer from '../../Footer/footer';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Alert,

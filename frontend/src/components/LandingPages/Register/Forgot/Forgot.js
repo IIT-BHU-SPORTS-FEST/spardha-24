@@ -16,7 +16,7 @@ import {
   Button,
 } from 'reactstrap';
 import styles from '../Signup/Signup.module.css';
-import Footer from '../../Footer/footer';
+// import Footer from '../../Footer/footer';
 
 function Forgot() {
   const ref_container = useRef();
