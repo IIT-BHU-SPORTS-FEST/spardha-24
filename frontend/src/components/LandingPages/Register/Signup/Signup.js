@@ -845,8 +845,9 @@ function Signup() {
       </Form>
     </motion.div>
     </div>
-    <div style={{height:'30px'}}></div>
-      <Footer/></div>
+    {/* <div style={{height:'30px'}}></div>
+      <Footer/>*/}
+      </div> 
   );
 }
 

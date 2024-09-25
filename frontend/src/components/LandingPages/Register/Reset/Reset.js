@@ -274,8 +274,8 @@ function Reset() {
       </Form>
     </div>
     </div>
-    <div style={{height:'30px'}}></div>
-      <Footer/>
+    {/* <div style={{height:'30px'}}></div>
+      <Footer/> */}
     </div>
   );
 }

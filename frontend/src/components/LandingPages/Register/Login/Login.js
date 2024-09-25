@@ -715,8 +715,8 @@ function Login() {
       </motion.div>
     </AnimatePresence>
     </div>
-    <div style={{height:'30px'}}></div>
-    <Footer></Footer>
+    {/* <div style={{height:'30px'}}></div>
+    <Footer></Footer> */}
     </div>
   );
 }
