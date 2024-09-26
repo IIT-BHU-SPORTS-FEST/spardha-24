@@ -41,6 +41,7 @@ const GAMES = {
     'Table Tennis',
     'Taekwondo',
     'Volleyball',
+    'Football',
   ],
   mixed: ['Chess', 'Cycling'],
 };
