@@ -20,7 +20,7 @@ import taekwondo from './image/taekwondo.png';
 import tennis from './image/tennis.png';
 import volleyball from './image/volleyball.png';
 import weightlifting from './image/weightlifting.png';
-import aquatics from './image/aquatics.png';
+// import aquatics from './image/aquatics.png';
 import AthleticsPDF from './athletics.pdf';
 import BadmintonPDF from './badminton.pdf';
 import BasketballPDF from './basketball.pdf';
@@ -120,17 +120,17 @@ class Person {
 }
 
 
-const Aquatics = (props) => {
-  return (
-    <EventCard
-      captainsArray={[ new Person("Bisesh Agarwal (M)", "7001782556", )]}
-      imageSrc={aquatics}
-      eventName="Aquatics"
-      rulebookPDF={AthleticsPDF}
-      {...props}
-    />
-  );
-};
+// const Aquatics = (props) => {
+//   return (
+//     <EventCard
+//       captainsArray={[ new Person("Bisesh Agarwal (M)", "7001782556", )]}
+//       imageSrc={aquatics}
+//       eventName="Aquatics"
+//       rulebookPDF={AthleticsPDF}
+//       {...props}
+//     />
+//   );
+// };
 
 const Athletics = (props) => {
   return (
@@ -383,5 +383,5 @@ export {
   Tennis,
   Volleyball,
   WeightLifting,
-  Aquatics,
+  // Aquatics,
 };

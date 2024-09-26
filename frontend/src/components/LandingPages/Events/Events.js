@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import aquatics from './image/aquatics.png';
-import aquaticshover from './image/aquaticshover.png';
+// import aquatics from './image/aquatics.png';
+// import aquaticshover from './image/aquaticshover.png';
 import athletics from './image/athletics.png';
 import athleticshover from './image/athleticshover.png';
 import basketball from './image/basketball.png';
@@ -45,7 +45,7 @@ import styles from './Events.module.css';
 import { Link } from 'react-router-dom';
 // import Carousel from '../Home/Carousel/Carouselhp';
 import {
-  Aquatics,
+  // Aquatics,
   Athletics,
   Badminton,
   Basketball,
@@ -89,6 +89,7 @@ const Events = () => {
   const [showResults17, setShowResults17] = useState(false);
   const [showResults18, setShowResults18] = useState(false);
   const [showResults19, setShowResults19] = useState(false);
+console.log(showResults19);
 
   const [athletics1, setathletics1] = useState(athletics);
   const athleticsMouseEnter = () => {
@@ -223,14 +224,14 @@ const Events = () => {
   const chessMouseLeave = () => {
     setchess1(chess);
   };
-  const [aquatics1, setaquatics1] = useState(aquatics);
-  const aquaticsMouseEnter = () => {
-    setaquatics1(aquaticshover);
-    console.log("entered");
-  };
-  const aquaticsMouseLeave = () => {
-    setaquatics1(aquatics);
-  };
+  // const [aquatics1, setaquatics1] = useState(aquatics);
+  // const aquaticsMouseEnter = () => {
+  //   setaquatics1(aquaticshover);
+  //   console.log("entered");
+  // };
+  // const aquaticsMouseLeave = () => {
+  //   setaquatics1(aquatics);
+  // };
 
 
   const onClick0 = () => {
@@ -651,28 +652,28 @@ const Events = () => {
     setShowResults18(!showResults18);
     setShowResults19(false);
   };
-  const onClick19 = () => {
-    setShowResults0(false);
-    setShowResults1(false);
-    setShowResults2(false);
-    setShowResults3(false);
-    setShowResults4(false);
-    setShowResults5(false);
-    setShowResults6(false);
-    setShowResults7(false);
-    setShowResults8(false);
-    setShowResults9(false);
-    setShowResults10(false);
-    setShowResults11(false);
-    setShowResults12(false);
-    setShowResults13(false);
-    setShowResults14(false);
-    setShowResults15(false);
-    setShowResults16(false);
-    setShowResults17(false);
-    setShowResults18(false);
-    setShowResults19(!showResults18);
-  };
+  // const onClick19 = () => {
+  //   setShowResults0(false);
+  //   setShowResults1(false);
+  //   setShowResults2(false);
+  //   setShowResults3(false);
+  //   setShowResults4(false);
+  //   setShowResults5(false);
+  //   setShowResults6(false);
+  //   setShowResults7(false);
+  //   setShowResults8(false);
+  //   setShowResults9(false);
+  //   setShowResults10(false);
+  //   setShowResults11(false);
+  //   setShowResults12(false);
+  //   setShowResults13(false);
+  //   setShowResults14(false);
+  //   setShowResults15(false);
+  //   setShowResults16(false);
+  //   setShowResults17(false);
+  //   setShowResults18(false);
+  //   setShowResults19(!showResults18);
+  // };
   
   return (
     <div className='blk'>
@@ -1096,7 +1097,7 @@ const Events = () => {
                 />
               ) : null}
 
-              <div
+              {/* <div
                 className={`${styles.col_2} ${styles.padding} `}
                 id="2"
                 onMouseEnter={aquaticsMouseEnter}
@@ -1111,13 +1112,13 @@ const Events = () => {
                 />
                 <p>Aquatics</p>
 
-              </div>
+              </div> */}
 
-              {showResults19 ? (
+              {/* {showResults19 ? (
                 <Aquatics
                   changeState={(showResult19) => setShowResults19(false)}
                 />
-              ) : null}
+              ) : null} */}
             </div>
           {/* </div> */}
         </div>

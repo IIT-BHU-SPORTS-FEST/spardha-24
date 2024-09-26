@@ -9,7 +9,7 @@ import { EventContext } from '../../../../../contexts/EventContext';
 const GAMES = {
   boys: [
     'Athletics',
-    'Aquatics',
+    // 'Aquatics',
     'Badminton',
     'Basketball',
     'Boxing',
@@ -29,7 +29,7 @@ const GAMES = {
   ],
   girls: [
     'Athletics',
-    'Aquatics',
+    // 'Aquatics',
     'Badminton',
     'Basketball',
     'Boxing',

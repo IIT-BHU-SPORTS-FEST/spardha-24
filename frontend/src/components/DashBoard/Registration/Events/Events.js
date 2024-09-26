@@ -16,8 +16,8 @@ const EventsDb = () => {
   const [showModals, setShowModals] = useState({
     Athletics_B: false,
     Athletics_G: false,
-    Aquatics_B: false,
-    Aquatics_G: false,
+    // Aquatics_B: false,
+    // Aquatics_G: false,
     Badminton_B: false,
     Badminton_G: false,
     Basketball_B: false,
@@ -49,7 +49,7 @@ const EventsDb = () => {
     Weightlifting_B: false,
   });
   const [Athletics_G, setAthletics_G] = useState({});
-  const [Aquatics_G, setAquatics_G] = useState({});
+  // const [Aquatics_G, setAquatics_G] = useState({});
   const [Boxing_G, setBoxing_G] = useState({});
   const [Taekwondo_G, setTaekwondo_G] = useState({});
   const [Volleyball_B, setVolleyball_B] = useState({});
@@ -86,7 +86,7 @@ const EventsDb = () => {
 
   const inputFields = {
     Athletics_G: [Athletics_G, setAthletics_G],
-    Aquatics_G: [Aquatics_G, setAquatics_G],
+    // Aquatics_G: [Aquatics_G, setAquatics_G],
     Boxing_G: [Boxing_G, setBoxing_G],
     Taekwondo_G: [Taekwondo_G, setTaekwondo_G],
     Volleyball_B: [Volleyball_B, setVolleyball_B],
