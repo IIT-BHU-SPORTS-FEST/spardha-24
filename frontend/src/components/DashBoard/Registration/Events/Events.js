@@ -28,6 +28,7 @@ const EventsDb = () => {
     Cycling_M: false,
     Cricket_B: false,
     Football_B: false,
+    Football_G: false,
     Handball_B: false,
     Handball_G: false,
     Hockey_B: false,
@@ -71,6 +72,7 @@ const EventsDb = () => {
   const [Handball_B, setHandball_B] = useState({});
   const [Handball_G, setHandball_G] = useState({});
   const [Football_B, setFootball_B] = useState({});
+  const [Football_G, setFootball_G] = useState({});
   const [Cricket_B, setCricket_B] = useState({});
   const [Taekwondo_B, setTaekwondo_B] = useState({});
   const [Boxing_B, setBoxing_B] = useState({});
@@ -108,6 +110,7 @@ const EventsDb = () => {
     Handball_B: [Handball_B, setHandball_B],
     Handball_G: [Handball_G, setHandball_G],
     Football_B: [Football_B, setFootball_B],
+    Football_G: [Football_G, setFootball_G],
     Cricket_B: [Cricket_B, setCricket_B],
     Taekwondo_B: [Taekwondo_B, setTaekwondo_B],
     Boxing_B: [Boxing_B, setBoxing_B],
