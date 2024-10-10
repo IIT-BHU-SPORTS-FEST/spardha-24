@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './MiddleSection.css';
 import { NavHashLink } from 'react-router-hash-link';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Mid() {
   const [daysLeft, setDaysLeft] = useState(0);
-  
+
+  const showNotification = () => {
+    toast.error('Registrations closed!', {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       const eventDate = new Date('2024-10-18');
@@ -32,14 +40,25 @@ function Mid() {
         </div>
 
         <div className="button-container">
-          <NavHashLink to="/register/signup#register">
-            <button className="btn2">REGISTER</button>
-          </NavHashLink>
+          <button onClick={showNotification} className="btn2">
+            REGISTER
+          </button>
+
           <NavHashLink to="/matches">
             <button className="btn1">MATCHES</button>
           </NavHashLink>
         </div>
       </div>
+      <ToastContainer
+        style={{
+          zIndex: '10', 
+          position: 'fixed',
+          top: '20%', 
+          left: '70%', 
+          transform: 'translate(-50%, -50%)', 
+          width: 'fit-content',
+        }}
+      />
     </div>
   );
 }
