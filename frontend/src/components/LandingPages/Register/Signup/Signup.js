@@ -43,7 +43,11 @@ function Signup() {
   const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
-
+    // dispatchToast({
+    //   color: 'danger',
+    //   message: 'Registrations are Closed.',
+    // });
+    // return;
     dispatchToast({
       color: 'primary',
       message: 'Please wait while your request is being processed.',

@@ -10,6 +10,8 @@ import {
 } from 'reactstrap';
 import styles from './Events.module.css';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EventsDb = () => {
   const token = localStorage.getItem('token');
@@ -307,7 +309,10 @@ const EventsDb = () => {
           <div className="events-heading">BOYS</div>
           <div className="edit_button">
             <Link
-              to="/dashboard/events"
+              // to="/dashboard/events"
+              onClick={()=>{toast.error('Registrations are closed', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+              });}}
               style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit
@@ -607,7 +612,10 @@ const EventsDb = () => {
           <div className="events-heading">Girls</div>
           <div className="edit_button">
             <Link
-              to="/dashboard/events"
+              // to="/dashboard/events"
+              onClick={()=>{toast.error('Registrations are closed', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+              });}}
               style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit
@@ -905,7 +913,10 @@ const EventsDb = () => {
           <div className="events-heading">Mixed</div>
           <div className="edit_button">
             <Link
-              to="/dashboard/events"
+              // to="/dashboard/events"
+              onClick={()=>{toast.error('Registrations are closed', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+              });}}
               style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
             >
               Edit

@@ -4,6 +4,8 @@ import './Registration.css';
 import Events from './Events/Events';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
   const [contdetails, setContDetails] = useState({
@@ -59,7 +61,10 @@ const Registration = () => {
                     <div className="events-heading">CONTINGENT DETAILS</div>
                     <div className="edit_button">
                       <Link
-                        to="/dashboard/contingentEdit"
+                        // to="/dashboard/contingentEdit"
+                        onClick={()=>{toast.error('Registrations are closed', {
+                          position: toast.POSITION.BOTTOM_RIGHT,
+                        });}}
                         style={{ textDecoration: 'none', color: 'rgba(2, 0, 33, 1)' }}
                       >
                         Edit
