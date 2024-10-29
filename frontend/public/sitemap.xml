@@ -5,83 +5,80 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
 <url>
   <loc>https://spardha.org.in/</loc>
-  <lastmod>2022-03-26T12:23:33+00:00</lastmod>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://spardha.org.in/register/signup</loc>
-  <lastmod>2022-03-26T12:23:33+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://spardha.org.in/register/login</loc>
-  <lastmod>2022-03-26T12:23:26+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://spardha.org.in/about#about</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/events</loc>
-  <lastmod>2022-03-26T12:22:34+00:00</lastmod>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://spardha.org.in/espardha#espardha</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://spardha.org.in/contactus#contactus</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://spardha.org.in/gallery</loc>
-  <lastmod>2022-03-26T12:23:30+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://spardha.org.in/sponsors#sponsors</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.70</priority>
 </url>
 <url>
-  <loc>https://spardha.org.in/team</loc>
-  <lastmod>2022-03-26T12:23:38+00:00</lastmod>
-  <priority>0.60</priority>
+  <loc>https://spardha.org.in/register/signup</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.65</priority>
 </url>
 <url>
-  <loc>https://spardha.org.in/sponsors</loc>
-  <lastmod>2022-03-26T12:23:23+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://spardha.org.in/ca</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
+  <loc>https://spardha.org.in/register/login</loc>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
   <priority>0.50</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/register/verify</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
   <priority>0.40</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/register/forgot</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
   <priority>0.40</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/dashboard/home</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
-  <priority>0.45</priority>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/dashboard/registration</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
-  <priority>0.45</priority>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/dashboard/profile</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
-  <priority>0.45</priority>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/dashboard/contingentEdit</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
-  <priority>0.20</priority>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.30</priority>
 </url>
 <url>
   <loc>https://spardha.org.in/dashboard/events</loc>
-  <lastmod>2022-03-26T07:09:37+00:00</lastmod>
-  <priority>0.20</priority>
+  <lastmod>2024-10-29T12:00:00+00:00</lastmod>
+  <priority>0.30</priority>
 </url>
-
-
 
 </urlset>
