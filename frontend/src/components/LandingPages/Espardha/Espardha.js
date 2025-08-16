@@ -60,7 +60,7 @@ const Espardha = () => {
                     because Espardha is about to set the gaming world on fire!
                     🔥
                   </div>
-                  <p style={{ color: "white" }}> 🏆 #Espardha2024 🎮</p>
+                  <p style={{ color: "white" }}> 🏆 #Espardha2025 🎮</p>
                   <div className={`${styles.buttons}`}>
                     {/* <Link to="/registration_form"> hello </Link> */}
                     <button className={`${styles.registerbtn} ${styles.btnclass}`} style={{ display: isCardVisible ? 'none' : 'block' }} onClick={handleRegisterClick}>Register Now</button>
@@ -78,7 +78,7 @@ const Espardha = () => {
                         <img src={valorent} alt='Valorant poster'></img>
                       </div>
                       <div className={`${styles.cardbottom}`}>
-                        <h4 style={{ fontWeight: "bold" }}>Valorant E-Spardha  2024</h4>
+                        <h4 style={{ fontWeight: "bold" }}>Valorant E-Spardha  2025</h4>
                         <div className={`${styles.prizepool}`}><h6>Registration Fee: ₹ 100/Person</h6>
                           <a href="https://forms.gle/fvo7NtGHoXLgGNcP6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                           <a href={valorant_rulebook} className={`${styles.btnclass}`} download>
@@ -94,7 +94,7 @@ const Espardha = () => {
                         <img src={bgmi} alt='BGMI Poster'></img>
                       </div>
                       <div className={`${styles.cardbottom}`}>
-                        <h4 style={{ fontWeight: "bold" }}> BGMI E-Spardha 2024</h4>
+                        <h4 style={{ fontWeight: "bold" }}> BGMI E-Spardha 2025</h4>
                         <div className={`${styles.prizepool}`}><h6>Registration Fee: ₹ 110/Person</h6>
                           <a href="https://forms.gle/E4qDU2kADYZuLL7Z9" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                           <a href={bgmi_rulebook} className={`${styles.btnclass}`} download>
@@ -110,7 +110,7 @@ const Espardha = () => {
                         <img src={bullet_echo} alt='Bullet Echo poster'></img>
                       </div>
                       <div className={`${styles.cardbottom}`}>
-                        <h4 style={{ fontWeight: "bold" }}>Bullet Echo E-Spardha  2024</h4>
+                        <h4 style={{ fontWeight: "bold" }}>Bullet Echo E-Spardha  2025</h4>
                         <div className={`${styles.prizepool}`}><h6>Registration Fee: Free</h6>
                           <a href="https://forms.gle/Ew8GVSMY1e2xCetr6" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                           <a href={bullet_echo_rulebook} className={`${styles.btnclass}`} download>
@@ -126,7 +126,7 @@ const Espardha = () => {
                         <img src={road_to_valor} alt='Valorant poster'></img>
                       </div>
                       <div className={`${styles.cardbottom}`}>
-                        <h4 style={{ fontWeight: "bold" }}>Road To Valor E-Spardha  2024</h4>
+                        <h4 style={{ fontWeight: "bold" }}>Road To Valor E-Spardha  2025</h4>
                         <div className={`${styles.prizepool}`}><h6>Registration Fee: Free</h6>
                           <a href="https://forms.gle/BxqY8G1YXY45qMMN8" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                           <a href={road_to_valor_rulebook} className={`${styles.btnclass}`} download>
@@ -142,7 +142,7 @@ const Espardha = () => {
                         <img src={realcricket} alt='Valorant poster'></img>
                       </div>
                       <div className={`${styles.cardbottom}`}>
-                        <h4 style={{ fontWeight: "bold" }}>Real Cricket E-Spardha  2024</h4>
+                        <h4 style={{ fontWeight: "bold" }}>Real Cricket E-Spardha  2025</h4>
                         <div className={`${styles.prizepool}`}><h6>Registration Fee: Free</h6>
                           <a href="https://forms.gle/jHcXKDf5tSNLek386" className={`${styles.formlink}`} target='blank'>   <p> Register Here</p></a>
                           <a href={realcricket_rulebook} className={`${styles.btnclass}`} download>

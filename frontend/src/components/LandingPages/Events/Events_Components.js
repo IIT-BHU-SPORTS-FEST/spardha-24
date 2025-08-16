@@ -268,7 +268,7 @@ const Kabbadi = (props) => {
 const Khokho = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Varadaraj Santhosh (M)", "9561820241", "varadraj.chavan.ece22@itbhu.ac.in"), new Person("Saloni Sharma (W)", "8392940227", "saloni.sharma.civ22@itbhu.ac.in")]}
+      captainsArray={[new Person("Varadaraj Santhosh (M)", "9561820251", "varadraj.chavan.ece22@itbhu.ac.in"), new Person("Saloni Sharma (W)", "8392940227", "saloni.sharma.civ22@itbhu.ac.in")]}
       imageSrc={khokho}
       eventName="Khokho"
       rulebookPDF={KhoKhoPDF}

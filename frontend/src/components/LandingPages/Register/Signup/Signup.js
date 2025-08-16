@@ -806,7 +806,7 @@ function Signup() {
                     target="_blank"
                     style={{ textDecoration: 'none' }}
                   >
-                    "Rules of Spardha 2024."{' '}
+                    "Rules of Spardha 2025."{' '}
                   </a>
                 </Label>
               </div>

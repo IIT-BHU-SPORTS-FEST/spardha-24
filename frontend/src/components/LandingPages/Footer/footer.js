@@ -14,7 +14,7 @@ const footer = () => {
     <div className={`${css.maindiv}`}>
       <div className={`${css.container}`}>
         <div className={`${css.address}`}>
-          <img src={img} className={`${css.logoimg}`} alt='Spardha 2024 with iitbhu logo'></img>
+          <img src={img} className={`${css.logoimg}`} alt='Spardha 2025 with iitbhu logo'></img>
           <div className={`${css.mail}`}>
             <div className={`${css.innerparts}`}>
               <img src={location} alt='Location svg' className={`${css.bluetext}`}></img>
@@ -71,7 +71,7 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <h5 className={`${css.bottom}`}>Spardha, IIT BHU ©2024. All Rights Reserved.</h5>
+      <h5 className={`${css.bottom}`}>Spardha, IIT BHU ©2025. All Rights Reserved.</h5>
     </div>
   )
 }

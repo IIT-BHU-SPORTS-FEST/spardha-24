@@ -98,7 +98,7 @@ const About = () => {
                           Hype&nbsp;Around Spardha
                         </h3>
                         <p className={`${styles.para1}`}>
-                        For starters, 2024 will witness the 39th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
+                        For starters, 2025 will witness the 39th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
                           <br />
                         </p>
                       </div>
