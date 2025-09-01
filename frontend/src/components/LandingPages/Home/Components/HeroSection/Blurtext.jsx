@@ -81,7 +81,12 @@ useEffect(() => {
     <div
   ref={ref}
   className={`no-animation ${className}`}
-  style={{ display: 'flex', flexWrap: 'wrap' }}
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',  // horizontal center
+    alignItems: 'center',      // vertical center (if container has height)
+  }}
 >
   {elements.map((segment, index) => {
     const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
