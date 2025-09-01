@@ -22,22 +22,21 @@ const HeroSection = () => {
   const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
 
   const handleAnimationComplete = () => console.log("Animation completed!");
-
   const routes = ["Home", "About Us", "Events", "Spardha", "Contact Us"];
 
   return (
     <section
-      className="hero-section"
-      style={{ backgroundImage: "url(/images/bg/hero-bg1.jpg)" }}
+      class="hero-section"
+      style={{ backgroundImage: "url(/hero-bg1.jpg)" }}
     >
-      <div className="overlay"></div>
+      <div class="overlay"></div>
 
       {/* TOP BAR */}
-      <div className="top-bar">
-        <img src="/images/bg/spardha2025.png" alt="Spardha Logo" className="logo" />
+      <div class="top-bar">
+        <img src="/spardha2025.png" alt="Spardha Logo" class="logo" />
 
         {/* Desktop Navbar */}
-        <nav className="navbar">
+        <nav class="navbar">
           <ul>
             {routes.map((item) => (
               <li key={item}>{item}</li>
@@ -46,26 +45,26 @@ const HeroSection = () => {
         </nav>
 
         {/* Auth buttons */}
-        <div className="auth-buttons">
-          <button className="signup-btn">Sign Up</button>
-          <button className="login-btn">Login</button>
+        <div class="auth-buttons">
+          <button class="signup-btn">Sign Up</button>
+          <button class="login-btn">Login</button>
         </div>
 
         {/* Hamburger for mobile+tablet */}
-        <div className="hamburger-btn" onClick={() => setSidebarOpen(true)}>
+        <div class="hamburger-btn" onClick={() => setSidebarOpen(true)}>
           <FaBars size={28} color="white" />
         </div>
       </div>
 
       {/* Backdrop */}
       <div
-        className={`sidebar-backdrop ${sidebarOpen ? "active" : ""}`}
+        class={`sidebar-backdrop ${sidebarOpen ? "active" : ""}`}
         onClick={() => setSidebarOpen(false)}
       ></div>
 
       {/* Sidebar for mobile+tablet */}
-      <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
-        <div className="close-btn" onClick={() => setSidebarOpen(false)}>
+      <div class={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
+        <div class="close-btn" onClick={() => setSidebarOpen(false)}>
           <FaTimes size={28} color="white" />
         </div>
         <ul>
@@ -73,14 +72,14 @@ const HeroSection = () => {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <div className="mobile-auth-buttons">
-          <button className="signup-btn">Sign Up</button>
-          <button className="login-btn">Login</button>
+        <div class="mobile-auth-buttons">
+          <button class="signup-btn">Sign Up</button>
+          <button class="login-btn">Login</button>
         </div>
       </div>
 
       {/* CENTER HEADING */}
-      <div className="center-heading">
+      <div class="center-heading">
         <h1>
           <BlurText
             text="UNLEASH THE CHAMPION"
@@ -100,27 +99,30 @@ const HeroSection = () => {
       </div>
 
       {/* BOTTOM ROW */}
-      <div className="bottom-row">
-        <div className="countdown-tagline">
-          <div className="countdown">
+      <div class="bottom-row">
+        <div class="countdown-tagline">
+          <div class="countdown">
             {[days, hours, minutes].map((time, i) => (
               <React.Fragment key={i}>
-                <div className="time-box">
-                  <span>{time}</span>
+                <div class="time-box">
+                  <span>{String(time).padStart(2, "0")}</span>
                   <p>{["DAYS", "HOURS", "MINUTES"][i]}</p>
                 </div>
-                {i < 2 && <div className="divider"></div>}
+                {i < 2 && <div class="divider"></div>}
               </React.Fragment>
             ))}
           </div>
-          <p className="tagline">
+
+          <p class="tagline">
             "Where passion meets performance — Spardha, IIT BHU’s ultimate
             sports fest."
           </p>
         </div>
 
-        <div className="event-info">
-          <FaMapMarkerAlt />
+        <div class="event-info">
+          <div class="location-box">
+          <FaMapMarkerAlt class="location-logo" color="black" />
+          </div>
           <div>
             <h4>10–12 OCTOBER, 2025</h4>
             <p>IIT BHU, VARANASI</p>
