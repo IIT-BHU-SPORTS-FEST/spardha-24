@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { FaMapMarkerAlt, FaBars, FaTimes } from "react-icons/fa";
-import BlurText from "./Blurtext";
-import "./HeroSection.css";
+import React, { useEffect, useState } from 'react';
+import BlurText from './Blurtext';
+import Sidebar from '../Navbar/Sidebar';
+import Navbar from '../Navbar/Navbar';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import './HeroSection.css';
+
 
 const HeroSection = () => {
-  const targetDate = new Date("2025-10-10T00:00:00").getTime();
+  const targetDate = new Date('2025-10-10T00:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -21,65 +24,20 @@ const HeroSection = () => {
   const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
 
-  const handleAnimationComplete = () => console.log("Animation completed!");
-  const routes = ["Home", "About Us", "Events", "Spardha", "Contact Us"];
+  const handleAnimationComplete = () => console.log('Animation completed!');
 
   return (
     <section
-      class="hero-section"
-      style={{ backgroundImage: "url(/hero-bg1.jpg)" }}
+      className="hero-section"
+      style={{ backgroundImage: 'url(/images/bg/hero-bg1.jpg)' }}
     >
-      <div class="overlay"></div>
+      <div className="overlay"></div>
 
-      {/* TOP BAR */}
-      <div class="top-bar">
-        <img src="/spardha2025.png" alt="Spardha Logo" class="logo" />
-
-        {/* Desktop Navbar */}
-        <nav class="navbar">
-          <ul>
-            {routes.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Auth buttons */}
-        <div class="auth-buttons">
-          <button class="signup-btn">Sign Up</button>
-          <button class="login-btn">Login</button>
-        </div>
-
-        {/* Hamburger for mobile+tablet */}
-        <div class="hamburger-btn" onClick={() => setSidebarOpen(true)}>
-          <FaBars size={28} color="white" />
-        </div>
-      </div>
-
-      {/* Backdrop */}
-      <div
-        class={`sidebar-backdrop ${sidebarOpen ? "active" : ""}`}
-        onClick={() => setSidebarOpen(false)}
-      ></div>
-
-      {/* Sidebar for mobile+tablet */}
-      <div class={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
-        <div class="close-btn" onClick={() => setSidebarOpen(false)}>
-          <FaTimes size={28} color="white" />
-        </div>
-        <ul>
-          {routes.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        <div class="mobile-auth-buttons">
-          <button class="signup-btn">Sign Up</button>
-          <button class="login-btn">Login</button>
-        </div>
-      </div>
+      <Navbar onHamburgerClick={() => setSidebarOpen(true)} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* CENTER HEADING */}
-      <div class="center-heading">
+      <div className="center-heading">
         <h1>
           <BlurText
             text="UNLEASH THE CHAMPION"

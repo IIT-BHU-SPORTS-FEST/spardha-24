@@ -1,0 +1,116 @@
+/* NAVBAR */
+.navbar ul {
+  display: flex;
+  gap: 1.25rem;             /* reduced from 2rem */
+  padding: 0.7rem 1.2rem;  /* reduced */
+  border-radius: 25px;      /* smaller rounding */
+  background: #FFFFFF1A;
+  backdrop-filter: blur(35px);
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background: #ffffff1a;
+  backdrop-filter: blur(25px);
+
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.25);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  color: white;
+  font-weight: 500;         /* a bit lighter */
+  font-size: 0.85rem;       /* smaller text */
+  text-transform: uppercase;
+  letter-spacing: 0.08em;   /* tightened */
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li:hover {
+  color: white;
+  transform: scale(1.05) translateY(-1px);
+}
+
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1.5px; /* thinner */
+  left: 0;
+  bottom: -3px;
+  background: #ffffffaa;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+/* HeroSection.css */
+
+/* Desktop navbar links */
+.navbar ul li a,
+.mobile-sidebar ul li a {
+  color: #fff;             /* Your desired font color */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 500;        /* Optional: make text bold */
+  transition: color 0.3s;  /* Smooth hover effect */
+}
+
+/* Hover effect for both */
+.navbar ul li a:hover,
+.mobile-sidebar ul li a:hover {
+  color: #ffcc00;  /* Change color on hover */
+}
+
+/* Optional: if mobile sidebar background is dark, you may need to increase contrast */
+.mobile-sidebar ul li a {
+  display: block; /* Ensure full clickable area */
+  padding: 10px 0; /* Add spacing for touch */
+}
+
+
+/* AUTH BUTTONS */
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;  /* tighter */
+}
+
+.signup-btn, .login-btn {
+  padding: 0.6rem 1.2rem;   /* smaller buttons */
+  font-size: 0.85rem;      /* reduced font */
+  border-radius: 20px;     /* less pill-like */
+  border: 1px solid rgba(255,255,255,0.3);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  padding-bottom: 0.7rem;
+}
+
+.signup-btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.signup-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}
+
+.login-btn {
+  background: white;
+  color: black;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}

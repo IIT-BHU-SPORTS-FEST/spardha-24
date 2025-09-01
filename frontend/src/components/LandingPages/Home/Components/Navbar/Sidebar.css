@@ -1,0 +1,98 @@
+/* Mobile sidebar (from right) */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 220px; /* sidebar width */
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* frosted glass style */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-left: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* reduced gap slightly */
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 25;
+  box-shadow: -6px 0 25px rgba(0,0,0,0.4);
+  overflow-y: auto; /* allow scrolling if content is too tall */
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+/* Close button */
+.mobile-sidebar .close-btn {
+  align-self: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mobile-sidebar .close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Sidebar links */
+.mobile-sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;          /* reduced gap */
+  color: white;
+  font-weight: 500;   /* lighter font weight */
+  font-size: 0.85rem; /* smaller font size */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mobile-sidebar ul li {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.mobile-sidebar ul li:hover {
+  transform: scale(1.03) translateX(2px);
+  color: #fffb;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.4);
+}
+
+/* Mobile auth buttons */
+.mobile-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* reduced gap */
+}
+
+.mobile-auth-buttons .signup-btn,
+.mobile-auth-buttons .login-btn {
+  width: 100%;
+  font-size: 0.8rem; /* smaller font */
+  padding: 0.5rem 0; /* reduce padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px; /* slightly smaller buttons */
+}
+
+.mobile-auth-buttons .signup-btn:hover,
+.mobile-auth-buttons .login-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255,255,255,0.3);
+}
+
+/* Overlay backdrop */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
