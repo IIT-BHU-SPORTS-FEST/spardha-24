@@ -1,7 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import Sidebar from './Sidebar';
 import { FaBars } from 'react-icons/fa';
+import { useState } from 'react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -11,8 +12,11 @@ const navLinks = [
   { name: 'Contact Us', path: '/contactus' },
 ];
 
-const Navbar = ({ onHamburgerClick }) => {
+const Navbar = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+  
   return (
+    <>
     <div className="top-bar">
       <img src="/images/bg/spardha2025.png" alt="Spardha Logo" className="logo" />
 
@@ -35,10 +39,12 @@ const Navbar = ({ onHamburgerClick }) => {
         </Link>
       </div>
 
-      <div className="hamburger-btn" onClick={onHamburgerClick}>
+      <div className="hamburger-btn" onClick={() => setSidebarOpen(true)}>
           <FaBars size={28} color="white" />
       </div>
     </div>
+    <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+    </>
   );
 };
 

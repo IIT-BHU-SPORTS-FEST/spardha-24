@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BlurText from './Blurtext';
-import Sidebar from '../Navbar/Sidebar';
+// import Sidebar from '../Navbar/Sidebar';
 import Navbar from '../Navbar/Navbar';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import './HeroSection.css';
@@ -9,7 +9,6 @@ import './HeroSection.css';
 const HeroSection = () => {
   const targetDate = new Date('2025-10-10T00:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -24,7 +23,7 @@ const HeroSection = () => {
   const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
 
-  const handleAnimationComplete = () => console.log('Animation completed!');
+  const handleAnimationComplete = () => {};
 
   return (
     <section
@@ -33,8 +32,7 @@ const HeroSection = () => {
     >
       <div className="overlay"></div>
 
-      <Navbar onHamburgerClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Navbar/>
 
       {/* CENTER HEADING */}
       <div className="center-heading">
@@ -57,29 +55,29 @@ const HeroSection = () => {
       </div>
 
       {/* BOTTOM ROW */}
-      <div class="bottom-row">
-        <div class="countdown-tagline">
-          <div class="countdown">
+      <div className="bottom-row">
+        <div className="countdown-tagline">
+          <div className="countdown">
             {[days, hours, minutes].map((time, i) => (
               <React.Fragment key={i}>
-                <div class="time-box">
+                <div className="time-box">
                   <span>{String(time).padStart(2, "0")}</span>
                   <p>{["DAYS", "HOURS", "MINUTES"][i]}</p>
                 </div>
-                {i < 2 && <div class="divider"></div>}
+                {i < 2 && <div className="divider"></div>}
               </React.Fragment>
             ))}
           </div>
 
-          <p class="tagline">
+          <p className="tagline">
             "Where passion meets performance — Spardha, IIT BHU’s ultimate
             sports fest."
           </p>
         </div>
 
-        <div class="event-info">
-          <div class="location-box">
-          <FaMapMarkerAlt class="location-logo" color="black" />
+        <div className="event-info">
+          <div className="location-box">
+          <FaMapMarkerAlt className="location-logo" color="black" />
           </div>
           <div>
             <h4>10–12 OCTOBER, 2025</h4>
