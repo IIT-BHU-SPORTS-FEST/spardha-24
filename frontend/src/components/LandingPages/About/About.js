@@ -1,8 +1,35 @@
 import "./About.css"
 import location_image from "./location_image.png"
-
+import { useState } from "react";
 
 const About = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // 🔹 Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // 🔹 Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+
+    // Reset form after submit
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+
+
   return <div className="top-div">
     <div className="pentagon-flipped dark-theme"></div>
     <div className="main-heading">
@@ -46,12 +73,37 @@ const About = () => {
       <div className="left-section">
         <div className="sub-heading-1">GET IN TOUCH</div>
         <div className="sub-heading-2">SPARDHA UNLEASHING POTENTIAL</div>
-        <div className="form-data">
-          <input type="text" className="input" placeholder="NAME"/>
-          <input type="text" className="input" placeholder="EMAIL" />
-          <textarea type="text" className="input msg" placeholder="MESSAGE" />
-          <button className="submit">SUBMIT</button>
-        </div>
+          <form className="form-data" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="input"
+              name="name"
+              placeholder="NAME"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              className="input"
+              name="email"
+              placeholder="EMAIL"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              className="input msg"
+              name="message"
+              placeholder="MESSAGE"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit" className="submit">
+              SUBMIT
+            </button>
+          </form>
       </div>
       <div className="seperator-1"></div>
       {/* eslint-disable-next-line */}
