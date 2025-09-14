@@ -6,7 +6,6 @@
     "alertifyjs": "^1.14.0",
     "axios": "^0.26.1",
     "bootstrap": "^5.3.1",
-    "caniuse-lite": "^1.0.30001660",
     "docx": "^4.7.1",
     "file-saver": "^2.0.5",
     "framer-motion": "^6.2.8",
@@ -58,6 +57,9 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "prettier": "^2.5.1",
+    "typescript": "^5.9.2"
   }
 }

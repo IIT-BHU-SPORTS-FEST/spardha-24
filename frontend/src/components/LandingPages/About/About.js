@@ -73,7 +73,40 @@ const About = () => {
     <div className="gallery">
           <div className="pentagon-flipped light-theme"></div>
       <div className="pentagon-not-flipped light-theme"></div>
-      <ImageMasonry/>
+      <div className="tag">Opening</div>
+      <ImageMasonry folderName={"about-us-images"}/>
+      <div className="tag">Team-Moments</div>
+      <ImageMasonry folderName={"team"}/>
+      <div className="tag">Badminton</div>
+      <ImageMasonry folderName={"badminton"}/>
+      <div className="tag">Basketball</div>
+      <ImageMasonry folderName={"basketball"}/>
+      <div className="tag">Boxing</div>
+      <ImageMasonry folderName={"boxing"}/>
+      <div className="tag">Chess</div>
+      <ImageMasonry folderName={"chess"}/>
+      <div className="tag">Football</div>
+      <ImageMasonry folderName={"football"}/>
+      <div className="tag">Hockey</div>
+      <ImageMasonry folderName={"hockey"}/>
+      <div className="tag">Cricket</div>
+      <ImageMasonry folderName={"cricket"}/>
+      <div className="tag">Volleyball</div>
+      <ImageMasonry folderName={"volleyball"}/>
+      <div className="tag">Athletics</div>
+      <ImageMasonry folderName={"athletics"}/>
+      <div className="tag">Handball</div>
+      <ImageMasonry folderName={"handball"}/>
+      <div className="tag">Aquatics</div>
+      <ImageMasonry folderName={"aquatics"}/>
+      <div className="tag">Taekwondo</div>
+      <ImageMasonry folderName={"taekwondo"}/>
+      <div className="tag">Khokho</div>
+      <ImageMasonry folderName={"khokho"}/>
+      <div className="tag">Powerlifting</div>
+      <ImageMasonry folderName={"powerlifting"}/>
+      <div className="tag">Closing</div>
+      <ImageMasonry folderName={"closing"}/>
     </div>
 
     <div className="rectangle-3">

@@ -15,6 +15,18 @@
   box-sizing: border-box;
 }
 
+.tag{
+    font-family: Anton;
+  font-weight: 100;
+  font-style: Regular;
+  font-size: 65px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  margin: 20px 30px;
+}
+
+
 /* Medium screens (tablet) */
 @media (max-width: 1024px) {
   .gallery {
