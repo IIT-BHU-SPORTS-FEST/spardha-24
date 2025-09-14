@@ -3,6 +3,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 
+.gallery {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;      /* optional: limit max width on large screens */
+  margin: 0 auto;         /* center horizontally */
+  border-radius: 48px;
+  padding: 80px 40px;     /* default padding */
+  background: #000d35;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+/* Medium screens (tablet) */
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 70px 30px;
+    border-radius: 32px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 50px 20px;
+    border-radius: 24px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .gallery {
+    padding: 40px 15px;
+    border-radius: 16px;
+  }
+}
+
+
 .top-div {
   width: 100vw;
   min-height: 100vh;

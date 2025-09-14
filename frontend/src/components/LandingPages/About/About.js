@@ -1,4 +1,5 @@
 import "./About.css"
+import ImageMasonry from "./ImageMasonry";
 import location_image from "./location_image.png"
 import { useState } from "react";
 
@@ -68,6 +69,13 @@ const About = () => {
         </p>
       </div>
     </div>
+
+    <div className="gallery">
+          <div className="pentagon-flipped light-theme"></div>
+      <div className="pentagon-not-flipped light-theme"></div>
+      <ImageMasonry/>
+    </div>
+
     <div className="rectangle-3">
       <div className="pentagon-flipped light-theme"></div>
       <div className="left-section">
