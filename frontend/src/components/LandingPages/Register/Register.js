@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { 
-  // Outlet,
+  Outlet,
  useNavigate } from 'react-router';
-// import styles from './Register.module.css';
+import styles from './Register.module.css';
 // import Carousel from '../Home/Carousel/Carouselhp';
 import Footer from '../Footer/footer';
 // import Header from '../Header/Header';
@@ -30,12 +30,12 @@ function Register() {
   ></div>
       {/* <Carousel /> */}
       {/* <Header/> */}
-      {/* <div className={`${styles.container}`} id="register">
+      <div className={`${styles.container}`} id="register">
         <div className={`${styles.card}`}>
           <Outlet />
         </div>
-      </div> */}
-     <div
+      </div>
+     {/* <div
         style={{
           width: '100vw',
           height: '70vh',
@@ -49,7 +49,7 @@ function Register() {
         }}
       >
         Opening Soon
-      </div>
+      </div> */}
       <Footer/>
     </div>
   );

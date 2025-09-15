@@ -46,6 +46,7 @@ const Contact = () => {
           </div>
         );
       case 'Events':
+<<<<<<< HEAD
         return (
           <div className='cards-row'>
             <Card name="Psasank Eswarvamsy" email="psasank.eswarvamsy.phy23@itbhu.ac.in" phone="9010404545"/>
@@ -53,6 +54,13 @@ const Contact = () => {
             <Card name="Pavan Punj Bais" email="pavanpunj.bais.min23@itbhu.ac.in" phone="9329008865"/>
           </div>
         );
+=======
+        return <>
+        <Card name="Sasank Eswar Vamsy" email="psasank.eswarvamsy.phy23@itbhu.ac.in" phone="9010404545"/>
+        <Card name="Grishma Tembhurne" email="grishma.stembhurne.che23@itbhu.ac.in" phone="9322192403"/> 
+        <Card name="Pavan Punj Bais" email="pavanpunj.bais.min23@itbhu.ac.in" phone="9329008865"/>
+        </>; 
+>>>>>>> origin/dev
       case 'Hospitality':
         return (
           <div className='cards-row'>
