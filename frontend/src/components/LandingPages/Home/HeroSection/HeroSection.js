@@ -66,29 +66,29 @@ const HeroSection = () => {
       </div>
 
       {/* BOTTOM ROW */}
-      <div class="bottom-row">
-        <div class="countdown-tagline">
-          <div class="countdown">
+      <div className="bottom-row">
+        <div className="countdown-tagline">
+          <div className="countdown">
             {[days, hours, minutes].map((time, i) => (
               <React.Fragment key={i}>
-                <div class="time-box">
+                <div className="time-box">
                   <span>{String(time).padStart(2, "0")}</span>
                   <p>{["DAYS", "HOURS", "MINUTES"][i]}</p>
                 </div>
-                {i < 2 && <div class="divider"></div>}
+                {i < 2 && <div className="divider"></div>}
               </React.Fragment>
             ))}
           </div>
 
          
-          <p class="tagline">
+          <p className="tagline">
             "Where passion meets performance — Spardha"
           </p>
         </div>
 
-        <div class="event-info">
-          <div class="location-box">
-          <FaMapMarkerAlt class="location-logo" color="black" />
+        <div className="event-info">
+          <div className="location-box">
+          <FaMapMarkerAlt className="location-logo" color="black" />
           </div>
           <div>
             <h4>10–12 OCTOBER, 2025</h4>
