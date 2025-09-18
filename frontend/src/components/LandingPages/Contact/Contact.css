@@ -1,183 +1,235 @@
-
 body {
-  overflow-x: hidden; 
-  background-image: 'url(/images/bg/hero-bg1.jpg)';
-}
-.heading123 {
-  color: rgba(73, 130, 246, 1);
-  align-self: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-  top: -2.5rem;
+  overflow-x: hidden;
+  background: #fff;
 }
 
-
-#contactus {
+.contactus-bg {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-bottom: 2rem; */
-  /* margin-top: 2rem; */
-  padding-bottom: 3rem;
   width: 100vw;
-height: fit-content;
+  min-height: 100vh;
+  background: #fff;
 }
 
-.container {
+.contactus-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: url('/images/bg/hero-bg1.jpg') center/cover no-repeat; */
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.conveners-block {
+  width: 100%;
+  background: #fff;
+  padding: 54px 0 0 0;
+  text-align: left;
+  border-radius: 0;
+}
+
+.conveners-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0a0a0a;
+  letter-spacing: 2px;
+  margin-left: 52px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.conveners-subtitle {
+  color: #5c5a5a;
+  font-size: 1.08rem;
+  max-width: 730px;
+  margin-left: 52px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.cards-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: flex-start;
+  margin-left: 52px;
+}
+
+.cards-row > * {
+  border-radius: 24px;
+  box-shadow: 0 4px 18px 0 rgba(0,20,40,0.11);
+  background: #fff;
+}
+
+.category-pills {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start;
+  margin: 32px 0 0 52px;
+  padding-bottom: 26px;
+}
+
+.pill-btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #e3e3e3;
+  border-radius: 22px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+
+.pill-btn.selected,
+.pill-btn:hover {
+  background: #f6faff;
+  color: #2456d1;
+  border-color: #4982f6;
+}
+
+.contact-getintouch {
+  display: flex;
+  background: #091025;
+  border-radius: 0 0 18px 18px;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 340px;
+  margin: 0 auto;
+  box-shadow: 0 2px 22px 0px rgba(0,0,0,0.059);
+}
+
+.getintouch-left {
+  flex: 1;
+  padding: 42px 36px 42px 58px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
-  min-height: 80vh;
-  max-height: max-content;
-  margin-top: 5rem;
-  font-size: small;
-  position: relative;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
 }
 
-.hamburger-container {
-  display: none;
-}
-
-
-.heading2 {
-  color: rgba(255, 255, 255, 1);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.heading2 li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.heading2 li:hover {
-  color: rgba(73, 130, 246, 1);
-}
-
-.heading2 li.selected {
-  color: rgba(73, 130, 246, 1);
-}
-
-.content123 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  overflow-y: auto;
-  row-gap: 2rem;
-  margin-top: 1rem;
-  padding: 1rem;
-}
-
-.hamburger {
+.getintouch-title {
   font-size: 2rem;
-  cursor: pointer;
-  background: none;
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.getintouch-punch {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 19px;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  border-radius: 6px;
   border: none;
-  padding: 10px;
-  color: rgba(255, 255, 255, 1);
-  z-index: 1001;
+  padding: 12px 8px;
+  font-size: 1rem;
+  background: #192249;
+  color: #fff;
 }
 
-.selected-heading {
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.2rem;
-  font-weight: bold;
+input:focus, textarea:focus {
+  outline: 2px solid #4982f6;
 }
 
-@media (max-width: 1400px){
-  .heading123{
-    top: -1.5rem;
-    padding-top: 1rem;
-  }
+.submit-btn {
+  border: none;
+  background: #4982f6;
+  color: #fff;
+  padding: 11px 0;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
 }
 
-@media (max-width: 992px) {
-  .hamburger-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-  }
+.submit-btn:hover {
+  background: #2456d1;
+}
 
-  .hamburger {
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 10px;
-    color: rgba(255, 255, 255, 1);
-    z-index: 1001;
-  }
+.getintouch-right {
+  flex: 1;
+  padding: 38px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .selected-heading {
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+.map-img {
+  width: 80%;
+  max-width: 270px;
+  border-radius: 18px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 22px rgba(50,80,220,0.13);
+}
 
-  
-  .heading2 {
-    display: none;
-  }
+.map-address {
+  text-align: center;
+  color: #fff;
+}
 
-  .heading2.active {
-    display: flex;
+.map-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.map-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .contact-getintouch {
+    max-width: 98vw;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 0 0 18px 18px;
+  }
+  .getintouch-left, .getintouch-right {
+    padding: 24px 8vw;
+  }
+  .map-img {
     width: 100%;
-    text-align: left;
-    padding: 10px 0;
+    max-width: 260px;
   }
-
-  .heading2 li {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    text-align: center;
+  .cards-row {
+    flex-direction: column;
+    gap: 18px;
+    margin-left: 4vw;
   }
-
-  .heading2 li h3 {
-    font-size: 1.5rem;
+  .conveners-title, .conveners-subtitle {
+    margin-left: 4vw;
   }
-
-  .heading2 li.selected {
-    background-color: #007bff;
-    color: white;
+  .category-pills {
+    margin-left: 4vw;
+    gap: 10px;
+    margin-bottom: 16px;
   }
 }
 
-@media (max-width: 600px) {
-  .selected-heading {
-    font-size: 1rem;
+@media (max-width: 500px) {
+  .conveners-title {
+    font-size: 1.15rem;
   }
-  .container{
-    margin: 5rem;
+  .conveners-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 18px;
   }
-
-  .heading2 li h3{
-    font-size: 1.1rem;
+  .getintouch-left, .getintouch-right {
+    padding: 12px 2vw;
   }
-
-  .hamburger-container {
-    height: min-content;
-  }
-
-}
-
-@media (max-width: 450px) {
-  .selected-heading {
-    font-size: 0.9rem;
-  }
-  
 }
