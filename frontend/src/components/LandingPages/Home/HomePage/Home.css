@@ -10,3 +10,12 @@
   align-items: center;
   font-family: Anta;
 }
+
+.second-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  align-items: center;
+  justify-content: center;
+}

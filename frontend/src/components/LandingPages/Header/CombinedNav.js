@@ -15,7 +15,9 @@ export const Navbar = ({ onHamburgerClick }) => {
 
   return (
     <div className="top-bar">
+    <Link to="/">
       <img src="/images/logo/white_logo_25.png" alt="Spardha Logo" className="logo" />
+    </Link>
 
       <div className="nav-links">
       <nav className="navbar">

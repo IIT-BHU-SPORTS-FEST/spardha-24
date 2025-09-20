@@ -11,8 +11,10 @@ function App() {
   return (
       <div className="sctn">
         <HeroSection/>
-        <About/>
-        <LocationCard/>
+        <div className='second-container'>
+          <About/>
+          <LocationCard/>
+        </div>
         {/* <Home_Contact/> */}
       </div>
   );

@@ -1,23 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+
 /* Base styles */
 .about {
-  margin: 1rem auto;
   background: #fff;
   border-radius: 20px;
   padding: 2rem 1rem;
+  padding-top: 90px;
+  padding-bottom: 90px;
   box-sizing: border-box;
+  width: 100%; /* <-- Take 90% of parent */
+  max-width: 1200px; /* Optional max width */
 }
 
 /* ---------- Top Section ---------- */
 .topSection {
-  max-width: 90vw;
   display: flex;
-  gap: 4rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -25,27 +33,34 @@
 }
 
 .textContent {
-  flex: 1;
-  min-width: 220px;
-  text-align: center;
+  margin-left: auto;
+  max-width: 800px;
 }
 
 .boldText {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.6;
+font-family: Anton;
+font-weight: 50;
+font-style: Regular;
+font-size: 24px;
+line-height: 140%;
+letter-spacing: 0%;
 }
 
 .subTitle {
+  padding-top: 10px;
   margin-top: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .normalText {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-top: 0.5rem;
+font-family: Poppins;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 140%;
+letter-spacing: 0%;
+
 }
 
 /* ---------- Bottom Section ---------- */
@@ -57,24 +72,22 @@
 
 .imageBox {
   position: relative;
-  width: 90vw;
-  max-width:95vw;
-  height: 50vh;
-  border-radius: 20px;
+  width: 100%; /* Full width of About section */
+  height: auto;
+  aspect-ratio: 16 / 7; /* Maintain ratio */
+  border-radius: 48px;
   overflow: hidden;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .image {
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 20px;
+  display: block;
 }
 
 .imageOverlay {
@@ -82,23 +95,31 @@
   top: 10%;
   left: 5%;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   z-index: 2;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-  max-width: 60vw;
+  max-width: 60%;
 }
 
 .image_data {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  font-size: 2rem;
+  font-family: Anton;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1.2rem, 4vw, 3.2rem);
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
+
+/* Stats Box */
 .statsBox {
+  border: 2px solid rebeccapurple;
   position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 180px;
+  bottom: 10%;
+  right: 70px;
+  width: 20%;
+  height: 80%;
   background: #f4e38f;
   border-radius: 20px;
   padding: 1rem 0.5rem;
@@ -112,9 +133,13 @@
 }
 
 .statsBox h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
+font-family: Anta;
+font-weight: 400;
+font-style: Regular;
+font-size: 2.5rem;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
 }
 
 .statsBox p {
@@ -122,24 +147,23 @@
   margin: 0;
 }
 
-/* ---------- Responsive Styles ---------- */
+/* ---------- Responsive ---------- */
 
 /* Tablets */
 @media (max-width: 900px) {
   .topSection {
     flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
+    gap: 1.5rem;
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .imageBox {
-    height: 40vh;
+    aspect-ratio: 16 / 9;
   }
   .imageOverlay {
-    font-size: 2rem;
-    max-width: 80vw;
+    font-size: 1.5rem;
+    max-width: 80%;
   }
   .statsBox {
     width: 140px;
@@ -155,37 +179,25 @@
 /* Mobile */
 @media (max-width: 600px) {
   .about {
-    margin: 2rem auto;
+    width: 95%;
     padding: 1rem 0.5rem;
     border-radius: 12px;
   }
   .topSection {
-    flex-direction: column;
-    gap: 1.2rem;
-    max-width: 98vw;
+    gap: 1rem;
   }
   .title {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  .textContent {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
   }
   .imageBox {
-    width: 98vw;
+    aspect-ratio: auto; /* auto height on small screens */
     height: 220px;
-    border-radius: 12px;
-  }
-  .image {
-    border-radius: 12px;
-    height: 100%;
-    object-fit: cover;
   }
   .imageOverlay {
-    font-size: 1.1rem;
+    font-size: 1rem;
     top: 5%;
     left: 3%;
-    max-width: 90vw;
+    max-width: 90%;
   }
   .statsBox {
     width: 90px;
@@ -199,5 +211,18 @@
   }
   .statsBox p {
     font-size: 0.7rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .statsBox {
+    bottom: 3%;
+    right: 7%;
+    width: 30%;     /* scale with screen */
+    max-width: 90px;
+  }
+  .image_data {
+    padding-left: 15px;
   }
 }
