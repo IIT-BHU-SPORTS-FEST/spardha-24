@@ -1,19 +1,22 @@
-
-
+/* Clean fixed header wrapper */
 .header-container {
-  max-width:90vw;
-  overflow-x: hidden;
+  width: 100%;
   position: fixed;
-  background: red;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000;           /* keep header on top */
+  background: transparent; /* no debug color */
+  pointer-events: none;    /* wrapper itself won't block content */
 }
-.navbar{
-  display: block;
+
+/* allow actual nav/top-bar elements to be interactive */
+.header-container > .top-bar,
+.header-container .navbar {
+  pointer-events: all;
 }
-@media screen and (max-width: 768px) {
-  .navbar {
-    display: none;
-  }
+
+/* ensure top-bar spans full width (avoid 100vw issues) */
+.top-bar {
+  width: 100%;
+  left: 0;
 }

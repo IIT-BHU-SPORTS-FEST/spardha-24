@@ -86,7 +86,7 @@ const Contact = () => {
     }}
   ></div>
         {/* <Carousel /> */}
-        <div className='container'>
+        <div className='contactus-container'>
           <div className='heading123'>
             <h2>Contact Us</h2>
           </div>

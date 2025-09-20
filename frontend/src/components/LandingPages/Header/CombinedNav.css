@@ -57,12 +57,10 @@
   }
 }
 .navbar {
-  display: flex;
+  display: flex; /* or whatever original rule set */
   align-items: center;
   gap: 1.5rem;
   justify-content: center;
-  margin: auto;
-  padding-top: 23px;
 }
 
 .navbar ul {

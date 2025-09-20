@@ -15,7 +15,7 @@ body {
 
 #contactus {
   position: relative;
-  display: flex;
+  display: absolute;
   justify-content: center;
   align-items: center;
   /* margin-bottom: 2rem; */
@@ -25,7 +25,7 @@ body {
 height: fit-content;
 }
 
-.container {
+.container-us {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -94,6 +94,7 @@ height: fit-content;
   font-weight: bold;
 }
 
+/* Contact Us Mobile Adjustments */
 @media (max-width: 1400px){
   .heading123{
     top: -1.5rem;
@@ -126,7 +127,6 @@ height: fit-content;
     font-weight: bold;
   }
 
-  
   .heading2 {
     display: none;
   }
@@ -162,7 +162,8 @@ height: fit-content;
     font-size: 1rem;
   }
   .container{
-    margin: 5rem;
+    margin: 1rem;
+    padding: 1rem;
   }
 
   .heading2 li h3{
@@ -172,12 +173,10 @@ height: fit-content;
   .hamburger-container {
     height: min-content;
   }
-
 }
 
 @media (max-width: 450px) {
   .selected-heading {
     font-size: 0.9rem;
   }
-  
 }
