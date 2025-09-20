@@ -268,7 +268,7 @@ const Kabbadi = (props) => {
 const Khokho = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Patalavath Akash  (M)", "9390902056", "patalavath.akash.eee23@itbhu.ac.in"), new Person("Velaga Swathi prasuna  (W)", "6305809838", "velaga.swathiprasuna.eee23@itbhu.ac.in")]}
+      captainsArray={[new Person("Patalavath Akash  (M)", "9390902056", "patalavath.akash.eee23@itbhu.ac.in"), new Person("Velaga Swathi Prasuna  (W)", "6305809838", "velaga.swathiprasuna.eee23@itbhu.ac.in")]}
       imageSrc={khokho}
       eventName="Khokho"
       rulebookPDF={KhoKhoPDF}
@@ -304,7 +304,7 @@ const Squash = (props) => {
 const TableTennis = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("Siva sathyaseelan (M)", "8248633313", "dnsiva.sathyaseelan.chy21@itbhu.ac.in"), new Person("Ashirbani Majumdar (W)", "9957965384 ", "ashirbani.majumdar.chy22@itbhu.ac.in")]}
+      captainsArray={[new Person("Siva Sathyaseelan (M)", "8248633313", "dnsiva.sathyaseelan.chy21@itbhu.ac.in"), new Person("Ashirbani Majumdar (W)", "9957965384 ", "ashirbani.majumdar.chy22@itbhu.ac.in")]}
       imageSrc={tabletennis}
       eventName="TableTennis"
       rulebookPDF={TableTennisPDF}

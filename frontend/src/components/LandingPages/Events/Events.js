@@ -933,7 +933,7 @@ console.log(showResults19);
                   alt=""
                  
                 />
-                <p>kho-kho</p>
+                <p>Kho-Kho</p>
 
               </div>
               
