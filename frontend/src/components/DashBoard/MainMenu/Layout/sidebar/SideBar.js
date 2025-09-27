@@ -58,7 +58,7 @@ const SideBar = ({ isOpen, toggle }) => {
         <div className="logo_db">
           <Link to="/">
             <img
-              src="/images/logo/spardha-logo-white.png"
+              src="/images/logo/white_logo_25.png"
               alt="spardha-logo"
               className="hidden-sm spardha-logo"
             />

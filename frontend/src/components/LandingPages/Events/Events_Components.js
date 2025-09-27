@@ -244,7 +244,7 @@ const Handball = (props) => {
 const Hockey = (props) => {
   return (
     <EventCard
-      captainsArray={[new Person("sunny sankhala (M)", "7877818023", "sunny.sankhala.che23@itbhu.ac.in")]}
+      captainsArray={[new Person("Sunny Sankhala (M)", "7877818023", "sunny.sankhala.che23@itbhu.ac.in")]}
       imageSrc={hockey}
       eventName="Hockey"
       rulebookPDF={HockeyPDF}

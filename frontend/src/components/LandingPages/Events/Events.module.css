@@ -7,13 +7,17 @@
   z-index: 1;
   position: relative;
   overflow: auto;
-  background-image: linear-gradient(
-    to right,
-    rgba(8, 8, 8, 0.75),
-    rgba(29, 29, 29, 0.75)
-  );
-  width: 100%;
-  border-radius: 20px;
+  overflow-y: auto;
+  margin-top: 0;
+  padding-top: 0;
+  top:0;
+  
+
+   /* backdrop-filter: blur(0px) saturate(180%);
+    -webkit-backdrop-filter: blur(0px) saturate(180%);
+    background-color: rgba(135, 144, 162, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125); */
   /* opacity: 85%; */
 }
 .scrollablediv {
@@ -21,8 +25,8 @@
   z-index: 1;
   position: relative;
   overflow: auto;
-
   width: 100%;
+  
   border-radius: 20px;
 }
 ::-webkit-scrollbar {
@@ -32,6 +36,7 @@
 .title {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .registerbtn {
@@ -58,6 +63,7 @@
     height: fit-content;
     padding: 1vh 4vh;
     margin-top: 3vh;
+  
     margin-bottom: 2vh;
   }
 }
@@ -105,7 +111,7 @@
 }
 .col_2:hover {
   transform: scale(1.1);
-  /* color: #4982F6; */
+  
 }
 .H2 {
   display: flex;
@@ -113,7 +119,7 @@
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 60px;
-  color: #4982f6;
+  color: #e6e9f0;
   width: 100%;
   /* padding-left: 350px; */
   font-size: 40px;
@@ -157,7 +163,6 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 @media (min-width: 376px) {
   .container {
     max-width: 400px;
@@ -215,6 +220,7 @@
   flex-wrap: wrap;
   padding: 0px 2vw;
   justify-content: space-around;
+  
 }
 
 .justify_content_center {
@@ -316,7 +322,7 @@
   background-color: white;
   padding: 30px;
   border-radius: 20px;
-}
+   }
 
 .padding {
   padding: 10px !important;
@@ -334,7 +340,7 @@
   margin: 2vh 0vh;
 }
 .padding:hover {
-  border: 2px solid #4982f6;
+  border: 2px solid #030d22;
 }
 .padding1 {
   padding: 10px !important;
@@ -1193,8 +1199,15 @@
     font-size: 18px;
   }
 } */
+
+/* .cards{
+   background-color: #e6e9f0;}
+/* .cards:hover{
+ background-color: #e6e9f0;
+} */ 
 @media (max-width: 768px) {
   .ftco_section {
     margin-top: -60px;
   }
 }
+

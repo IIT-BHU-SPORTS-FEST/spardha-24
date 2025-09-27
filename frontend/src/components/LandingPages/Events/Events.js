@@ -695,7 +695,7 @@ console.log(showResults19);
           <div className={styles.title}>
 
             <div><h2 className={`${styles.mb_1} ${styles.H2}`} >
-              EVENTS
+            EVENTS
             </h2></div>
             <div>
               <Link to="/register/signup/" className={styles.registerbtn}>Register Now</Link>
@@ -705,7 +705,7 @@ console.log(showResults19);
             <div className={`${styles.row}`}>
              
               <div
-                className={`${styles.col_2} ${styles.padding} `}
+                className={`${styles.col_2} ${styles.padding} ${styles.cards} `}
                 id="0" onMouseEnter={athleticsMouseEnter}
                 onMouseLeave={athleticsMouseLeave}
                 onClick={onClick0}

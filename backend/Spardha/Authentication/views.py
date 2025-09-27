@@ -146,7 +146,7 @@ class RequestPasswordResetEmail(generics.GenericAPIView):
             relativeLink = reverse(
                 "password-reset-confirm", kwargs={"uidb64": uidb64, "token": token}
             )
-            absurl = "https://spardha25.onrender.com" + relativeLink
+            absurl = "https://verification.spardha.org.in" + relativeLink
             Temp_Data = {
                 "userName": user.name,
                 "reset-link": absurl
@@ -273,7 +273,7 @@ def send_verification_mail(user, request):
     token = PasswordResetTokenGenerator().make_token(user)
     # current_site = get_current_site(request=request).domain
     relativeLink = reverse("activate-account", kwargs={"uidb64": uidb64, "token": token})
-    absurl = "https://spardha25.onrender.com" + relativeLink
+    absurl = "https://verification.spardha.org.in" + relativeLink
 
     Temp_Data = {
         "userName": user.name,

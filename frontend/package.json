@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "alertifyjs": "^1.14.0",
-    "axios": "^0.26.1",
+    "axios": "^1.12.2",
     "bootstrap": "^5.3.1",
     "docx": "^4.7.1",
     "file-saver": "^2.0.5",

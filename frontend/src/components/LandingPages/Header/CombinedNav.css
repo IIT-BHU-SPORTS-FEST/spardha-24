@@ -21,6 +21,13 @@
     display: none;
   }
 }
+.welcome-message{
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
 .hamburger-btn{
   display: none;

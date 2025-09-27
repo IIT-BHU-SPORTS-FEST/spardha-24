@@ -12,7 +12,7 @@ import { saveAs } from 'file-saver';
 const Home = () => {
   toast.configure();
   const token = localStorage.getItem('token');
-  // console.log('token', token);
+  console.log('token', token);
   const baseUrl = process.env.REACT_APP_BASE_URL;
 
   const [user, setUser] = useState('');

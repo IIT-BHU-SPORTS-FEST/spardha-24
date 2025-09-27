@@ -28,7 +28,7 @@ const eventsData = [
   {
     title:"BGMI E-Spardha \n2025",
     img: bgmi,
-    fee: "₹120/Person",
+    fee: "Free",
     regLink: "https://forms.gle/MP4LPtveVJhpzbLs5",
     rulebook: bgmi_rulebook,
   },
