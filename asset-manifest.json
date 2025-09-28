@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ecafa855.css",
-    "main.js": "/static/js/main.705e5046.js",
+    "main.js": "/static/js/main.d3fd9504.js",
     "static/css/921.638ae3c8.chunk.css": "/static/css/921.638ae3c8.chunk.css",
     "static/js/921.da0cf2b6.chunk.js": "/static/js/921.da0cf2b6.chunk.js",
     "static/css/888.afd73ae6.chunk.css": "/static/css/888.afd73ae6.chunk.css",
@@ -9,7 +9,7 @@
     "static/css/54.b29d1d4e.chunk.css": "/static/css/54.b29d1d4e.chunk.css",
     "static/js/54.dea5c6b3.chunk.js": "/static/js/54.dea5c6b3.chunk.js",
     "static/css/625.abd7913e.chunk.css": "/static/css/625.abd7913e.chunk.css",
-    "static/js/625.ef909a30.chunk.js": "/static/js/625.ef909a30.chunk.js",
+    "static/js/625.9f5db70a.chunk.js": "/static/js/625.9f5db70a.chunk.js",
     "static/css/731.8dff0d9c.chunk.css": "/static/css/731.8dff0d9c.chunk.css",
     "static/js/731.153941d7.chunk.js": "/static/js/731.153941d7.chunk.js",
     "static/css/112.373214bd.chunk.css": "/static/css/112.373214bd.chunk.css",
@@ -239,13 +239,13 @@
     "static/media/3.jpg": "/static/media/3.31b24f7cac801f1b9875.jpg",
     "static/media/91.jpg": "/static/media/91.dd46c9f18960be34fbb4.jpg",
     "static/media/32.jpg": "/static/media/32.c51236ff555c6d7db10a.jpg",
+    "static/media/CyclingPDF.pdf": "/static/media/CyclingPDF.06162e0e72653e32f8b9.pdf",
     "static/media/IMG-20230924-WA0010.jpg": "/static/media/IMG-20230924-WA0010.742319dc030b871d583c.jpg",
     "static/media/chess.pdf": "/static/media/chess.876148440e5523638c9d.pdf",
     "static/media/football.pdf": "/static/media/football.d2682ddbb2cbfe6c9e83.pdf",
     "static/media/404.jpg": "/static/media/404.f76542c74704c842f032.jpg",
     "static/media/IMG-20230924-WA0009.jpg": "/static/media/IMG-20230924-WA0009.c4b26618b6bda608a082.jpg",
     "static/media/sports-arena.jpg": "/static/media/sports-arena.4fe18d136a63d1953f2e.jpg",
-    "static/media/CyclingPDF.pdf": "/static/media/CyclingPDF.6699c82e1d23b381f428.pdf",
     "static/media/vs.png": "/static/media/vs.88effbc86dc41bc457a3.png",
     "static/media/testi-5.jpg": "/static/media/testi-5.e9c4108f20abc5ae7b53.jpg",
     "static/media/taekwondohover.png": "/static/media/taekwondohover.cf1a028bd24c62853604.png",
@@ -254,7 +254,7 @@
     "static/media/insta.svg": "/static/media/insta.48c2a74dca1eea202d3e5d2329c8d172.svg",
     "static/media/facebook.svg": "/static/media/facebook.cc9f13451c633de083af95a28b38b501.svg",
     "main.ecafa855.css.map": "/static/css/main.ecafa855.css.map",
-    "main.705e5046.js.map": "/static/js/main.705e5046.js.map",
+    "main.d3fd9504.js.map": "/static/js/main.d3fd9504.js.map",
     "921.638ae3c8.chunk.css.map": "/static/css/921.638ae3c8.chunk.css.map",
     "921.da0cf2b6.chunk.js.map": "/static/js/921.da0cf2b6.chunk.js.map",
     "888.afd73ae6.chunk.css.map": "/static/css/888.afd73ae6.chunk.css.map",
@@ -262,7 +262,7 @@
     "54.b29d1d4e.chunk.css.map": "/static/css/54.b29d1d4e.chunk.css.map",
     "54.dea5c6b3.chunk.js.map": "/static/js/54.dea5c6b3.chunk.js.map",
     "625.abd7913e.chunk.css.map": "/static/css/625.abd7913e.chunk.css.map",
-    "625.ef909a30.chunk.js.map": "/static/js/625.ef909a30.chunk.js.map",
+    "625.9f5db70a.chunk.js.map": "/static/js/625.9f5db70a.chunk.js.map",
     "731.8dff0d9c.chunk.css.map": "/static/css/731.8dff0d9c.chunk.css.map",
     "731.153941d7.chunk.js.map": "/static/js/731.153941d7.chunk.js.map",
     "112.373214bd.chunk.css.map": "/static/css/112.373214bd.chunk.css.map",
@@ -323,6 +323,6 @@
   },
   "entrypoints": [
     "static/css/main.ecafa855.css",
-    "static/js/main.705e5046.js"
+    "static/js/main.d3fd9504.js"
   ]
 }
