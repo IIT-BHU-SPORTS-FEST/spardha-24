@@ -1,86 +1,182 @@
-import './Contact.css';
-import Card from './Card/Card';
-import HomeContact from "../Home/Contact/Contact"
+
+body {
+  overflow-x: hidden; 
+  background-image: 'url(/images/bg/hero-bg1.jpg)';
+}
+.heading123 {
+  color: rgba(73, 130, 246, 1);
+  align-self: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  top: -2.5rem;
+}
 
 
+#contactus {
+  position: relative;
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 2rem; */
+  /* margin-top: 2rem; */
+  padding-bottom: 3rem;
+  width: 100vw;
+height: fit-content;
+}
 
-const Contact = () => {
+.container-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  min-height: 80vh;
+  max-height: max-content;
+  margin-top: 5rem;
+  font-size: small;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
 
-  // const renderCards = () => {
-  //   switch (selectedCategory) {
-  //     case 'Conveners':
-  //       return (
-  //         <div className='cards-row'>
-  //           <Card mainImage='/images/Contact/cimages/Convenor2.jpg' name="Devang Darpe" position="Convener" email="devang.darpe.cer22@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/devang-darpe-a09501256?trk=contact-info"/>
-  //           <Card mainImage='/images/Contact/cimages/Co-convenorw.jpg' name="Riddhi Rangari" position="Co-convener" email="riddhi.rangari.mst22@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/riddhi-rangari-583a0125a" insta="https://www.instagram.com/riddhiii.i?igsh=enBvNHh4NGxsZzF1"/>
-  //           <Card mainImage='/images/Contact/cimages/Co-convenor21.jpg' name="Suraj Kumar" position="Co-convener" email="suraj.kumar.min22@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/suraj-kumar-3578a1258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" insta="https://www.instagram.com/kr_srj23?utm_source=qr&igsh=YXBwNWN0aTlxcHkz"/>
-  //           <Card mainImage='/images/Contact/cimages/Co-convenor22.jpg' name="Aditya Amarnath" position="Co-convener" email="aditya.amarnath.cer22@itbhu.ac.in" isConvener={true} linkedin="https://www.linkedin.com/in/aditya-amarnath-82663a22b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" insta="https://www.instagram.com/aditya_amarnath18/"/>
-  //         </div>
-  //       );
-  //     case 'Publicity':
-  //       return (
-  //         <div className='cards-row'>
-  //           <Card name="Gudipati Pranav Reddy" email="gudipati.pranavreddy.min23@itbhu.ac.in" phone="9032348290"/>
-  //           <Card name="Deepak" email="deepak.student.phe23@itbhu.ac.in" phone="8307778018"/>
-  //           <Card name="Ajay Meena" email="ajay.meena.che23@itbhu.ac.in" phone="8076203750"/>
-  //         </div>
-  //       );
-  //     case 'Marketing':
-  //       return (
-  //         <div className='cards-row'>
-  //           <Card name="Sriyog Holkar" email="sriyog.holkar.cse23@itbhu.ac.in" phone="9019746667"/>
-  //           <Card name="Abhishek Biradar" email="abhishek.biradar.phe23@itbhu.ac.in" phone="9380041488"/>
-  //           <Card name="Md Kaif" email="md.kaif.cer23@itbhu.ac.in" phone="9142994832"/>
-  //         </div>
-  //       );
-  //     case 'Events':
+.hamburger-container {
+  display: none;
+}
 
-  //       return <>
-  //       <Card name="Sasank Eswar Vamsy" email="psasank.eswarvamsy.phy23@itbhu.ac.in" phone="9010404545"/>
-  //       <Card name="Grishma Tembhurne" email="grishma.stembhurne.che23@itbhu.ac.in" phone="9322192403"/> 
-  //       <Card name="Pavan Punj Bais" email="pavanpunj.bais.min23@itbhu.ac.in" phone="9329008865"/>
-  //       </>; 
 
-  //     case 'Hospitality':
-  //       return (
-  //         <div className='cards-row'>
-  //           <Card name="Ashok Kumar Meena" email="ashok.kmeena.civ23@itbhu.ac.in" phone="8306460439"/>
-  //           <Card name="Piyush Kumar Pakad" email="piyushkr.pakad.cse23@itbhu.ac.in" phone="9351966135"/>
-  //           <Card name="Shweta Singh" email="shweta.singh.cer23@itbhu.ac.in" phone="8439960289"/>
-  //         </div>
-  //       );
-  //     case 'Technical':
-  //       return (
-  //         <div className='cards-row'>
-  //           <Card name="Rohit Kumar" email="rohit.kumar.che23@itbhu.ac.in" phone="9350126101"/>
-  //           <Card name="Roshan Mittal" email="roshan.mittal.che23@itbhu.ac.in" phone="9351966135"/>
-  //         </div>
-  //       );
-  //     default:
-  //       return null;
-  //   }
-  // };
+.heading2 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-  return (
-    <section id="contactus" className="contactus-bg"  style={{
-    backgroundImage: "url(/images/bg/hero-bg1.jpg)",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-      <div className="conveners-block">
-        <h1 className="conveners-title">OUR CONVENERS</h1>
-        <p className="conveners-subtitle">
-          "Behind the grandeur of Spardha stand our conveners, whose relentless efforts and inspiring leadership transform ideas into reality. With their guidance, the fest continues to grow as a symbol of energy, passion, and sporting excellence at IIT BHU."
-        </p>
-        <Card/>
-      </div>
-       <div style={{ backgroundColor: "rgb(23, 30, 41)"}}>
-  <HomeContact/>
-</div>
-    </section>
-  );
-};
+.heading2 li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
 
-export default Contact;
+.heading2 li:hover {
+  color: rgba(73, 130, 246, 1);
+}
+
+.heading2 li.selected {
+  color: rgba(73, 130, 246, 1);
+}
+
+.content123 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: auto;
+  row-gap: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  color: rgba(255, 255, 255, 1);
+  z-index: 1001;
+}
+
+.selected-heading {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Contact Us Mobile Adjustments */
+@media (max-width: 1400px){
+  .heading123{
+    top: -1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hamburger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1001;
+  }
+
+  .selected-heading {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .heading2 {
+    display: none;
+  }
+
+  .heading2.active {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .heading2 li {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading2 li h3 {
+    font-size: 1.5rem;
+  }
+
+  .heading2 li.selected {
+    background-color: #007bff;
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .selected-heading {
+    font-size: 1rem;
+  }
+  .container{
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .heading2 li h3{
+    font-size: 1.1rem;
+  }
+
+  .hamburger-container {
+    height: min-content;
+  }
+}
+
+@media (max-width: 450px) {
+  .selected-heading {
+    font-size: 0.9rem;
+  }
+}
