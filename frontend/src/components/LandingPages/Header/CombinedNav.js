@@ -10,6 +10,7 @@ const navLinks = [
   { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
   { name: 'Contact Us', path: '/contactus' },
+  {name: 'Timeline', path:'/timeline'},
   { name: 'Sponsors', path: '/sponsors' },
 ];
 const token = localStorage.getItem('token');
