@@ -10,11 +10,8 @@ const navLinks = [
   { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
   { name: 'Contact Us', path: '/contactus' },
-<<<<<<< HEAD
-  {name: 'Timeline', path:'/timeline'}
-=======
+  {name: 'Timeline', path:'/timeline'},
   { name: 'Sponsors', path: '/sponsors' },
->>>>>>> 4d811f68e821182c3283b51b747f974451df073b
 ];
 const token = localStorage.getItem('token');
 const baseUrl = process.env.REACT_APP_BASE_URL;
