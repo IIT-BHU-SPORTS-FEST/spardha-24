@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Events', path: '/events' },
   // { name: 'E-Spardha', path: '/espardha' },
   { name: 'Contact Us', path: '/contactus' },
+  {name: 'Timeline', path:'/timeline'}
 ];
 
 export const Navbar = ({ onHamburgerClick }) => {
