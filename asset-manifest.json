@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.53a8a9e1.css",
-    "main.js": "/static/js/main.3224fe04.js",
+    "main.js": "/static/js/main.7c72df22.js",
     "static/css/921.638ae3c8.chunk.css": "/static/css/921.638ae3c8.chunk.css",
     "static/js/921.948b188a.chunk.js": "/static/js/921.948b188a.chunk.js",
     "static/css/888.afd73ae6.chunk.css": "/static/css/888.afd73ae6.chunk.css",
@@ -51,8 +51,8 @@
     "static/js/838.2eb933c1.chunk.js": "/static/js/838.2eb933c1.chunk.js",
     "static/css/466.3f452386.chunk.css": "/static/css/466.3f452386.chunk.css",
     "static/js/466.f9184414.chunk.js": "/static/js/466.f9184414.chunk.js",
-    "static/css/955.f02aa005.chunk.css": "/static/css/955.f02aa005.chunk.css",
-    "static/js/955.2078e6d7.chunk.js": "/static/js/955.2078e6d7.chunk.js",
+    "static/css/31.c0dc3cf3.chunk.css": "/static/css/31.c0dc3cf3.chunk.css",
+    "static/js/31.f0434381.chunk.js": "/static/js/31.f0434381.chunk.js",
     "static/js/774.564bc5b6.chunk.js": "/static/js/774.564bc5b6.chunk.js",
     "static/js/673.299aad05.chunk.js": "/static/js/673.299aad05.chunk.js",
     "static/js/334.45b5e440.chunk.js": "/static/js/334.45b5e440.chunk.js",
@@ -71,7 +71,6 @@
     "static/media/athleticshover.png": "/static/media/athleticshover.1a2907e78e764aa5fbde.png",
     "static/media/FIFA.png": "/static/media/FIFA.b975e602d8d3ecd4ed97.png",
     "static/media/FIFA_rulebook.pdf": "/static/media/FIFA_rulebook.1eb36c648989811239f6.pdf",
-    "static/media/freefire1.png": "/static/media/freefire1.43a1bdb23b7cd5e8db72.png",
     "static/media/CODM.png": "/static/media/CODM.83c300e6b8f908c9f9d3.png",
     "static/media/basket1.png": "/static/media/basket1.2a5a7e7daffbf49c81f5.png",
     "static/media/image.png": "/static/media/image.2a5a7e7daffbf49c81f5.png",
@@ -79,7 +78,6 @@
     "static/media/valorent.png": "/static/media/valorent.5df321abd20931a4878c.png",
     "static/media/cycling.png": "/static/media/cycling.95c3b7ec303cafa0b5e1.png",
     "static/media/contactus.png": "/static/media/contactus.78b4ceedaaa85ba70f64.png",
-    "static/media/FREEFIRE_RULEBOOK.pdf": "/static/media/FREEFIRE_RULEBOOK.e06e24fa24383ebe47b5.pdf",
     "static/media/chess.png": "/static/media/chess.4ad067ee86ecfa937e82.png",
     "static/media/chesshover.png": "/static/media/chesshover.4ad067ee86ecfa937e82.png",
     "static/media/bgmi.png": "/static/media/bgmi.4cf72fb67227d8116c05.png",
@@ -293,7 +291,7 @@
     "static/media/testi-5.jpg": "/static/media/testi-5.e9c4108f20abc5ae7b53.jpg",
     "index.html": "/index.html",
     "main.53a8a9e1.css.map": "/static/css/main.53a8a9e1.css.map",
-    "main.3224fe04.js.map": "/static/js/main.3224fe04.js.map",
+    "main.7c72df22.js.map": "/static/js/main.7c72df22.js.map",
     "921.638ae3c8.chunk.css.map": "/static/css/921.638ae3c8.chunk.css.map",
     "921.948b188a.chunk.js.map": "/static/js/921.948b188a.chunk.js.map",
     "888.afd73ae6.chunk.css.map": "/static/css/888.afd73ae6.chunk.css.map",
@@ -343,8 +341,8 @@
     "838.2eb933c1.chunk.js.map": "/static/js/838.2eb933c1.chunk.js.map",
     "466.3f452386.chunk.css.map": "/static/css/466.3f452386.chunk.css.map",
     "466.f9184414.chunk.js.map": "/static/js/466.f9184414.chunk.js.map",
-    "955.f02aa005.chunk.css.map": "/static/css/955.f02aa005.chunk.css.map",
-    "955.2078e6d7.chunk.js.map": "/static/js/955.2078e6d7.chunk.js.map",
+    "31.c0dc3cf3.chunk.css.map": "/static/css/31.c0dc3cf3.chunk.css.map",
+    "31.f0434381.chunk.js.map": "/static/js/31.f0434381.chunk.js.map",
     "774.564bc5b6.chunk.js.map": "/static/js/774.564bc5b6.chunk.js.map",
     "673.299aad05.chunk.js.map": "/static/js/673.299aad05.chunk.js.map",
     "334.45b5e440.chunk.js.map": "/static/js/334.45b5e440.chunk.js.map",
@@ -362,6 +360,6 @@
   },
   "entrypoints": [
     "static/css/main.53a8a9e1.css",
-    "static/js/main.3224fe04.js"
+    "static/js/main.7c72df22.js"
   ]
 }
