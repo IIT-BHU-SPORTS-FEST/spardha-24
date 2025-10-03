@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./About.module.css";
+import "./About2.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -36,7 +37,7 @@ useEffect(() => {
     <section className={styles.about}>
       {/* Top Section */}
       <div className={styles.topSection}>
-        <h2 className={styles.title}>ABOUT</h2>
+        <div className={styles.heading_a}>ABOUT US</div>
         <div className={styles.textContent}>
           <p className={styles.boldText}>
             Spardha, the annual sports fest of IIT BHU, is a celebration of
@@ -61,7 +62,9 @@ useEffect(() => {
       {/* Bottom Section */}
       <div className={styles.bottomSection}>
         <div className={styles.imageBox}>
-          <img src="/images/general/image.png" alt="Spardha" className={styles.image} />
+          <div className="pentagon-flipped light-theme"></div>
+          <div className="pentagon-not-flipped light-theme"></div>
+          <img src="/images/general/image.jpg" alt="Spardha" className={styles.image} />
           <div className={styles.imageOverlay}>
             <p className={styles.image_data}>
               Spardha <br />

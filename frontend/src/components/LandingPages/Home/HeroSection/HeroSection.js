@@ -79,8 +79,7 @@ const HeroSection = () => {
               </React.Fragment>
             ))}
           </div>
-
-         
+          
           <p className="tagline">
             "Where passion meets performance — Spardha"
           </p>

@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+.gallery {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;      /* optional: limit max width on large screens */
+  margin: 0 auto;         /* center horizontally */
+  border-radius: 48px;
+  padding: 80px 40px;     /* default padding */
+  background: #000d35;
+  opacity: 1;
+  box-sizing: border-box;
+
+
+    --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-depth: 34px;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+
+}
+
+.tag{
+    font-family: Anton;
+  font-weight: 100;
+  font-style: Regular;
+ font-size: clamp(32px, 8vw, 65px);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+  margin: 20px 30px;
+}
+
+
+/* Medium screens (tablet) */
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 70px 30px;
+    border-radius: 32px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 50px 20px;
+    border-radius: 24px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .gallery {
+    padding: 40px 15px;
+    border-radius: 16px;
+  }
+}
+
+.bg-onset {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+}
+.bg-onset::-webkit-scrollbar {
+  display: none; 
+}
+
+
+.top-div {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 10;
+}
+
+.main-heading {
+  font-family: Anton;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 85px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: whitesmoke;
+  text-shadow: 2px 2px 20px #000000;
+  padding-top: 65px;
+}
+
+.rectangle-1 {
+  position: relative;
+  width: 90%;
+  border-radius: 48px;
+  padding: 80px 60px;
+  opacity: 1;
+  background: #000d35;
+  --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-depth: 34px;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+}
+
+.rectangle-2 {
+    --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-depth: 34px;
+  position: relative;
+  width: 31%;
+  border-radius: 48px;
+  padding: 70px 60px;
+  opacity: 1;
+  background: #000d35;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+}
+
+.second-heading {
+  opacity: 1;
+  font-family: Anton;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+
+.para {
+  font-family: Anta;
+  font-weight: 10;
+  font-style: Regular;
+  font-size: 22px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.container-1 {
+  width: 90%;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Default pentagon size */
+.pentagon-flipped,
+.pentagon-not-flipped {
+  width: 246px;
+  height: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+/* Flip-specific positions */
+.pentagon-flipped {
+  top: -0.5px;
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
+}
+
+.pentagon-not-flipped {
+  bottom: -0.5px;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* Responsive pentagon sizes */
+@media screen and (max-width: 1024px) {
+  .pentagon-flipped,
+  .pentagon-not-flipped {
+    width: 180px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pentagon-flipped,
+  .pentagon-not-flipped {
+    width: 140px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pentagon-flipped,
+  .pentagon-not-flipped {
+    width: 110px;
+    height: 20px;
+  }
+}
+
+
+.dark-theme {
+  background: #000000;
+}
+.light-theme {
+  background: white;
+}
+
+.rectangle-3 {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background: #000411;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seperator-1 {
+    width: 0.5px;
+    height: 350px;
+    background-color: #ffffff;
+}
+
+.left-section {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 70px;
+    gap: 15px;
+}
+.sub-heading-1 {
+  opacity: 1;
+  font-family: Anton;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.sub-heading-2 {
+  opacity: 1;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+
+.form-data{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap:15px;
+    margin: 10px;
+}
+
+.input{
+    width: 100%;
+    height: 36px;
+    opacity: 1;
+    border-radius: 10px;
+    background: #D9D9D91A;
+    color: #ffffff;
+    font-size:medium;
+    padding-left:12px;
+    padding-right: 12px;
+    font-family:Poppins;
+     outline: none;
+
+}
+
+.msg {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;       /* same padding as .input */
+}
+
+.input:focus, input:hover, .msg:hover, .msg:focus{
+    border: 1px solid  rgba(45, 129, 247, 0.6);                        /* white border on focus */
+    box-shadow: 0 0 10px 2px rgba(45, 129, 247, 0.6); /* blue glow */
+    background: #D9D9D91A;                          /* keep background same */
+}
+
+
+.right-section{
+    width: 49%;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .container-1 {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .rectangle-2 {
+    width: 90%;
+    padding: 40px 30px;
+  }
+
+  .rectangle-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seperator-1, .right-section {
+    display: none;
+  }
+
+  .left-section {
+    width: 90%;
+    padding-left: 0;
+  }
+
+  .form-data {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-heading {
+    font-size: 60px;
+    padding-top: 40px;
+  }
+
+  .sub-heading-1 {
+    font-size: 36px;
+  }
+
+  .sub-heading-2, .para {
+    font-size: 16px;
+  }
+
+  .rectangle-1 {
+    padding: 40px 20px;
+  }
+}
+
+/* Button animation with sliding darker shade */
+.submit {
+    font-family: Anta;
+    font-weight: 400;
+    width: max-content;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+  background: #2D81F7;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.8s ease-in-out;
+}
+
+.submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Slightly darker overlay */
+  transition: all 0.4s ease;
+}
+
+.submit:hover::before {
+  left: 0; /* Slide from left to right */
+}
+
+.submit:hover {
+  transform: scale(110%);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* Fade-in effect for rectangles */
+.rectangle-1, .rectangle-2, .rectangle-3 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.rectangle-2:nth-child(1) { animation-delay: 0.2s; }
+.rectangle-2:nth-child(2) { animation-delay: 0.4s; }
+.rectangle-2:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Default for large screens */
+.gallery,
+.rectangle-1,
+.rectangle-2 {
+  --notch-width: 240px; 
+  --notch-depth: 34px;
+}
+
+/* Medium screens (tablet) */
+@media screen and (max-width: 1024px) {
+  .gallery,
+  .rectangle-1,
+  .rectangle-2 {
+    --notch-width: 180px;
+    --notch-depth: 28px;
+  }
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 768px) {
+  .gallery,
+  .rectangle-1,
+  .rectangle-2 {
+    --notch-width: 140px;
+    --notch-depth: 24px;
+  }
+}
+
+/* Extra small screens (very small mobile) */
+@media screen and (max-width: 480px) {
+  .gallery,
+  .rectangle-1,
+  .rectangle-2 {
+    --notch-width: 110px;
+    --notch-depth: 20px;
+  }
+}

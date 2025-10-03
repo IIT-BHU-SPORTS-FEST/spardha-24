@@ -1,4 +1,6 @@
 import styles from "./Location.module.css";
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import "./extra.css"
 
 const  LocationCard=()=> {
   return (
@@ -8,7 +10,9 @@ const  LocationCard=()=> {
         <h2 className={styles.title}>LOCATION</h2>
 
         <div className={styles.addressBlock}>
-          <span className={styles.icon}>📍</span>
+          <div className="location-box">
+          <FaMapMarkerAlt className="location-logo" color="black" />
+          </div>
           <p className={styles.address}>
             Indian Institute of Technology (BHU) Varanasi <br />
             Banaras Hindu University Campus, <br />

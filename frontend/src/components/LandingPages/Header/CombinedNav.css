@@ -21,6 +21,13 @@
     display: none;
   }
 }
+.welcome-message{
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
 .hamburger-btn{
   display: none;
@@ -57,12 +64,10 @@
   }
 }
 .navbar {
-  display: flex;
+  display: flex; /* or whatever original rule set */
   align-items: center;
   gap: 1.5rem;
   justify-content: center;
-  margin: auto;
-  padding-top: 23px;
 }
 
 .navbar ul {

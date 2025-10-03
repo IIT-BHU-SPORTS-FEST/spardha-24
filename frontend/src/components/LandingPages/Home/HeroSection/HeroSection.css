@@ -12,8 +12,8 @@
   background-position: center;
   user-select: none;
 
-  overflow-y: scroll;    /* allow scrolling if content is taller */
-  overflow-x: hidden; /* prevent horizontal overflow */
+  /* overflow-y: scroll;   */
+  overflow-x: hidden; 
 }
 
 

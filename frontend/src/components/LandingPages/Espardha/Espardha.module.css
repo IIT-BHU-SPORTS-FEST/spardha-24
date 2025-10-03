@@ -1,365 +1,501 @@
-.ftco_section {
-  margin: 100px 200px 0 200px;
-
-  position: relative;
-}
-.container {
-  width: 100%;
-  background-color: rgb(2,0,31);
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  height: 150%;
-  padding-bottom: 50px;
-}
-.container {
-  /* position: fixed; */
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* background: rgba(255, 255, 255, 0.9); */
-  padding: 30px 50px;
-}
-.maindiv {
-  padding: 41px 35px;
+/* General Layout */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Hahmlet:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.title {
+  width: 100%;         /* or whatever container width */
+  height: 166px;       /* the "line height" container you want */
   display: flex;
-  flex-direction: row;
-  border-radius: 21px;
-  /* background: #fff; */
-  background-color: rgb(2,0,31);
-  height: 80vh;
-  overflow-y: auto;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
 }
-/* .maindiv::-webkit-scrollbar {
-  width: 0px;
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.maindiv::-webkit-scrollbar-thumb {
-  background-color: #760e53;
-  border-radius: 200px;
-} */
-.poster {
-  padding: 20px;
-  border-right: 1.5px solid #000;
-}
-.content {
-  margin: 12px 0 36px 36px;
-  padding: 10px;
-  border-radius: 20px;
-  border: 1.5px solid #000;
-}
-.top {
-  justify-content: center;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-.top h1 {
-  color:rgba(73, 130, 246, 1);
+
+
+.title h2 {
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
-  font-family: Poppins, sans-serif;
-  /* font-size: 28px; */
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: capitalize;
+  animation: slideDown 1s ease-out forwards;
 }
-.middle {
-  align-items: center;
+
+.title h2 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 5vw;       /* responsive font size */
+  color: white;
+  margin-top: -20px;            /* remove default h2 margin */
+  line-height: 1;       /* make line height tight for flex centering */
+}
+/* Wrapper to allow absolute positioning */
+/* Polygon decorative elements */
+.polywhite {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  z-index: 10;
+}
+
+.polygonbg {
+  position: absolute;
+  top: -20px;
+  left:50%;
+  transform: translateX(-50%);
+  margin-top: -110px;
+  z-index: -1;
+}
+
+.polywi {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+/* Enhanced outermostdiv to work with polygons */
+.outermostdiv {
+  position: relative;
+  background-color: #000d35;
+  border-radius: 40px;
+  padding: 40px 0px;
+  margin: 100px auto 40px auto;
+  width: 95%;
+  /* min-height: fit-content; */
+  max-width: 1200px;
+  overflow: visible; 
+  text-align: center;
+  color: white;
+
+
+
+  --notch-width: clamp(160px, 20vw, 280px);
+  --notch-depth: clamp(20px, 4vw, 40px);
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    calc(50% - (var(--notch-width) / 2)) 0,
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) var(--notch-depth),
+    calc(50% + (var(--notch-width) / 2)) 0,
+    100% 0,
+    100% 100%,
+    calc(50% + (var(--notch-width) / 2)) 100%,
+    calc(50% + (var(--notch-width) / 2) - var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2) + var(--notch-depth)) calc(100% - var(--notch-depth)),
+    calc(50% - (var(--notch-width) / 2)) 100%,
+    0 100%
+  );
+
+
+}
+
+/* Responsive adjustments for polygons */
+@media (max-width: 768px) {
+  .polywhite {
+    width:100px;
+    height: 45px;
+    top: -25px;
+  }
+  
+  .polygonbg {
+    width: 100px;
+    height: 45px;
+    top: -15px;
+    right: -20px;
+  }
+  
+  .polywi {
+    width: 100px;
+    height: 45px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .polywhite {
+    width: 80px;
+    height: 45px;
+    top: -25px;
+  }
+  
+  .polygonbg {
+    width: 80px;
+    height: 45px;
+    top: -15px;
+    right: -15px;
+  }
+  
+  .polywi {
+    width: 80px;
+    height: 45px;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+.maindiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 10%;
+}
+
+/* Poster */
+.poster img {
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Content area next to poster */
+.content {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  gap: 20px;
 }
-.discription {
-  color:white;
-  /* color: #000; */
-  text-align: center;
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.buttons {
-  gap: 5rem;
+
+/* Top section (controller + heading) */
+.top {
   display: flex;
-  padding-left: 40px;
+  align-items: center;
+  gap: 15px;
 }
-.buttons a {
-  border-radius: 35px;
-  border: 2px solid rgba(73, 130, 246, 1)  ;
-  padding: 9px 33px;
-  justify-content: center;
-  text-align: center;
+
+.top img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Middle description & buttons */
+.middle {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  font-weight: bold;
-  flex-shrink: 0;
-  color: white;
-  text-decoration: none;
-  font-family: Poppins, sans-serif;
-}
-.buttons a:hover{
-  background-color:  rgba(73, 130, 246, 1);
   color: #fff;
 }
-.top p {
-  /* color: #000; */
-  color:white;
+.poster p {
+  font-size: 1.2rem;
+  font-family: "Anta", sans-serif;
+  line-height: 1.4;
+  color:#fff;
+  margin-top: 12px;
   text-align: center;
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+}
+.middle .discription {
+  font-size: 1.2rem;
+  font-family: "Anta", sans-serif;
+  line-height: 1.4;
+  color:#fff;
 }
 
-.bottom {
-  align-items: center;
+/* Buttons */
+.buttons {
   display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-.bottom_heading {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 35px;
-}
-.hr {
-  width: 200px;
-  border-top: 1px solid black;
-}
-/*my try*/
-.cardmaindiv{
-  display: flex;
-  flex-direction: column;
-justify-content: center;
-align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-.btnclass{
-  border-radius: 35px;
-  border: 2px solid rgba(73, 130, 246, 1)  ;
-  padding: 9px 33px;
-  background-color: black;
   justify-content: center;
-  text-align: center;
-  gap: 10px;
-  font-weight: bold;
-  flex-shrink: 0;
-  color: white;
-  text-decoration: none;
-  font-family: Poppins, sans-serif;
 }
-.btnclass:hover{
-  background-color:  rgba(73, 130, 246, 1);
+
+.btnclass {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #ff4c00;
   color: #fff;
-}
-.cardcon{margin-top: 20px;
-  width: fit-content;
-  /* height: 300px; */
-  padding-bottom: 20px;
-  background: rgba(2, 0, 33, 1);  
-  display: flex;
-  gap:20px;
-  color:white;
-  flex-direction: column;
-  border-radius: 20px;
-  border: 2px solid rgb(55, 0, 128);
-  justify-content: center;
-  align-items: center;
-}
-.cardcon:hover{
-  transform: scale(1.05);
-  transition-duration: 500ms;
-}
-.cardimg img{
- width:350px;
- border-top-right-radius: 20px;
- border-top-left-radius: 20px;
- object-fit: fill;
-}
-.formlink{
   text-decoration: none;
-  color: rgb(183,112,217);
-  font-weight: bold;
-  font-family:Poppins, sans-serif;
-}
-.prizepool{
-  display: flex;
-  flex-direction: column;
-  color: rgb(153,153,153);
-  justify-content: center;
-  align-items: center;
-}
-.formlink:hover{
-  color:aqua
-}
-.cardbottom{
-  padding: 5px;
-}
-.maindiv {
-  overflow: auto;
-}
-.maindiv::-webkit-scrollbar {
-  display: none; 
-}
-.maindiv {
-  scrollbar-width: none; /* Hides the scrollbar */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-/*my try*/
-.bottom h3 {
-  /* color: #760e53; */
-  color: rgba(73, 130, 246, 1);
-  text-align: center;
-  font-family: Poppins, sans-serif;
-  /* font-size: 24px; */
-  font-style: normal;
+.btnclass:hover {
+  background-color: #ff6a33;
+}
+
+.registerbtn, .backbtn {
+  border: none;
+}
+
+/* Cards container */
+/* Main container for all cards */
+.cardmaindiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+
+  min-height: 100vh;
+}
+
+/* Form link wrapper */
+.formlink {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formlink:hover {
+  transform: translateY(-8px);
+}
+
+/* Main card container with glassmorphism */
+.cardcon {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.cardcon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+}
+
+.cardcon:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 15px 35px 0 rgba(31, 38, 135, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Card image section */
+.cardimg {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cardimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.cardcon:hover .cardimg img {
+  transform: scale(1.05);
+}
+
+/* Card bottom section */
+.cardbottom {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardbottom h4 {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.4rem;
   font-weight: 600;
-  line-height: normal;
-  text-decoration-line: underline;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.3;
 }
-.contacts {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 17rem;
-}
-.contact_card {
-  align-items: center;
+
+/* Prize pool section */
+.prizepool {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+}
+
+.prizepool h6 {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.prizepool p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Rulebook button */
+.btnclass {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 15px 0 rgba(31, 38, 135, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnclass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btnclass:hover::before {
+  left: 100%;
+}
+
+.btnclass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
   color: white;
-  text-align: center;
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.contact_card p {
-  font-weight: 400;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(31, 38, 135, 0.4);
 }
 
-@media (max-width: 1500px) {
-  .container {
-    padding: 20px;
-  }
-  .maindiv {
-    padding: 20px;
-  }
-  .content {
-    margin-left: 15px;
-  }
-}
-@media (max-width: 1380px) {
-  .contacts {
-    gap: 6rem;
-  }
-  .hr {
-    width: 150px;
-  }
-  .buttons {
-    gap: 2.5rem;
-    padding-left: 0;
-  }
-  .bottom_heading {
-    gap: 20px;
-  }
-  .top h1 {
-    font-size: 28px;
-  }
-  .bottom h3 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1230px) {
-  .ftco_section {
-    margin: 100px 150px 0 150px;
-  }
-  .poster {
-    padding-left: 0;
-  }
-}
-@media (max-width: 1111px) {
-  .ftco_section {
-    margin: 100px 100px 0 100px;
-  }
-  .hr {
-    width: 125px;
-  }
-  .buttons {
+/* Responsive design */
+@media (max-width: 768px) {
+  .cardmaindiv {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .cardimg {
+    height: 180px;
+  }
+  
+  .cardbottom {
+    padding: 1.2rem;
+  }
+  
+  .cardbottom h4 {
+    font-size: 1.2rem;
   }
 }
-@media (max-width: 990px) {
+
+/* Optional: Different background gradients for variety */
+.cardmaindiv.variant-1 {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+}
+
+.cardmaindiv.variant-2 {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+}
+
+.cardmaindiv.variant-3 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+/* Mobile adjustments */
+
+@media(max-width: 320px) {
+  .title h2 {
+    font-size: 15vw; 
+  }
+}
+@media(max-width: 768px) {
+  .title h2 {
+    font-size: 11vw; 
+  }
+}
+/* Poster responsiveness */
+.poster {
+  max-width: 100%;
+  flex: 1 1 300px;  /* allows it to shrink on small screens */
+}
+
+.poster img {
+  width: 90%;        /* fill container */
+  height: auto;       /* keep aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
   .maindiv {
-    flex-direction: column;
+    flex-direction: column; /* stack poster & content */
+    align-items: center;
+    gap: 30px;
   }
+
   .poster {
-    border-right: none;
-    border-bottom: 1.5px solid black;
-    margin-bottom: 20px;
-    width: 100%;
-    justify-content: center;
-    display: flex;
+    max-width: 90%;
   }
-}
-@media (max-width: 720px) {
-  .poster {
-    margin-bottom: 0;
-    border-bottom: 2px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
   .content {
-    border: none;
-  }
-  .bottom {
-    border-top: 2px solid black;
-    padding-top: 20px;
-  }
-  .hr {
-    width: 0;
-  }
-  .top {
-    flex-direction: column;
-  }
-  .buttons {
-    flex-direction: column;
-  }
-  .contacts {
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-    align-items: flex-start;
-  }
-  .contact_card{
-    align-items: flex-start;
+    max-width: 90%;
+    text-align: center;
   }
 }
-@media (max-width: 540px) {
-  .ftco_section {
-    margin: 100px 50px 0 50px;
+
+@media (max-width: 425px) {
+  .poster {
+    max-width: 100%;
   }
-}
-@media (max-width: 450px) {
-  .ftco_section {
-    margin: 100px 30px 0 30px;
+
+  .content {
+    font-size: 0.9rem; 
   }
-}
-@media (max-width: 395px) {
-  .ftco_section {
-    margin: 100px 11px 0 11px;
-  }
-}
-.outermostdiv{
-  width: 100vw;
-  height: 100vh;
 }
