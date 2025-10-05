@@ -1,7 +1,5 @@
 import axios from "axios";
 import React, { useContext, useEffect, useRef } from "react";
-// import { FiSend } from "react-icons/fi";
-// import { Link } from "react-router-dom";
 import { useReducer } from "react";
 import {
   Alert,
@@ -10,7 +8,6 @@ import {
   FormGroup,
   Input,
   InputGroup,
-  // InputGroupText,
   Label,
   Button,
 } from "reactstrap";
@@ -125,16 +122,6 @@ function Login() {
   return (
     <div id="loginDiv" className={`${styles.loginDiv}`} ref={ref_container}>
       <h3 className={`${styles.heading}`}> Spardha : Admin dashboard </h3>
-      {/* <hr /> */}
-
-      {/* <Alert
-        color="success"
-        style={{
-          fontSize: "14px",
-          fontFamily: "Helvetica Neue,Helvetica,Arial,sans-serif",
-        }}
-        className="py-2"
-      ></Alert> */}
 
       <Form className={`${styles["form-horizontal"]}`}>
         <div
@@ -168,20 +155,10 @@ function Login() {
                     <span style={{ color: "red" }}>*</span>
                   </Label>
                   <InputGroup className={`${styles["input-group"]}`}>
-                    {/* <InputGroupText
-                      className={`${styles["form-text"]} ${
-                        username.valid && " text-success border-success"
-                      } ${
-                        username.warning !== "" && " text-danger border-danger"
-                      }`}
-                    >
-                      <FaAt></FaAt>
-                    </InputGroupText> */}
                     <Input
                       name="username"
                       id="username"
                       type="text"
-                    //   placeholder="Enter your username or email"
                       value={username.value}
                       valid={username.warning === "" && username.value !== ""}
                       invalid={username.warning !== ""}
@@ -211,15 +188,6 @@ function Login() {
                     <span style={{ color: "red" }}>*</span>
                   </Label>
                   <InputGroup className={`${styles["input-group"]}`}>
-                    {/* <InputGroupText
-                      className={`${styles["form-text"]} ${
-                        password.valid && " text-success border-success"
-                      } ${
-                        password.warning !== "" && " text-danger border-danger"
-                      }`}
-                    >
-                      <FaKey></FaKey>
-                    </InputGroupText> */}
                     <Input
                       name="password"
                       id="password"

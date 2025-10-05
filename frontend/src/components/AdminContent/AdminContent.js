@@ -39,7 +39,7 @@ const Admin = () => {
           <div className="logo_db">
             <Link to="/">
               <img
-                src="/images/spardha-logo-white.png"
+                src="/images/white_logo_25.png"
                 alt="spardha-logo"
                 className="hidden-sm spardha-logo"
               />

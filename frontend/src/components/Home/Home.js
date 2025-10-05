@@ -20,35 +20,6 @@ function Home() {
 		if (!isLoggedIn) navigate("/login");
 	},[isLoggedIn, navigate])
     return (
-		// <>
-		// 	<h1 className={styles.heading}>Admin Dashboard</h1>
-		// 	<p>
-		// 		Access a comprehensive view of all user data at a glance on this
-		// 		dedicated admin page
-		// 	</p>
-		// 	<div className='card-container'>
-		// 		<Card
-		// 			heading={"All Users"}
-		// 			message={"View all users and their details"}
-		// 			linkTo={"/allUsers"}
-		// 		/>
-		// 		<Card
-		// 			heading={"Sports Registrations"}
-		// 			message={"View all sports registrations and their details"}
-		// 			linkTo={"/sportsRegistrations"}
-		// 		/>
-		// 		<Card
-		// 			heading={"Document Verification"}
-		// 			message={"View all document verifications and their details"}
-		// 			linkTo={"/documentVerification"}
-		// 		/>
-		// 		<Card
-		// 			heading={"All Games"}
-		// 			message={"View all games of categories Boy, Girl, Mixed"}
-		// 			linkTo={"/allGames"}
-		// 		/>
-		// 	</div>
-		// </>
 		<div className="maindiv">
 
            
