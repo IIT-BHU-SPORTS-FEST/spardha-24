@@ -180,6 +180,17 @@ const Card = () => {
 
   return (
     <section id='contactus'>
+      {selectedCategory!=='Conveners'?" ":
+      <>       <h1 className="conveners-title">OUR CONVENERS</h1>
+        <p className="conveners-subtitle">
+          "Behind the grandeur of Spardha stand our conveners, whose relentless efforts and inspiring leadership transform ideas into reality. With their guidance, the fest continues to grow as a symbol of energy, passion, and sporting excellence at IIT BHU."
+          <br/>
+        </p></>
+}
+          <div className='notice'>
+          <br/>
+            🔄Hover the cards to view contacts🔄
+          </div>
       <div className='container glass-card-container'>
         <div className="outermostcard">
           <div className="category-nav" ref={menuRef}>

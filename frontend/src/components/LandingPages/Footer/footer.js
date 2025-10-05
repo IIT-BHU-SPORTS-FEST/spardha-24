@@ -96,7 +96,7 @@ const Footer = () => {
               <div className={css['team-contacts']}>
                 <div className={css['team-member']}>
                   <div className={css['member-header']}>
-                    <span className={css['team-role']}>Event Convener</span>
+                    <span className={css['team-role']}>Fest Convener</span>
                     <span className={css['team-name']}>Devang Darpe</span>
                   </div>
                   <a
