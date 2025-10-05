@@ -69,15 +69,12 @@ const Contact = () => {
   }}
 >
       <div className="conveners-block">
-        <h1 className="conveners-title">OUR CONVENERS</h1>
-        <p className="conveners-subtitle">
-          "Behind the grandeur of Spardha stand our conveners, whose relentless efforts and inspiring leadership transform ideas into reality. With their guidance, the fest continues to grow as a symbol of energy, passion, and sporting excellence at IIT BHU."
-          <br/>
+       
           <div className='notice'>
           <br/>
             🔄Hover the cards to view contacts🔄
           </div>
-        </p>
+        
         <Card/>
       </div>
 
@@ -88,4 +85,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact;
