@@ -113,7 +113,7 @@ const Card = () => {
     ],
     'Events': [
       {
-        name: "Psasank Eswarvamsy",
+        name: "Sasank Eswar Vamsy",
         position: "",
         mainImage: '/images/teams_images/Events/pasasnk.jpg',
         email: "psasank.eswarvamsy.phy23@itbhu.ac.in",
