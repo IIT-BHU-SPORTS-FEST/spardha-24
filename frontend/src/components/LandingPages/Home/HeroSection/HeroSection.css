@@ -182,7 +182,7 @@
   text-align: center;
   color: white;
   padding: 0 1rem;
-  margin: 0 auto 2.5rem;
+  margin: 20px auto 2.5rem;
   width: 100%;
   max-width: 1375px;
   height: auto;
@@ -658,5 +658,75 @@
 
   .event-info {
     justify-content: center;
+  }
+}
+
+/* --- CENTER LEFT DIV ON LAPTOP/TABLET --- */
+@media (min-width: 768px) {
+  .bottom-row {
+    justify-content: center; /* center the row horizontally */
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .countdown-tagline {
+    flex-direction: column; /* keep items stacked */
+    align-items: center;    /* center content horizontally */
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;     /* tagline also centered */
+  }
+}
+
+/* MOBILE: keep original alignment */
+@media (max-width: 767px) {
+  .bottom-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .countdown-tagline {
+    align-items: center;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+}
+
+
+
+
+/* Opening Ceremony Info Box */
+.opening-info h4 {
+  font-size: 1.5rem;       /* default desktop font size */
+}
+
+.opening-info p {
+  font-size: 1.2rem;
+}
+
+/* LAPTOP / TABLET: larger fonts and center content */
+@media (min-width: 768px) {
+  .opening-info h4 {
+    font-size: 1.9rem;   /* slightly larger */
+  }
+
+  .opening-info p {
+    font-size: 1.5rem;   /* slightly larger */
+  }
+}
+
+/* MOBILE: smaller but readable */
+@media (max-width: 767px) {
+  .opening-info h4 {
+    font-size: 1.5rem;     /* readable on mobile */
+  }
+
+  .opening-info p {
+    font-size: 1.2rem;
   }
 }
