@@ -2,20 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* Remove the problematic scroll container styles */
+.bg-onset {
+  /* Remove height: 100vh and overflow-y: auto */
+  width: 100%;
+  /* Let the content flow naturally */
+}
+
+/* Apply background to body or a wrapper instead */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 
 .gallery {
   position: relative;
   width: 90%;
-  max-width: 1400px;      /* optional: limit max width on large screens */
-  margin: 0 auto;         /* center horizontally */
+  max-width: 1400px;
+  margin: 0 auto;
   border-radius: 48px;
-  padding: 80px 40px;     /* default padding */
+  padding: 80px 40px;
   background: #000d35;
   opacity: 1;
   box-sizing: border-box;
 
-
-    --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-width: 240px;
   --notch-depth: 34px;
   -webkit-clip-path: polygon(
     0 0,
@@ -45,20 +57,18 @@
     calc(50% - (var(--notch-width) / 2)) 100%,
     0 100%
   );
-
 }
 
 .tag{
-    font-family: Anton;
+  font-family: Anton;
   font-weight: 100;
   font-style: Regular;
- font-size: clamp(32px, 8vw, 65px);
+  font-size: clamp(32px, 8vw, 65px);
   line-height: 100%;
   letter-spacing: 0%;
   color: white;
   margin: 20px 30px;
 }
-
 
 /* Medium screens (tablet) */
 @media (max-width: 1024px) {
@@ -84,28 +94,18 @@
   }
 }
 
-.bg-onset {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  scrollbar-width: none;
-}
-.bg-onset::-webkit-scrollbar {
-  display: none; 
-}
-
-
 .top-div {
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  /* Remove min-height: 100vh - let content determine height */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   position: relative;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   z-index: 10;
+  /* Add padding for better spacing */
+  padding: 20px 0;
 }
 
 .main-heading {
@@ -127,7 +127,7 @@
   padding: 80px 60px;
   opacity: 1;
   background: #000d35;
-  --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-width: 240px;
   --notch-depth: 34px;
   -webkit-clip-path: polygon(
     0 0,
@@ -160,7 +160,7 @@
 }
 
 .rectangle-2 {
-    --notch-width: 240px;   /* fixed width of trapezium cut */
+  --notch-width: 240px;
   --notch-depth: 34px;
   position: relative;
   width: 31%;
@@ -228,7 +228,6 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
 /* Default pentagon size */
 .pentagon-flipped,
 .pentagon-not-flipped {

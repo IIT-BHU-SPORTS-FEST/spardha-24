@@ -62,15 +62,15 @@ const Espardha = () => {
     <>
   {/* <crousel /> */}
     <div 
-      style={{
-        backgroundImage: "url('/images/bg/hero-bg1-blur.png')",
-        width: "100%",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        // backgroundRepeat: "no-repeat",
-        overflow:"scroll"
-      }}
+      // style={{
+      //   backgroundImage: "url('/images/bg/hero-bg1-blur.png')",
+      //   width: "100%",
+      //   // height: "100vh",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   // backgroundRepeat: "no-repeat",
+      //   // overflow:"scroll"
+      // }}
     >
   <div className={styles.outermostdiv}>
     
