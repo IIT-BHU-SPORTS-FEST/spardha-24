@@ -144,9 +144,10 @@ const Matches = () => {
                 onChange={handleDateChange}
                 style={{ color: 'white', backgroundColor: 'transparent' }}
               >
-                <option style={{ color: 'black', backgroundColor: 'transparent' }} value="2025-10-18">October 18, 2025</option>
-                <option style={{ color: 'black', backgroundColor: 'transparent' }}  value="2025-10-19">October 19, 2025</option>
-                <option style={{ color: 'black', backgroundColor: 'transparent' }}  value="2025-10-20">October 20, 2025 </option>
+                <option style={{ color: 'black', backgroundColor: 'transparent' }} value="2025-10-09">October 09, 2025</option>
+                <option style={{ color: 'black', backgroundColor: 'transparent' }} value="2025-10-10">October 10, 2025</option>
+                <option style={{ color: 'black', backgroundColor: 'transparent' }}  value="2025-10-11">October 11, 2025</option>
+                <option style={{ color: 'black', backgroundColor: 'transparent' }}  value="2025-10-12">October 12, 2025 </option>
                 <option style={{ color: 'black', backgroundColor: 'transparent' }}  value="All">All</option>
               </select>
               {/* <p>Selected Date: {selectedDate}</p> */}
