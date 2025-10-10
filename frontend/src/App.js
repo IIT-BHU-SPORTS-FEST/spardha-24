@@ -11,6 +11,7 @@ import NotFound from './components/LandingPages/NotFound/NotFound';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
 // import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
+import Timeline from './components/LandingPages/Schedule/Timeline.js';
 // import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
 
 const LandingPages = React.lazy(() =>
@@ -208,6 +209,15 @@ function App() {
             element={
               <Suspense fallback={<Preloader />}>
                 <Events />
+                <Footer />
+              </Suspense>
+            }
+          />
+           <Route
+            path="timeline"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Timeline/>
                 <Footer />
               </Suspense>
             }
