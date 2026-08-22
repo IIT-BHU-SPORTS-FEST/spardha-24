@@ -50,7 +50,7 @@ const Footer = () => {
               <ul className={css['nav-links']}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about#about">About</Link></li>
-                <li><Link to="/events#events">Events</Link></li>
+                {/* <li><Link to="/events#events">Events</Link></li> */}
                 <li><Link to="/sponsors#sponsors">Sponsors</Link></li>
                 <li><Link to="/contactus#contactus">Contact Us</Link></li>
               </ul>
