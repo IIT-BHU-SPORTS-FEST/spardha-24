@@ -22,7 +22,7 @@ const Footer = () => {
               alt="Spardha IIT BHU Logo"
             />
             <div className={css['brand-content']}>
-              <h3 className={css['brand-title']}>SPARDHA 2025</h3>
+              <h3 className={css['brand-title']}>SPARDHA 2026</h3>
               <p className={css['brand-description']}>
                 <span className={css['brand-highlight']}>SPARDHA</span> is the
                 annual sports festival of IIT (BHU) Varanasi, celebrating
@@ -139,7 +139,7 @@ const Footer = () => {
         <div className={css['footer-bottom']}>
           <div className={css['footer-bottom-content']}>
             <div className={css['copyright']}>
-              © 2025 Spardha, IIT BHU. All Rights Reserved. | Awaken the Arena - Where Champions Rise
+              © 2026 Spardha, IIT BHU. All Rights Reserved. | Awaken the Arena - Where Champions Rise
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ const About = () => {
       {/* <div className="pentagon-flipped light-theme"></div>
       <div className="pentagon-not-flipped light-theme"></div> */}
       <p className="para">
-        Spardha is the annual sports festival of IIT (BHU), Varanasi. In its glorious history of over 39 years, Spardha has grown to become the largest and one of the most awaited sports festival of northern India where athletic competition is drawn from throughout the country. Each year, over a thousand participants compete in an array of sports like hockey, basketball, cricket, boxing, tennis and many more, creating a stunning spectacle of exceptional fervidness in athletic talent. The event, embraced by one of the best gatherings of celebrated sports personalities and spirited audience, has always enthused a zest for continuously scaling new zeniths in the pursuit of excellence and vibrancy among one and all. At present, Spardha has a team of over 500 and is also associated with numerous renowned firms and sports organizations. These exhilarating days have many resounding experiences for participants and supporters alike, creating a lifetime of memories. Gear up yourself to witness the thrilling and frolicsome SPARDHA.
+        Spardha is the annual sports festival of IIT (BHU), Varanasi. In its glorious history of over 40 years, Spardha has grown to become the largest and one of the most awaited sports festival of northern India where athletic competition is drawn from throughout the country. Each year, over a thousand participants compete in an array of sports like hockey, basketball, cricket, boxing, tennis and many more, creating a stunning spectacle of exceptional fervidness in athletic talent. The event, embraced by one of the best gatherings of celebrated sports personalities and spirited audience, has always enthused a zest for continuously scaling new zeniths in the pursuit of excellence and vibrancy among one and all. At present, Spardha has a team of over 500 and is also associated with numerous renowned firms and sports organizations. These exhilarating days have many resounding experiences for participants and supporters alike, creating a lifetime of memories. Gear up yourself to witness the thrilling and frolicsome SPARDHA.
       </p>
     </div>
     <div className="container-1">
@@ -62,7 +62,7 @@ const About = () => {
       <div className="pentagon-not-flipped light-theme"></div> */}
         <p className="second-heading">HYPE AROUND SPARDHA</p>
         <p className="para">
-          For starters, 2025 will witness the 40th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
+          For starters, 2026 will witness the 40th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
         </p>
       </div>
       <div className="rectangle-2">
