@@ -91,7 +91,7 @@ class CountdownTimer extends Component {
     super(props);
 
     // Correct IST conversion: add 5 hours 30 minutes to UTC
-     const utcDate = new Date("2026-10-10T00:00:00Z");
+     const utcDate = new Date("2025-10-10T00:00:00Z");
     this.targetDate = new Date(utcDate.getTime() + (5.5 * 60 * 60 * 1000));
 
     this.state = this.calculateTimeDifference();
