@@ -97,7 +97,7 @@ const Footer = () => {
                 <div className={css['team-member']}>
                   <div className={css['member-header']}>
                     <span className={css['team-role']}>Fest Convener</span>
-                    <span className={css['team-name']}>Devang Darpe</span>
+                    <span className={css['team-name']}>Mohammad Kaif</span>
                   </div>
                   <a
                     href="mailto:convener.spardha@itbhu.ac.in"
