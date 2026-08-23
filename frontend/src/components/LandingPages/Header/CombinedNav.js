@@ -7,7 +7,7 @@ import './CombinedNav.css';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
-  { name: 'Events', path: '/events' },
+  // { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
   { name: 'Contact Us', path: '/contactus' },
   { name: 'Sponsors', path: '/sponsors' },
@@ -120,6 +120,7 @@ useEffect(() => {
             <li key={link.path} onClick={onClose}>
               <Link to={link.path} onClick={onClose}>{link.name}</Link>
             </li>
+
           ))}
         </ul>
          {
