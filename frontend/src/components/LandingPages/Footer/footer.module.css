@@ -39,7 +39,7 @@
 
 /* Add decorative elements to the top division line */
 .footer-premium::after {
-  content: '⚡ Awaken the areana -- Spardha 2025 ⚡';
+  content: '⚡ Awaken the areana -- Spardha 2026 ⚡';
   position: absolute;
   top: -8px;
   left: 50%;
@@ -392,7 +392,7 @@
     font-size: 10px;
     padding: 4px 12px;
     top: -5px;
-    content: 'SPARDHA 2025';
+    content: 'SPARDHA 2026';
   }
 
   /* stack into 1 column for mobile */

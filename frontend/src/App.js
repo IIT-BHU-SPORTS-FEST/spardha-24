@@ -204,7 +204,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -212,7 +212,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="PrivacyPolicy"
             element={
@@ -221,14 +221,14 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="matches"
             element={

@@ -15,8 +15,8 @@ function Mid() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // event date in IST explicitly (10 Oct 2025 00:00:00 IST)
-      const eventDate = new Date("2025-10-10T00:00:00+05:30");
+      // event date in IST explicitly (10 Oct 2026 00:00:00 IST)
+      const eventDate = new Date("2026-10-10T00:00:00+05:30");
       const currentDate = new Date();
 
       const timeDifference = eventDate - currentDate;
