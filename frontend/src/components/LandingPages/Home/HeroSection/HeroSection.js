@@ -69,6 +69,7 @@ const HeroSection = () => {
                 {i < 2 && <div className="divider"></div>}
               </React.Fragment>
             ))}
+          </div>
           <div className="opening-info">
             <h4>Opening Ceremony</h4>
             <p>~ 9th October 2026, 5 PM</p>
