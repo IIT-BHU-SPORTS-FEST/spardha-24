@@ -9,7 +9,7 @@ const navLinks = [
   { name: 'About Us', path: '/about' },
   // { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
-  { name: 'Contact Us', path: '/contactus' },
+  //{ name: 'Contact Us', path: '/contactus' },
   { name: 'Sponsors', path: '/sponsors' },
   { name: 'Matches', path: '/matches' },
 ];

@@ -80,9 +80,11 @@ const EventsEdit = React.lazy(() =>
 const HomePage = React.lazy(() =>
   import('./components/LandingPages/Home/HomePage/Home')
 );
-const Footer1 = React.lazy(() =>
-  import('./components/LandingPages/Contact/Contact.js')
-);
+
+//const Footer1 = React.lazy(() =>
+  //import('./components/LandingPages/Contact/Contact.js')
+//);
+
 const Matches = React.lazy(() =>
   import('./components/LandingPages/matches/matches')
 );
@@ -273,6 +275,7 @@ function App() {
               </Suspense>
             }
           />
+          {/*}
           <Route
             path="contactus"
             element={
@@ -281,7 +284,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
         </Route>
 
         <Route
