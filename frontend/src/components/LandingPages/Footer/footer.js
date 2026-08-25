@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 // import { ReactComponent as FacebookIcon } from './images/facebook.svg';
 // import { ReactComponent as LinkedInIcon } from './images/linkedin.svg';
 
-import whiteLogo from './images/spardha26.jpeg';
-
 const Footer = () => {
   return (
     <footer className={css['footer-premium']}>
@@ -17,7 +15,7 @@ const Footer = () => {
           {/* Left Column */}
           <div className={css['footer-left']}>
             <img
-              src={whiteLogo}
+              src='./images/logo/spardha26.jpeg'
               className={css['footer-logo']}
               alt="Spardha IIT BHU Logo"
             />
