@@ -160,5 +160,3 @@ class CountdownTimer extends Component {
 }
 
 export default CountdownTimer;
-
-

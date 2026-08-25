@@ -44,7 +44,7 @@ function Mid() {
       <div className="left-box">
         <div className="countdown-container">
           <p className="days-text">WELCOME TO</p>
-          <div className="newimg"><img src="/images/logo/spardhalogo.png" alt="spardha-logo" /></div>
+          <div className="newimg"><img src="/images/logo/spardha26.jpeg" alt="spardha-logo" /></div>
           <p className="bold-text">UNLEASHING POTENTIAL</p>
 
           {/* Countdown Display */}

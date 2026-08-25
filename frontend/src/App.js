@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
@@ -10,6 +11,7 @@ import NotFound from './components/LandingPages/NotFound/NotFound';
 // import { Carousel } from 'react-responsive-carousel';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
+// import Shedule from
 // import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
 // import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
 
@@ -117,6 +119,7 @@ function App() {
             element={
               <Suspense fallback={<Spinner />}>
                 <HomePage />
+                <CountdownTimer /> {/* Added timer component here */}
                 <Footer />
               </Suspense>
             }
@@ -203,7 +206,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -211,7 +214,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="PrivacyPolicy"
             element={
@@ -220,14 +223,14 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="matches"
             element={

@@ -42,7 +42,7 @@ function HomeSlider() {
                   </a> */}
                   <img
                     id="columnLogo"
-                    src="/images/logo/spardha-white-home.png"
+                    src="/images/logo/spardha26.jpeg"
                     alt="spardha"
                   />
                   {/* <a href="https://iitiantrader.in/">
