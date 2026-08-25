@@ -25,11 +25,11 @@ const About = React.lazy(() => import('./components/LandingPages/About/About'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
-const Events = React.lazy(() =>
-  import('./components/LandingPages/Events/Events')
-);
+//const Events = React.lazy(() =>
+//  import('./components/LandingPages/Events/Events')
+//);
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
+//const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
 const Sponsors = React.lazy(() =>
   import('./components/LandingPages/Sponsors/Sponsors')
 );
