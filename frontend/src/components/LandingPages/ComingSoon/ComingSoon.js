@@ -28,7 +28,7 @@
 import React from "react";
 import "./ComingSoon.css";
 import Bgimg from '../Home/Images/newbg.jpg'  // path to your background
-import Logo from "../../../assets/spardha_logo.png";   // your gym logo
+//import Logo from "./images/logo/spardha26.jpeg";   // your gym logo
 
 const ComingSoon = () => {
   return (
@@ -53,7 +53,7 @@ const ComingSoon = () => {
 
           {/* Center circle with logo */}
           <div className="center-circle">
-            <img src={Logo} alt="Logo" />
+            <img src="/images/logo/spardha26.jpeg" alt="Logo" />
           </div>
 
           {/* Bar */}
@@ -70,8 +70,8 @@ const ComingSoon = () => {
         <h1>COMING SOON</h1>
         <p>Your Strength Awaits.</p>
         <p>Contact:</p>
-        <p>Devang Darpe</p>
-        <p>6350107038</p>
+        <p>Mohammad Kaif</p>
+        <p>+91 : 9142994832</p>
         
       </div>
     </div>
