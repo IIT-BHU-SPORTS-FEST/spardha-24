@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
@@ -24,11 +25,11 @@ const About = React.lazy(() => import('./components/LandingPages/About/About'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
-const Events = React.lazy(() =>
-  import('./components/LandingPages/Events/Events')
-);
+//const Events = React.lazy(() =>
+//  import('./components/LandingPages/Events/Events')
+//);
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
+//const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
 const Sponsors = React.lazy(() =>
   import('./components/LandingPages/Sponsors/Sponsors')
 );
@@ -79,9 +80,11 @@ const EventsEdit = React.lazy(() =>
 const HomePage = React.lazy(() =>
   import('./components/LandingPages/Home/HomePage/Home')
 );
-const Footer1 = React.lazy(() =>
-  import('./components/LandingPages/Contact/Contact.js')
-);
+
+//const Footer1 = React.lazy(() =>
+  //import('./components/LandingPages/Contact/Contact.js')
+//);
+
 const Matches = React.lazy(() =>
   import('./components/LandingPages/matches/matches')
 );
@@ -118,6 +121,7 @@ function App() {
             element={
               <Suspense fallback={<Spinner />}>
                 <HomePage />
+                <CountdownTimer /> {/* Added timer component here */}
                 <Footer />
               </Suspense>
             }
@@ -204,7 +208,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -212,7 +216,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="PrivacyPolicy"
             element={
@@ -221,14 +225,14 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="matches"
             element={
@@ -271,6 +275,7 @@ function App() {
               </Suspense>
             }
           />
+          {/*}
           <Route
             path="contactus"
             element={
@@ -279,7 +284,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
         </Route>
 
         <Route

@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 // import { ReactComponent as FacebookIcon } from './images/facebook.svg';
 // import { ReactComponent as LinkedInIcon } from './images/linkedin.svg';
 
-import whiteLogo from './images/white_logo_25.png';
-
 const Footer = () => {
   return (
     <footer className={css['footer-premium']}>
@@ -17,12 +15,12 @@ const Footer = () => {
           {/* Left Column */}
           <div className={css['footer-left']}>
             <img
-              src={whiteLogo}
+              src='./images/logo/spardha26.jpeg'
               className={css['footer-logo']}
               alt="Spardha IIT BHU Logo"
             />
             <div className={css['brand-content']}>
-              <h3 className={css['brand-title']}>SPARDHA 2025</h3>
+              <h3 className={css['brand-title']}>SPARDHA 2026</h3>
               <p className={css['brand-description']}>
                 <span className={css['brand-highlight']}>SPARDHA</span> is the
                 annual sports festival of IIT (BHU) Varanasi, celebrating
@@ -50,9 +48,9 @@ const Footer = () => {
               <ul className={css['nav-links']}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about#about">About</Link></li>
-                <li><Link to="/events#events">Events</Link></li>
+                {/* <li><Link to="/events#events">Events</Link></li> */}
                 <li><Link to="/sponsors#sponsors">Sponsors</Link></li>
-                <li><Link to="/contactus#contactus">Contact Us</Link></li>
+                {/* <li><Link to="/contactus#contactus">Contact Us</Link></li> */}
               </ul>
             </div>
 
@@ -97,7 +95,7 @@ const Footer = () => {
                 <div className={css['team-member']}>
                   <div className={css['member-header']}>
                     <span className={css['team-role']}>Fest Convener</span>
-                    <span className={css['team-name']}>Devang Darpe</span>
+                    <span className={css['team-name']}>Mohammad Kaif</span>
                   </div>
                   <a
                     href="mailto:convener.spardha@itbhu.ac.in"
@@ -139,7 +137,7 @@ const Footer = () => {
         <div className={css['footer-bottom']}>
           <div className={css['footer-bottom-content']}>
             <div className={css['copyright']}>
-              © 2025 Spardha, IIT BHU. All Rights Reserved. | Awaken the Arena - Where Champions Rise
+              © 2026 Spardha, IIT BHU. All Rights Reserved. | Awaken the Arena - Where Champions Rise
             </div>
           </div>
         </div>
