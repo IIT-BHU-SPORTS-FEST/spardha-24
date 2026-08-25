@@ -11,6 +11,7 @@ import NotFound from './components/LandingPages/NotFound/NotFound';
 // import { Carousel } from 'react-responsive-carousel';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
+// import Shedule from
 // import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
 // import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
 
@@ -205,7 +206,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -213,7 +214,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="PrivacyPolicy"
             element={
@@ -222,14 +223,14 @@ function App() {
               </Suspense>
             }
           />
-          <Route
+          {/* <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="matches"
             element={

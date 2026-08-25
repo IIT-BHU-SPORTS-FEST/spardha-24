@@ -55,7 +55,8 @@ const Fixtures = ({ selectedSport , selectedDate}) => {
               {data.game_venue}
               {/* | Round {data.round }*/}
             </div>
-
+                  {
+data.team2 ===" "? " ":
             <div className="row3" style={{ color: 'white' }}>
               <div className="row4">
                 {/* <div className="rectangle"></div> */}
@@ -69,6 +70,7 @@ const Fixtures = ({ selectedSport , selectedDate}) => {
                 {data.team2}
               </div>
             </div>
+                  }
           </div>
         ))
       )}

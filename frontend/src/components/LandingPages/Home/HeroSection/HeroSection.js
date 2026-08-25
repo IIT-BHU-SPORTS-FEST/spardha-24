@@ -69,6 +69,10 @@ const HeroSection = () => {
                 {i < 2 && <div className="divider"></div>}
               </React.Fragment>
             ))}
+          <div className="opening-info">
+            <h4>Opening Ceremony</h4>
+            <p>~ 9th October 2026, 5 PM</p>
+            <p>Gymkhana, IIT BHU, Varanasi</p>
           </div>
 
           <p className="tagline">
@@ -82,7 +86,7 @@ const HeroSection = () => {
             <FaMapMarkerAlt className="location-logo" color="black" />
           </div>
           <div>
-            <h4>10–12 OCTOBER, 2025</h4>
+            <h4>10–12 OCTOBER, 2026</h4>
             <p>IIT BHU, VARANASI</p>
           </div>
         </div>
