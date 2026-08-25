@@ -55,7 +55,7 @@ const HeroSection = () => {
             <FaMapMarkerAlt className="location-logo" color="black" />
           </div>
           <div>
-            <h4>9–11 OCTOBER, 2026</h4>
+            <h4>10–12 OCTOBER, 2025</h4>
             <p>IIT BHU, VARANASI</p>
           </div>
         </div>
