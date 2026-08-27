@@ -39,7 +39,7 @@
 
 /* Add decorative elements to the top division line */
 .footer-premium::after {
-  content: '⚡ Awaken the areana -- Spardha 2026 ⚡';
+  content: '⚡ FIFA -- Spardha 2026 ⚡';
   position: absolute;
   top: -8px;
   left: 50%;
