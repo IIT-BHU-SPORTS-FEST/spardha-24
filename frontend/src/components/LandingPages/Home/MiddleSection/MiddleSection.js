@@ -15,8 +15,8 @@ function Mid() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // event date in IST explicitly (10 Oct 2026 00:00:00 IST)
-      const eventDate = new Date("2026-10-10T00:00:00+05:30");
+      // event date in IST explicitly (9 Oct 2026 00:00:00 IST)
+      const eventDate = new Date("2026-10-09T00:00:00+05:30");
       const currentDate = new Date();
 
       const timeDifference = eventDate - currentDate;
@@ -44,7 +44,7 @@ function Mid() {
       <div className="left-box">
         <div className="countdown-container">
           <p className="days-text">WELCOME TO</p>
-          <div className="newimg"><img src="/images/logo/spardhalogo.png" alt="spardha-logo" /></div>
+          <div className="newimg"><img src="/images/logo/spardha26.jpeg" alt="spardha-logo" /></div>
           <p className="bold-text">UNLEASHING POTENTIAL</p>
 
           {/* Countdown Display */}
