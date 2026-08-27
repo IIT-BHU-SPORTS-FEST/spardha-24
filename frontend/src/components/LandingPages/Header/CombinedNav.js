@@ -38,7 +38,7 @@ useEffect(() => {
   return (
     <div className="top-bar">
     <Link to="/">
-      <img src="/images/logo/spardha26.jpeg" alt="Spardha Logo" className="logo" />
+      <img src="/images/logo/spardha-nav-black.svg" alt="Spardha Logo" className="logo" />
     </Link>
 
       <div className="nav-links">

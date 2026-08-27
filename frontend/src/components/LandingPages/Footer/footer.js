@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 // import { ReactComponent as FacebookIcon } from './images/facebook.svg';
 // import { ReactComponent as LinkedInIcon } from './images/linkedin.svg';
 
-import whiteLogo from './images/spardha26.jpeg';
+const whiteLogo = "/images/logo/spardha-full-black.svg";
 
 const Footer = () => {
   return (
