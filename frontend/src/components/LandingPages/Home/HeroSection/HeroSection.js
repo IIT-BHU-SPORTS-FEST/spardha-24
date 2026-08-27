@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BlurText from './Blurtext';
-import { FaMapMarkerAlt } from 'react-icons/fa';
 import './HeroSection.css';
-import Confetti from './Confetti';
-import { ConfettiSideCannons } from './ConfettiSideCannons';
 
 const HeroSection = () => {
   // Countdown target: 10th October (IST)
@@ -31,9 +28,6 @@ const HeroSection = () => {
       style={{ backgroundImage: 'url(/images/bg/hero-bg1.jpg)' }}
     >
       <div className="overlay"></div>
-
-      <Confetti />
-      <ConfettiSideCannons />
 
       {/* CENTER HEADING */}
       <div className="center-heading">
@@ -83,16 +77,8 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* RIGHT DIV: event location */}
-        <div className="event-info">
-          <div className="location-box">
-            <FaMapMarkerAlt className="location-logo" color="black" />
-          </div>
-          <div>
-            <h4>10–12 OCTOBER, 2026</h4>
-            <p>IIT BHU, VARANASI</p>
-          </div>
-        </div>
+        {/* Invisible spacer so countdown/opening stay in their original positions */}
+        <div className="event-info" aria-hidden="true" style={{ visibility: 'hidden' }} />
       </div>
     </section>
   );
