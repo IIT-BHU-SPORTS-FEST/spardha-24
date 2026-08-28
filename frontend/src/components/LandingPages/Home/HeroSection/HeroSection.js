@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BlurText from './Blurtext';
-import { FaMapMarkerAlt } from 'react-icons/fa';
 import './HeroSection.css';
-import Confetti from './Confetti';
-import { ConfettiSideCannons } from './ConfettiSideCannons';
 
 const HeroSection = () => {
   // Countdown target: 10th October (IST)
@@ -32,9 +29,6 @@ const HeroSection = () => {
     >
       <div className="overlay"></div>
 
-      <Confetti />
-      <ConfettiSideCannons />
-
       {/* CENTER HEADING */}
       <div className="center-heading">
         <h1>
@@ -55,9 +49,8 @@ const HeroSection = () => {
         </h1>
       </div>
 
-      {/* BOTTOM ROW */}
+      {/* BOTTOM: timer above opening ceremony */}
       <div className="bottom-row">
-        {/* LEFT DIV: countdown timer to 10th October */}
         <div className="countdown-tagline">
           <div className="countdown">
             {[days, hours, minutes].map((time, i) => (
@@ -71,7 +64,8 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
-        <div>
+
+        <div className="opening-block">
           <div className="opening-info">
             <h4>Opening Ceremony</h4>
             <p>~ 9th October 2026, 5 PM</p>
@@ -81,17 +75,6 @@ const HeroSection = () => {
           <p className="tagline">
             "Where passion meets performance — Spardha"
           </p>
-        </div>
-
-        {/* RIGHT DIV: event location */}
-        <div className="event-info">
-          <div className="location-box">
-            <FaMapMarkerAlt className="location-logo" color="black" />
-          </div>
-          <div>
-            <h4>10–12 OCTOBER, 2026</h4>
-            <p>IIT BHU, VARANASI</p>
-          </div>
         </div>
       </div>
     </section>
