@@ -6,7 +6,7 @@ import "./Countdown.css";
 //     super(props);
 
 //     // Calculate the target date and time in IST (UTC+5:30)
-//     this.targetDate = new Date("2026-10-10T00:00:00Z"); // UTC time
+//     this.targetDate = new Date("2026-10-09T00:00:00Z"); // UTC time
 //     this.targetDate.setHours(this.targetDate.getHours() -5, this.targetDate.getMinutes()-30 );
 
 //     // Initialize the state with the initial time difference
@@ -91,7 +91,7 @@ class CountdownTimer extends Component {
     super(props);
 
     // Correct IST conversion: add 5 hours 30 minutes to UTC
-    const utcDate = new Date("2026-10-10T00:00:00Z");
+    const utcDate = new Date("2026-10-09T00:00:00Z");
     this.targetDate = new Date(utcDate.getTime() + (5.5 * 60 * 60 * 1000));
 
     this.state = this.calculateTimeDifference();
@@ -160,5 +160,3 @@ class CountdownTimer extends Component {
 }
 
 export default CountdownTimer;
-
-
