@@ -49,9 +49,8 @@ const HeroSection = () => {
         </h1>
       </div>
 
-      {/* BOTTOM ROW */}
+      {/* BOTTOM: timer above opening ceremony */}
       <div className="bottom-row">
-        {/* LEFT DIV: countdown timer to 10th October */}
         <div className="countdown-tagline">
           <div className="countdown">
             {[days, hours, minutes].map((time, i) => (
@@ -65,7 +64,8 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
-        <div>
+
+        <div className="opening-block">
           <div className="opening-info">
             <h4>Opening Ceremony</h4>
             <p>~ 9th October 2026, 5 PM</p>
@@ -76,9 +76,6 @@ const HeroSection = () => {
             "Where passion meets performance — Spardha"
           </p>
         </div>
-
-        {/* Invisible spacer so countdown/opening stay in their original positions */}
-        <div className="event-info" aria-hidden="true" style={{ visibility: 'hidden' }} />
       </div>
     </section>
   );
