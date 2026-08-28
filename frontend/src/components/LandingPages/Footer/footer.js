@@ -17,11 +17,7 @@ const Footer = () => {
           {/* Left Column */}
           <div className={css['footer-left']}>
             <img
-<<<<<<< HEAD
-              src='./images/logo/spardha26.jpeg'
-=======
-              src="/images/logo/spardha26.jpeg
->>>>>>> 63a80f8 (Fix footer logo image path)
+              src={whiteLogo}
               className={css['footer-logo']}
               alt="Spardha IIT BHU Logo"
             />
