@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
+//import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
@@ -122,7 +122,7 @@ function App() {
             element={
               <Suspense fallback={<Spinner />}>
                 <HomePage />
-                <CountdownTimer /> {/* Added timer component here */}
+                {/*<CountdownTimer /> */} {/* Added timer component here */}
                 <Footer />
               </Suspense>
             }
