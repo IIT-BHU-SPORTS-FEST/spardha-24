@@ -85,9 +85,9 @@ const HomePage = React.lazy(() =>
   //import('./components/LandingPages/Contact/Contact.js')
 //);
 
-const Matches = React.lazy(() =>
-  import('./components/LandingPages/matches/matches')
-);
+//const Matches = React.lazy(() =>
+  //import('./components/LandingPages/matches/matches')
+//);
 
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
