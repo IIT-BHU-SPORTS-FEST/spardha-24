@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.b2890db4.css",
-    "main.js": "/static/js/main.32be048f.js",
+    "main.js": "/static/js/main.62a95dc8.js",
     "static/css/921.55608da0.chunk.css": "/static/css/921.55608da0.chunk.css",
     "static/js/921.a42c4b8f.chunk.js": "/static/js/921.a42c4b8f.chunk.js",
     "static/css/888.afd73ae6.chunk.css": "/static/css/888.afd73ae6.chunk.css",
     "static/js/888.a80f26f8.chunk.js": "/static/js/888.a80f26f8.chunk.js",
     "static/css/54.ec44458f.chunk.css": "/static/css/54.ec44458f.chunk.css",
-    "static/js/54.47b226d4.chunk.js": "/static/js/54.47b226d4.chunk.js",
+    "static/js/54.0053e93e.chunk.js": "/static/js/54.0053e93e.chunk.js",
     "static/css/112.199e9f6a.chunk.css": "/static/css/112.199e9f6a.chunk.css",
     "static/js/112.0bab296d.chunk.js": "/static/js/112.0bab296d.chunk.js",
     "static/css/207.04eb1514.chunk.css": "/static/css/207.04eb1514.chunk.css",
@@ -213,13 +213,13 @@
     "static/media/testi-5.jpg": "/static/media/testi-5.e9c4108f20abc5ae7b53.jpg",
     "index.html": "/index.html",
     "main.b2890db4.css.map": "/static/css/main.b2890db4.css.map",
-    "main.32be048f.js.map": "/static/js/main.32be048f.js.map",
+    "main.62a95dc8.js.map": "/static/js/main.62a95dc8.js.map",
     "921.55608da0.chunk.css.map": "/static/css/921.55608da0.chunk.css.map",
     "921.a42c4b8f.chunk.js.map": "/static/js/921.a42c4b8f.chunk.js.map",
     "888.afd73ae6.chunk.css.map": "/static/css/888.afd73ae6.chunk.css.map",
     "888.a80f26f8.chunk.js.map": "/static/js/888.a80f26f8.chunk.js.map",
     "54.ec44458f.chunk.css.map": "/static/css/54.ec44458f.chunk.css.map",
-    "54.47b226d4.chunk.js.map": "/static/js/54.47b226d4.chunk.js.map",
+    "54.0053e93e.chunk.js.map": "/static/js/54.0053e93e.chunk.js.map",
     "112.199e9f6a.chunk.css.map": "/static/css/112.199e9f6a.chunk.css.map",
     "112.0bab296d.chunk.js.map": "/static/js/112.0bab296d.chunk.js.map",
     "207.04eb1514.chunk.css.map": "/static/css/207.04eb1514.chunk.css.map",
@@ -272,6 +272,6 @@
   },
   "entrypoints": [
     "static/css/main.b2890db4.css",
-    "static/js/main.32be048f.js"
+    "static/js/main.62a95dc8.js"
   ]
 }
