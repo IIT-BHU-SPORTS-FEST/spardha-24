@@ -67,8 +67,8 @@ const HeroSection = () => {
 
         <div className="opening-block">
           <div className="opening-info">
-            <h4>Opening Ceremony</h4>
-            <p>~ 9th October 2026, 5 PM</p>
+            {/*<h4>Opening Ceremony</h4> */}
+            {/*<p>~ 9th October 2026, 5 PM</p> */}
             <p>Gymkhana, IIT BHU, Varanasi</p>
           </div>
 
