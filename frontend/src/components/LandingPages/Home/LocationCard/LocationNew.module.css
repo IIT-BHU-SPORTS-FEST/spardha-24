@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+
+.card {
+  width: 88%;
+  max-width: 1200px;
+  margin: 60px auto 80px;
+
+  padding: 48px 55px 35px;
+
+  background: linear-gradient(
+    135deg,
+    #075b91,
+    #075f8e
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 34px;
+
+  color: white;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin: 0 0 35px 20px;
+
+  font-family: 'Anta', sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+
+  color: white;
+}
+
+.locationIcon {
+  color: #ffe000;
+  font-size: 52px;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* ---------- IMAGE ---------- */
+
+.imageContainer {
+  flex: 1.25;
+  min-width: 0;
+}
+
+.image {
+  display: block;
+
+  width: 100%;
+  height: 370px;
+
+  object-fit: cover;
+
+  border: 6px solid white;
+  border-radius: 42px;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------- DETAILS ---------- */
+
+.details {
+  flex: 0.75;
+
+  min-height: 370px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.addressBlock {
+  margin-top: 65px;
+}
+
+
+.addressTitle {
+  margin: 0 0 8px;
+
+  font-family: Georgia, 'Times New Roman', serif;
+
+  font-size: 29px;
+  font-weight: 600;
+
+  text-decoration: underline;
+  text-underline-offset: 5px;
+
+  color: white;
+}
+
+
+.address {
+  max-width: 420px;
+
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 18px;
+  line-height: 1.45;
+
+  color: white;
+}
+
+
+/* ---------- MAP BUTTON ---------- */
+
+.mapLink {
+  align-self: flex-end;
+
+  text-decoration: none;
+}
+
+
+.mapButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-width: 105px;
+  height: 48px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #087e9b;
+
+  color: white;
+
+  font-family: 'Anta', sans-serif;
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.mapButton:hover {
+  transform: scale(1.05);
+  background: #078aa8;
+}
+
+
+.mapIcon {
+  font-size: 25px;
+  line-height: 1;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 992px) {
+
+  .card {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .locationIcon {
+    font-size: 42px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    height: 350px;
+  }
+
+  .details {
+    width: 100%;
+    min-height: auto;
+    gap: 30px;
+  }
+
+  .addressBlock {
+    margin-top: 0;
+  }
+
+  .mapLink {
+    align-self: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .card {
+    width: 92%;
+    padding: 30px 20px;
+    border-radius: 25px;
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    margin-left: 5px;
+    margin-bottom: 25px;
+
+    font-size: 40px;
+    gap: 14px;
+  }
+
+  .locationIcon {
+    font-size: 32px;
+  }
+
+  .image {
+    height: 240px;
+    border-width: 4px;
+    border-radius: 28px;
+  }
+
+  .addressTitle {
+    font-size: 23px;
+  }
+
+  .address {
+    font-size: 15px;
+  }
+
+  .mapButton {
+    min-width: 100px;
+    height: 44px;
+    font-size: 15px;
+  }
+}

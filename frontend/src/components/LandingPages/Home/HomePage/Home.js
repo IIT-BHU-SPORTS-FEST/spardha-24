@@ -3,7 +3,7 @@ import './Home.css';
 import HeroSection from '../HeroSection/HeroSection';
 import HomeContact from '../Contact/Contact';
 import About from '../About_section/About';
-import LocationCard from '../LocationCard/LocationCard';
+import LocationCard from '../LocationCard/LocationCardNew';
 
 // import Footer from '../Footer/Footer';
 

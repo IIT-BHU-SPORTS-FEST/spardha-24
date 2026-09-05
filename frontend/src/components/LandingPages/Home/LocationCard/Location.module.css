@@ -4,270 +4,131 @@
 
 
 .card {
-  width: 88%;
-  max-width: 1200px;
-  margin: 60px auto 80px;
-
-  padding: 48px 55px 35px;
-
-  background: linear-gradient(
-    135deg,
-    #075b91,
-    #075f8e
-  );
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 34px;
-
-  color: white;
-
-  box-sizing: border-box;
-}
-
-
-/* ---------- TITLE ---------- */
-
-.title {
   display: flex;
-  align-items: center;
-  gap: 25px;
-
-  margin: 0 0 35px 20px;
-
-  font-family: 'Anta', sans-serif;
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-
-  color: white;
-}
-
-.locationIcon {
-  color: #ffe000;
-  font-size: 52px;
-}
-
-
-/* ---------- MAIN CONTENT ---------- */
-
-.content {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-
-  gap: 60px;
+  align-items: center;
+  background: #1E1E1E;
+  color: white;
+  border-radius: 48px;
+  padding: 2.5rem;
+  aspect-ratio: 16/7;
+  width: 95%;
+  max-width: 1300px; /* Optional max width */
+  margin-bottom: 100px;
+  flex-wrap: wrap; /* helps on smaller screens */
 }
 
-
-/* ---------- IMAGE ---------- */
-
-.imageContainer {
-  flex: 1.25;
-  min-width: 0;
-}
-
-.image {
-  display: block;
-
-  width: 100%;
-  height: 370px;
-
-  object-fit: cover;
-
-  border: 6px solid white;
-  border-radius: 42px;
-
-  box-sizing: border-box;
-}
-
-
-/* ---------- DETAILS ---------- */
-
-.details {
-  flex: 0.75;
-
-  min-height: 370px;
-
+.left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-
-  text-align: center;
+  height: 95%;
 }
 
+.title {
+font-family: Anton;
+font-weight: 400;
+font-style: Regular;
+font-size: 64px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
 
 .addressBlock {
-  margin-top: 65px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-bottom: 100px;
+  margin-bottom: 2rem;
 }
 
 
-.addressTitle {
-  margin: 0 0 8px;
-
-  font-family: Georgia, 'Times New Roman', serif;
-
-  font-size: 29px;
-  font-weight: 600;
-
-  text-decoration: underline;
-  text-underline-offset: 5px;
-
-  color: white;
+.location_logo {
+  width: 40px;
+  height: 36px;
+  color: black;
 }
-
 
 .address {
-  max-width: 420px;
-
-  margin: 0;
-
-  font-family: 'Poppins', sans-serif;
-
-  font-size: 18px;
-  line-height: 1.45;
-
-  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
 }
-
-
-/* ---------- MAP BUTTON ---------- */
-
-.mapLink {
-  align-self: flex-end;
-
-  text-decoration: none;
-}
-
-
 .mapButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  min-width: 105px;
-  height: 48px;
-
-  padding: 0 20px;
-
+  gap: 0.75rem;
+  background: white;
+  color: black;
+  font-weight: 600;
   border: none;
-  border-radius: 14px;
-
-  background: #087e9b;
-
-  color: white;
-
-  font-family: 'Anta', sans-serif;
-  font-size: 17px;
-
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  will-change: transform;
 }
-
 
 .mapButton:hover {
-  transform: scale(1.05);
-  background: #078aa8;
+  transform: scale(1.08); /* smoother scale */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* soft floating effect */
 }
 
-
-.mapIcon {
-  font-size: 25px;
-  line-height: 1;
+.arrow {
+  font-size: 1.2rem;
 }
 
+.right {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
 
-/* ---------- RESPONSIVE ---------- */
+.image {
+  border-radius: 16px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
 
+/* ✅ Responsive Styles */
 @media (max-width: 992px) {
-
   .card {
-    width: 90%;
-    padding: 40px;
-  }
-
-  .title {
-    font-size: 52px;
-  }
-
-  .locationIcon {
-    font-size: 42px;
-  }
-
-  .content {
     flex-direction: column;
-    gap: 35px;
+    text-align: center;
   }
 
-  .imageContainer {
-    width: 100%;
-  }
-
-  .image {
-    height: 350px;
-  }
-
-  .details {
-    width: 100%;
-    min-height: auto;
-    gap: 30px;
+  .left {
+    text-align: center;
   }
 
   .addressBlock {
-    margin-top: 0;
-  }
-
-  .mapLink {
-    align-self: center;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .card {
-    width: 92%;
-    padding: 30px 20px;
-    border-radius: 25px;
-
-    margin-top: 40px;
-    margin-bottom: 50px;
-  }
-
-  .title {
-    margin-left: 5px;
-    margin-bottom: 25px;
-
-    font-size: 40px;
-    gap: 14px;
-  }
-
-  .locationIcon {
-    font-size: 32px;
-  }
-
-  .image {
-    height: 240px;
-    border-width: 4px;
-    border-radius: 28px;
-  }
-
-  .addressTitle {
-    font-size: 23px;
-  }
-
-  .address {
-    font-size: 15px;
+    justify-content: center;
   }
 
   .mapButton {
-    min-width: 100px;
-    height: 44px;
-    font-size: 15px;
+    margin: 0 auto;
+  }
+  .right{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+    .right{
+    display: none;
+  }
+
+  .address {
+    font-size: 0.9rem;
+  }
+
+  .mapButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
