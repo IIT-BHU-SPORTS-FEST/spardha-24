@@ -10,7 +10,7 @@
 .footer-premium {
   position: relative;
   background: var(--bg-navy);
-  padding: 75px 0 24px;
+  padding: 50px 0 16px;
   font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--muted-white);
   margin-top: 0;
@@ -65,7 +65,7 @@
   z-index: 10;
   background: transparent;
   margin: 0;
-  padding: 20px 40px 18px;
+  padding: 16px 30px 14px;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -75,28 +75,30 @@
 
 /* Logo inside main footer */
 .footer-logo {
-  width: 250px;
+  width: 195px;
   height: auto;
-  margin-bottom: 22px;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));
+  margin-bottom: 16px;
+ /* filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));*/
   transition: all 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 8px;
-  background: rgba(255, 255, 255, 0.02);
+  border: none;
+  outline: none;
+  background: transparent;
+   padding: 0;
+   display: block;
 }
 .footer-logo:hover { 
   transform: translateY(-3px); 
-  border-color: var(--accent-yellow);
-  box-shadow: 0 0 18px rgba(255, 217, 61, 0.5);
+  /* border-color: var(--accent-yellow);
+  box-shadow: 0 0 18px rgba(255, 217, 61, 0.5); */
+  filter: drop-shadow(0 0 12px rgba(255, 217, 61, 0.5)); /* Glows cleanly around the logo itself */
 }
 
 /* Grid layout */
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.3fr;
-  gap: 50px;
-  max-width: 1380px;
+  gap: 36px;
+  max-width: 1260px;
   margin: 0 auto;
 }
 
@@ -110,12 +112,12 @@
 .brand-content { text-align: left; }
 
 .brand-title {
-  font-size: 2.1rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--muted-white);
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 .brand-highlight {
@@ -126,40 +128,39 @@
 
 .brand-description {
   color: rgba(255,255,255,0.82);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  max-width: 440px;
-  margin-bottom: 16px;
+  font-size: .96rem;
+  line-height: 1.58;
+  max-width: 400px;
+  margin-bottom: 14px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .general-contact h4 {
   color: rgba(255,255,255,0.92);
-  font-size: 1.05rem;
-  margin-bottom: 8px;
+  font-size: 1.02rem;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .contact-link-main {
-    font-size: 1.08rem;
+    font-size: 1.00rem;
   color: var(--accent-green);
   text-decoration: none;
   font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 6px;
-  background: rgba(100,255,218,0.03);
-  border: 1px solid rgba(100, 255, 218, 0.15);
+  padding: 0;
+  background:transparent;
+  border: none;
   transition: all 0.25s ease;
   display: inline-block;
 }
 .contact-link-main:hover {
-  border-color: var(--accent-yellow);
-  color: var(--accent-yellow);
-  background: rgba(255, 217, 61, 0.08);
-  box-shadow: 0 0 15px rgba(255, 217, 61, 0.5),
-    inset 0 0 8px rgba(255, 217, 61, 0.15);
-    transform: translateY(-2px);
+   color: var(--accent-yellow);
+  text-shadow: 0 0 12px rgba(255, 217, 61, 0.6); /* Clean text glow instead of box */
+  transform: translateX(3px);
+  background: transparent;
+  border: none;
+  box-shadow: none,
 }
 
 /* Middle Column */
@@ -172,7 +173,7 @@
 }
 
 .nav-section h3, .social-section h3 {
-  color: #fff; font-size: 1.25rem; font-weight: 700; margin-bottom: 10px;
+  color: #fff; font-size: 1.12rem; font-weight: 700; margin-bottom: 10px;
   text-transform: uppercase; letter-spacing: 1.2px; position: relative;
 }
 
@@ -206,11 +207,11 @@
 .nav-links a {
   color: var(--accent-green);               /* Green text by default (#64ffda) */
   text-decoration: none;
-  font-size: 1.08rem;
+  font-size: .98rem;
   font-weight: 500;
   display: block;
   border-radius: 6px;
-  padding: 10px 14px;
+  padding: 7px 10px;
   border: 1px solid transparent;            /* Smooth border transition */
   transition: all 0.25s ease;
 }
@@ -234,8 +235,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  width:50px;
-  height:50px;
+  width:44px;
+  height:44px;
   border-radius: 50%;
   transition: transform 0.18s ease, filter 0.18s ease;
   text-decoration: none;
@@ -291,7 +292,7 @@
 }
 
 .contact-section h3 { 
-  font-size: 1.25rem; 
+  font-size: 1.12rem; 
   margin-bottom: 10px; 
   font-weight:700;
   color:#fff; 
@@ -308,25 +309,25 @@
   border-radius:2px; 
 }
 
-.team-contacts { display:flex; flex-direction:column; gap:12px; }
+.team-contacts { display:flex; flex-direction:column; gap:18px; }
 
 .team-member { 
-  background: rgba(255,255,255,0.015); 
-  padding: 14px 18px; 
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent; 
+  padding: 0; 
+  border: none;
+  outline: none;
   transition: all 0.25s ease;
 }
 .team-member:hover {
-  border-color: var(--accent-yellow);
-  background: rgba(255, 217, 61, 0.04);
-  box-shadow: 0 0 16px rgba(255, 217, 61, 0.35);
-  transform: translateY(-2px);
+     background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateY(-1px);
 }
 
 .member-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 10px; }
 
-.team-role { color: rgba(255,255,255,0.72); font-size: 0.88rem; font-weight: 600; text-transform: uppercase; }
+.team-role { color: rgba(255,255,255,0.72); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; }
 
 /*.team-name {
   color: var(--accent-green);
@@ -362,7 +363,7 @@
 .team-name {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--accent-green);
@@ -381,33 +382,35 @@
 .contact-link { 
   color: var(--accent-green); 
   text-decoration: none; 
-  font-size: 01.02rem; 
+  font-size: 0.92rem; 
   font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: 1px solid transparent;
+  padding: 0;
+  border: none;
+  background: transparent;
   transition: all 0.25s ease;
   display: inline-block;
 }
 .contact-link:hover { 
   color: var(--accent-yellow); 
-  background: rgba(255, 217, 61, 0.12);
-  border-color: var(--accent-yellow);
-  box-shadow: 0 0 10px rgba(255, 217, 61, 0.5);
+   text-shadow: 0 0 10px rgba(255, 217, 61, 0.6);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateX(3px);
 }
 
 /* Footer Bottom */
 .footer-bottom { 
-  margin-top: 36px; 
-  padding-top: 18px; 
+  margin-top: 24px; 
+  padding-top: 14px; 
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 .copyright { 
   color: rgba(255,255,255,0.48); 
-  font-size: 0.92rem; 
+  font-size: 0.82rem; 
   text-align: center; 
   padding-bottom: 6px;
-  padding: 12px 24px;
+  padding: 8px 16px;
   border-radius: 6px;
   background: transparent;
   border: none;
@@ -627,7 +630,12 @@
 
 /* ================= Mobile & Tablet Responsive (Enlarged) ================= */
 
-@media (max-width: 1024px) {
+
+
+
+
+
+/* @media (max-width: 1024px) {
   .footer-logo { 
     width: 180px; 
     margin-bottom: 18px; 
@@ -640,29 +648,29 @@
 @media (max-width: 768px) {
   .footer-premium { 
     padding: 40px 0 24px; 
-  }
+  } */
 
   /* Large, bold logo on mobile */
-  .footer-logo { 
+  /* .footer-logo { 
     width: 175px; 
     margin-bottom: 18px; 
-  }
+  } */
 
   /* Spardha 2026 title */
-  .brand-title {
+  /* .brand-title {
     font-size: 1.8rem;
     letter-spacing: 1.5px;
-  }
+  } */
 
   /* Description paragraph */
-  .brand-description {
+  /* .brand-description {
     font-size: 1rem;
     line-height: 1.65;
     margin-bottom: 22px;
-  }
+  } */
 
   /* Stack columns cleanly into 1 column */
-  .footer-grid {
+  /* .footer-grid {
     grid-template-columns: 1fr;
     gap: 34px;
   }
@@ -678,52 +686,49 @@
   .footer-middle {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 28px;
-  }
+  } */
 
   /* Section Headings ("Navigate", "Connect With Us", "Contact Team") */
-  .nav-section h3, 
+  /* .nav-section h3, 
   .social-section h3, 
   .contact-section h3 {
     font-size: 1.25rem;
     margin-bottom: 16px;
-  }
+  } */
 
   /* Big Navigation links (Home, About, Sponsors) */
-  .nav-links li {
+  /* .nav-links li {
     margin-bottom: 10px;
   }
   .nav-links a {
     font-size: 1.15rem;
     padding: 12px 16px;
     display: inline-block;
-  }
+  } */
 
   /* Big main email button (spardha@itbhu.ac.in) */
-  .contact-link-main {
+  /* .contact-link-main {
     font-size: 1.1rem;
     padding: 12px 22px;
     display: inline-block;
-  }
+  } */
 
   /* Role headings */
-  .team-role {
+  /* .team-role {
     font-size: 0.95rem;
-  }
+  } */
 
   /* Mohammad Kaif (large, attractive signature script on mobile) */
-  .team-name {
-    font-size: 1.65rem;
-  }
-
+  
   /* 3 email links on the right */
-  .contact-link {
+  /* .contact-link {
     font-size: 1.05rem;
     padding: 10px 16px;
     display: inline-block;
-  }
+  } */
 
   /* Social Icons */
-  .social-grid {
+  /* .social-grid {
     gap: 18px;
     margin-top: 14px;
   }
@@ -734,17 +739,17 @@
   .social-link img {
     width: 28px;
     height: 28px;
-  }
+  } */
 
   /* Copyright text */
-  .copyright {
+  /* .copyright {
     font-size: 0.88rem;
     line-height: 1.6;
     padding: 14px;
-  }
+  } */
 
   /* Top badge */
-  .footer-premium::before {
+  /* .footer-premium::before {
     height: 4px;
   }
   .footer-premium::after {
@@ -757,10 +762,10 @@
 @media (max-width: 480px) {
   .footer-main-content { 
     padding: 24px 18px 12px;
-  }
+  } */
 
   /* Keep logo large on small smartphones */
-  .footer-logo {
+  /* .footer-logo {
     width: 165px;
   }
 
@@ -776,5 +781,162 @@
     content: 'SPARDHA 2026';
     font-size: 11px;
     padding: 5px 14px;
+  } */
+
+
+
+
+
+
+
+  /* ================= Mobile & Tablet Responsive (Refined) ================= */
+
+@media (max-width: 1024px) {
+  .footer-logo { 
+    width: 175px; 
+    margin-bottom: 16px; 
+  }
+  .footer-main-content { 
+    padding: 24px 20px 14px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-premium { 
+    padding: 30px 0 18px; 
+  }
+
+  /* Keep logo size as you like it */
+  .footer-logo { 
+    width: 170px; 
+    margin-bottom: 14px; 
+  }
+
+  /* Scaled-down readable title */
+  .brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  /* Scaled-down description */
+  .brand-description {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  /* Column gap */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    border-right: none;
+    padding: 0;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+  }
+
+  /* Section Headings */
+  .nav-section h3, 
+  .social-section h3, 
+  .contact-section h3 {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+
+  /* Scaled-down Navigation links */
+  .nav-links li {
+    margin-bottom: 6px;
+  }
+  .nav-links a {
+    font-size: 0.96rem;
+    padding: 7px 10px;
+    display: inline-block;
+  }
+
+  /* Scaled-down main email button */
+  .contact-link-main {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    display: inline-block;
+  }
+
+  /* Right column team */
+  .team-role {
+    font-size: 0.78rem;
+  }
+
+  .team-name {
+    font-size: 1.35rem;       /* Refined script size for mobile */
+  }
+
+  .contact-link {
+    font-size: 0.88rem;
+    padding: 6px 10px;
+    display: inline-block;
+  }
+
+  /* Social Icons */
+  .social-grid {
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+  .social-link img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Copyright text */
+  .copyright {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  .footer-premium::before {
+    height: 4px;
+  }
+  .footer-premium::after {
+    font-size: 11px;
+    padding: 5px 14px;
+    top: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main-content { 
+    padding: 18px 14px 10px;
+  }
+
+  /* Logo stays clear and good size */
+  .footer-logo {
+    width: 160px;
+  }
+
+  .brand-title {
+    font-size: 1.4rem;
+  }
+
+  .team-name {
+    font-size: 1.28rem;
+  }
+
+  .footer-premium::after {
+    content: 'SPARDHA 2026';
+    font-size: 10px;
+    padding: 4px 12px;
   }
 }
