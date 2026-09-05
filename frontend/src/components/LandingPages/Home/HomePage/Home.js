@@ -2,7 +2,7 @@
 import './Home.css';
 import HeroSection from '../HeroSection/HeroSection';
 import HomeContact from '../Contact/Contact';
-import About from '../About_section/About';
+import About from '../About_section/newAbout';
 import LocationCard from '../LocationCard/LocationCard';
 
 // import Footer from '../Footer/Footer';
