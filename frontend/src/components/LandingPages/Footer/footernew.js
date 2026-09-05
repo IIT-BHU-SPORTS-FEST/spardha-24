@@ -1,5 +1,5 @@
 // Footer.jsx
-import css from './footer.module.css';
+import css from './footernew.module.css';
 import { Link } from 'react-router-dom';
 
 // IMPORTANT: these imports use SVGR (importing as React components)
