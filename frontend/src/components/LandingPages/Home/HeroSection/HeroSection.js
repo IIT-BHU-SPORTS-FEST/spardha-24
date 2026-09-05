@@ -1,28 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import BlurText from './Blurtext';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import './HeroSection.css';
 import Confetti from './Confetti';
 import { ConfettiSideCannons } from './ConfettiSideCannons';
+import FootballCountdown from './FootballCountdown';
 
 const HeroSection = () => {
-  // Countdown target: 10th October (IST)
-  const targetDate = new Date('2026-10-10T00:00:00+05:30').getTime();
-  const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = Date.now();
-      const diff = targetDate - now;
-      setTimeLeft(diff > 0 ? diff : 0);
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-
   const handleAnimationComplete = () => console.log('Animation completed!');
 
   return (
@@ -57,20 +41,11 @@ const HeroSection = () => {
 
       {/* BOTTOM ROW */}
       <div className="bottom-row">
-        {/* LEFT DIV: countdown timer to 10th October */}
+        {/* LEFT DIV: countdown timer component */}
         <div className="countdown-tagline">
-          <div className="countdown">
-            {[days, hours, minutes].map((time, i) => (
-              <React.Fragment key={i}>
-                <div className="time-box">
-                  <span>{String(time).padStart(2, '0')}</span>
-                  <p>{['DAYS', 'HOURS', 'MINUTES'][i]}</p>
-                </div>
-                {i < 2 && <div className="divider"></div>}
-              </React.Fragment>
-            ))}
-          </div>
+          <FootballCountdown />
         </div>
+        
         <div>
           <div className="opening-info">
             <h4>Opening Ceremony</h4>

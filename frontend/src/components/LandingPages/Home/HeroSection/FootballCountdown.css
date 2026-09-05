@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&display=swap');
+
+.countdown-container {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px;
+}
+
+.countdown-title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    gap: 20px;
+}
+
+.title-decor {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: #39ff14;
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+    position: relative;
+}
+
+.title-decor::before, .title-decor::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #39ff14;
+    box-shadow: 0 0 8px #39ff14;
+}
+
+.title-decor::before { top: -7px; }
+.title-decor::after { bottom: -7px; }
+
+.timer-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ball-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), inset 0 0 18px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Aligns the ball background patterns so the black pentagons stay whole */
+.ball-days { background-position: 25% 40%; }
+.ball-hours { background-position: 75% 40%; }
+.ball-minutes { background-position: 40% 75%; }
+.ball-seconds { background-position: 60% 20%; }
+
+.time-value {
+    position: relative;
+    z-index: 2;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0c1b33;
+    letter-spacing: 1px;
+    transform: translateY(-8px); /* Shifted upwards into the solid white panel */
+    text-shadow: 
+         1px  1px 0px rgba(255, 255, 255, 0.9),
+        -1px  1px 0px rgba(255, 255, 255, 0.9),
+         1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+         0px  2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-colon {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #39ff14;
+    margin-bottom: 45px;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+.countdown-label {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #39ff14;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    padding: 6px 16px;
+    border-radius: 6px;
+}
