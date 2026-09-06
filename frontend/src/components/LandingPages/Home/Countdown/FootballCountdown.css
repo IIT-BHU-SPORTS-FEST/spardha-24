@@ -60,7 +60,10 @@
     position: relative;
     width: 130px;
     height: 130px;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg') no-repeat center center;
+    
+  background: url('./editball.png') no-repeat center center;
+  
+
     background-size: cover;
     border-radius: 50%;
     display: flex;
