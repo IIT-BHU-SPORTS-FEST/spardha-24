@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import FootballCountdown from './components/LandingPages/Home/Countdown/FootballCountdown';  
+  
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
@@ -122,7 +122,6 @@ function App() {
             element={
               <Suspense fallback={<Spinner />}>
                  <HomePage />
-<FootballCountdown />
 <Footer />
               </Suspense>
             }
