@@ -11,7 +11,7 @@ const HeroSection = () => {
         loop
         playsInline
         preload="auto"
-        poster="/images/bg/hero-bg1.jpg"
+        // poster="/images/bg/hero-bg1.jpg"
       >
         <source src="/videos/upscaled-video .mp4" type="video/mp4" />
       </video>
