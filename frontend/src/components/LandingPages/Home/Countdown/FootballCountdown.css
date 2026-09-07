@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@600;700&display=swap');
 
 .countdown-wrapper {
-  background-color: #030303;
+  background : black;
   width: 100%;
   padding: 40px 15px;
   display: flex;

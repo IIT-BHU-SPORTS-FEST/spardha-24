@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root{
   --bg-navy: #031326;
   --accent-green: #64ffda;
@@ -9,7 +16,7 @@
 /* Core Footer Container */
 .footer-premium {
   position: relative;
-  background: var(--bg-navy);
+  background: black;
   padding: 50px 0 16px;
   font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--muted-white);
@@ -85,6 +92,9 @@
 .brand-content { text-align: left; }
 
 .brand-title {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.85rem;
   font-weight: 800;
   color: var(--muted-white);
@@ -335,7 +345,7 @@
 
 .team-name {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-style: google-sans;
   font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: 1px;
