@@ -2,7 +2,7 @@
 import './Home.css';
 import HeroSection from '../HeroSection/HeroSection26';
 import HomeContact from '../Contact/Contact';
-import About from '../About_section/About';
+import About from '../About_section/newAbout';
 import LocationCard from '../LocationCard/LocationCardNew';
 
 import FootballCountdown from '../Countdown/FootballCountdown.js';
