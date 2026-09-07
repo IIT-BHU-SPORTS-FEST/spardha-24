@@ -2,7 +2,13 @@
 
 /* TOP BAR MAIN CONTAINER */
 .top-bar {
-  background: radial-gradient(ellipse at center, rgba(16, 45, 78, 0.45) 0%, rgba(8, 22, 38, 0.55) 100%) !important;
+background:
+  linear-gradient(
+    135deg,
+    #081626 0%,
+    #102f52 50%,
+    #1a3e6d 100%
+  ) !important;
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   display: flex !important;
