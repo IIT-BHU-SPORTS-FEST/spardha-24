@@ -200,10 +200,85 @@
   font-weight: 600;
 }
 
+/* --- Responsive Breakdown --- */
+
+/* Tablets (1024px and below) */
 @media (max-width: 1024px) {
-  .layoutGrid { grid-template-columns: 1fr; }
-  .trackLine { display: none; }
-  .statShard { transform: skewX(0); }
-  .statShard:hover { transform: translateX(-10px); }
-  .shardContent { transform: skewX(0); }
+  .aboutSection {
+    padding: 4rem 2.5rem;
+  }
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .trackLine {
+    display: none; /* Hide the slanted background line */
+  }
+  .statShard {
+    transform: skewX(0); /* Remove the slant */
+    padding: 1.5rem 2rem;
+  }
+  .statShard:hover {
+    transform: translateX(-10px); /* Simpler hover effect without the skew */
+  }
+  .shardContent {
+    transform: skewX(0);
+  }
+}
+
+/* Mobile Landscape & Large Phones (768px and below) */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 3rem 1.5rem;
+  }
+  .glitchHeader {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  .accentSubtitle {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+  }
+  .textContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 1rem;
+  }
+  .statShard {
+    padding: 1.2rem 1.5rem;
+  }
+  .statNumber {
+    font-size: 2.2rem;
+    min-width: 130px; /* Reduced to prevent text cutoff */
+  }
+  .statLabel {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 2rem 1rem;
+  }
+  .layoutGrid {
+    gap: 2rem;
+  }
+  .shardContent {
+    flex-direction: column; /* Stacks the number above the label */
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .statNumber {
+    min-width: auto; /* Allow natural width when stacked */
+    font-size: 2rem;
+  }
+  /* Reduce the glitch text spread to prevent horizontal scrolling */
+  .glitchHeader::before {
+    left: -2px;
+  }
+  .glitchHeader::after {
+    left: 2px;
+  }
 }
