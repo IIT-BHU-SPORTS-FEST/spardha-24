@@ -62,7 +62,7 @@ const About = () => {
       <div className="pentagon-not-flipped light-theme"></div> */}
         <p className="second-heading">HYPE AROUND SPARDHA</p>
         <p className="para">
-          For starters, 2026 will witness the 40th edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
+          For starters, 2026 will witness the 41st edition of Spardha, a festival which has grown from strength to strength ever since its inception. After all these successful editions, Spardha, today stands as the largest inter-collegiate sporting event of India.
         </p>
       </div>
       <div className="rectangle-2">

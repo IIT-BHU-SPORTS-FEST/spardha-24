@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-  
+//import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react';
-import Footer from './components/LandingPages/Footer/footer.js';
+import Footer from './components/LandingPages/Footer/footernew.js';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
 import NotFound from './components/LandingPages/NotFound/NotFound';
@@ -85,9 +85,9 @@ const HomePage = React.lazy(() =>
   //import('./components/LandingPages/Contact/Contact.js')
 //);
 
-const Matches = React.lazy(() =>
-  import('./components/LandingPages/matches/matches')
-);
+//const Matches = React.lazy(() =>
+  //import('./components/LandingPages/matches/matches')
+//);
 
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
@@ -121,8 +121,9 @@ function App() {
             path="/"
             element={
               <Suspense fallback={<Spinner />}>
-                 <HomePage />
-<Footer />
+                <HomePage />
+                {/*<CountdownTimer /> */} {/* Added timer component here */}
+                <Footer />
               </Suspense>
             }
           />
@@ -234,7 +235,7 @@ function App() {
               </Suspense>
             }
           /> */}
-          <Route
+          {/* <Route
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
@@ -242,7 +243,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          />
+          /> */}
           <Route
             path="guests"
             element={
