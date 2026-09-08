@@ -108,7 +108,7 @@ function App() {
     <>
       {/* <Router> */}
       <Routes className="routes" style={{ overflowX: 'hidden' }}>
-        <Route path="*" element={<NotFoundnew />} />
+        <Route path="*" element={<NotFound />} />
         <Route
           path="/"
           element={
