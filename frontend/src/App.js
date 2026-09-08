@@ -92,7 +92,7 @@ const HomePage = React.lazy(() =>
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
 //);
-
+const Espardhanew = React.lazy(() => import('./components/LandingPages/Espardha/Espardhanew'));
 function usePageViews() {
   let location = useLocation();
   useEffect(() => {
@@ -143,6 +143,15 @@ function App() {
               </Suspense>
             }
           >
+          <Route
+          exact
+          path="espardha"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <Espardhanew />
+            </Suspense>
+          }
+        />
             <Route
               exact
               path="signup"
@@ -200,14 +209,15 @@ function App() {
             }
           />
           <Route
-            path="espardha"
-            element={
-              <Suspense fallback={<Preloader />}>
-                { /*<Espardha /> */ }
-                { <ComingSoon/> }
-                <Footer />
-              </Suspense>
-            }
+          path="espardha"
+          element={
+            <Suspense fallback={<Preloader />}>
+              { /* <Espardha /> */ }
+              <Espardhanew />
+              <Footer />
+            </Suspense>
+          }
+        />
           />
           
           {/* <Route
