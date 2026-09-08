@@ -275,7 +275,7 @@ const Espardhanew = () => {
 
         {/* Bottom Heading: Sign Up with a valid safe link / anchor target placeholder */}
         <div className="espardha-signup-section">
-          <a href="" className="espardha-signup-link">
+          <a href="register/signup" className="espardha-signup-link">
             <h1 className="espardha-signup-title">SIGN UP</h1>
           </a>
         </div>
