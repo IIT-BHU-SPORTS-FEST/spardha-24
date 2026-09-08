@@ -21,7 +21,7 @@ const LandingPages = React.lazy(() =>
 const DashBoard = React.lazy(() =>
   import('./components/DashBoard/MainMenu/DashBoard')
 );
-const About = React.lazy(() => import('./components/LandingPages/About/About'));
+const About = React.lazy(() => import('./components/LandingPages/About/AboutNew'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
