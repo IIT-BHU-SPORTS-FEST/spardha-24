@@ -1,0 +1,250 @@
+.main_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  align-items: center;
+}
+
+.main_container {
+  background: url("/public/images/bg/404.jpg") no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  text-align: center;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.sub_container {
+  width: 50vw;
+  /* height: 85vh; */
+  position: absolute;
+  z-index: 100;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_Heading {
+  /* font-family: 'League Spartan'; */
+  font-family: 'Ropa Sans', sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.notFound_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound_text {
+  padding: 0px 20px;
+  /* letter-spacing: 20px; */
+  font-family: 'League Spartan';
+  font-weight: 400;
+  font-size: 180px;
+}
+
+.back_buttons {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.home_button {
+  background-color: #6db549;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 7px 20px;
+  margin: 10px 20px;
+  border-radius: 6px;
+}
+
+.home_button:hover {
+  color: #fff;
+  background: green;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+.footer {
+  padding: 5px 0;
+
+}
+
+.agile-info,
+.paragraphs {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.71);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 3em;
+  margin-top: 2em;
+}
+
+.sub_heading {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.71);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 0 40px;
+  /* margin-bottom: 3em; */
+  /* margin-top: 2em; */
+}
+
+.footer p {
+  margin: 2.4em 0em;
+}
+
+.fa {
+  padding: 2px 7px;
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  flex-direction: row;
+  display: flex;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: deeppink;
+  color: white;
+}
+
+.fa-map-marker {
+  background: #F44336;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width: 768px) {
+  .top_Heading {
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  .notFound_text {
+    font-size: 90px;
+  }
+
+  .sub_container {
+    width: 70vw;
+  }
+
+  .images {
+    width: 90px;
+  }
+}
+
+@media(max-width: 425px) {
+  .top_Heading {
+    font-weight: 550;
+    font-size: 50px;
+  }
+
+  .notFound_text {
+    font-size: 60px;
+  }
+
+  .sub_container {
+    width: 90vw;
+  }
+
+  .images {
+    width: 60px;
+  }
+}
+
+@media(max-width: 320px) {
+
+  .top_Heading {
+    font-weight: 550;
+    font-size: 35px;
+    padding-bottom: 10px;
+  }
+
+  .notFound_text {
+    font-size: 40px;
+  }
+
+  .sub_heading {
+    font-size: 0.6em !important;
+    padding: 0 40px;
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  .notFound_text {
+    font-size: 40px;
+  }
+
+  .sub_container {
+    width: 90vw;
+  }
+
+  .images {
+    width: 40px;
+  }
+
+  .fa {
+    width: 25px;
+    height: 25px;
+    padding: 0px 6px;
+  }
+
+  .home_button {
+    font-size: 14px;
+    padding: 2px 14px;
+    width: 90px;
+  }
+}

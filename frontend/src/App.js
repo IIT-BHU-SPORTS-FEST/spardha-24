@@ -7,7 +7,7 @@ import { Suspense } from 'react';
 import Footer from './components/LandingPages/Footer/footernew.js';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
-import NotFound from './components/LandingPages/NotFound/NotFound';
+import NotFound from './components/LandingPages/NotFound/NotFoundnew';
 // import { Carousel } from 'react-responsive-carousel';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
@@ -108,7 +108,7 @@ function App() {
     <>
       {/* <Router> */}
       <Routes className="routes" style={{ overflowX: 'hidden' }}>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundnew />} />
         <Route
           path="/"
           element={
