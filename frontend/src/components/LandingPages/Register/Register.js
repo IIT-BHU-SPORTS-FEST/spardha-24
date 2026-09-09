@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router';
 import styles from './Register.module.css';
-import Footer from '../Footer/footer';
+import Footer from '../Footer/footernew';
 
 import bgImage from './Background Image.jpeg';
 import playerImg from './picture.png';
