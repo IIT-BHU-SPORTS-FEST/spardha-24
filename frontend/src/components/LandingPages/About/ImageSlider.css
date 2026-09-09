@@ -447,7 +447,7 @@
   transform-origin: left center;
 
   animation:
-    sliderTimer 5.5s linear forwards;
+    sliderTimer 2s linear forwards;
 }
 
 .about-slider__timer-fill.is-paused {
