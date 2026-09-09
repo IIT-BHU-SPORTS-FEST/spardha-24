@@ -29,7 +29,7 @@ const Events = React.lazy(() =>
   import('./components/LandingPages/Events/Events26')
 );
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-//const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
+const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
 const Sponsors = React.lazy(() =>
   import('./components/LandingPages/Sponsors/Sponsors')
 );
@@ -219,7 +219,7 @@ function App() {
           }
         />
           
-          {/* <Route
+           <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -243,13 +243,8 @@ function App() {
                 <Team />
               </Suspense>
             }
-<<<<<<< HEAD
-          /> */}
-          {/* <Route
-=======
           /> 
-          <Route
->>>>>>> 16e624d (removed the {/* from app.js)
+          {/* <Route
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
