@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 //import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Preloader from './components/LandingPages/Preloader/Preloader';
+import Preloader from './components/LandingPages/Preloader/NewLoader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react';
 import Footer from './components/LandingPages/Footer/footernew.js';
