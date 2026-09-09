@@ -124,7 +124,7 @@ function importAll(context) {
 
 const pad = (value) => String(value).padStart(2, "0");
 
-const AUTOPLAY_MS = 5500;
+const AUTOPLAY_MS = 2000;
 
 const ImageSlider = ({ folderName, categoryLabel }) => {
   const images = useMemo(() => {
