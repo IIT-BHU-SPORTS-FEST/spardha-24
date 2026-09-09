@@ -1,4 +1,4 @@
-const makePlaceholderImage = (name) => {
+/*const makePlaceholderImage = (name) => {
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820">
       <defs>
@@ -49,124 +49,125 @@ const makePlaceholderImage = (name) => {
 
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 };
+*/
 
 const sportsData = [
   {
     id: 'football',
     name: 'Football',
-    image: makePlaceholderImage('Football'),
+    image: '/images/icons26/football.svg',
     rulebook: '/rulebooks/Spardha26 Football RuleBook.pdf',
     description: 'Fast-paced team competition for players who thrive under pressure.',
   },
   {
     id: 'cricket',
     name: 'Cricket',
-    image: makePlaceholderImage('Cricket'),
+    image: '/images/icons26/cricket.svg',
     rulebook: '/rulebooks/Spardha26 Cricket RuleBook.pdf',
     description: 'Bring your best batting, bowling, and fielding to the pitch.',
   },
   {
     id: 'volleyball',
     name: 'Volleyball',
-    image: makePlaceholderImage('Volleyball'),
+    image: '/images/icons26/volleyball.svg',
     rulebook: '/rulebooks/Spardha26 Volleyball Rulebook.pdf',
     description: 'A high-energy contest of timing, teamwork, and precision.',
   },
   {
     id: 'table-tennis',
     name: 'Table Tennis',
-    image: makePlaceholderImage('Table Tennis'),
+    image: '/images/icons26/table-tennis.svg',
     rulebook: '/rulebooks/spardha26 Table Tennis Rule Book.pdf',
     description: 'Quick reflexes and sharp strategy decide every point.',
   },
   {
     id: 'athletics',
     name: 'Athletics',
-    image: makePlaceholderImage('Athletics'),
+    image: '/images/icons26/athletics.svg',
     rulebook: '/rulebooks/Spardha26 Athletics RuleBook.pdf',
     description: 'Run, jump, and compete for excellence on the track.',
   },
   {
     id: 'lawn-tennis',
     name: 'Lawn Tennis',
-    image: makePlaceholderImage('Lawn Tennis'),
+    image: '/images/icons26/lawn-tennis.svg',
     rulebook: '/rulebooks/Spardha26 Lawn Tennis RuleBook.pdf',
     description: 'A test of endurance, control, and court awareness.',
   },
   {
     id: 'basketball',
     name: 'Basketball',
-    image: makePlaceholderImage('Basketball'),
+    image: '/images/icons26/basketball.svg',
     rulebook: '/rulebooks/Spardha26 Basketball RuleBook.pdf',
     description: 'Make every possession count in this full-court battle.',
   },
   {
     id: 'badminton',
     name: 'Badminton',
-    image: makePlaceholderImage('Badminton'),
+    image: '/images/icons26/badminton.svg',
     rulebook: '/rulebooks/Spardha26 Badminton RuleBook.pdf',
     description: 'Speed, precision, and movement come together on court.',
   },
   {
     id: 'weight-lifting',
     name: 'Weight Lifting',
-    image: makePlaceholderImage('Weight Lifting'),
+    image: '/images/icons26/weight-lifting.svg',
     rulebook: '/rulebooks/Spardha26 Weightlifting RuleBook.pdf',
     description: 'Lift with confidence, technique, and controlled strength.',
   },
   {
     id: 'boxing',
     name: 'Boxing',
-    image: makePlaceholderImage('Boxing'),
+    image: '/images/icons26/boxing.svg',
     rulebook: '/rulebooks/Spardha26  Boxing RuleBook.pdf',
     description: 'A disciplined contest of power, timing, and focus.',
   },
   {
     id: 'kabaddi',
     name: 'Kabaddi',
-    image: makePlaceholderImage('Kabaddi'),
+    image: '/images/icons26/kabaddi.svg',
     rulebook: '/rulebooks/Spardha26 Kabbadi RuleBook.pdf',
     description: 'Tactical raids and resilient defending decide the match.',
   },
   {
     id: 'squash',
     name: 'Squash',
-    image: makePlaceholderImage('Squash'),
+    image: '/images/icons26/squash.svg',
     rulebook: '/rulebooks/Spardha26 Squash RuleBook.pdf',
     description: 'Own the court with pace, accuracy, and persistence.',
   },
   {
     id: 'handball',
     name: 'Handball',
-    image: makePlaceholderImage('Handball'),
+    image: '/images/icons26/handball.svg',
     rulebook: '/rulebooks/Spardha26 Handball RuleBook.pdf',
     description: 'A dynamic team event built on speed and coordination.',
   },
   {
     id: 'taekwondo',
     name: 'Taekwondo',
-    image: makePlaceholderImage('Taekwondo'),
+    image: '/images/icons26/taekwondo.svg',
     rulebook: '/rulebooks/Spardha26 Taekwondo RuleBook Revised-1.pdf',
     description: 'Demonstrate disciplined technique, balance, and control.',
   },
   {
     id: 'hockey',
     name: 'Hockey',
-    image: makePlaceholderImage('Hockey'),
+    image: '/images/icons26/hockey.svg',
     rulebook: '/rulebooks/Spardha26 Hockey RuleBook.pdf',
     description: 'Play with intensity, tactical movement, and teamwork.',
   },
   {
     id: 'kho-kho',
     name: 'Kho-Kho',
-    image: makePlaceholderImage('Kho-Kho'),
+    image: '/images/icons26/kho-kho.svg',
     rulebook: '/rulebooks/Spardha26 Kho Kho RuleBook.pdf',
     description: 'A rapid contest of agility, anticipation, and pursuit.',
   },
   {
     id: 'chess',
     name: 'Chess',
-    image: makePlaceholderImage('Chess'),
+    image: '/images/icons26/chess.svg',
     rulebook: '/rulebooks/Spardha26 Chess RuleBook.pdf',
     description: 'Plan ahead, stay composed, and make every move matter.',
   },

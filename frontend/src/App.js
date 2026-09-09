@@ -219,7 +219,7 @@ function App() {
           }
         />
           
-           <Route
+          <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -227,7 +227,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> 
+          />
           <Route
             path="PrivacyPolicy"
             element={
