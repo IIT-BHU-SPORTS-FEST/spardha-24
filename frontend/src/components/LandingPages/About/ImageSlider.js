@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
 } from "react";
+
 import "./ImageSlider.css";
 
 const folderContexts = {
@@ -121,16 +122,11 @@ function importAll(context) {
   return context.keys().map(context);
 }
 
-const pad = (value) =>
-  String(value).padStart(2, "0");
+const pad = (value) => String(value).padStart(2, "0");
 
 const AUTOPLAY_MS = 5500;
-const TRANSITION_MS = 700;
 
-const ImageSlider = ({
-  folderName,
-  categoryLabel,
-}) => {
+const ImageSlider = ({ folderName, categoryLabel }) => {
   const images = useMemo(() => {
     const context =
       folderContexts[folderName] ||
@@ -143,41 +139,21 @@ const ImageSlider = ({
 
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [transitioning, setTransitioning] =
-    useState(false);
 
   const touchStartX = useRef(null);
-  const autoplayRef = useRef(null);
-  const transitionTimeoutRef = useRef(null);
 
   const moveTo = useCallback(
     (nextIndex) => {
-      if (count <= 1 || transitioning) {
+      if (count <= 1) {
         return;
       }
 
       const normalized =
         (nextIndex + count) % count;
 
-      if (normalized === index) {
-        return;
-      }
-
-      setTransitioning(true);
       setIndex(normalized);
-
-      if (transitionTimeoutRef.current) {
-        clearTimeout(
-          transitionTimeoutRef.current
-        );
-      }
-
-      transitionTimeoutRef.current =
-        window.setTimeout(() => {
-          setTransitioning(false);
-        }, TRANSITION_MS);
     },
-    [count, index, transitioning]
+    [count]
   );
 
   const next = useCallback(() => {
@@ -188,9 +164,15 @@ const ImageSlider = ({
     moveTo(index - 1);
   }, [index, moveTo]);
 
+  const goTo = useCallback(
+    (nextIndex) => {
+      moveTo(nextIndex);
+    },
+    [moveTo]
+  );
+
   useEffect(() => {
     setIndex(0);
-    setTransitioning(false);
   }, [folderName]);
 
   useEffect(() => {
@@ -198,31 +180,18 @@ const ImageSlider = ({
       return undefined;
     }
 
-    autoplayRef.current =
-      window.setInterval(() => {
-        setIndex((current) => {
-          return (current + 1) % count;
-        });
-      }, AUTOPLAY_MS);
+    const autoplay = window.setInterval(() => {
+      setIndex((current) => (current + 1) % count);
+    }, AUTOPLAY_MS);
 
     return () => {
-      if (autoplayRef.current) {
-        clearInterval(autoplayRef.current);
-      }
+      window.clearInterval(autoplay);
     };
   }, [count, paused, folderName]);
 
   useEffect(() => {
     return () => {
-      if (autoplayRef.current) {
-        clearInterval(autoplayRef.current);
-      }
-
-      if (transitionTimeoutRef.current) {
-        clearTimeout(
-          transitionTimeoutRef.current
-        );
-      }
+      touchStartX.current = null;
     };
   }, []);
 
@@ -264,6 +233,7 @@ const ImageSlider = ({
       endX - touchStartX.current;
 
     touchStartX.current = null;
+
     setPaused(false);
 
     if (Math.abs(delta) < 45) {
@@ -277,11 +247,27 @@ const ImageSlider = ({
     }
   };
 
+  const getRelativePosition = (imageIndex) => {
+    if (count === 0) {
+      return 0;
+    }
+
+    let difference = imageIndex - index;
+
+    if (difference > count / 2) {
+      difference -= count;
+    }
+
+    if (difference < -count / 2) {
+      difference += count;
+    }
+
+    return difference;
+  };
+
   if (!count) {
     return null;
   }
-
-  const currentImage = images[index];
 
   return (
     <div
@@ -299,33 +285,80 @@ const ImageSlider = ({
       onTouchEnd={handleTouchEnd}
     >
       <div className="about-slider__viewport">
-        <div className="about-slider__image-wrap">
-          <img
-            key={currentImage}
-            className={`about-slider__image${
-              transitioning
-                ? " is-transitioning"
-                : ""
-            }`}
-            src={currentImage}
-            alt={`${categoryLabel} ${
-              index + 1
-            } of ${count}`}
-            draggable="false"
-          />
+        <div
+          className="about-slider__fan"
+          aria-live="polite"
+        >
+          {images.map((src, imageIndex) => {
+            const position =
+              getRelativePosition(imageIndex);
+
+            const isActive = position === 0;
+
+            const isVisible =
+              Math.abs(position) <= 3;
+
+            if (!isVisible) {
+              return null;
+            }
+
+            return (
+              <button
+                key={`${src}-${imageIndex}`}
+                type="button"
+                className={`about-slider__card${
+                  isActive
+                    ? " is-active"
+                    : ""
+                }`}
+                data-position={position}
+                onClick={() => {
+                  if (isActive) {
+                    return;
+                  }
+
+                  goTo(imageIndex);
+                }}
+                aria-label={
+                  isActive
+                    ? `${categoryLabel} photo ${
+                        imageIndex + 1
+                      } of ${count}`
+                    : `Show ${categoryLabel} photo ${
+                        imageIndex + 1
+                      } of ${count}`
+                }
+                aria-current={
+                  isActive ? "true" : undefined
+                }
+                style={{
+                  "--card-image": `url("${src}")`,
+                }}
+              >
+                <img
+                  className="about-slider__card-image"
+                  src={src}
+                  alt={`${categoryLabel} ${
+                    imageIndex + 1
+                  } of ${count}`}
+                  draggable="false"
+                />
+
+                <span className="about-slider__card-shine" />
+              </button>
+            );
+          })}
         </div>
 
         <div
-          className="about-slider__frame"
+          className="about-slider__glow"
+          aria-hidden="true"
+        />
+
+        <div
+          className="about-slider__badge"
           aria-hidden="true"
         >
-          <span className="about-slider__corner about-slider__corner--tl" />
-          <span className="about-slider__corner about-slider__corner--tr" />
-          <span className="about-slider__corner about-slider__corner--bl" />
-          <span className="about-slider__corner about-slider__corner--br" />
-        </div>
-
-        <div className="about-slider__badge">
           {pad(index + 1)} / {pad(count)}
         </div>
 
@@ -337,7 +370,9 @@ const ImageSlider = ({
               onClick={previous}
               aria-label={`Previous ${categoryLabel}`}
             >
-              ‹
+              <span aria-hidden="true">
+                ‹
+              </span>
             </button>
 
             <button
@@ -346,7 +381,9 @@ const ImageSlider = ({
               onClick={next}
               aria-label={`Next ${categoryLabel}`}
             >
-              ›
+              <span aria-hidden="true">
+                ›
+              </span>
             </button>
           </>
         )}
@@ -358,7 +395,9 @@ const ImageSlider = ({
           >
             <span
               className={`about-slider__timer-fill${
-                paused ? " is-paused" : ""
+                paused
+                  ? " is-paused"
+                  : ""
               }`}
               key={`${index}-${paused}`}
             />
@@ -374,7 +413,10 @@ const ImageSlider = ({
           disabled={count <= 1}
           aria-label={`Previous ${categoryLabel} photo`}
         >
-          <span aria-hidden="true">‹</span>
+          <span aria-hidden="true">
+            ‹
+          </span>
+
           <span className="about-slider__nav-label">
             Previous
           </span>
@@ -396,7 +438,8 @@ const ImageSlider = ({
               className="about-slider__progress-fill"
               style={{
                 width: `${
-                  ((index + 1) / count) * 100
+                  ((index + 1) / count) *
+                  100
                 }%`,
               }}
             />
@@ -413,7 +456,10 @@ const ImageSlider = ({
           <span className="about-slider__nav-label">
             Next
           </span>
-          <span aria-hidden="true">›</span>
+
+          <span aria-hidden="true">
+            ›
+          </span>
         </button>
       </div>
     </div>
