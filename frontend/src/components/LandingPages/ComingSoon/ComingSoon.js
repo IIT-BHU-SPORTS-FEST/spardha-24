@@ -68,10 +68,6 @@ const ComingSoon = () => {
         </div>
 
         <h1>COMING SOON</h1>
-        <p>Your Strength Awaits.</p>
-        <p>Contact:</p>
-        <p>Mohammad Kaif</p>
-        <p>+91 : 9142994832</p>
         
       </div>
     </div>
