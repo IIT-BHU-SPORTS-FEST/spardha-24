@@ -71,7 +71,6 @@ const ComingSoon = () => {
         <p>Your Strength Awaits.</p>
         <p>Contact:</p>
         <p>Mohammad Kaif</p>
-        <p>+91 : 9142994832</p>
         
       </div>
     </div>
