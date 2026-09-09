@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const IMAGE_SRC = new URL("./image.jpeg", import.meta.url).href;
 
-const MIN_LOADER_TIME = 2000;
+const MIN_LOADER_TIME = 3000;
 
 const SoccerImageLoader = ({
   progress,
@@ -13,14 +13,13 @@ const SoccerImageLoader = ({
   const isControlled = typeof progress === "number";
 
   const [entered, setEntered] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const [displayProgress, setDisplayProgress] = useState(
     isControlled
       ? Math.max(0, Math.min(100, progress))
       : 0
   );
-
-  const [visible, setVisible] = useState(true);
 
   const targetProgress = useRef(
     isControlled
@@ -31,9 +30,9 @@ const SoccerImageLoader = ({
   const startTime = useRef(Date.now());
   const direction = useRef(1);
 
-  /* -----------------------------------------
-     Initial entrance animation
-  ----------------------------------------- */
+  /* =========================================
+     ENTRANCE
+  ========================================= */
 
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -43,9 +42,9 @@ const SoccerImageLoader = ({
     return () => cancelAnimationFrame(frame);
   }, []);
 
-  /* -----------------------------------------
-     Update target progress
-  ----------------------------------------- */
+  /* =========================================
+     UPDATE TARGET PROGRESS
+  ========================================= */
 
   useEffect(() => {
     if (!isControlled) return;
@@ -56,9 +55,9 @@ const SoccerImageLoader = ({
     );
   }, [progress, isControlled]);
 
-  /* -----------------------------------------
-     Smooth actual progress
-  ----------------------------------------- */
+  /* =========================================
+     SMOOTH PROGRESS
+  ========================================= */
 
   useEffect(() => {
     if (!isControlled) return;
@@ -68,7 +67,6 @@ const SoccerImageLoader = ({
     const animate = () => {
       setDisplayProgress((current) => {
         const target = targetProgress.current;
-
         const difference = target - current;
 
         if (Math.abs(difference) < 0.1) {
@@ -86,9 +84,9 @@ const SoccerImageLoader = ({
     return () => cancelAnimationFrame(frame);
   }, [isControlled]);
 
-  /* -----------------------------------------
-     Automatic progress when no progress prop
-  ----------------------------------------- */
+  /* =========================================
+     AUTOMATIC PROGRESS
+  ========================================= */
 
   useEffect(() => {
     if (isControlled) return;
@@ -115,9 +113,9 @@ const SoccerImageLoader = ({
     return () => clearInterval(interval);
   }, [isControlled]);
 
-  /* -----------------------------------------
-     Complete loader when progress = 100
-  ----------------------------------------- */
+  /* =========================================
+     FINISH LOADER
+  ========================================= */
 
   useEffect(() => {
     if (!isControlled) return;
@@ -134,15 +132,13 @@ const SoccerImageLoader = ({
     const timer = setTimeout(() => {
       setDisplayProgress(100);
 
-      const fadeTimer = setTimeout(() => {
+      setTimeout(() => {
         setVisible(false);
 
         if (onComplete) {
           onComplete();
         }
-      }, 300);
-
-      return () => clearTimeout(fadeTimer);
+      }, 350);
     }, remaining);
 
     return () => clearTimeout(timer);
@@ -153,9 +149,15 @@ const SoccerImageLoader = ({
     onComplete,
   ]);
 
-  /* -----------------------------------------
-     Football position in 1200 x 900 image
-  ----------------------------------------- */
+  /* =========================================
+     IMAGE COORDINATES
+
+     Original image: 1200 x 900
+
+     Football center:
+     X = 510
+     Y = 210
+  ========================================= */
 
   const pct = Math.max(
     0,
@@ -183,7 +185,17 @@ const SoccerImageLoader = ({
       <style>{`
 
         /* =====================================
-           ROOT
+           RESET
+        ===================================== */
+
+        .sil-root,
+        .sil-root * {
+          box-sizing: border-box;
+        }
+
+
+        /* =====================================
+           MAIN LOADER
         ===================================== */
 
         .sil-root {
@@ -192,6 +204,7 @@ const SoccerImageLoader = ({
           --cream: #f6f2e7;
 
           position: fixed;
+
           inset: 0;
 
           width: 100%;
@@ -200,9 +213,9 @@ const SoccerImageLoader = ({
 
           background: var(--navy);
 
-          z-index: 99999;
-
           overflow: hidden;
+
+          z-index: 99999;
 
           isolation: isolate;
 
@@ -214,15 +227,21 @@ const SoccerImageLoader = ({
             visibility 0.45s ease;
         }
 
+
         .sil-root.sil-hidden {
           opacity: 0;
+
           visibility: hidden;
+
           pointer-events: none;
         }
 
 
         /* =====================================
-           FRAME
+           IMAGE FRAME
+
+           The actual image is ALWAYS kept
+           in its native 4:3 ratio.
         ===================================== */
 
         .sil-frame {
@@ -235,52 +254,62 @@ const SoccerImageLoader = ({
 
           opacity: 0;
 
-          transform: scale(1.035);
+          transform: scale(1.025);
 
           transition:
             opacity 0.9s
               cubic-bezier(.2,.8,.2,1),
 
-            transform 1.2s
+            transform 1.1s
               cubic-bezier(.2,.8,.2,1);
         }
 
+
         .sil-frame.sil-in {
           opacity: 1;
+
           transform: scale(1);
         }
 
 
         /* =====================================
            IMAGE
+
+           contain = NEVER stretched
+           NEVER distorted
         ===================================== */
 
         .sil-img {
           position: absolute;
 
-          inset: 0;
-
           width: 100%;
           height: 100%;
 
-          object-fit: contain;
-          object-position: center;
+          inset: 0;
 
           display: block;
 
+          object-fit: contain;
+
+          object-position: center center;
+
           user-select: none;
+
           pointer-events: none;
 
           -webkit-user-drag: none;
 
           animation:
-            sil-breathe 9s
-            ease-in-out infinite;
+            sil-breathe
+            9s ease-in-out infinite;
         }
 
 
         /* =====================================
-           SVG OVERLAY
+           SVG
+
+           Same dimensions as image.
+           This keeps ring aligned.
         ===================================== */
 
         .sil-overlay-svg {
@@ -290,6 +319,8 @@ const SoccerImageLoader = ({
 
           width: 100%;
           height: 100%;
+
+          display: block;
 
           pointer-events: none;
 
@@ -305,7 +336,7 @@ const SoccerImageLoader = ({
           fill: none;
 
           stroke:
-            rgba(244, 211, 94, 0.25);
+            rgba(244,211,94,0.25);
 
           stroke-width: 9;
         }
@@ -364,13 +395,15 @@ const SoccerImageLoader = ({
 
           inset: 0;
 
+          pointer-events: none;
+
           background:
             linear-gradient(
               75deg,
               transparent 40%,
-              rgba(255,255,255,0.12) 48%,
-              rgba(255,255,255,0.26) 50%,
-              rgba(255,255,255,0.12) 52%,
+              rgba(255,255,255,0.08) 47%,
+              rgba(255,255,255,0.20) 50%,
+              rgba(255,255,255,0.08) 53%,
               transparent 60%
             );
 
@@ -384,13 +417,13 @@ const SoccerImageLoader = ({
             7s ease-in-out infinite;
 
           animation-delay: 1.2s;
-
-          pointer-events: none;
         }
 
 
         /* =====================================
-           BOTTOM SCRIM
+           BOTTOM GRADIENT
+
+           Makes text readable.
         ===================================== */
 
         .sil-scrim {
@@ -400,18 +433,21 @@ const SoccerImageLoader = ({
           right: 0;
           bottom: 0;
 
-          height: 38%;
+          width: 100%;
+
+          height: 40%;
+
+          pointer-events: none;
 
           background:
             linear-gradient(
               180deg,
               transparent 0%,
-              rgba(12,22,48,0.25) 20%,
-              rgba(12,22,48,0.88) 80%,
-              rgba(12,22,48,0.98) 100%
+              rgba(12,22,48,0.10) 15%,
+              rgba(12,22,48,0.45) 40%,
+              rgba(12,22,48,0.90) 78%,
+              rgba(12,22,48,1) 100%
             );
-
-          pointer-events: none;
         }
 
 
@@ -423,42 +459,57 @@ const SoccerImageLoader = ({
           position: absolute;
 
           left:
-            clamp(20px, 5vw, 70px);
+            clamp(24px, 5vw, 70px);
 
           right:
-            clamp(20px, 5vw, 70px);
+            clamp(24px, 5vw, 70px);
 
           bottom:
-            clamp(24px, 6vh, 60px);
+            clamp(28px, 6vh, 60px);
+
+          z-index: 10;
 
           display: flex;
 
           align-items: flex-end;
 
-          justify-content: space-between;
+          justify-content:
+            space-between;
 
-          gap: 24px;
-
-          z-index: 5;
+          gap: 30px;
         }
 
+
+        /* =====================================
+           TEXT
+        ===================================== */
 
         .sil-caption {
           color: var(--cream);
 
+          font-family:
+            Inter,
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+
           font-size:
-            clamp(12px, 1.1vw, 15px);
+            clamp(12px, 1vw, 15px);
 
           line-height: 1.4;
 
-          letter-spacing: 0.01em;
+          letter-spacing: 0.02em;
+
+          min-width: 0;
         }
 
 
         .sil-caption b {
           display: block;
 
-          margin-bottom: 4px;
+          margin-bottom: 5px;
 
           font-family:
             "Space Grotesk",
@@ -467,7 +518,7 @@ const SoccerImageLoader = ({
             sans-serif;
 
           font-size:
-            clamp(25px, 3vw, 38px);
+            clamp(26px, 3vw, 40px);
 
           line-height: 1;
 
@@ -486,27 +537,27 @@ const SoccerImageLoader = ({
 
         .sil-bar {
           width:
-            min(220px, 30vw);
+            clamp(140px, 20vw, 260px);
 
           height: 5px;
 
           flex-shrink: 0;
 
+          margin-bottom: 6px;
+
+          overflow: hidden;
+
           border-radius: 999px;
 
           background:
             rgba(255,255,255,0.18);
-
-          overflow: hidden;
-
-          margin-bottom: 6px;
         }
 
 
         .sil-bar-fill {
-          height: 100%;
-
           width: 0;
+
+          height: 100%;
 
           border-radius: inherit;
 
@@ -527,7 +578,7 @@ const SoccerImageLoader = ({
 
 
         /* =====================================
-           ANIMATIONS
+           IMAGE ANIMATION
         ===================================== */
 
         @keyframes sil-breathe {
@@ -538,10 +589,14 @@ const SoccerImageLoader = ({
           }
 
           50% {
-            transform: scale(1.025);
+            transform: scale(1.018);
           }
         }
 
+
+        /* =====================================
+           COMET ROTATION
+        ===================================== */
 
         @keyframes sil-rotate {
 
@@ -554,6 +609,10 @@ const SoccerImageLoader = ({
           }
         }
 
+
+        /* =====================================
+           SHIMMER
+        ===================================== */
 
         @keyframes sil-sweep {
 
@@ -576,54 +635,106 @@ const SoccerImageLoader = ({
 
         /* =====================================
            TABLET
+           601px - 1024px
         ===================================== */
 
-        @media (max-width: 900px) {
+        @media
+          (min-width: 601px)
+          and (max-width: 1024px) {
 
           .sil-img {
             object-fit: contain;
           }
 
+
+          .sil-footer {
+            left: 35px;
+            right: 35px;
+
+            bottom: 35px;
+
+            gap: 25px;
+          }
+
+
+          .sil-caption b {
+            font-size: 32px;
+          }
+
+
           .sil-bar {
-            width: 180px;
+            width: 200px;
+          }
+
+
+          .sil-scrim {
+            height: 42%;
           }
         }
 
 
         /* =====================================
-           MOBILE
+           MOBILE PORTRAIT
         ===================================== */
 
         @media (max-width: 600px) {
 
-          .sil-frame {
-            transform: scale(1.02);
+          .sil-root {
+            min-height: 100dvh;
           }
 
-          .sil-frame.sil-in {
-            transform: scale(1);
-          }
 
+          /*
+             Keep the image proportional.
+             Since the source is 4:3, it will
+             fit the width of the phone.
+          */
 
           .sil-img {
+            width: 100%;
+            height: auto;
+
+            min-height: 0;
+
+            top: 0;
+            bottom: auto;
+
             object-fit: contain;
-            object-position: center;
+
+            object-position: top center;
           }
 
 
+          .sil-overlay-svg {
+            width: 100%;
+            height: auto;
+
+            aspect-ratio: 4 / 3;
+
+            top: 0;
+            bottom: auto;
+          }
+
+
+          /* Stronger bottom gradient */
+
           .sil-scrim {
-            height: 45%;
+            height: 62%;
 
             background:
               linear-gradient(
                 180deg,
                 transparent 0%,
-                rgba(12,22,48,0.45) 30%,
-                rgba(12,22,48,0.94) 80%,
+                rgba(12,22,48,0.08) 15%,
+                rgba(12,22,48,0.30) 35%,
+                rgba(12,22,48,0.78) 60%,
+                rgba(12,22,48,0.97) 82%,
                 rgba(12,22,48,1) 100%
               );
           }
 
+
+          /* Footer becomes vertical */
 
           .sil-footer {
 
@@ -640,7 +751,9 @@ const SoccerImageLoader = ({
 
             align-items: stretch;
 
-            gap: 12px;
+            justify-content: flex-end;
+
+            gap: 13px;
           }
 
 
@@ -650,74 +763,187 @@ const SoccerImageLoader = ({
 
 
           .sil-caption b {
-            font-size: 28px;
+            font-size: 30px;
+
+            margin-bottom: 4px;
           }
 
 
           .sil-bar {
             width: 100%;
 
-            max-width: none;
-
             height: 4px;
 
             margin-bottom: 0;
+          }
+
+
+          /*
+             Slightly slower image movement
+             on mobile to avoid excessive
+             visual movement.
+          */
+
+          .sil-img {
+            animation-duration: 12s;
           }
         }
 
 
         /* =====================================
            SMALL MOBILE
+           <= 380px
         ===================================== */
 
         @media (max-width: 380px) {
 
           .sil-footer {
+
             left: 16px;
             right: 16px;
+
+            bottom:
+              max(
+                16px,
+                env(safe-area-inset-bottom)
+              );
+
+            gap: 10px;
           }
 
+
           .sil-caption b {
-            font-size: 25px;
+            font-size: 26px;
+          }
+
+
+          .sil-caption {
+            font-size: 11px;
+          }
+
+
+          .sil-bar {
+            height: 4px;
           }
         }
 
 
         /* =====================================
-           LANDSCAPE MOBILE
+           MOBILE LANDSCAPE
         ===================================== */
 
-        @media (
-          max-height: 500px
-        ) and (orientation: landscape) {
+        @media
+          (max-width: 900px)
+          and (max-height: 550px)
+          and (orientation: landscape) {
+
+          .sil-img {
+            width: auto;
+
+            height: 100%;
+
+            max-width: none;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+              translate(-50%, -50%);
+          }
+
+
+          .sil-overlay-svg {
+            width: auto;
+
+            height: 100%;
+
+            max-width: none;
+
+            top: 50%;
+            left: 50%;
+
+            transform:
+              translate(-50%, -50%);
+
+            aspect-ratio: 4 / 3;
+          }
+
+
+          .sil-scrim {
+            height: 55%;
+
+            background:
+              linear-gradient(
+                180deg,
+                transparent 0%,
+                rgba(12,22,48,0.35) 45%,
+                rgba(12,22,48,0.95) 100%
+              );
+          }
+
 
           .sil-footer {
 
-            bottom: 16px;
+            left: 25px;
+            right: 25px;
+
+            bottom: 18px;
 
             flex-direction: row;
 
             align-items: flex-end;
+
+            gap: 20px;
           }
+
 
           .sil-caption b {
-            font-size: 22px;
+            font-size: 23px;
           }
 
+
+          .sil-caption {
+            font-size: 11px;
+          }
+
+
           .sil-bar {
-            width:
-              min(180px, 28vw);
+            width: 180px;
+
+            height: 4px;
           }
         }
 
 
         /* =====================================
-           ACCESSIBILITY
+           VERY SHORT DEVICES
         ===================================== */
 
-        @media (
-          prefers-reduced-motion: reduce
-        ) {
+        @media (max-height: 650px)
+          and (orientation: portrait) {
+
+          .sil-footer {
+            bottom: 18px;
+          }
+
+
+          .sil-caption b {
+            font-size: 25px;
+          }
+
+
+          .sil-scrim {
+            height: 52%;
+          }
+        }
+
+
+        /* =====================================
+           REDUCED MOTION
+        ===================================== */
+
+        @media
+          (prefers-reduced-motion: reduce) {
 
           .sil-img,
           .sil-comet,
@@ -725,14 +951,15 @@ const SoccerImageLoader = ({
             animation: none;
           }
 
-          .sil-frame {
 
+          .sil-frame {
             transition: none;
 
             opacity: 1;
 
             transform: none;
           }
+
 
           .sil-progress,
           .sil-bar-fill {
@@ -743,6 +970,10 @@ const SoccerImageLoader = ({
       `}</style>
 
 
+      {/* =====================================
+          LOADER FRAME
+      ===================================== */}
+
       <div
         className={`sil-frame ${
           entered ? "sil-in" : ""
@@ -750,7 +981,7 @@ const SoccerImageLoader = ({
       >
 
         {/* ==================================
-            LOADER IMAGE
+            IMAGE
         ================================== */}
 
         <img
@@ -799,6 +1030,8 @@ const SoccerImageLoader = ({
           </defs>
 
 
+          {/* RING BACKGROUND */}
+
           <circle
             className="sil-track"
             cx={cx}
@@ -806,6 +1039,8 @@ const SoccerImageLoader = ({
             r={r}
           />
 
+
+          {/* PROGRESS */}
 
           <circle
             className="sil-progress"
@@ -822,6 +1057,8 @@ const SoccerImageLoader = ({
             }
           />
 
+
+          {/* COMET */}
 
           <g className="sil-comet">
 
@@ -845,10 +1082,12 @@ const SoccerImageLoader = ({
 
 
         {/* SHIMMER */}
+
         <div className="sil-shimmer" />
 
 
-        {/* BOTTOM SCRIM */}
+        {/* BOTTOM GRADIENT */}
+
         <div className="sil-scrim" />
 
 

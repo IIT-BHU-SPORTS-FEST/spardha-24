@@ -85,9 +85,9 @@ const HomePage = React.lazy(() =>
   //import('./components/LandingPages/Contact/Contact.js')
 //);
 
-//const Matches = React.lazy(() =>
-  //import('./components/LandingPages/matches/matches')
-//);
+const Matches = React.lazy(() =>
+  import('./components/LandingPages/matches/matches')
+);
 
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
@@ -244,7 +244,7 @@ function App() {
               </Suspense>
             }
           /> 
-          {/* <Route
+           <Route
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
@@ -252,7 +252,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> */}
+          /> 
           <Route
             path="guests"
             element={
