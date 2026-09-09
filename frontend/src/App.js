@@ -236,15 +236,20 @@ function App() {
               </Suspense>
             }
           />
-          {/* <Route
+          <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
+<<<<<<< HEAD
           /> */}
           {/* <Route
+=======
+          /> 
+          <Route
+>>>>>>> 16e624d (removed the {/* from app.js)
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
