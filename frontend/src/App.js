@@ -31,7 +31,7 @@ const About = React.lazy(() => import('./components/LandingPages/About/About'));
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
 //const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
 const Sponsors = React.lazy(() =>
-  import('./components/LandingPages/Sponsors/Sponsors')
+  import('./components/LandingPages/Sponsors/NewSponsors')
 );
 const Gallery = React.lazy(() =>
   import('./components/LandingPages/Gallery/Gallery')
