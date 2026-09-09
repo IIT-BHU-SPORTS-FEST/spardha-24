@@ -415,3 +415,22 @@ padding: 24px 28px;
 font-size: 17px;
 }
 }
+/* =========================================
+   MOBILE SIDEBAR - ABOVE EVERYTHING
+========================================= */
+
+@media only screen and (max-width: 767px) {
+
+  #navigation.sidebar-is-open {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+  }
+
+  .user-dashboard {
+    position: relative;
+    z-index: 1;
+  }
+}
