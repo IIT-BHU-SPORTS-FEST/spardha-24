@@ -429,8 +429,5 @@ font-size: 17px;
     z-index: 9999 !important;
   }
 
-  .user-dashboard {
-    position: relative;
-    z-index: 1;
-  }
+  
 }
