@@ -7,10 +7,22 @@ import codImg from './COD.jpg.png';
 import valoImg from './valo.jpg.png';
 
 const games = [
-  { id: 'bgmi', name: 'BGMI', image: bgmiImg },
-  { id: 'ff', name: 'Free Fire MAX', image: ffImg },
-  { id: 'cod', name: 'Call of Duty Mobile', image: codImg },
-  { id: 'valo', name: 'Valorant', image: valoImg },
+  {
+    id: 'bgmi', name: 'BGMI', emoji: '🎮', image: bgmiImg,
+    description: `BGMI at e-Spardha is an intense battle-royale competition where teams compete through strategy, teamwork, communication, and individual skill to secure the highest possible score. Only officially registered players are permitted to participate, and all teams must join the designated lobby on time and follow the announced match format. Points will be awarded based on placement and eliminations. The use of hacks, cheats, scripts, exploits, modified files, or unauthorized software is strictly prohibited. Players must maintain fair play and report any technical issues, disputes, or suspicious activity to the tournament officials immediately. The decision of the e-Spardha organizing committee regarding any violation or dispute will be final.`
+  },
+  {
+    id: 'ff', name: 'Free Fire MAX', emoji: '🔥', image: ffImg,
+    description: `Free Fire at e-Spardha is a fast-paced battle-royale competition that challenges players to showcase their reflexes, strategy, teamwork, and survival skills. Only officially registered players may participate, and teams must join their assigned lobby within the scheduled time while following the announced tournament format and scoring system. Rankings will be determined based on placement and eliminations. The use of hacks, mods, scripts, exploits, third-party applications, or any unfair means of gaining an advantage is strictly prohibited. Players are expected to maintain sportsmanship throughout the tournament and report any technical issue or dispute to the officials immediately. The decision of the e-Spardha organizing committee shall be considered final.`
+  },
+  {
+    id: 'cod', name: 'Call of Duty: Mobile', emoji: '🎯', image: codImg,
+    description: `Call of Duty: Mobile at e-Spardha brings an action-packed competitive experience where teamwork, accuracy, tactical thinking, and quick decision-making determine the winner. Only officially registered players are permitted to participate, and all teams must follow the approved roster, match format, game settings, and schedule announced by the organizers. The use of hacks, cheats, scripts, modified clients, exploits, unauthorized applications, or any other unfair advantage is strictly forbidden. Players must join the assigned lobby on time, maintain proper conduct, and report technical problems, disputes, or suspected violations to the tournament officials immediately. The organizing committee reserves the right to impose penalties or disqualify teams for rule violations, and its decision shall be final.`
+  },
+  {
+    id: 'valo', name: 'Valorant', emoji: '⚡', image: valoImg,
+    description: `Valorant at e-Spardha is a tactical team-based competition where precision, strategy, communication, and coordination are key to victory. Only registered players using their approved accounts are allowed to compete, and teams must follow the announced match format, map selection, schedule, and tournament procedures. The use of cheats, hacks, scripts, exploits, unauthorized software, account sharing, or external assistance is strictly prohibited. Teams must be present in the designated lobby on time and immediately report any technical issue, suspected violation, or dispute to the tournament administrators. Any player or team found violating the rules may face penalties or disqualification, and the decision of the e-Spardha officials will be final.`
+  },
 ];
 
 const Espardhanew = () => {
@@ -29,14 +41,14 @@ const Espardhanew = () => {
   }, []);
 
   return (
-    <div 
+    <div
       className="espardha-container"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(10, 25, 50, 0.65), rgba(5, 12, 25, 0.9)), url('${bgWallpaper}')`
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Google+Sans:wght@400;500;700&display=swap');
 
         html {
           scroll-behavior: smooth;
@@ -169,7 +181,8 @@ const Espardhanew = () => {
           position: relative;
           overflow: hidden;
           width: 100%;
-          height: 270px;
+          height: auto;
+          min-height: 270px;
           border-radius: 22px;
           background: linear-gradient(135deg, rgba(15, 35, 70, 0.65), rgba(5, 15, 35, 0.85));
           backdrop-filter: blur(16px);
@@ -177,10 +190,30 @@ const Espardhanew = () => {
           border: 1.5px solid rgba(255, 255, 255, 0.25);
           box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.3);
           box-sizing: border-box;
-          padding: 28px;
+          padding: 20px 22px;
           transform-style: preserve-3d;
           transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease;
           cursor: pointer;
+        }
+
+        .espardha-rulebook-game-title {
+          margin: 0 0 10px 0;
+          font-family: 'Black Ops One', cursive, sans-serif;
+          font-size: 1.1rem;
+          color: #FFDE00;
+          letter-spacing: 1px;
+          text-shadow: 0 0 10px rgba(255, 222, 0, 0.4);
+        }
+
+        .espardha-rulebook-para {
+          margin: 0;
+          font-family: 'Google Sans', sans-serif;
+          font-weight: 400;
+          font-size: 0.88rem;
+          color: rgba(255, 255, 255, 0.85);
+          line-height: 1.6;
+          letter-spacing: 0.1px;
+          text-align: justify;
         }
 
         .espardha-rulebook-box:hover {
@@ -243,7 +276,7 @@ const Espardhanew = () => {
       `}</style>
 
       {/* Main Grid Content Area */}
-      <div 
+      <div
         className="espardha-main-content"
         style={{
           transform: `perspective(1000px) rotateY(${mousePos.x * 3}deg) rotateX(${-mousePos.y * 3}deg)`
@@ -268,7 +301,10 @@ const Espardhanew = () => {
               </div>
 
               {/* Clean Dark Blue Rulebook Glass Card */}
-              <div className="espardha-rulebook-box" />
+              <div className="espardha-rulebook-box">
+                <p className="espardha-rulebook-game-title">{game.emoji} {game.name}</p>
+                <p className="espardha-rulebook-para">{game.description}</p>
+              </div>
             </div>
           ))}
         </div>
