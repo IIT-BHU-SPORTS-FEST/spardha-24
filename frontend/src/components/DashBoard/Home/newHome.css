@@ -416,7 +416,7 @@ font-size: 17px;
 }
 }
 /* =========================================
-   MOBILE SIDEBAR - ABOVE EVERYTHING
+   MOBILE SIDEBAR
 ========================================= */
 
 @media only screen and (max-width: 767px) {
@@ -425,9 +425,12 @@ font-size: 17px;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
-    height: 100vh !important;
-    z-index: 9999 !important;
-  }
 
-  
+    width: 100vw !important;
+    height: 100vh !important;
+
+    z-index: 2147483647 !important;
+
+    transform: translate3d(0, 0, 0) !important;
+  }
 }
