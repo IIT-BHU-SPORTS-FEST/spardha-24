@@ -24,7 +24,7 @@ const About = React.lazy(() => import('./components/LandingPages/About/About'));
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
 const Events = React.lazy(() =>
-  import('./components/LandingPages/Events/Events')
+  import('./components/LandingPages/Events/Events26')
 );
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
 const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
@@ -203,7 +203,7 @@ function App() {
               </Suspense>
             }
           />
-          {/* <Route
+          <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -211,7 +211,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> */}
+          /> 
           <Route
             path="PrivacyPolicy"
             element={
