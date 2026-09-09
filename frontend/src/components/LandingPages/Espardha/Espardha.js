@@ -16,35 +16,35 @@ import fifa_rulebook from "./rulebook/FIFA_rulebook.pdf";
 
 const eventsData = [
   {
-    title: "Valorant E-Spardha 2025",
+    title: "Valorant E-Spardha 2026",
     img: valorent,
     fee: "₹100/Person",
     regLink: "https://forms.gle/zS9TLeaJyWBShVcH6",
     rulebook: valorant_rulebook,
   },
   {
-    title:"BGMI E-Spardha \n2025",
+    title:"BGMI E-Spardha \n2026",
     img: bgmi,
     fee: "Free",
     regLink: "https://forms.gle/MP4LPtveVJhpzbLs5",
     rulebook: bgmi_rulebook,
   },
   // {
-  //   title: "Free Fire E-Spardha 2025",
+  //   title: "Free Fire E-Spardha 2026",
   //   img: freefire,
   //   fee: "₹120/Person",
   //   regLink: "https://forms.gle/ef5ExuEMofxjL9SP9",
   //   rulebook: freefire_rulebook,
   // },
   {
-    title: "Call Of Duty Mobile E-Spardha 2025",
+    title: "Call Of Duty Mobile E-Spardha 2026",
     img: cod,
     fee: "₹100/Person",
     regLink: "https://forms.gle/4dFXAJd9adsvZqq1A",
     rulebook: codm_rulebook,
   },
   {
-    title: "Fifa E-Spardha 2025",
+    title: "Fifa E-Spardha 2026",
     img: fifa,
     fee: "₹100/Person",
     regLink: "https://forms.gle/77mKg5YV3dHAP9yaA",
@@ -86,7 +86,7 @@ const Espardha = () => {
       <div className={styles.maindiv}>
         <div className={styles.poster}>
           <img src={poster} alt="poster" width="400px" height="500px" />
-          <p style={{ color: "white" }}>🏆 #Espardha2025 🎮</p>
+          <p style={{ color: "white" }}>🏆 #Espardha2026 🎮</p>
         </div>
 
         <div className={styles.content}>

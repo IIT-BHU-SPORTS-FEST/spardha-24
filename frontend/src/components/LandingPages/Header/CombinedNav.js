@@ -9,8 +9,9 @@ const navLinks = [
   { name: 'About Us', path: '/about' },
   { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
-  { name: 'Contact Us', path: '/contactus' },
+  //{ name: 'Contact Us', path: '/contactus' },
   { name: 'Sponsors', path: '/sponsors' },
+  // { name: 'Matches', path: '/matches' },
 ];
 const token = localStorage.getItem('token');
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -37,7 +38,7 @@ useEffect(() => {
   return (
     <div className="top-bar">
     <Link to="/">
-      <img src="/images/logo/white_logo_25.png" alt="Spardha Logo" className="logo" />
+      <img src="/images/logo/spardha-nav-black.svg" alt="Spardha Logo" className="logo" />
     </Link>
 
       <div className="nav-links">

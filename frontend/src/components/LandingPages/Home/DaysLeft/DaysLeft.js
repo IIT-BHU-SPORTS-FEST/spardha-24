@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 function Date1() {
   const [startDate, setStartDate] = useState(new Date()); 
-  const endDate =(new Date('2025-10-10'));
+  const endDate =(new Date('2026-10-09'));
   useEffect(()=>{
     setInterval(() => {
       setStartDate(new Date());//checking everyhour so that when date changes it updates
