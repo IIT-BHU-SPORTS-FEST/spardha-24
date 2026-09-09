@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
-import { FaEnvelope, FaUser } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
-
 import {
   Alert,
   Form,
@@ -15,32 +14,31 @@ import {
   InputGroupText,
   Label,
   Button,
+  Row
 } from 'reactstrap';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../Signup/Signup.module.css';
 
 function Verify() {
   const ref_container = useRef();
+
   useEffect(() => {
-    const scrollDiv = document.getElementById('verifyDiv').offsetTop;
-    window.scrollTo({ top: scrollDiv + 600, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     dispatchToast({
       color: 'primary',
       message: 'Please wait while your request is being processed.',
     });
-
     if (!email.valid) {
       dispatchToast({
         color: 'danger',
-        message: 'Please fill out all the fields correctly',
+        message: 'Please enter a valid email address.',
       });
       return;
     }
-
     const baseUrl = process.env.REACT_APP_BASE_URL;
     axios
       .post(`${baseUrl}auth/verify/`, {
@@ -51,12 +49,11 @@ function Verify() {
           color: 'success',
           message: res.data.success,
         });
-        return;
       })
       .catch(({ response }) => {
         dispatchToast({
           color: 'danger',
-          message: response.data[Object.keys(response.data)[0]].toString(),
+          message: response?.data ? response.data[Object.keys(response.data)[0]].toString() : 'An error occurred.',
         });
       });
   };
@@ -83,147 +80,102 @@ function Verify() {
     message: '',
   });
 
-  return (<div className={`${styles.outerdiv}`}>
-    <div className={`${styles.maindiv}`}>
-    <div id="verifyDiv" ref={ref_container}>
-      <h3 className={`${styles.heading}`}> VERIFY EMAIL </h3>
-      <hr />
+  return (
+    <div className={`${styles.outerdiv}`}>
+      <div className={`${styles.maindiv}`} style={{ height: '750px', minHeight: '750px' }}>
+        <AnimatePresence>
+          <motion.div
+            id="verifyDiv"
+            ref={ref_container}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{ flex: 1, display: 'flex', flexDirection: 'column' }}
+          >
+            
+            <div style={{ textAlign: 'center', marginBottom: '1rem', marginTop: '1rem' }}>
+              <h2 style={{ color: 'white', fontWeight: '700', fontFamily: 'Poppins', letterSpacing: '1px' }}>
+                Verify Account
+              </h2>
+              <p style={{ color: '#a0a0a0', fontSize: '14px', marginTop: '10px' }}>
+                Enter your registered email address to receive an activation link.
+              </p>
+            </div>
 
-      <Alert
-        color="success"
-        style={{
-          fontSize: '14px',
-          backgroundColor: '#020021',
-          color: '#ffffff',
-          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-          border:'none',
-        }}
-        className="py-2 success"
-      >
-        Click{' '}
-        <Link to="/register/signup" style={{ textDecoration: 'none' }}>
-          here{' '}
-        </Link>{' '}
-        to <strong>sign up</strong>
-        <br />
-        Click{' '}
-        <Link to="/register/login" className="text-decoration-none">
-          here{` `}
-        </Link>
-        to <strong>login</strong>
-      </Alert>
-
-      <Alert
-        color="primary"
-        className="py-2"
-        style={{
-          fontSize: '14px',
-          backgroundColor: '#020021',
-          color: '#ffffff',
-          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-          border:'none',
-        }}
-      >
-        Enter your email address to get activation link.
-      </Alert>
-      <h4
-                className={`${styles['panel-title']} text-center`}
-                style={{ color: 'white' }}
-              >
-                <FaUser /> Login Details
-              </h4>
-      <Form className={`${styles['form-horizontal']}`}>
-        <div
-          className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
-          style={{ marginTop: '12px' }}
-        >
-          <div className={`${styles.panel}`}>
-            <div className={styles.abc123}>
-              <FormGroup className={`${styles['form-group']}`}>
-                <div className="col-sm-12">
+            <Form style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Row xs={1} md={1} xl={1} className="justify-content-center">
+                <div className="col-sm-12" style={{ maxWidth: '500px', margin: '0 auto', width: '100%' }}>
+                  
                   <FormGroup className={`${styles['form-group']}`}>
                     <Label for="email" className={`${styles.label}`}>
-                      Email Address:&nbsp;
-                      <span style={{ color: 'red' }}>*</span>
+                      Email Address <span style={{ color: 'red' }}>*</span>
                     </Label>
                     <InputGroup className={`${styles['input-group']}`}>
                       <InputGroupText
                         className={`${styles['form-text']} ${
-                          email.valid && ' text-success border-success'
-                        } ${
-                          email.warning !== '' && ' text-danger border-danger'
-                        }`}
+                          email.valid && ' text-success'
+                        } ${email.warning !== '' && ' text-danger'}`}
                       >
-                        <FaEnvelope></FaEnvelope>
+                        <FaEnvelope />
                       </InputGroupText>
                       <Input
                         name="email"
                         id="email"
                         type="email"
-                        placeholder="Enter Your Email Address"
+                        placeholder="Enter your email address"
                         value={email.value}
                         valid={email.warning === '' && email.value !== ''}
                         invalid={email.warning !== ''}
                         onChange={(e) => {
                           dispatchEmail(e.target.value);
                         }}
-                        bsSize="sm"
                         className={`${styles['form-control']}`}
                         required
-                      ></Input>
+                      />
                     </InputGroup>
-                    <div class="col-sm-12 text-end">
-                      <span
-                        style={{
-                          color: 'white',
-                          fontSize: '14px',
-                          fontFamily:
-                            'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-                        }}
-                      >
-                        <span style={{ color: 'red' }}>*</span>Mandatory Field
-                      </span>
-                    </div>
                     {email.warning !== '' && (
-                      <FormFeedback
-                        className="text-danger d-block fw-bold"
-                        style={{ fontSize: '12px' }}
-                      >
+                      <FormFeedback className="text-danger d-block fw-bold" style={{ fontSize: '12px' }}>
                         {email.warning}
                       </FormFeedback>
                     )}
                   </FormGroup>
+
                 </div>
-              </FormGroup>
-            </div>
-          </div>
+              </Row>
 
-          {toast.message !== '' && (
-            <Alert
-              color={toast.color}
-              style={{
-                fontSize: '15px',
-                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
-              }}
-              className="my-1 py-2"
-            >
-              {toast.message}
-            </Alert>
-          )}
+              {toast.message !== '' && (
+                <Alert
+                  color={toast.color}
+                  style={{ fontSize: '14px', borderRadius: '10px', maxWidth: '500px' }}
+                  className="my-3 py-2 text-center mx-auto"
+                >
+                  {toast.message}
+                </Alert>
+              )}
 
-          <Button
-            color="success"
-            className={`${styles['btn-block']}`}
-            onClick={submitHandler}
-          >
-            {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
-            SUBMIT
-          </Button>
-        </div>
-      </Form>
-    </div>
-    </div>
+              {/* FIX APPLIED HERE: Added whiteSpace: 'nowrap' and width: '100%' to the wrapper */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', marginTop: '1.5rem' }}>
+                <Button
+                  color="primary"
+                  className={`${styles['btn-block']}`}
+                  onClick={submitHandler}
+                  style={{ width: '100%', maxWidth: '300px', height: '50px', whiteSpace: 'nowrap' }}
+                >
+                  SEND LINK <span>&rarr;</span>
+                </Button>
+              </div>
 
+              <div className="text-center mt-4" style={{ fontSize: '13px', color: '#ccc' }}>
+                Back to <Link to="/register/login" style={{ color: '#4982F6', textDecoration: 'none', fontWeight: 'bold' }}>Login</Link>
+                <br />
+                Don't have an account? <Link to="/register/signup" style={{ color: '#4982F6', textDecoration: 'none' }}>Sign Up</Link>
+              </div>
+
+            </Form>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
