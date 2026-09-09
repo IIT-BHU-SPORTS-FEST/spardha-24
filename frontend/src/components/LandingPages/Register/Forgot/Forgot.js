@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
-import { FaEnvelope, FaUser } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useReducer } from 'react';
 import isEmail from 'validator/lib/isEmail';
@@ -14,32 +14,31 @@ import {
   InputGroupText,
   Label,
   Button,
+  Row
 } from 'reactstrap';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../Signup/Signup.module.css';
-
 
 function Forgot() {
   const ref_container = useRef();
+
   useEffect(() => {
-    const scrollDiv = document.getElementById('forgotDiv').offsetTop;
-    window.scrollTo({ top: scrollDiv + 600, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
   const submitHandler = (e) => {
     e.preventDefault();
-
     dispatchToast({
       color: 'primary',
       message: 'Please wait while your request is being processed.',
     });
-
     if (!email.valid) {
       dispatchToast({
         color: 'danger',
-        message: 'Please fill out all the fields correctly',
+        message: 'Please enter a valid email address.',
       });
       return;
     }
-
     const baseUrl = process.env.REACT_APP_BASE_URL;
     axios
       .post(`${baseUrl}auth/password_reset/email/`, {
@@ -50,12 +49,11 @@ function Forgot() {
           color: 'success',
           message: res.data.success,
         });
-        return;
       })
       .catch(({ response }) => {
         dispatchToast({
           color: 'danger',
-          message: response.data[Object.keys(response.data)[0]].toString(),
+          message: response?.data ? response.data[Object.keys(response.data)[0]].toString() : 'An error occurred.',
         });
       });
   };
@@ -82,143 +80,102 @@ function Forgot() {
     message: '',
   });
 
-  return (<div className={`${styles.outerdiv}`}>
-    <div className={`${styles.maindiv}`}>
-    <div id="forgotDiv" ref={ref_container}>
-      <h3 className={`${styles.heading}`}> FORGOT PASSWORD </h3>
-      <hr />
-
-      <Alert
-        color="success"
-        style={{
-          fontSize: '14px',
-          backgroundColor: '#020021',
-          color:'#ffffff',
-          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-          border: 'none',
-        }}
-        className="py-2"
-      >
-        Click{' '}
-        <Link to="/register/signup" style={{ textDecoration: 'none' }}>
-          here{' '}
-        </Link>{' '}
-        to <strong>sign up</strong>
-        <br />
-        Click{' '}
-        <Link to="/register/login" className="text-decoration-none">
-          here{` `}
-        </Link>
-        to <strong>login</strong>
-      </Alert>
-
-      <Alert
-        color="primary"
-        className="py-2"
-        style={{
-          fontSize: '14px',
-          backgroundColor: '#020021',
-          color:'#ffffff',
-          fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-          border: 'none',
-        }}
-      >
-        Enter the details below and confirm using OTP Verification.
-      </Alert>
-
-      
-      
-              <h4
-                className={`${styles['panel-title']} text-center`}
-                style={{ color: 'white' }}
-              >
-                <FaUser /> Login Details
-              </h4>
-            
-      <Form className={`${styles['form-horizontal']}`}>
-        <div
-          className="col-sm-12 justify-content-center fw-bold d-flex flex-column"
-          style={{ marginTop: '12px' }}
-        >
-          <div className={`${styles.panel}`}>
-            
-            <div className={styles.abc123}>
-            <FormGroup className={`${styles['form-group']}`}>
-              <div className="col-sm-12">
-                <FormGroup className={`${styles['form-group']}`}>
-                  <Label for="email" className={`${styles.label}`}>
-                    Email Address:&nbsp;
-                    <span style={{ color: 'red' }}>*</span>
-                  </Label>
-                  <InputGroup className={`${styles['input-group']}`}>
-                    <InputGroupText
-                      className={`${styles['form-text']} ${
-                        email.valid && ' text-success border-success'
-                      } ${
-                        email.warning !== '' && ' text-danger border-danger'
-                      }`}
-                    >
-                      <FaEnvelope></FaEnvelope>
-                    </InputGroupText>
-                    <Input
-                      name="email"
-                      id="email"
-                      type="email"
-                      placeholder="Enter Your Email Address"
-                      value={email.value}
-                      valid={email.warning === '' && email.value !== ''}
-                      invalid={email.warning !== ''}
-                      onChange={(e) => {
-                        dispatchEmail(e.target.value);
-                      }}
-                      bsSize="sm"
-                      className={`${styles['form-control']}`}
-                      required
-                    ></Input>
-                    
-                  </InputGroup>
-                  <div class="col-sm-12  text-end">
-      <span style={{ color: 'red' }}>*</span>Mandatory Field
-      </div>
-                  {email.warning !== '' && (
-                    <FormFeedback
-                      className="text-danger d-block fw-bold"
-                      style={{ fontSize: '12px' }}
-                    >
-                      {email.warning}
-                    </FormFeedback>
-                  )}
-                </FormGroup>
-              </div>
-            </FormGroup>
-          </div> </div>
-
-          {toast.message !== '' && (
-            <Alert
-              color={toast.color}
-              style={{
-                fontSize: '15px',
-                fontFamily: 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
-              }}
-              className="my-1 py-2"
-            >
-              {toast.message}
-            </Alert>
-          )}
-
-          <Button
-            color="success"
-            className={`${styles['btn-block']}`}
-            onClick={submitHandler}
+  return (
+    <div className={`${styles.outerdiv}`}>
+      <div className={`${styles.maindiv}`} style={{ height: '750px', minHeight: '750px' }}>
+        <AnimatePresence>
+          <motion.div
+            id="forgotDiv"
+            ref={ref_container}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{ flex: 1, display: 'flex', flexDirection: 'column' }}
           >
-            {/* <FaPaperPlane color="white" className="me-1"></FaPaperPlane> */}
-            SUBMIT
-          </Button>
-        </div>
-      </Form>
-    </div>
-    </div>
+            
+            <div style={{ textAlign: 'center', marginBottom: '1rem', marginTop: '1rem' }}>
+              <h2 style={{ color: 'white', fontWeight: '700', fontFamily: 'Poppins', letterSpacing: '1px' }}>
+                Forgot Password
+              </h2>
+              <p style={{ color: '#a0a0a0', fontSize: '14px', marginTop: '10px' }}>
+                Enter your registered email address to receive a password reset link.
+              </p>
+            </div>
 
+            <Form style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Row xs={1} md={1} xl={1} className="justify-content-center">
+                <div className="col-sm-12" style={{ maxWidth: '500px', margin: '0 auto', width: '100%' }}>
+                  
+                  <FormGroup className={`${styles['form-group']}`}>
+                    <Label for="email" className={`${styles.label}`}>
+                      Email Address <span style={{ color: 'red' }}>*</span>
+                    </Label>
+                    <InputGroup className={`${styles['input-group']}`}>
+                      <InputGroupText
+                        className={`${styles['form-text']} ${
+                          email.valid && ' text-success'
+                        } ${email.warning !== '' && ' text-danger'}`}
+                      >
+                        <FaEnvelope />
+                      </InputGroupText>
+                      <Input
+                        name="email"
+                        id="email"
+                        type="email"
+                        placeholder="Enter your email address"
+                        value={email.value}
+                        valid={email.warning === '' && email.value !== ''}
+                        invalid={email.warning !== ''}
+                        onChange={(e) => {
+                          dispatchEmail(e.target.value);
+                        }}
+                        className={`${styles['form-control']}`}
+                        required
+                      />
+                    </InputGroup>
+                    {email.warning !== '' && (
+                      <FormFeedback className="text-danger d-block fw-bold" style={{ fontSize: '12px' }}>
+                        {email.warning}
+                      </FormFeedback>
+                    )}
+                  </FormGroup>
+
+                </div>
+              </Row>
+
+              {toast.message !== '' && (
+                <Alert
+                  color={toast.color}
+                  style={{ fontSize: '14px', borderRadius: '10px', maxWidth: '500px' }}
+                  className="my-3 py-2 text-center mx-auto"
+                >
+                  {toast.message}
+                </Alert>
+              )}
+
+              {/* FIX APPLIED HERE: Added flexDirection: 'column' and alignItems: 'center' */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1.5rem' }}>
+                <Button
+                  color="primary"
+                  className={`${styles['btn-block']}`}
+                  onClick={submitHandler}
+                  style={{ width: '100%', maxWidth: '300px', height: '50px' }}
+                >
+                  SEND RESET LINK <span>&rarr;</span>
+                </Button>
+              </div>
+
+              <div className="text-center mt-4" style={{ fontSize: '13px', color: '#ccc' }}>
+                Remember your password? <Link to="/register/login" style={{ color: '#4982F6', textDecoration: 'none', fontWeight: 'bold' }}>Login</Link>
+                <br />
+                Don't have an account? <Link to="/register/signup" style={{ color: '#4982F6', textDecoration: 'none' }}>Sign Up</Link>
+              </div>
+
+            </Form>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

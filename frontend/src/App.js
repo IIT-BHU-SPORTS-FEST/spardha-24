@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 //import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Preloader from './components/LandingPages/Preloader/Preloader';
+import Preloader from './components/LandingPages/Preloader/NewLoader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react';
 import Footer from './components/LandingPages/Footer/footernew.js';
@@ -21,7 +21,7 @@ const LandingPages = React.lazy(() =>
 const DashBoard = React.lazy(() =>
   import('./components/DashBoard/MainMenu/DashBoard')
 );
-const About = React.lazy(() => import('./components/LandingPages/About/About'));
+const About = React.lazy(() => import('./components/LandingPages/About/AboutNew'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
@@ -31,7 +31,7 @@ const Events = React.lazy(() =>
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
 const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
 const Sponsors = React.lazy(() =>
-  import('./components/LandingPages/Sponsors/Sponsors')
+  import('./components/LandingPages/Sponsors/NewSponsors')
 );
 const Gallery = React.lazy(() =>
   import('./components/LandingPages/Gallery/Gallery')
@@ -85,9 +85,9 @@ const HomePage = React.lazy(() =>
   //import('./components/LandingPages/Contact/Contact.js')
 //);
 
-//const Matches = React.lazy(() =>
-  //import('./components/LandingPages/matches/matches')
-//);
+const Matches = React.lazy(() =>
+  import('./components/LandingPages/matches/matches')
+);
 
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
@@ -243,8 +243,8 @@ function App() {
                 <Team />
               </Suspense>
             }
-          />
-          {/* <Route
+          /> 
+           <Route
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
@@ -252,7 +252,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> */}
+          /> 
           <Route
             path="guests"
             element={
