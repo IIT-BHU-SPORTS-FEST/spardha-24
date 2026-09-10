@@ -4,6 +4,15 @@ import styles from './newteam.module.css';
 
 // Importing local team images
 import AmitNaikImg from './Amit Naik.webp';
+import abhishekpandeyImg from './abhishekpandey.jpeg';
+import ayushkumarImg from './ayushkumar.jpeg';
+import boddu from './boddu.jpeg';
+import dhruv from './dhruv.jpeg';
+import kumarabhishek from './kumarabhishek.jpeg';
+import nikhilyadav from './nikhilyadav.jpeg';
+import sindhuja from './sindhuja.jpeg';
+import sumitverma from './sumitverma.jpeg';
+import vansh from './vanshShah.jpeg';
 import AshokKumarMeenaImg from './Ashok Kumar Meena.jpg';
 import AyushChaurasiaImg from './Ayush Chaurasia.png';
 import BabyHaraniImg from './Baby Harani Bailapudi.jpg';
@@ -91,13 +100,71 @@ const teamData = [
     email: 'mailto:eslavath.maruthik.ece24@itbhu.ac.in',
   },
 
+   // --- TECH ---
+  {
+    id: 26,
+    name: 'KHUSHHAL KUMRAWAT',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: KhushhalKumrawatImg,
+    phone: '8236071713',
+    email: 'mailto:khushhal.kumrawat.cer24@itbhu.ac.in',
+  },
+  {
+    id: 27,
+    name: 'SAMIR DESHKAR',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: DeshkarSamirImg,
+    phone: '8482931748',
+    email: 'mailto:deshkar.samird.cer24@itbhu.ac.in',
+  },
+  {
+    id: 28,
+    name: 'VARNIT SAINI',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: VarnitSainiImg,
+    phone: '8077400112',
+    email: 'mailto:varnit.saini.cer24@itbhu.ac.in',
+  },
+
+  // --- EVENTS ---
+  {
+    id: 9,
+    name: 'SHOURYA DIWAKAR',
+    role: 'TEAM MEMBER',
+    vertical: 'Events',
+    image: ShouryaDiwakarImg,
+    phone: '8923559452',
+    email: 'mailto:shourya.diwakar.chy24@itbhu.ac.in',
+  },
+  {
+    id: 10,
+    name: 'ABHISKEK KUMAR PANDEY',
+    role: 'TEAM MEMBER',
+    vertical: 'Events',
+    image: abhishekpandeyImg,
+    phone: '',
+    email: '',
+  },
+  {
+    id: 11,
+    name: 'HRITIK ROSHAN',
+    role: 'TEAM MEMBER',
+    vertical: 'Events',
+    image: noneImg,
+    phone: '',
+    email: '',
+  },
+
   // --- PUBLIC RELATIONS ---
   {
     id: 20,
     name: 'DHRUV PANKAJ BAVISKAR',
     role: 'TEAM MEMBER',
     vertical: 'Public Relations',
-    image: noneImg,
+    image: dhruv,
     phone: '',
     email: '',
   },
@@ -106,7 +173,7 @@ const teamData = [
     name: 'SINDHUJA',
     role: 'TEAM MEMBER',
     vertical: 'Public Relations',
-    image: noneImg,
+    image: sindhuja,
     phone: '',
     email: '',
   },
@@ -144,7 +211,7 @@ const teamData = [
     name: 'BODDU SRAYAN ROY',
     role: 'TEAM MEMBER',
     vertical: 'Publicity',
-    image: noneImg,
+    image: boddu,
     phone: '6304993307',
     email: 'mailto:bsrayan.roy.min24@itbhu.ac.in',
   },
@@ -169,35 +236,6 @@ const teamData = [
     email: 'mailto:ayush.chaurasia.apd24@itbhu.ac.in',
   },
 
-  // --- TECH ---
-  {
-    id: 26,
-    name: 'KHUSHHAL KUMRAWAT',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: KhushhalKumrawatImg,
-    phone: '8236071713',
-    email: 'mailto:khushhal.kumrawat.cer24@itbhu.ac.in',
-  },
-  {
-    id: 27,
-    name: 'SAMIR DESHKAR',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: DeshkarSamirImg,
-    phone: '8482931748',
-    email: 'mailto:deshkar.samird.cer24@itbhu.ac.in',
-  },
-  {
-    id: 28,
-    name: 'VARNIT SAINI',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: VarnitSainiImg,
-    phone: '8077400112',
-    email: 'mailto:varnit.saini.cer24@itbhu.ac.in',
-  },
-
   // --- SOCIAL MEDIA ---
   {
     id: 6,
@@ -213,7 +251,7 @@ const teamData = [
     name: 'NIKHIK YADAV',
     role: 'TEAM MEMBER',
     vertical: 'Social Media',
-    image: noneImg,
+    image: nikhilyadav,
     phone: '',
     email: '',
   },
@@ -222,39 +260,11 @@ const teamData = [
     name: 'VANSH VAIBHAV SHAH',
     role: 'TEAM MEMBER',
     vertical: 'Social Media',
-    image: noneImg,
+    image: vansh,
     phone: '',
     email: '',
   },
 
-  // --- EVENTS ---
-  {
-    id: 9,
-    name: 'SHOURYA DIWAKAR',
-    role: 'TEAM MEMBER',
-    vertical: 'Events',
-    image: ShouryaDiwakarImg,
-    phone: '8923559452',
-    email: 'mailto:shourya.diwakar.chy24@itbhu.ac.in',
-  },
-  {
-    id: 10,
-    name: 'ABHISKEK KUMAR PANDEY',
-    role: 'TEAM MEMBER',
-    vertical: 'Events',
-    image: noneImg,
-    phone: '',
-    email: '',
-  },
-  {
-    id: 11,
-    name: 'HRITIK ROSHAN',
-    role: 'TEAM MEMBER',
-    vertical: 'Events',
-    image: noneImg,
-    phone: '',
-    email: '',
-  },
   // --- OPERATIONS ---
   {
     id: 12,
@@ -270,7 +280,7 @@ const teamData = [
     name: 'SUMIT VERMA',
     role: 'TEAM MEMBER',
     vertical: 'Operations',
-    image: noneImg,
+    image: sumitverma,
     phone: '',
     email: '',
   },
@@ -281,7 +291,7 @@ const teamData = [
     name: 'AYUSH KUMAR',
     role: 'TEAM MEMBER',
     vertical: 'Hospitality',
-    image: noneImg,
+    image: ayushkumarImg,
     phone: '9216154784',
     email: 'mailto:ayush.kumar.min24@itbhu.ac.in',
   },
@@ -299,7 +309,7 @@ const teamData = [
     name: 'ABHISHEK KUMAR',
     role: 'TEAM MEMBER',
     vertical: 'Hospitality',
-    image: noneImg,
+    image: kumarabhishek,
     phone: '9065290038',
     email: 'mailto:kumar.abhishek.che24@itbhu.ac.in',
   },
@@ -311,12 +321,12 @@ const verticalsList = [
   'Convener',
   'Co-Conveners',
   'Marketing',
+  'Tech',
+  'Events',
   'Public Relations',
   'Publicity',
   'Design',
-  'Tech',
   'Social Media',
-  'Events',
   'Operations',
   'Hospitality',
 ];
