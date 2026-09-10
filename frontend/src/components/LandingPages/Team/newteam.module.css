@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat:wght@400;600;800&display=swap');
+
+/* ==========================================================================
+   1. PAGE CONTAINER & BACKDROP
+   ========================================================================== */
+.darkTeamWrapper {
+  background: linear-gradient(180deg, rgba(5, 7, 15, 0.85) 0%, rgba(10, 12, 22, 0.95) 100%),
+              url('./TEAMwallpaper.jpeg') center/cover fixed no-repeat;
+  min-height: 100vh;
+  padding: 120px 20px 80px 20px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif, system-ui;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. FLOATING TITLES & BUTTONS
+   ========================================================================== */
+.teamPageTitle {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+
+  font-family: 'Black Ops One', Impact, 'Arial Black', cursive, sans-serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin: 0 auto 35px auto;
+  text-transform: uppercase;
+
+  text-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(59, 130, 246, 0.7),
+    0 0 50px rgba(56, 189, 248, 0.4);
+
+  animation: floatTitle 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatTitle {
+  0% {
+    transform: translateY(0px);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8), 0 0 25px rgba(59, 130, 246, 0.6);
+  }
+  100% {
+    transform: translateY(-6px);
+    text-shadow: 0 10px 20px rgba(0,0,0,0.9), 0 0 40px rgba(56, 189, 248, 0.8);
+  }
+}
+
+.filterNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.filterTabBtn {
+  font-family: 'Black Ops One', cursive, sans-serif;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #cbd5e1;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Active vertical button highlight only */
+.filterTabBtn.active {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-color: #60a5fa;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.7), 0 0 15px rgba(96, 165, 250, 0.5);
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   3. VERTICAL SECTIONS & CATEGORY HEADER HOVERS
+   ========================================================================== */
+
+.categoryGroup {
+  margin-bottom: 70px;
+  padding: 30px 15px;
+  border-radius: 28px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.categoryGroup:hover {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.08), inset 0 0 30px rgba(59, 130, 246, 0.05);
+}
+
+.categoryTitle {
+  display: inline-block;
+  position: relative;
+  font-family: 'Black Ops One', cursive, sans-serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #38bdf8;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.5), 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.categoryTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #2563eb, #38bdf8, transparent);
+  background-size: 200% 100%;
+  transform: translateX(-50%);
+  transition: width 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 2px;
+}
+
+.categoryTitle:hover {
+  color: #ffffff;
+  letter-spacing: 5px;
+  transform: translateY(-4px);
+  text-shadow: 
+    0 0 20px rgba(56, 189, 248, 0.9), 
+    0 0 40px rgba(37, 99, 235, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.categoryTitle:hover::after {
+  width: 90%;
+  box-shadow: 0 0 15px #38bdf8, 0 0 30px #2563eb;
+  animation: underlineGlow 2s linear infinite;
+}
+
+@keyframes underlineGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Layout for regular grids */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 320px));
+  justify-content: center;
+  gap: 35px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Layout for hierarchical Secretaries section */
+.secretariesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.convenerRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.coConvenersRow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 100%;
+}
+
+/* Force card width consistency across flex layouts */
+.convenerRow .verticalCard,
+.coConvenersRow .verticalCard {
+  width: 100%;
+  max-width: 320px;
+  min-width: 290px;
+}
+
+/* ==========================================================================
+   4. GLASSMORPHISM CARDS
+   ========================================================================== */
+.verticalCard {
+  position: relative;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.78) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.verticalCard::after {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.14) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.verticalCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #2563eb, #818cf8, #38bdf8);
+  background-size: 300% 100%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  animation: animatedNeonGlow 4s linear infinite;
+  z-index: 11;
+}
+
+@keyframes animatedNeonGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+.verticalCard:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.85);
+  box-shadow: 
+    0 22px 45px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(14, 165, 233, 0.45),
+    0 0 15px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.verticalCard:hover::after {
+  transform: rotate(25deg) translate(80%, 80%);
+}
+
+.verticalCard:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 16px #38bdf8;
+}
+
+/* ==========================================================================
+   5. INNER CARD ELEMENTS
+   ========================================================================== */
+.cardTopInfo {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.cardMemberName {
+  font-family: 'Black Ops One', cursive, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.cardMemberRole {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.cardImageContainer {
+  width: 100%;
+  height: 290px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.9), 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.verticalCard:hover .cardImageContainer {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.verticalCard:hover .cardImg {
+  transform: scale(1.06);
+}
+
+.imagePlaceholderBox {
+  font-family: 'Black Ops One', cursive, sans-serif;
+  color: #64748b;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  padding: 10px 16px;
+  border: 1px dashed rgba(100, 116, 139, 0.4);
+  border-radius: 8px;
+}
+
+.cardBottomSocials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.cardIcon {
+  font-size: 1.55rem;
+  color: #94a3b8;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.7));
+}
+
+.cardIcon:hover {
+  transform: translateY(-4px) scale(1.25);
+}
+
+.linkedinIcon:hover {
+  color: #0a66c2;
+  filter: drop-shadow(0 0 12px rgba(10, 102, 194, 0.9));
+}
+
+.instagramIcon:hover {
+  color: #e1306c;
+  filter: drop-shadow(0 0 12px rgba(225, 48, 108, 0.9));
+}
+
+.emailIcon:hover {
+  color: #38bdf8;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.9));
+}
+.iconButton {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

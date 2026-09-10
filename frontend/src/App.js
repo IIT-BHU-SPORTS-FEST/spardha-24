@@ -29,7 +29,7 @@ const Events = React.lazy(() =>
   import('./components/LandingPages/Events/Events26')
 );
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
+const Team = React.lazy(() => import('./components/LandingPages/Team/newteam'));
 const Sponsors = React.lazy(() =>
   import('./components/LandingPages/Sponsors/NewSponsors')
 );
