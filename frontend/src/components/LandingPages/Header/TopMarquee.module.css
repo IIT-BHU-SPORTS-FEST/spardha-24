@@ -1,0 +1,80 @@
+/* Import Quicksand Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+
+:root {
+  --marquee-navy-glass: rgba(7, 15, 26, 0.85);
+  --marquee-border-glow: rgba(142, 202, 230, 0.35);
+  --metallic-glow: rgba(142, 202, 230, 0.4);
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 80;
+}
+
+/* ==========================================
+   COMPACT NAVY BLUE GLASS BANNER
+   ========================================== */
+.dark-banner {
+  background: var(--marquee-navy-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 3px 0;
+  border-top: 1px solid var(--marquee-border-glow);
+  border-bottom: 1px solid var(--marquee-border-glow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(142, 202, 230, 0.08);
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.track-slow {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 32s linear infinite;
+}
+
+.content-group {
+  display: flex;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   LIGHT METALLIC BLUE TEXT STYLING
+   ========================================== */
+.main-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: clamp(0.68rem, 1.1vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  
+  /* Metallic Gradient Effect */
+  background: linear-gradient(
+    180deg, 
+    #ffffff 0%, 
+    #b0e0e6 30%, 
+    #70c1b3 65%, 
+    #4a90e2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Subtle Metallic Reflection Shadow */
+  filter: drop-shadow(0px 0px 5px var(--metallic-glow));
+}
+
+.dark-banner:hover .track-slow {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
