@@ -60,7 +60,10 @@ const HomeContact = () => {
         {/* Left Section */}
         <div className={styles.left}>
           <div className={styles.leftInner}>
-          <span className={styles.eyebrow}>✦ SPARDHA 2026 • IIT (BHU)</span>
+          <div className={styles.labelWrap}>
+            <span className={styles.labelLine} aria-hidden="true"></span>
+            <span className={styles.eyebrow}>✦ SPARDHA 2026</span>
+          </div>
           <h1 className={styles.heading}>Contact Us</h1>
           <h1 className={styles.heading}>LET'S CONNECT</h1>
           <div className={styles.duoLine} aria-hidden="true"></div>
