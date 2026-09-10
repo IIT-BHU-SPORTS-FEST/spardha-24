@@ -120,6 +120,84 @@ const teamData = [
     email: 'mailto:amit.naik.che24@itbhu.ac.in',
   },
 
+  // --- PUBLICITY ---
+  {
+    id: 23,
+    name: 'DHARAVATH SHIVANI',
+    role: 'TEAM MEMBER',
+    vertical: 'Publicity',
+    image: DharavathShivaniImg,
+    phone: '9030011685',
+    email: 'mailto:dharavath.shivani.min24@itbhu.ac.in',
+  },
+  {
+    id: 24,
+    name: 'KOTHA RAKSHITHA',
+    role: 'TEAM MEMBER',
+    vertical: 'Publicity',
+    image: KothaRakshithaImg,
+    phone: '8885332907',
+    email: 'mailto:kotha.rakshitha.min24@itbhu.ac.in',
+  },
+  {
+    id: 25,
+    name: 'BODDU SRAYAN ROY',
+    role: 'TEAM MEMBER',
+    vertical: 'Publicity',
+    image: noneImg,
+    phone: '6304993307',
+    email: 'mailto:bsrayan.roy.min24@itbhu.ac.in',
+  },
+
+  // --- DESIGN ---
+  {
+    id: 4,
+    name: 'PRAKHAR',
+    role: 'TEAM MEMBER',
+    vertical: 'Design',
+    image: PrakharImg,
+    phone: '8002108970',
+    email: 'mailto:prakhar.student.apd24@itbhu.ac.in',
+  },
+  {
+    id: 5,
+    name: 'AYUSH CHAURASIA',
+    role: 'TEAM MEMBER',
+    vertical: 'Design',
+    image: AyushChaurasiaImg,
+    phone: '8650450625',
+    email: 'mailto:ayush.chaurasia.apd24@itbhu.ac.in',
+  },
+
+  // --- TECH ---
+  {
+    id: 26,
+    name: 'KHUSHHAL KUMRAWAT',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: KhushhalKumrawatImg,
+    phone: '8236071713',
+    email: 'mailto:khushhal.kumrawat.cer24@itbhu.ac.in',
+  },
+  {
+    id: 27,
+    name: 'SAMIR DESHKAR',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: DeshkarSamirImg,
+    phone: '8482931748',
+    email: 'mailto:deshkar.samird.cer24@itbhu.ac.in',
+  },
+  {
+    id: 28,
+    name: 'VARNIT SAINI',
+    role: 'TECH TEAM',
+    vertical: 'Tech',
+    image: VarnitSainiImg,
+    phone: '8077400112',
+    email: 'mailto:varnit.saini.cer24@itbhu.ac.in',
+  },
+
   // --- SOCIAL MEDIA ---
   {
     id: 6,
@@ -197,26 +275,6 @@ const teamData = [
     email: '',
   },
 
-   // --- DESIGN ---
-  {
-    id: 4,
-    name: 'PRAKHAR',
-    role: 'TEAM MEMBER',
-    vertical: 'Design',
-    image: PrakharImg,
-    phone: '8002108970',
-    email: 'mailto:prakhar.student.apd24@itbhu.ac.in',
-  },
-  {
-    id: 5,
-    name: 'AYUSH CHAURASIA',
-    role: 'TEAM MEMBER',
-    vertical: 'Design',
-    image: AyushChaurasiaImg,
-    phone: '8650450625',
-    email: 'mailto:ayush.chaurasia.apd24@itbhu.ac.in',
-  },
-
   // --- HOSPITALITY ---
   {
     id: 14,
@@ -245,65 +303,6 @@ const teamData = [
     phone: '9065290038',
     email: 'mailto:kumar.abhishek.che24@itbhu.ac.in',
   },
-
-
-  // --- PUBLICITY ---
-  {
-    id: 23,
-    name: 'DHARAVATH SHIVANI',
-    role: 'TEAM MEMBER',
-    vertical: 'Publicity',
-    image: DharavathShivaniImg,
-    phone: '9030011685',
-    email: 'mailto:dharavath.shivani.min24@itbhu.ac.in',
-  },
-  {
-    id: 24,
-    name: 'KOTHA RAKSHITHA',
-    role: 'TEAM MEMBER',
-    vertical: 'Publicity',
-    image: KothaRakshithaImg,
-    phone: '8885332907',
-    email: 'mailto:kotha.rakshitha.min24@itbhu.ac.in',
-  },
-  {
-    id: 25,
-    name: 'BODDU SRAYAN ROY',
-    role: 'TEAM MEMBER',
-    vertical: 'Publicity',
-    image: noneImg,
-    phone: '6304993307',
-    email: 'mailto:bsrayan.roy.min24@itbhu.ac.in',
-  },
-
-  // --- TECH ---
-  {
-    id: 26,
-    name: 'KHUSHHAL KUMRAWAT',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: KhushhalKumrawatImg,
-    phone: '8236071713',
-    email: 'mailto:khushhal.kumrawat.cer24@itbhu.ac.in',
-  },
-  {
-    id: 27,
-    name: 'SAMIR DESHKAR',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: DeshkarSamirImg,
-    phone: '8482931748',
-    email: 'mailto:deshkar.samird.cer24@itbhu.ac.in',
-  },
-  {
-    id: 28,
-    name: 'VARNIT SAINI',
-    role: 'TECH TEAM',
-    vertical: 'Tech',
-    image: VarnitSainiImg,
-    phone: '8077400112',
-    email: 'mailto:varnit.saini.cer24@itbhu.ac.in',
-  },
   
 ];
 
@@ -313,13 +312,13 @@ const verticalsList = [
   'Co-Conveners',
   'Marketing',
   'Public Relations',
+  'Publicity',
+  'Design',
+  'Tech',
   'Social Media',
   'Events',
   'Operations',
   'Hospitality',
-  'Design',
-  'Publicity',
-  'Tech',
 ];
 
 // Sub-component for individual cards to handle toggle state
