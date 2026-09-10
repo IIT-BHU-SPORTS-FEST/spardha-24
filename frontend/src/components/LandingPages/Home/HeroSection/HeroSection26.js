@@ -35,7 +35,7 @@ const HeroSection = () => {
           <span className="date-line" />
         </div>
 
-        <p className="fest-tagline">Driven by Greatness</p>
+        <p className="fest-tagline">Pursuit by Greatness</p>
       </div>
     </section>
   );
