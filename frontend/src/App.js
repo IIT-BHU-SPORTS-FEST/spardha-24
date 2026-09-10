@@ -1,100 +1,44 @@
-import React, { useEffect } from 'react';
-//import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Preloader from './components/LandingPages/Preloader/Preloader';
-import Spinner from './components/DashBoard/Spinner/Spinner';
-import { Suspense } from 'react';
-import Footer from './components/LandingPages/Footer/footernew.js';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
+
+// Static / Fallback Components
+import Preloader from './components/LandingPages/Preloader/Preloader';
+import Spinner from './components/DashBoard/Spinner/Spinner';
+import Footer from './components/LandingPages/Footer/footernew.js';
 import NotFound from './components/LandingPages/NotFound/NotFound';
-// import { Carousel } from 'react-responsive-carousel';
+import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
-// import Shedule from
-import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
-// import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
 
-const LandingPages = React.lazy(() =>
-  import('./components/LandingPages/LandingPages')
-);
-const DashBoard = React.lazy(() =>
-  import('./components/DashBoard/MainMenu/DashBoard')
-);
-const About = React.lazy(() => import('./components/LandingPages/About/About'));
-// const CamAmb = React.lazy(() =>
-//   import('./components/LandingPages/Camp_Amb/CamAmb')
-// );
-//const Events = React.lazy(() =>
-//  import('./components/LandingPages/Events/Events')
-//);
-const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-//const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
-const Sponsors = React.lazy(() =>
-  import('./components/LandingPages/Sponsors/Sponsors')
-);
-const Gallery = React.lazy(() =>
-  import('./components/LandingPages/Gallery/Gallery')
-);
-const Guests = React.lazy(() =>
-  import('./components/LandingPages/Guests/Guests')
-);
-const Register = React.lazy(() =>
-  import('./components/LandingPages/Register/Register')
-);
-const Signup = React.lazy(() =>
-  import('./components/LandingPages/Register/Signup/Signup')
-);
-const Login = React.lazy(() =>
-  import('./components/LandingPages/Register/Login/Login')
-);
-const PrivacyPolicy = React.lazy(() =>
-  import('./components/LandingPages/PrivacyPolicy/PrivacyPolicy')
-);
-const Forgot = React.lazy(() =>
-  import('./components/LandingPages/Register/Forgot/Forgot')
-);
-const Reset = React.lazy(() =>
-  import('./components/LandingPages/Register/Reset/Reset')
-);
-const Verify = React.lazy(() =>
-  import('./components/LandingPages/Register/Verify/Verify')
-);
-const Home = React.lazy(() => import('./components/DashBoard/Home/Home'));
-const Registration = React.lazy(() =>
-  import('./components/DashBoard/Registration/Registration')
-);
-const Document = React.lazy(() =>
-  import('./components/DashBoard/Document/Document')
-);
-
-const Profile = React.lazy(() =>
-  import('./components/DashBoard/Profile/Profile')
-);
-const ContingentEdit = React.lazy(() =>
-  import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit')
-);
-const EventsEdit = React.lazy(() =>
-  import('./components/DashBoard/Registration/Events/EventsEdit/EventsEdit')
-);
-const HomePage = React.lazy(() =>
-  import('./components/LandingPages/Home/HomePage/Home')
-);
-
-//const Footer1 = React.lazy(() =>
-  //import('./components/LandingPages/Contact/Contact.js')
-//);
-
-//const Matches = React.lazy(() =>
-  //import('./components/LandingPages/matches/matches')
-//);
-
-//const Espardha = React.lazy(() =>
-  //import('./components/LandingPages/Espardha/Espardha')
-//);
+// Lazy Loaded Components
+const LandingPages = lazy(() => import('./components/LandingPages/LandingPages'));
+const DashBoard = lazy(() => import('./components/DashBoard/MainMenu/DashBoard'));
+const About = lazy(() => import('./components/LandingPages/About/About'));
+const Team = lazy(() => import('./components/LandingPages/Team/newteam')); // Restored Team Import
+const Admin = lazy(() => import('./components/DashBoard/Admin/Admin'));
+const Sponsors = lazy(() => import('./components/LandingPages/Sponsors/Sponsors'));
+const Gallery = lazy(() => import('./components/LandingPages/Gallery/Gallery'));
+const Guests = lazy(() => import('./components/LandingPages/Guests/Guests'));
+const Register = lazy(() => import('./components/LandingPages/Register/Register'));
+const Signup = lazy(() => import('./components/LandingPages/Register/Signup/Signup'));
+const Login = lazy(() => import('./components/LandingPages/Register/Login/Login'));
+const PrivacyPolicy = lazy(() => import('./components/LandingPages/PrivacyPolicy/PrivacyPolicy'));
+const Forgot = lazy(() => import('./components/LandingPages/Register/Forgot/Forgot'));
+const Reset = lazy(() => import('./components/LandingPages/Register/Reset/Reset'));
+const Verify = lazy(() => import('./components/LandingPages/Register/Verify/Verify'));
+const Home = lazy(() => import('./components/DashBoard/Home/Home'));
+const Registration = lazy(() => import('./components/DashBoard/Registration/Registration'));
+const Document = lazy(() => import('./components/DashBoard/Document/Document'));
+const Profile = lazy(() => import('./components/DashBoard/Profile/Profile'));
+const ContingentEdit = lazy(() => import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit'));
+const EventsEdit = lazy(() => import('./components/DashBoard/Registration/Events/EventsEdit/EventsEdit'));
+const HomePage = lazy(() => import('./components/LandingPages/Home/HomePage/Home'));
 
 function usePageViews() {
-  let location = useLocation();
+  const location = useLocation();
+
   useEffect(() => {
     InitializeReactGA(ReactGA);
     ReactGA.set({ page: location.pathname });
@@ -104,288 +48,142 @@ function usePageViews() {
 
 function App() {
   usePageViews();
+
   return (
-    <>
-      {/* <Router> */}
-      <Routes className="routes" style={{ overflowX: 'hidden' }}>
-        <Route path="*" element={<NotFound />} />
-        <Route
-          path="/"
-          element={
-            <Suspense fallback={<Preloader />}>
-              <LandingPages />{' '}
-            </Suspense>
-          }
-        >
-          <Route
-            path="/"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <HomePage />
-                {/*<CountdownTimer /> */} {/* Added timer component here */}
-                <Footer />
-              </Suspense>
-            }
-          />
-          <Route
-            path=""
-            element={
-              <Suspense fallback={<Preloader />}>
-                <About />
-              </Suspense>
-            }
-          />
-          <Route
-            path="register"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Register />
-              </Suspense>
-            }
-          >
+    <div className="routes" style={{ overflowX: 'hidden' }}>
+      <Suspense fallback={<Preloader />}>
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+
+          {/* Landing Pages Layout */}
+          <Route path="/" element={<LandingPages />}>
             <Route
-              exact
-              path="signup"
+              index
               element={
-                <Suspense fallback={<Preloader />}>
-                  <Signup />
-                  {/* <ComingSoon/> */}
+                <Suspense fallback={<Spinner />}>
+                  <HomePage />
+                  <Footer />
                 </Suspense>
               }
             />
-            <Route
-              exact
-              path="login"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <Login />
-                </Suspense>
-              }
-            />
-            <Route
-              exact
-              path="forgot"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <Forgot />
-                </Suspense>
-              }
-            />
-            <Route
-              exact
-              path="reset"
-              element={
-                <Suspense fallback={<Preloader />}>
-                  <Reset />
-                </Suspense>
-              }
-            />
+            <Route path="about" element={<About />} />
+            
+            {/* Restored Team Route */}
+            <Route path="team" element={<Team />} />
+
+            {/* Registration Sub-Routes */}
+            <Route path="register" element={<Register />}>
+              <Route path="signup" element={<Signup />} />
+              <Route path="login" element={<Login />} />
+              <Route path="forgot" element={<Forgot />} />
+              <Route path="reset" element={<Reset />} />
+              <Route path="verify" element={<Verify />} />
+            </Route>
 
             <Route
-              exact
-              path="verify"
+              path="espardha"
               element={
-                <Suspense fallback={<Preloader />}>
-                  <Verify />
+                <>
+                  <ComingSoon />
+                  <Footer />
+                </>
+              }
+            />
+            <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="guests" element={<Guests />} />
+            <Route
+              path="sponsors"
+              element={
+                <>
+                  <Sponsors />
+                  <Footer />
+                </>
+              }
+            />
+            <Route path="gallery" element={<Gallery />} />
+          </Route>
+
+          {/* Admin Routes */}
+          <Route
+            path="admin"
+            element={
+              <>
+                <Admin />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="admin/showtable"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <ShowTable />
+              </Suspense>
+            }
+          />
+          <Route
+            path="admin/allusers"
+            element={
+              <Suspense fallback={<Spinner />}>
+                <ShowallTable />
+              </Suspense>
+            }
+          />
+
+          {/* Dashboard Routes */}
+          <Route path="/dashboard" element={<DashBoard />}>
+            <Route
+              path="home"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="Document"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Document />
+                </Suspense>
+              }
+            />
+            <Route
+              path="registration"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Registration />
+                </Suspense>
+              }
+            />
+            <Route
+              path="contingentEdit"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <ContingentEdit />
+                </Suspense>
+              }
+            />
+            <Route
+              path="events"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <EventsEdit />
+                </Suspense>
+              }
+            />
+            <Route
+              path="Profile"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Profile />
                 </Suspense>
               }
             />
           </Route>
-          <Route
-            path="about"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <About />
-              </Suspense>
-            }
-          />
-          <Route
-            path="espardha"
-            element={
-              <Suspense fallback={<Preloader />}>
-                { /*<Espardha /> */ }
-                { <ComingSoon/> }
-                <Footer />
-              </Suspense>
-            }
-          />
-          
-          {/* <Route
-            path="events"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Events />
-                <Footer />
-              </Suspense>
-            }
-          /> */}
-          <Route
-            path="PrivacyPolicy"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <PrivacyPolicy />
-              </Suspense>
-            }
-          />
-          {/* <Route
-            path="team"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Team />
-              </Suspense>
-            }
-          /> */}
-          {/* <Route
-            path="matches"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Matches />
-                <Footer />
-              </Suspense>
-            }
-          /> */}
-          <Route
-            path="guests"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Guests />
-              </Suspense>
-            }
-          />
-          <Route
-            path="sponsors"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Sponsors />
-                <Footer />
-              </Suspense>
-            }
-          />
-          {/* <Route
-            path="ca"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <CamAmb />
-              </Suspense>
-            }
-          /> */}
-          <Route
-            path="gallery"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Gallery />
-              </Suspense>
-            }
-          />
-          {/*}
-          <Route
-            path="contactus"
-            element={
-              <Suspense fallback={<Preloader />}>
-                <Footer1 />
-                <Footer />
-              </Suspense>
-            }
-          /> */}
-        </Route>
-
-        <Route
-          path="admin"
-          element={
-            <Suspense fallback={<Preloader />}>
-              <Admin />
-              <Footer />
-            </Suspense>
-          }
-        />
-        <Route
-          path="admin/showtable"
-          element={
-            <Suspense fallback={<Spinner />}>
-              <ShowTable />
-            </Suspense>
-          }
-        />
-
-        {/* <Route
-            path="admin/allgames"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <AllGameFixtures />
-              </Suspense>
-            }
-          /> */}
-
-        <Route
-          path="admin/allusers"
-          element={
-            <Suspense fallback={<Spinner />}>
-              <ShowallTable />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/dashboard"
-          element={
-            <Suspense fallback={<Preloader />}>
-              <DashBoard />
-              <Footer />
-            </Suspense>
-          }
-        >
-          <Route
-            path="home"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="Document"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <Document />
-              </Suspense>
-            }
-          />
-          <Route
-            path="registration"
-            element={
-              <Suspense fallback={<Spinner />}>
-              <Registration />
-              </Suspense>
-            }
-          />
-          <Route
-            path="contingentEdit"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <ContingentEdit />
-              </Suspense>
-            }
-          />
-
-          <Route
-            path="events"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <EventsEdit />
-              </Suspense>
-            }
-          />
-          <Route
-            path="Profile"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <Profile />
-              </Suspense>
-            }
-          />
-        </Route>
-      </Routes>
-    
-    </>
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 

@@ -10,6 +10,7 @@ import iitbhuLogo from './Group 123.png';
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About us', path: '/about' },
+  { name: 'Team', path: '/team' },
   { name: 'Events', path: '/events' },
   { name: 'E-Spardha', path: '/espardha' },
   { name: 'Contact us', path: '/contactus' },
