@@ -1,128 +1,395 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+
+import Preloader from './components/LandingPages/Preloader/NewLoader';
+import Spinner from './components/DashBoard/Spinner/Spinner';
+import Footer from './components/LandingPages/Footer/footernew.js';
+
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
 
-// Static / Fallback Components
-import Preloader from './components/LandingPages/Preloader/Preloader';
-import Spinner from './components/DashBoard/Spinner/Spinner';
-import Footer from './components/LandingPages/Footer/footernew.js';
-import NotFound from './components/LandingPages/NotFound/NotFound';
-import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
+import NotFound from './components/LandingPages/NotFound/NotFoundnew';
+
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
 
-// Lazy Loaded Components
-const LandingPages = lazy(() => import('./components/LandingPages/LandingPages'));
-const DashBoard = lazy(() => import('./components/DashBoard/MainMenu/DashBoard'));
-const About = lazy(() => import('./components/LandingPages/About/About'));
-const Team = lazy(() => import('./components/LandingPages/Team/newteam')); // Restored Team Import
-const Admin = lazy(() => import('./components/DashBoard/Admin/Admin'));
-const Sponsors = lazy(() => import('./components/LandingPages/Sponsors/Sponsors'));
-const Gallery = lazy(() => import('./components/LandingPages/Gallery/Gallery'));
-const Guests = lazy(() => import('./components/LandingPages/Guests/Guests'));
-const Register = lazy(() => import('./components/LandingPages/Register/Register'));
-const Signup = lazy(() => import('./components/LandingPages/Register/Signup/Signup'));
-const Login = lazy(() => import('./components/LandingPages/Register/Login/Login'));
-const PrivacyPolicy = lazy(() => import('./components/LandingPages/PrivacyPolicy/PrivacyPolicy'));
-const Forgot = lazy(() => import('./components/LandingPages/Register/Forgot/Forgot'));
-const Reset = lazy(() => import('./components/LandingPages/Register/Reset/Reset'));
-const Verify = lazy(() => import('./components/LandingPages/Register/Verify/Verify'));
-const Home = lazy(() => import('./components/DashBoard/Home/Home'));
-const Registration = lazy(() => import('./components/DashBoard/Registration/Registration'));
-const Document = lazy(() => import('./components/DashBoard/Document/Document'));
-const Profile = lazy(() => import('./components/DashBoard/Profile/Profile'));
-const ContingentEdit = lazy(() => import('./components/DashBoard/Registration/ContingentEdit/ContingentEdit'));
-const EventsEdit = lazy(() => import('./components/DashBoard/Registration/Events/EventsEdit/EventsEdit'));
-const HomePage = lazy(() => import('./components/LandingPages/Home/HomePage/Home'));
+// ==================== LAZY IMPORTS ====================
+
+const LandingPages = lazy(() =>
+  import('./components/LandingPages/LandingPages')
+);
+
+const DashBoard = lazy(() =>
+  import('./components/DashBoard/MainMenu/DashBoard')
+);
+
+const About = lazy(() =>
+  import('./components/LandingPages/About/AboutNew')
+);
+
+const Events = lazy(() =>
+  import('./components/LandingPages/Events/Events26')
+);
+
+const Admin = lazy(() =>
+  import('./components/DashBoard/Admin/Admin')
+);
+
+const Team = lazy(() =>
+  import('./components/LandingPages/Team/newteam')
+);
+
+const Sponsors = lazy(() =>
+  import('./components/LandingPages/Sponsors/NewSponsors')
+);
+
+const Gallery = lazy(() =>
+  import('./components/LandingPages/Gallery/Gallery')
+);
+
+const Guests = lazy(() =>
+  import('./components/LandingPages/Guests/Guests')
+);
+
+const Register = lazy(() =>
+  import('./components/LandingPages/Register/Register')
+);
+
+const Signup = lazy(() =>
+  import('./components/LandingPages/Register/Signup/Signup')
+);
+
+const Login = lazy(() =>
+  import('./components/LandingPages/Register/Login/Login')
+);
+
+const PrivacyPolicy = lazy(() =>
+  import('./components/LandingPages/PrivacyPolicy/PrivacyPolicy')
+);
+
+const Forgot = lazy(() =>
+  import('./components/LandingPages/Register/Forgot/Forgot')
+);
+
+const Reset = lazy(() =>
+  import('./components/LandingPages/Register/Reset/Reset')
+);
+
+const Verify = lazy(() =>
+  import('./components/LandingPages/Register/Verify/Verify')
+);
+
+const Home = lazy(() =>
+  import('./components/DashBoard/Home/Home')
+);
+
+const Registration = lazy(() =>
+  import('./components/DashBoard/Registration/Registration')
+);
+
+const Document = lazy(() =>
+  import('./components/DashBoard/Document/Document')
+);
+
+const Profile = lazy(() =>
+  import('./components/DashBoard/Profile/Profile')
+);
+
+const ContingentEdit = lazy(() =>
+  import(
+    './components/DashBoard/Registration/ContingentEdit/ContingentEdit'
+  )
+);
+
+const EventsEdit = lazy(() =>
+  import(
+    './components/DashBoard/Registration/Events/EventsEdit/EventsEdit'
+  )
+);
+
+const HomePage = lazy(() =>
+  import('./components/LandingPages/Home/HomePage/Home')
+);
+
+const Matches = lazy(() =>
+  import('./components/LandingPages/matches/matches')
+);
+
+const Espardhanew = lazy(() =>
+  import('./components/LandingPages/Espardha/Espardhanew')
+);
+
+// ==================== GOOGLE ANALYTICS ====================
 
 function usePageViews() {
   const location = useLocation();
 
   useEffect(() => {
     InitializeReactGA(ReactGA);
-    ReactGA.set({ page: location.pathname });
+
+    ReactGA.set({
+      page: location.pathname,
+    });
+
     ReactGA.pageview(location.pathname);
   }, [location]);
 }
+
+// ==================== APP ====================
 
 function App() {
   usePageViews();
 
   return (
-    <div className="routes" style={{ overflowX: 'hidden' }}>
+    <div
+      className="routes"
+      style={{ overflowX: 'hidden' }}
+    >
       <Suspense fallback={<Preloader />}>
         <Routes>
+
+          {/* =================================================
+              404
+          ================================================= */}
           <Route path="*" element={<NotFound />} />
 
-          {/* Landing Pages Layout */}
+
+          {/* =================================================
+              LANDING PAGES
+              /
+              /about
+              /team
+              /register/*
+          ================================================= */}
+
           <Route path="/" element={<LandingPages />}>
+
+            {/* HOME */}
             <Route
               index
               element={
                 <Suspense fallback={<Spinner />}>
-                  <HomePage />
-                  <Footer />
+                  <>
+                    <HomePage />
+                    <Footer />
+                  </>
                 </Suspense>
               }
             />
-            <Route path="about" element={<About />} />
-            
-            {/* Restored Team Route */}
-            <Route path="team" element={<Team />} />
 
-            {/* Registration Sub-Routes */}
-            <Route path="register" element={<Register />}>
-              <Route path="signup" element={<Signup />} />
-              <Route path="login" element={<Login />} />
-              <Route path="forgot" element={<Forgot />} />
-              <Route path="reset" element={<Reset />} />
-              <Route path="verify" element={<Verify />} />
-            </Route>
 
+            {/* ABOUT */}
             <Route
-              path="espardha"
+              path="about"
               element={
-                <>
-                  <ComingSoon />
-                  <Footer />
-                </>
+                <Suspense fallback={<Spinner />}>
+                  <About />
+                </Suspense>
               }
             />
-            <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
-            <Route path="guests" element={<Guests />} />
+
+
+            {/* TEAM */}
             <Route
-              path="sponsors"
+              path="team"
               element={
+                <Suspense fallback={<Spinner />}>
+                  <Team />
+                </Suspense>
+              }
+            />
+
+
+            {/* REGISTER */}
+            <Route
+              path="register"
+              element={
+                <Suspense fallback={<Spinner />}>
+                  <Register />
+                </Suspense>
+              }
+            >
+
+              {/* /register/signup */}
+              <Route
+                path="signup"
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <Signup />
+                  </Suspense>
+                }
+              />
+
+              {/* /register/login */}
+              <Route
+                path="login"
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <Login />
+                  </Suspense>
+                }
+              />
+
+              {/* /register/forgot */}
+              <Route
+                path="forgot"
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <Forgot />
+                  </Suspense>
+                }
+              />
+
+              {/* /register/reset */}
+              <Route
+                path="reset"
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <Reset />
+                  </Suspense>
+                }
+              />
+
+              {/* /register/verify */}
+              <Route
+                path="verify"
+                element={
+                  <Suspense fallback={<Spinner />}>
+                    <Verify />
+                  </Suspense>
+                }
+              />
+
+            </Route>
+
+          </Route>
+
+
+          {/* =================================================
+              OTHER LANDING PAGE ROUTES
+          ================================================= */}
+
+          {/* ESPARDHA */}
+          <Route
+            path="/espardha"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <>
+                  <Espardhanew />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          />
+
+
+          {/* EVENTS */}
+          <Route
+            path="/events"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <>
+                  <Events />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          />
+
+
+          {/* PRIVACY POLICY */}
+          <Route
+            path="/PrivacyPolicy"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <PrivacyPolicy />
+              </Suspense>
+            }
+          />
+
+
+          {/* MATCHES */}
+          <Route
+            path="/matches"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <>
+                  <Matches />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          />
+
+
+          {/* GUESTS */}
+          <Route
+            path="/guests"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Guests />
+              </Suspense>
+            }
+          />
+
+
+          {/* SPONSORS */}
+          <Route
+            path="/sponsors"
+            element={
+              <Suspense fallback={<Preloader />}>
                 <>
                   <Sponsors />
                   <Footer />
                 </>
-              }
-            />
-            <Route path="gallery" element={<Gallery />} />
-          </Route>
-
-          {/* Admin Routes */}
-          <Route
-            path="admin"
-            element={
-              <>
-                <Admin />
-                <Footer />
-              </>
+              </Suspense>
             }
           />
+
+
+          {/* GALLERY */}
           <Route
-            path="admin/showtable"
+            path="/gallery"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <Gallery />
+              </Suspense>
+            }
+          />
+
+
+          {/* =================================================
+              ADMIN
+          ================================================= */}
+
+          {/* /admin */}
+          <Route
+            path="/admin"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <>
+                  <Admin />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          />
+
+
+          {/* /admin/showtable */}
+          <Route
+            path="/admin/showtable"
             element={
               <Suspense fallback={<Spinner />}>
                 <ShowTable />
               </Suspense>
             }
           />
+
+
+          {/* /admin/allusers */}
           <Route
-            path="admin/allusers"
+            path="/admin/allusers"
             element={
               <Suspense fallback={<Spinner />}>
                 <ShowallTable />
@@ -130,8 +397,25 @@ function App() {
             }
           />
 
-          {/* Dashboard Routes */}
-          <Route path="/dashboard" element={<DashBoard />}>
+
+          {/* =================================================
+              DASHBOARD
+              /dashboard/*
+          ================================================= */}
+
+          <Route
+            path="/dashboard"
+            element={
+              <Suspense fallback={<Preloader />}>
+                <>
+                  <DashBoard />
+                  <Footer />
+                </>
+              </Suspense>
+            }
+          >
+
+            {/* /dashboard/home */}
             <Route
               path="home"
               element={
@@ -140,6 +424,9 @@ function App() {
                 </Suspense>
               }
             />
+
+
+            {/* /dashboard/Document */}
             <Route
               path="Document"
               element={
@@ -148,6 +435,9 @@ function App() {
                 </Suspense>
               }
             />
+
+
+            {/* /dashboard/registration */}
             <Route
               path="registration"
               element={
@@ -156,6 +446,9 @@ function App() {
                 </Suspense>
               }
             />
+
+
+            {/* /dashboard/contingentEdit */}
             <Route
               path="contingentEdit"
               element={
@@ -164,6 +457,9 @@ function App() {
                 </Suspense>
               }
             />
+
+
+            {/* /dashboard/events */}
             <Route
               path="events"
               element={
@@ -172,6 +468,9 @@ function App() {
                 </Suspense>
               }
             />
+
+
+            {/* /dashboard/Profile */}
             <Route
               path="Profile"
               element={
@@ -180,7 +479,9 @@ function App() {
                 </Suspense>
               }
             />
+
           </Route>
+
         </Routes>
       </Suspense>
     </div>
