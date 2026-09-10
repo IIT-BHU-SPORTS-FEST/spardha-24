@@ -1,193 +1,122 @@
 import styles from "./LocationNew.module.css";
 
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from "react-icons/fa";
 
-import "./extra.css"
+import "./extra.css";
 
 const LocationCard = () => {
 
   return (
-
     <div className={styles.card}>
 
-      {/* =====================================================
-          PHASE ONE - ARTISTIC IIT BHU MAP
-          ===================================================== */}
+      <div className={styles.backgroundImage}>
+        <img
+          src="/images/general/location-image.jpeg"
+          alt="IIT BHU"
+        />
+      </div>
 
-      <div className={styles.mapPhase}>
+      <div className={styles.overlay}></div>
 
-        <div className={styles.mapAtmosphere}></div>
+      <div className={styles.yellowGlow}></div>
 
-        <div className={styles.mapGrid}></div>
+      <div className={styles.header}>
 
-        <div className={`${styles.mapRoad} ${styles.roadOne}`}></div>
-        <div className={`${styles.mapRoad} ${styles.roadTwo}`}></div>
-        <div className={`${styles.mapRoad} ${styles.roadThree}`}></div>
-        <div className={`${styles.mapRoad} ${styles.roadFour}`}></div>
-        <div className={`${styles.mapRoad} ${styles.roadFive}`}></div>
+        <div className={styles.titleAccent}></div>
 
-        <div className={`${styles.mapArea} ${styles.areaOne}`}></div>
-        <div className={`${styles.mapArea} ${styles.areaTwo}`}></div>
-        <div className={`${styles.mapArea} ${styles.areaThree}`}></div>
-        <div className={`${styles.mapArea} ${styles.areaFour}`}></div>
-        <div className={`${styles.mapArea} ${styles.areaFive}`}></div>
+        <h2 className={styles.title}>LOCATION</h2>
 
-        <div className={`${styles.mapLabel} ${styles.labelTop}`}>
-          IIT (BHU)
-        </div>
+        <FaMapMarkerAlt className={styles.titleIcon} />
 
-        <div className={`${styles.mapLabel} ${styles.labelLeft}`}>
-          Academic Area
-        </div>
+      </div>
 
-        <div className={`${styles.mapLabel} ${styles.labelRight}`}>
-          Main Gate
-        </div>
+      <div className={styles.content}>
 
-        <div className={`${styles.mapLabel} ${styles.labelBottom}`}>
-          Varanasi
-        </div>
+        <div className={styles.leftContent}>
 
-        <div className={styles.mapMarker}>
+          <div className={styles.locationTag}>
+            <span></span>
+            SPARDHA 2026
+          </div>
 
-          <div className={styles.markerOuter}></div>
+          <p className={styles.leftText}>
+            EXPERIENCE THE ENERGY
+            <br />
+            OF IIT BHU
+          </p>
 
-          <div className={styles.markerPulse}></div>
+          <div className={styles.leftLine}></div>
 
-          <FaMapMarkerAlt />
+          <p className={styles.leftLocation}>
+            VARANASI · UTTAR PRADESH
+          </p>
 
         </div>
 
-        <div className={styles.mapCaption}>
+        <div className={styles.rightContent}>
 
-          <span>LOCATING</span>
+          <div className={styles.venueText}>
 
-          <strong>IIT (BHU), VARANASI</strong>
+            <span className={styles.venueSmall}>
+              THE VENUE
+            </span>
+
+            <h1>
+              <span className={styles.venueLine}>
+                IIT BHU
+              </span>
+
+              <strong className={styles.venueLine}>
+                VARANASI
+              </strong>
+            </h1>
+
+            <div className={styles.venueUnderline}></div>
+
+            <p>IIT (BHU)</p>
+
+          </div>
+
+          <div className={styles.mapArea}>
+
+            <div className={styles.mapTop}>
+
+              <div className={styles.mapTitle}>
+                <FaMapMarkerAlt />
+                <span>FIND US</span>
+              </div>
+
+              <span className={styles.mapPlace}>
+                IIT BHU
+              </span>
+
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/Xkf8wT3ty3K53FMGA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.mapLink}
+            >
+              <span>OPEN IN GOOGLE MAPS</span>
+              <span className={styles.arrow}>↗</span>
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
-
-      {/* =====================================================
-          PHASE TWO - LOCATION CARD
-          ===================================================== */}
-
-      <div className={styles.cardContent}>
-
-        <div className={styles.titleRow}>
-
-          <div className={styles.titleAccent}></div>
-
-          <h2 className={styles.title}>
-            LOCATION
-          </h2>
-
-          <FaMapMarkerAlt className={styles.locationIcon} />
-
-        </div>
-
-
-        <div className={styles.content}>
-
-          <div className={styles.imageContainer}>
-
-            <div className={styles.imageGlow}></div>
-
-            <div className={styles.imageCornerTop}></div>
-
-            <div className={styles.imageCornerBottom}></div>
-
-            <img
-              src="/images/general/electrical.png"
-              alt="IIT BHU Building"
-              width={500}
-              height={350}
-              className={styles.image}
-            />
-
-            <div className={styles.imageBadge}>
-              <span className={styles.badgeDot}></span>
-              IIT BHU
-            </div>
-
-          </div>
-
-
-          <div className={styles.details}>
-
-            <div className={styles.addressBlock}>
-
-              <h3 className={styles.addressTitle}>
-                IIT (BHU), Varanasi
-              </h3>
-
-              <div className={styles.addressLine}></div>
-
-              <p className={styles.address}>
-                A historic campus, iconic venues, and a
-                city that knows how to make every
-                occasion memorable.
-              </p>
-
-            </div>
-
-
-            <div className={styles.detailsBottom}>
-
-              <div className={styles.locationMeta}>
-
-                <span>
-                  VARANASI
-                </span>
-
-                <span className={styles.metaDivider}>
-                  /
-                </span>
-
-                <span>
-                  UTTAR PRADESH
-                </span>
-
-              </div>
-
-
-              <a
-                href="https://maps.app.goo.gl/Xkf8wT3ty3K53FMGA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mapLink}
-              >
-
-                <button className={styles.mapButton}>
-
-                  <span className={styles.mapIcon}>
-                    ⌖
-                  </span>
-
-                  <span>
-                    Open Map
-                  </span>
-
-                  <span className={styles.buttonArrow}>
-                    →
-                  </span>
-
-                </button>
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
+      <div className={styles.bottomText}>
+        <span>INDIAN INSTITUTE OF TECHNOLOGY</span>
+        <i></i>
+        <span>VARANASI</span>
       </div>
 
     </div>
-
   );
-}
+
+};
 
 export default LocationCard;

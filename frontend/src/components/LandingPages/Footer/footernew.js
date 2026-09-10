@@ -12,6 +12,26 @@ const whiteLogo = "/images/logo/spardha-full-black.svg";
 const Footer = () => {
   return (
     <footer className={css['footer-premium']}>
+      {/* Scrolling Ticker Strip */}
+      <div 
+        className={css['ticker-wrap']}
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+          e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+        }}
+      >
+        <div className={css['ticker-track']}>
+          {[...Array(3)].map((_, i) => (
+            <span key={i} className={css['ticker-content']}>
+              EXCELLENCE&nbsp;&nbsp;★&nbsp;&nbsp;LEGACY&nbsp;&nbsp;★&nbsp;&nbsp;SPORTS&nbsp;&nbsp;★&nbsp;&nbsp;PASSION&nbsp;&nbsp;★&nbsp;&nbsp;THE ARENA&nbsp;&nbsp;★&nbsp;&nbsp;SPARDHA 2026&nbsp;&nbsp;★&nbsp;&nbsp;WHERE CHAMPIONS RISE&nbsp;&nbsp;★&nbsp;&nbsp;COMPETE&nbsp;&nbsp;★&nbsp;&nbsp;CONQUER&nbsp;&nbsp;★&nbsp;&nbsp;ENERGY&nbsp;&nbsp;★&nbsp;&nbsp;
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className={css['footer-main-content']}>
         <div className={css['footer-grid']}>
           {/* Left Column */}
@@ -30,16 +50,6 @@ const Footer = () => {
                 sporting glory. Join us in this magnificent celebration of
                 sportsmanship.
               </p>
-
-              <div className={css['general-contact']}>
-                <h4>General Inquiries</h4>
-                <a
-                  href="mailto:spardha@itbhu.ac.in"
-                  className={css['contact-link-main']}
-                >
-                  spardha@itbhu.ac.in
-                </a>
-              </div>
             </div>
           </div>
 
@@ -49,9 +59,9 @@ const Footer = () => {
               <h3>Navigate</h3>
               <ul className={css['nav-links']}>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/about#about">About</Link></li>
+                <li><Link to="/about">About</Link></li>
                 {/* <li><Link to="/events#events">Events</Link></li> */}
-                <li><Link to="/sponsors#sponsors">Sponsors</Link></li>
+                <li><Link to="/sponsors">Sponsors</Link></li>
                 {/* <li><Link to="/contactus#contactus">Contact Us</Link></li> */}
               </ul>
             </div>
@@ -94,10 +104,10 @@ const Footer = () => {
             <div className={css['contact-section']}>
               <h3>Contact Team</h3>
               <div className={css['team-contacts']}>
-                <div className={css['team-member']}>
+                <div className={css['team-member']} style={{gridColumn: 'unset'}}>
                   <div className={css['member-header']}>
                     <span className={css['team-role']}>Fest Convener</span>
-                    <span className={css['team-name']}>Md. Kaif</span>
+                    <span className={css['convener-name']}>Md. Kaif</span>
                   </div>
                   <a
                     href="mailto:convener.spardha@itbhu.ac.in"
@@ -128,6 +138,18 @@ const Footer = () => {
                     className={css['contact-link']}
                   >
                     media.spardha@itbhu.ac.in
+                  </a>
+                </div>
+
+                <div className={css['team-member']}>
+                  <div className={css['member-header']}>
+                    <span className={css['team-role']}>General Inquiries</span>
+                  </div>
+                  <a
+                    href="mailto:spardha@itbhu.ac.in"
+                    className={css['contact-link']}
+                  >
+                    spardha@itbhu.ac.in
                   </a>
                 </div>
               </div>
