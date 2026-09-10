@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 //import CountdownTimer from './components/LandingPages/Home/Countdown/Countdown'; // Added import for timer
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Preloader from './components/LandingPages/Preloader/Preloader';
+import Preloader from './components/LandingPages/Preloader/NewLoader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react';
-import Footer from './components/LandingPages/Footer/footer.js';
+import Footer from './components/LandingPages/Footer/footernew.js';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
-import NotFound from './components/LandingPages/NotFound/NotFound';
+import NotFound from './components/LandingPages/NotFound/NotFoundnew';
 // import { Carousel } from 'react-responsive-carousel';
 import ShowTable from './components/LandingPages/UserData/ShowTable';
 import ShowallTable from './components/LandingPages/UserData/ShowallTable';
 // import Shedule from
-import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
+// import ComingSoon from './components/LandingPages/ComingSoon/ComingSoon.js';
 // import { AllGameFixtures } from './components/LandingPages/UserData/AllGameFixtures';
 
 const LandingPages = React.lazy(() =>
@@ -21,17 +21,17 @@ const LandingPages = React.lazy(() =>
 const DashBoard = React.lazy(() =>
   import('./components/DashBoard/MainMenu/DashBoard')
 );
-const About = React.lazy(() => import('./components/LandingPages/About/About'));
+const About = React.lazy(() => import('./components/LandingPages/About/AboutNew'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );
-//const Events = React.lazy(() =>
-//  import('./components/LandingPages/Events/Events')
-//);
+const Events = React.lazy(() =>
+  import('./components/LandingPages/Events/Events26')
+);
 const Admin = React.lazy(() => import('./components/DashBoard/Admin/Admin'));
-//const Team = React.lazy(() => import('./components/LandingPages/Team/Team'));
+const Team = React.lazy(() => import('./components/LandingPages/Team/newteam'));
 const Sponsors = React.lazy(() =>
-  import('./components/LandingPages/Sponsors/Sponsors')
+  import('./components/LandingPages/Sponsors/NewSponsors')
 );
 const Gallery = React.lazy(() =>
   import('./components/LandingPages/Gallery/Gallery')
@@ -85,14 +85,14 @@ const HomePage = React.lazy(() =>
   //import('./components/LandingPages/Contact/Contact.js')
 //);
 
-//const Matches = React.lazy(() =>
-  //import('./components/LandingPages/matches/matches')
-//);
+const Matches = React.lazy(() =>
+  import('./components/LandingPages/matches/matches')
+);
 
 //const Espardha = React.lazy(() =>
   //import('./components/LandingPages/Espardha/Espardha')
 //);
-
+const Espardhanew = React.lazy(() => import('./components/LandingPages/Espardha/Espardhanew'));
 function usePageViews() {
   let location = useLocation();
   useEffect(() => {
@@ -143,6 +143,15 @@ function App() {
               </Suspense>
             }
           >
+          <Route
+          exact
+          path="espardha"
+          element={
+            <Suspense fallback={<Preloader />}>
+              <Espardhanew />
+            </Suspense>
+          }
+        />
             <Route
               exact
               path="signup"
@@ -200,17 +209,17 @@ function App() {
             }
           />
           <Route
-            path="espardha"
-            element={
-              <Suspense fallback={<Preloader />}>
-                { /*<Espardha /> */ }
-                { <ComingSoon/> }
-                <Footer />
-              </Suspense>
-            }
-          />
+          path="espardha"
+          element={
+            <Suspense fallback={<Preloader />}>
+              { /* <Espardha /> */ }
+              <Espardhanew />
+              <Footer />
+            </Suspense>
+          }
+        />
           
-          {/* <Route
+          <Route
             path="events"
             element={
               <Suspense fallback={<Preloader />}>
@@ -218,7 +227,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> */}
+          />
           <Route
             path="PrivacyPolicy"
             element={
@@ -227,15 +236,15 @@ function App() {
               </Suspense>
             }
           />
-          {/* <Route
+          <Route
             path="team"
             element={
               <Suspense fallback={<Preloader />}>
                 <Team />
               </Suspense>
             }
-          /> */}
-          {/* <Route
+          /> 
+           <Route
             path="matches"
             element={
               <Suspense fallback={<Preloader />}>
@@ -243,7 +252,7 @@ function App() {
                 <Footer />
               </Suspense>
             }
-          /> */}
+          /> 
           <Route
             path="guests"
             element={

@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 // import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const EventsDb = () => {
   const token = localStorage.getItem('token');
   const [showModals, setShowModals] = useState({
@@ -303,7 +304,9 @@ const EventsDb = () => {
   };
 
   return (
-    <>
+    <>  
+     
+
       <div className='sub_details'>
         <div className='heading-register'>
           <div className="events-heading">BOYS</div>
