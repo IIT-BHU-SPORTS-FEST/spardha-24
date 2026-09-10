@@ -1,7 +1,7 @@
 // import React from 'react';
 import './Home.css';
-import HeroSection from '../HeroSection/HeroSection26';
-import HomeContact from '../Contact/Contact';
+import HeroSection from '../HeroSection/HeroSectionStadium';
+import HomeContact from '../Contact/ContactNew';
 import About from '../About_section/newAbout';
 import LocationCard from '../LocationCard/LocationCardNew';
 

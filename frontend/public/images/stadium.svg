@@ -1,0 +1,167 @@
+<svg width="1536" height="864" viewBox="0 0 1536 864" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#050d1f"/>
+      <stop offset="0.45" stop-color="#0a1c38"/>
+      <stop offset="0.8" stop-color="#0e2a4a"/>
+      <stop offset="1" stop-color="#113355"/>
+    </linearGradient>
+    <linearGradient id="ceiling" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020a1c"/>
+      <stop offset="1" stop-color="#0b1f3a"/>
+    </linearGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1c38"/>
+      <stop offset="1" stop-color="#07152b"/>
+    </linearGradient>
+    <radialGradient id="flood" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#e8fbff" stop-opacity="0.95"/>
+      <stop offset="0.35" stop-color="#9fd8f0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#9fd8f0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6f4ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#d6f4ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15925a"/>
+      <stop offset="1" stop-color="#0b6b42"/>
+    </linearGradient>
+    <pattern id="crowd" width="7" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="2" r="1.15" fill="#cfe4f5" opacity="0.5"/>
+      <circle cx="5" cy="5.5" r="1.05" fill="#7ea6c9" opacity="0.45"/>
+      <circle cx="2.5" cy="7.5" r="0.95" fill="#eef6fd" opacity="0.4"/>
+    </pattern>
+    <pattern id="crowd2" width="8" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="3" r="1.1" fill="#b9d6ea" opacity="0.4"/>
+      <circle cx="5.5" cy="7" r="1" fill="#5f8db4" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Night sky / atmosphere -->
+  <rect width="1536" height="864" fill="url(#sky)"/>
+
+  <!-- Ceiling -->
+  <rect width="1536" height="235" fill="url(#ceiling)"/>
+  <g stroke="#152c4d" stroke-width="3" opacity="0.65">
+    <path d="M0 60 H1536"/>
+    <path d="M0 120 H1536" stroke-width="2"/>
+    <path d="M0 175 H1536"/>
+  </g>
+  <g stroke="#0f2a4d" stroke-width="14" opacity="0.5">
+    <path d="M80 40 L400 190"/>
+    <path d="M240 40 L560 190"/>
+    <path d="M400 40 L720 190"/>
+    <path d="M560 40 L880 190"/>
+    <path d="M720 40 L1040 190"/>
+    <path d="M880 40 L1200 190"/>
+    <path d="M1040 40 L1360 190"/>
+    <path d="M1200 40 L1500 200"/>
+  </g>
+
+  <!-- Floodlight clusters -->
+  <g>
+    <circle cx="255" cy="168" r="130" fill="url(#flood)"/>
+    <circle cx="510" cy="168" r="130" fill="url(#flood)"/>
+    <circle cx="768" cy="168" r="150" fill="url(#flood)"/>
+    <circle cx="1026" cy="168" r="130" fill="url(#flood)"/>
+    <circle cx="1281" cy="168" r="130" fill="url(#flood)"/>
+  </g>
+  <g fill="#d9f4ff">
+    <rect x="225" y="150" width="60" height="18" rx="6"/>
+    <rect x="480" y="150" width="60" height="18" rx="6"/>
+    <rect x="738" y="150" width="60" height="18" rx="6"/>
+    <rect x="996" y="150" width="60" height="18" rx="6"/>
+    <rect x="1251" y="150" width="60" height="18" rx="6"/>
+  </g>
+
+  <!-- Light beams -->
+  <g fill="url(#beam)">
+    <polygon points="255,186 90,430 470,420"/>
+    <polygon points="510,186 380,440 660,430"/>
+    <polygon points="768,186 580,470 980,470"/>
+    <polygon points="1026,186 880,440 1160,430"/>
+    <polygon points="1281,186 1130,430 1460,428"/>
+  </g>
+
+  <!-- Upper bowl -->
+  <path d="M0 235 L1536 235 L1536 470 Q1400 428 1280 438 Q1150 450 1040 452 Q900 456 768 458 Q636 456 496 452 Q386 450 256 438 Q136 428 0 470 Z" fill="url(#bowl)"/>
+  <path d="M0 235 L1536 235 L1536 268 Q1360 236 1200 246 Q1050 256 900 268 Q768 276 636 268 Q486 256 336 246 Q176 236 0 268 Z" fill="#0e2547" opacity="0.9"/>
+
+  <!-- Crowd -->
+  <rect x="0" y="250" width="1536" height="120" fill="url(#crowd)"/>
+  <rect x="0" y="330" width="1536" height="120" fill="url(#crowd2)"/>
+
+  <!-- Lower bowl rows -->
+  <g stroke="#27456f" stroke-width="3" opacity="0.55" fill="none">
+    <path d="M-20 470 Q350 400 768 408 Q1186 400 1556 470"/>
+    <path d="M-20 505 Q360 440 768 448 Q1176 440 1556 505"/>
+    <path d="M-20 545 Q370 484 768 492 Q1166 484 1556 545"/>
+  </g>
+
+  <!-- Stadium screens -->
+  <g>
+    <rect x="140" y="300" width="300" height="72" rx="10" fill="#04101f" stroke="#1d4a78" stroke-width="3"/>
+    <rect x="150" y="308" width="280" height="56" rx="6" fill="url(#flood)" opacity="0.35"/>
+    <text x="290" y="345" fill="#eaf6ff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="10" text-anchor="middle">SPARDHA</text>
+    <rect x="1096" y="300" width="300" height="72" rx="10" fill="#04101f" stroke="#1d4a78" stroke-width="3"/>
+    <rect x="1106" y="308" width="280" height="56" rx="6" fill="url(#flood)" opacity="0.35"/>
+    <text x="1246" y="345" fill="#eaf6ff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="10" text-anchor="middle">SPARDHA</text>
+  </g>
+
+  <!-- Pitch underglow -->
+  <ellipse cx="768" cy="720" rx="720" ry="220" fill="#0a5c3a" opacity="0.55"/>
+
+  <!-- Football pitch -->
+  <polygon points="500,545 1036,545 1390,855 146,855" fill="url(#pitch)"/>
+  <!-- Mowing stripes -->
+  <g fill="#ffffff" opacity="0.05">
+    <polygon points="500,545 590,545 262,855 146,855"/>
+    <polygon points="725,545 815,545 560,855 444,855"/>
+    <polygon points="950,545 1036,545 902,855 786,855"/>
+  </g>
+  <g fill="#083a24" opacity="0.18">
+    <polygon points="590,545 725,545 444,855 262,855"/>
+    <polygon points="815,545 950,545 786,855 560,855"/>
+  </g>
+
+  <!-- Field markings -->
+  <g stroke="#e8f6ee" stroke-width="4" opacity="0.75" fill="none">
+    <polygon points="486,553 1050,553 1383,851 153,851"/>
+    <line x1="768" y1="553" x2="768" y2="851"/>
+    <ellipse cx="768" cy="702" rx="120" ry="52"/>
+    <circle cx="768" cy="702" r="6" fill="#e8f6ee"/>
+    <polygon points="490,566 606,566 462,846 346,846"/>
+    <polygon points="1046,566 930,566 1190,846 1074,846"/>
+    <line x1="606" y1="566" x2="462" y2="846"/>
+    <line x1="930" y1="566" x2="1074" y2="846"/>
+  </g>
+
+  <!-- Players -->
+  <g>
+    <ellipse cx="700" cy="790" rx="26" ry="6" fill="#04101b" opacity="0.5"/>
+    <path d="M700 720 L692 760 L708 760 Z" fill="#06121f"/>
+    <circle cx="700" cy="712" r="10" fill="#06121f"/>
+    <path d="M689 742 Q700 748 711 742 L714 752 Q700 760 686 752 Z" fill="#dcedf7"/>
+    <ellipse cx="840" cy="772" rx="24" ry="6" fill="#04101b" opacity="0.5"/>
+    <path d="M840 706 L833 744 L847 744 Z" fill="#06121f"/>
+    <circle cx="840" cy="699" r="9" fill="#06121f"/>
+    <path d="M830 726 Q840 731 850 726 L853 736 Q840 743 827 736 Z" fill="#dcedf7"/>
+    <ellipse cx="610" cy="742" rx="22" ry="5" fill="#04101b" opacity="0.5"/>
+    <path d="M610 682 L604 716 L616 716 Z" fill="#06121f"/>
+    <circle cx="610" cy="675" r="8" fill="#06121f"/>
+    <path d="M601 699 Q610 704 619 699 L622 708 Q610 714 598 708 Z" fill="#dcedf7"/>
+    <ellipse cx="920" cy="740" rx="22" ry="5" fill="#04101b" opacity="0.5"/>
+    <path d="M920 680 L914 714 L926 714 Z" fill="#06121f"/>
+    <circle cx="920" cy="673" r="8" fill="#06121f"/>
+    <path d="M911 697 Q920 702 929 697 L932 706 Q920 712 908 706 Z" fill="#dcedf7"/>
+  </g>
+
+  <!-- Ground fog -->
+  <rect x="0" y="600" width="1536" height="264" fill="url(#sky)" opacity="0.34"/>
+  <g fill="#9fd8f0">
+    <ellipse cx="300" cy="820" rx="340" ry="60" opacity="0.10"/>
+    <ellipse cx="1200" cy="826" rx="360" ry="64" opacity="0.10"/>
+    <ellipse cx="768" cy="840" rx="420" ry="70" opacity="0.12"/>
+  </g>
+</svg>
