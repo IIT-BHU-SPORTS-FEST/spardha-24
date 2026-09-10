@@ -74,24 +74,66 @@ const HomeContact = () => {
         {/* Right Section */}
         <div className={styles.right}>
           <div className={styles.formBox}>
-        <form className={styles.form} onSubmit={handleSubmit}>
-    <input type="text" placeholder="Name" className={styles.input} name="name" value={form.name}
-        onChange={handleChange} />
-    <input type="email" placeholder="Email" className={styles.input} name="email"
-     value={form.email}
-        onChange={handleChange} />
-    <textarea placeholder="Message" className={styles.textarea} name="message"
-     value={form.message}
-        onChange={handleChange}></textarea>
-     <button
-        type="submit"
-        disabled={loading}
-       className={styles.button}
-      >
-        {loading ? "Submitting..." : "SUBMIT   →"}
-      </button>
-  </form>
-</div>
+            <span className={styles.panelCornerTL} aria-hidden="true"></span>
+            <span className={styles.panelCornerBR} aria-hidden="true"></span>
+
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.formHead}>
+                <span className={styles.formTag}>SPARDHA // 2026</span>
+                <h3 className={styles.formTitle}>REACH THE SPARDHA TEAM</h3>
+                <div className={styles.formAccent} aria-hidden="true"></div>
+              </div>
+
+              <label className={styles.field}>
+                <span className={styles.fieldMeta}>
+                  <span className={styles.fieldIcon} aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="8" r="4"/>
+                      <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/>
+                    </svg>
+                  </span>
+                  YOUR NAME
+                </span>
+                <input type="text" placeholder="Enter your full name" className={styles.input} name="name" value={form.name}
+                  onChange={handleChange} required />
+                <span className={styles.fieldNum} aria-hidden="true">01</span>
+              </label>
+
+              <label className={styles.field}>
+                <span className={styles.fieldMeta}>
+                  <span className={styles.fieldIcon} aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="5" width="18" height="14" rx="2"/>
+                      <path d="M3 7l9 6 9-6"/>
+                    </svg>
+                  </span>
+                  EMAIL ADDRESS
+                </span>
+                <input type="email" placeholder="you@example.com" className={styles.input} name="email"
+                  value={form.email} onChange={handleChange} required />
+                <span className={styles.fieldNum} aria-hidden="true">02</span>
+              </label>
+
+              <label className={styles.field}>
+                <span className={styles.fieldMeta}>
+                  <span className={styles.fieldIcon} aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 5h16v12H8l-4 4z"/>
+                    </svg>
+                  </span>
+                  YOUR MESSAGE
+                </span>
+                <textarea placeholder="Tell us what's on your mind..." className={styles.textarea} name="message"
+                  value={form.message} onChange={handleChange} required></textarea>
+                <span className={styles.fieldNum} aria-hidden="true">03</span>
+              </label>
+
+              <button type="submit" disabled={loading} className={styles.button}>
+                <span className={styles.btnLabel}>{loading ? "Submitting..." : "SEND MESSAGE"}</span>
+                <span className={styles.btnArrow} aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
           <div className={styles.backgroundImage}></div>
         </div>
       </div>
