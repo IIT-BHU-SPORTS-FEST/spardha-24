@@ -49,7 +49,7 @@ const teamData = [
     role: 'CO-CONVENER',
     vertical: 'Co-Conveners',
     image: OmKulshreeImg,
-    phone: '6260111459',
+    phone: '',
     email: 'mailto:omkulshree.sahu.cer23@itbhu.ac.in',
   },
   {
@@ -58,7 +58,7 @@ const teamData = [
     role: 'CO-CONVENER',
     vertical: 'Co-Conveners',
     image: ShaneshrajeImg,
-    phone: '8669937273',
+    phone: '',
     email: 'mailto:shaneshraje.skadu.chy23@itbhu.ac.in',
   },
   {
@@ -67,7 +67,7 @@ const teamData = [
     role: 'CO-CONVENER',
     vertical: 'Co-Conveners',
     image: AshokKumarMeenaImg,
-    phone: '8306460439',
+    phone: '',
     email: 'mailto:ashok.kmeena.civ23@itbhu.ac.in',
   },
 
