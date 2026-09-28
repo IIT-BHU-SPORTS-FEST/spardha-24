@@ -107,7 +107,7 @@ const teamData = [
     role: 'TECH TEAM',
     vertical: 'Tech',
     image: KhushhalKumrawatImg,
-    phone: '8236071713',
+    phone: '',
     email: 'mailto:khushhal.kumrawat.cer24@itbhu.ac.in',
   },
   {
@@ -116,7 +116,7 @@ const teamData = [
     role: 'TECH TEAM',
     vertical: 'Tech',
     image: DeshkarSamirImg,
-    phone: '8482931748',
+    phone: '',
     email: 'mailto:deshkar.samird.cer24@itbhu.ac.in',
   },
   {
