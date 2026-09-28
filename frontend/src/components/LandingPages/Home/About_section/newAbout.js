@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const STATS_DATA = [
   { value: 21, label: "EVENTS CATEGORIES" },
   { value: 250, label: "COMPETING COLLEGES" },
-  { value: 45000, label: "TOTAL FOOTFALL" },
-  { value: 475000, label: "DIGITAL IMPRESSIONS" },
+  { value: 50000, label: "TOTAL FOOTFALL" },
+  { value: 1700000, label: "DIGITAL IMPRESSIONS" },
 ];
 
 export default function About() {
