@@ -30,25 +30,31 @@ const HomeContact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Google Apps Script web apps redirect internally (302), which causes the
+    // browser to send Origin: null on the follow-up request. GScript does not
+    // whitelist the null origin, so the *response* is blocked by CORS even
+    // though the write already succeeded on the server.
+    //
+    // Fix: use mode:"no-cors" so the browser sends the request without
+    // enforcing CORS on the response. The response is opaque (unreadable),
+    // so we treat a successful network send as a success.
     try {
-      const res = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbys5zd1ReBGByhITzLeZqTYF-pAg5mme6z4CDxKMFzOYdKKDdjmhB5wqYO6Fj8ZVnMM/exec",
         {
           method: "POST",
+          mode: "no-cors",         // prevents CORS error on the opaque response
           body: JSON.stringify(form),
         }
       );
 
-      const data = await res.json();
-
-      if (data.result === "success") {
-        alert("Form submitted successfully!");
-        setForm({ name: "", email: "", phone: "", college: "", message: "" });
-      } else {
-        alert("Error: " + data.error);
-      }
+      // Response is opaque with no-cors — assume success if fetch didn't throw
+      alert("Form submitted successfully!");
+      setForm({ name: "", email: "", phone: "", college: "", message: "" });
     } catch (err) {
-      alert("Request failed: " + err.message);
+      // Only reaches here on a genuine network failure (offline, DNS error, etc.)
+      alert("Request failed. Please check your connection and try again.");
+      console.error("Contact form error:", err);
     } finally {
       setLoading(false);
     }
