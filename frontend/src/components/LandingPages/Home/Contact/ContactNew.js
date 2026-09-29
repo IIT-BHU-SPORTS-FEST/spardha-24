@@ -1,7 +1,7 @@
 import React,{useEffect, useRef, useState} from "react";
 import styles from "./ContactNew.module.css";
 const HomeContact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", college: "", message: "" });
   const [loading, setLoading] = useState(false);
   const containerRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -43,7 +43,7 @@ const HomeContact = () => {
 
       if (data.result === "success") {
         alert("Form submitted successfully!");
-        setForm({ name: "", email: "", message: "" }); 
+        setForm({ name: "", email: "", phone: "", college: "", message: "" });
       } else {
         alert("Error: " + data.error);
       }
@@ -114,6 +114,51 @@ const HomeContact = () => {
                 <span className={styles.fieldNum} aria-hidden="true">02</span>
               </label>
 
+
+              <label className={styles.field}>
+                <span className={styles.fieldMeta}>
+                  <span className={styles.fieldIcon} aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 01-2.18 2A19.86 19.86 0 013.09 4.18 2 2 0 015.09 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                  </span>
+                  PHONE NUMBER
+                </span>
+                <input
+                  type="tel"
+                  placeholder="e.g. +91 98765 43210"
+                  className={styles.input}
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  pattern="[0-9+\-\s()]{7,15}"
+                  title="Enter a valid phone number"
+                  required
+                />
+                <span className={styles.fieldNum} aria-hidden="true">03</span>
+              </label>
+
+              <label className={styles.field}>
+                <span className={styles.fieldMeta}>
+                  <span className={styles.fieldIcon} aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                      <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                  </span>
+                  COLLEGE NAME
+                </span>
+                <input
+                  type="text"
+                  placeholder="Enter your college name"
+                  className={styles.input}
+                  name="college"
+                  value={form.college}
+                  onChange={handleChange}
+                  required
+                />
+                <span className={styles.fieldNum} aria-hidden="true">04</span>
+              </label>
               <label className={styles.field}>
                 <span className={styles.fieldMeta}>
                   <span className={styles.fieldIcon} aria-hidden="true">
@@ -125,7 +170,7 @@ const HomeContact = () => {
                 </span>
                 <textarea placeholder="Tell us what's on your mind..." className={styles.textarea} name="message"
                   value={form.message} onChange={handleChange} required></textarea>
-                <span className={styles.fieldNum} aria-hidden="true">03</span>
+                <span className={styles.fieldNum} aria-hidden="true">05</span>
               </label>
 
               <button type="submit" disabled={loading} className={styles.button}>
