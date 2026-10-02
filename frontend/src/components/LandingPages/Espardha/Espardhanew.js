@@ -3,26 +3,41 @@ import React, { useState, useEffect } from 'react';
 import bgWallpaper from './e spardha wallpaper.jpg.jpeg';
 import bgmiImg from './bgmi.jpg.png';
 import ffImg from './FF.jpg.png';
-import codImg from './COD.jpg.png';
-import valoImg from './valo.jpg.png';
+import realCricketImg from './img/real-cricket.jpeg';
+
+import brochure from './rulebook/Broucher_2026.pdf';
+import bgmiRulebook from './rulebook/BGMI_2026.pdf';
+import freeFireRulebook from './rulebook/Free_Fire_2026.pdf';
+import realCricketRulebook from './rulebook/Real_Cricket_2026.pdf';
 
 const games = [
   {
-    id: 'bgmi', name: 'BGMI', emoji: '🎮', image: bgmiImg,
-    description: `BGMI at e-Spardha is an intense battle-royale competition where teams compete through strategy, teamwork, communication, and individual skill to secure the highest possible score. Only officially registered players are permitted to participate, and all teams must join the designated lobby on time and follow the announced match format. Points will be awarded based on placement and eliminations. The use of hacks, cheats, scripts, exploits, modified files, or unauthorized software is strictly prohibited. Players must maintain fair play and report any technical issues, disputes, or suspicious activity to the tournament officials immediately. The decision of the e-Spardha organizing committee regarding any violation or dispute will be final.`
+    id: 'bgmi',
+    name: 'BGMI',
+    emoji: '🎮',
+    image: bgmiImg,
+    description: `BGMI at e-Spardha is an intense battle-royale competition where teams compete through strategy, teamwork, communication, and individual skill to secure the highest possible score. Only officially registered players are permitted to participate, and all teams must join the designated lobby on time and follow the announced match format. Points will be awarded based on placement and eliminations. The use of hacks, cheats, scripts, exploits, modified files, or unauthorized software is strictly prohibited. Players must maintain fair play and report any technical issues, disputes, or suspicious activity to the tournament officials immediately. The decision of the e-Spardha organizing committee regarding any violation or dispute will be final.`,
+    signupLink: 'https://forms.gle/WxmXsX2PKY8K3nLDA',
+    rulebook: bgmiRulebook
   },
   {
-    id: 'ff', name: 'Free Fire MAX', emoji: '🔥', image: ffImg,
-    description: `Free Fire at e-Spardha is a fast-paced battle-royale competition that challenges players to showcase their reflexes, strategy, teamwork, and survival skills. Only officially registered players may participate, and teams must join their assigned lobby within the scheduled time while following the announced tournament format and scoring system. Rankings will be determined based on placement and eliminations. The use of hacks, mods, scripts, exploits, third-party applications, or any unfair means of gaining an advantage is strictly prohibited. Players are expected to maintain sportsmanship throughout the tournament and report any technical issue or dispute to the officials immediately. The decision of the e-Spardha organizing committee shall be considered final.`
+    id: 'ff',
+    name: 'Free Fire MAX',
+    emoji: '🔥',
+    image: ffImg,
+    description: `Free Fire at e-Spardha is a fast-paced battle-royale competition that challenges players to showcase their reflexes, strategy, teamwork, and survival skills. Only officially registered players may participate, and teams must join their assigned lobby within the scheduled time while following the announced tournament format and scoring system. Rankings will be determined based on placement and eliminations. The use of hacks, mods, scripts, exploits, third-party applications, or any unfair means of gaining an advantage is strictly prohibited. Players are expected to maintain sportsmanship throughout the tournament and report any technical issue or dispute to the officials immediately. The decision of the e-Spardha organizing committee shall be considered final.`,
+    signupLink: 'https://forms.gle/8xi66ewmfwbrE4UH8',
+    rulebook: freeFireRulebook
   },
   {
-    id: 'cod', name: 'Call of Duty: Mobile', emoji: '🎯', image: codImg,
-    description: `Call of Duty: Mobile at e-Spardha brings an action-packed competitive experience where teamwork, accuracy, tactical thinking, and quick decision-making determine the winner. Only officially registered players are permitted to participate, and all teams must follow the approved roster, match format, game settings, and schedule announced by the organizers. The use of hacks, cheats, scripts, modified clients, exploits, unauthorized applications, or any other unfair advantage is strictly forbidden. Players must join the assigned lobby on time, maintain proper conduct, and report technical problems, disputes, or suspected violations to the tournament officials immediately. The organizing committee reserves the right to impose penalties or disqualify teams for rule violations, and its decision shall be final.`
-  },
-  {
-    id: 'valo', name: 'Valorant', emoji: '⚡', image: valoImg,
-    description: `Valorant at e-Spardha is a tactical team-based competition where precision, strategy, communication, and coordination are key to victory. Only registered players using their approved accounts are allowed to compete, and teams must follow the announced match format, map selection, schedule, and tournament procedures. The use of cheats, hacks, scripts, exploits, unauthorized software, account sharing, or external assistance is strictly prohibited. Teams must be present in the designated lobby on time and immediately report any technical issue, suspected violation, or dispute to the tournament administrators. Any player or team found violating the rules may face penalties or disqualification, and the decision of the e-Spardha officials will be final.`
-  },
+    id: 'real-cricket',
+    name: 'Real Cricket',
+    emoji: '🏏',
+    image: realCricketImg,
+    description: `Real Cricket at e-Spardha is an exciting cricket competition where players compete through strategy, skill, timing, and game awareness to secure the highest possible score. Only officially registered players are permitted to participate, and all players must join the designated match/lobby on time and follow the announced match format and rules. Points will be awarded based on match results and performance as specified by the tournament organizers. The use of hacks, cheats, scripts, exploits, modified game files, or unauthorized software is strictly prohibited. Players must maintain fair play and report any technical issues, disputes, or suspicious activity to the tournament officials immediately. The decision of the e-Spardha organizing committee regarding any violation or dispute will be final.`,
+    signupLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdHlC9yyUtonrYH85QTr2Lkh1to1ieKNfeUopuoMRRNRWX-5A/viewform',
+    rulebook: realCricketRulebook
+  }
 ];
 
 const Espardhanew = () => {
@@ -31,12 +46,15 @@ const Espardhanew = () => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { innerWidth, innerHeight } = window;
+
       const x = (e.clientX / innerWidth - 0.5) * 2;
       const y = (e.clientY / innerHeight - 0.5) * 2;
+
       setMousePos({ x, y });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
@@ -106,7 +124,13 @@ const Espardhanew = () => {
           text-shadow: 4px 6px 0px #000, 0 0 30px rgba(255, 222, 0, 0.9);
         }
 
-        /* 4 Game Rows Grid */
+        /* Make top RULEBOOK heading clickable */
+        .espardha-header-link {
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        /* Game Rows */
         .espardha-games-grid {
           display: flex;
           flex-direction: column;
@@ -176,7 +200,7 @@ const Espardhanew = () => {
           border-color: #FFDE00;
         }
 
-        /* Right Column Glassmorphic Rulebook Card */
+        /* Right Column Glassmorphic Card */
         .espardha-rulebook-box {
           position: relative;
           overflow: hidden;
@@ -222,38 +246,34 @@ const Espardhanew = () => {
           box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(0, 140, 255, 0.4);
         }
 
-        /* Bottom Sign Up Section */
-        .espardha-signup-section {
-          text-align: center;
-          margin-top: 70px;
-          width: 100%;
+        /* Sign Up and Rule Book Buttons */
+        .espardha-action-buttons {
+          display: flex;
+          gap: 12px;
+          margin-top: 18px;
+          flex-wrap: wrap;
         }
 
-        .espardha-signup-link {
+        .espardha-action-button {
+          display: inline-block;
+          padding: 10px 18px;
+          border: 2px solid #FFDE00;
+          border-radius: 8px;
+          background: rgba(255, 222, 0, 0.08);
+          color: #FFDE00;
+          font-family: 'Black Ops One', cursive, sans-serif;
+          font-size: 0.78rem;
+          letter-spacing: 1px;
+          cursor: pointer;
           text-decoration: none;
-          display: inline-block;
-          background: none;
-          border: none;
-          padding: 0;
-          cursor: pointer;
+          transition: all 0.3s ease;
         }
 
-        .espardha-signup-title {
-          color: #FFDE00 !important;
-          font-family: 'Black Ops One', cursive, sans-serif !important;
-          font-size: 3.8rem;
-          font-weight: 400;
-          margin: 0;
-          cursor: pointer;
-          display: inline-block;
-          letter-spacing: 2px;
-          text-shadow: 2px 2px 0px #000, 4px 4px 10px rgba(0,0,0,0.9), 0 0 25px rgba(255, 222, 0, 0.5);
-          transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), text-shadow 0.3s ease;
-        }
-
-        .espardha-signup-link:hover .espardha-signup-title {
-          transform: scale(1.1) translateY(-5px);
-          text-shadow: 4px 8px 0px #000, 0 0 40px rgba(255, 222, 0, 0.9);
+        .espardha-action-button:hover {
+          background: #FFDE00;
+          color: #081020;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(255, 222, 0, 0.35);
         }
 
         @media (max-width: 850px) {
@@ -261,16 +281,42 @@ const Espardhanew = () => {
             flex-direction: column;
             gap: 15px;
           }
+
           .espardha-game-row {
             grid-template-columns: 1fr;
           }
+
           .espardha-card-container {
             width: 100%;
             max-width: 210px;
             margin: 0 auto;
           }
+
           .espardha-yellow-title {
             text-align: center;
+          }
+
+          .espardha-rulebook-box {
+            min-height: auto;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .espardha-container {
+            padding-top: 100px;
+          }
+
+          .espardha-yellow-title {
+            font-size: 2.4rem;
+          }
+
+          .espardha-action-buttons {
+            justify-content: center;
+          }
+
+          .espardha-action-button {
+            font-size: 0.7rem;
+            padding: 9px 14px;
           }
         }
       `}</style>
@@ -282,40 +328,93 @@ const Espardhanew = () => {
           transform: `perspective(1000px) rotateY(${mousePos.x * 3}deg) rotateX(${-mousePos.y * 3}deg)`
         }}
       >
+
         {/* Top Headings Row */}
         <div className="espardha-header-row">
-          <h1 className="espardha-yellow-title">CONTEST</h1>
-          <h1 className="espardha-yellow-title">RULEBOOK</h1>
+
+          <h1 className="espardha-yellow-title">
+            CONTEST
+          </h1>
+
+          <a
+            href={brochure}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="espardha-header-link"
+          >
+            <h1 className="espardha-yellow-title">
+              RULEBOOK
+            </h1>
+          </a>
+
         </div>
 
         {/* Game Cards Rows */}
         <div className="espardha-games-grid">
+
           {games.map((game) => (
             <div key={game.id} className="espardha-game-row">
+
               {/* Contest Image Card */}
               <div className="espardha-card-container">
+
                 <div className="espardha-card-inner">
-                  <img src={game.image} alt={game.name} className="espardha-game-card-img" />
+                  <img
+                    src={game.image}
+                    alt={game.name}
+                    className="espardha-game-card-img"
+                  />
                 </div>
+
                 <div className="espardha-card-depth-frame" />
+
               </div>
 
-              {/* Clean Dark Blue Rulebook Glass Card */}
+              {/* Game Information Card */}
               <div className="espardha-rulebook-box">
-                <p className="espardha-rulebook-game-title">{game.emoji} {game.name}</p>
-                <p className="espardha-rulebook-para">{game.description}</p>
+
+                <p className="espardha-rulebook-game-title">
+                  {game.emoji} {game.name}
+                </p>
+
+                <p className="espardha-rulebook-para">
+                  {game.description}
+                </p>
+
+                {/* Game-specific Buttons */}
+                <div className="espardha-action-buttons">
+
+                  {/* SIGN UP */}
+                  <a
+                    href={game.signupLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="espardha-action-button"
+                  >
+                    SIGN UP
+                  </a>
+
+                  {/* RULE BOOK */}
+                  <a
+                    href={game.rulebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="espardha-action-button"
+                  >
+                    RULE BOOK
+                  </a>
+
+                </div>
+
               </div>
+
             </div>
           ))}
+
         </div>
 
-        {/* Bottom Heading: Sign Up with a valid safe link / anchor target placeholder */}
-        <div className="espardha-signup-section">
-          <a href="register/signup" className="espardha-signup-link">
-            <h1 className="espardha-signup-title">SIGN UP</h1>
-          </a>
-        </div>
       </div>
+
     </div>
   );
 };
