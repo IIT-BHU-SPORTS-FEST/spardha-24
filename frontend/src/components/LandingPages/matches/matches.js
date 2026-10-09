@@ -505,16 +505,16 @@ const fixturesData = [
     "date": "2026-10-09",
     "time": "7:00 PM - 7:30 PM",
     "venue": "Kabaddi Ground",
-    "team1": "IIT BHU",
-    "team2": "SOA"
+    "team1": "IIT BHU (G)",
+    "team2": "SOA (G)"
   },
   {
     "game_name": "Kabbadi",
     "date": "2026-10-09",
     "time": "7:45 PM - 8:15 PM",
     "venue": "Kabaddi Ground",
-    "team1": "JEC JABALPUR",
-    "team2": "MBM JODHPUR"
+    "team1": "JEC JABALPUR (G)",
+    "team2": "MBM JODHPUR (G)"
   },
   {
     "game_name": "Table Tennis",
