@@ -1,5 +1,6 @@
 .ftco_section {
   margin: 100px 150px 32px 150px;
+
   position: relative;
 }
 .container {
@@ -282,3 +283,230 @@ body {
 width: 100vw;
   }
 }
+
+.matchesSupreme {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+}
+
+.displayBox {
+  background: rgba(12, 15, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 1.25rem;
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  min-height: 11.5rem;
+}
+
+.displayBox:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0px 6px 24px rgba(73, 130, 246, 0.35);
+  border-color: #4982F6;
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sportBadge {
+  display: inline-block;
+  background: rgba(73, 130, 246, 0.15);
+  color: #4982F6;
+  border: 1px solid rgba(73, 130, 246, 0.4);
+  padding: 0.2rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.teamsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 12px;
+}
+
+.teamBox {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  word-break: break-word;
+  line-height: 1.35;
+}
+
+.vsBadge {
+  color: #4982F6;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(73, 130, 246, 0.35);
+  padding: 0.35rem 0.7rem;
+  border-radius: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.metaLabel {
+  color: #8892b0;
+  font-weight: 500;
+}
+
+.metaValue {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.noMatches {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #8892b0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  padding: 3rem;
+}
+
+@media (max-width: 1050px) {
+  .matchesSupreme {
+    grid-template-columns: 1fr;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .teamBox {
+    font-size: 0.95rem;
+  }
+  .metaRow {
+    font-size: 0.85rem;
+  }
+  .displayBox {
+    padding: 14px 16px;
+  }
+}
+
+.tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.eventsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(12, 15, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+}
+
+.eventsTable th {
+  background: rgba(73, 130, 246, 0.15);
+  color: #4982F6;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(73, 130, 246, 0.3);
+  white-space: nowrap;
+}
+
+.eventsTable td {
+  padding: 14px 20px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.eventsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.eventsTable tbody tr:hover td {
+  background: rgba(73, 130, 246, 0.08);
+}
+
+.timeCell {
+  font-weight: 600;
+  color: #4982F6 !important;
+  white-space: nowrap;
+}
+
+.eventCell {
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+.categoryCell {
+  white-space: nowrap;
+}
+
+.tagDefault {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tagGirls {
+  display: inline-block;
+  background: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.35);
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.roundCell {
+  color: #94a3b8 !important;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tableResponsive {
+    padding: 0.5rem;
+  }
+  .eventsTable th,
+  .eventsTable td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+
